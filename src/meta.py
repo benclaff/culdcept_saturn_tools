@@ -1,3 +1,14 @@
+# YAML
+_YAML_PADDING = 4
+
+# saturn specifics
+#################################
+
+_MAX_CHAR_PER_DIALOG_LINE = 22
+_LINE_RETURN = '\x0A'
+_WAIT_INPUT = '\x07'
+_END_OF_DIALOG = '\x00'
+
 # extracted iso files
 _BIN = ""
 _DT0 = "/home/ben/Dropbox/GAMES/SATURN_CULDCEPT/Culdcept (Japan) (Rev A) (10M) - Extracted/CULDCEPT.DT0"
