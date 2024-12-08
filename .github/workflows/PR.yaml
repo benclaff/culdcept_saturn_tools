@@ -1,8 +1,14 @@
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+
 name: Translation validations
 run-name: ${{ github.actor }} is testing translation validity 🚀
-on:
-  pull_request:
-    #branches: ["**"]
 
 jobs:
   test_python:
