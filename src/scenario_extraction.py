@@ -51,18 +51,18 @@ def pretty_block_siftJIS(idx, groupdict, start, end, indent=0, shift=0):
                 value = value.hex(" ", 2)
             elif key == "text":
 
-                value = value.replace(b'\x13\x07', "§PN§".encode('shift_jisx0213'))
-                value = value.replace(b'\x0A', '§0A§'.encode('shift_jisx0213'))
-                value = value.replace(b'\x07', '§07§'.encode('shift_jisx0213'))
+                value = value.replace(b'\x13\x07', "#PN#".encode('shift_jisx0213'))
+                value = value.replace(b'\x0A', '#0A#'.encode('shift_jisx0213'))
+                value = value.replace(b'\x07', '#07#'.encode('shift_jisx0213'))
                 # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
                 try:
                     value = value.decode('shift_jisx0213', errors='strict')
                 except UnicodeError as ex:
-                    print(ex.with_traceback())
+                    print(ex.with_traceback(ex))
                     exit(1)
         if key == "text":
             block_yaml += str(key) + ":\n"
-            block_yaml += ' ' * indent + "windows: " + str(value.count("§0A§")+1) + '\n'
+            block_yaml += ' ' * indent + "windows: " + str(value.count("#0A#")+1) + '\n'
             block_yaml += ' ' * indent + "original: " + str(value) + '\n'
             block_yaml += ' ' * indent + "translated: " + str(value) + '\n'
         else:
@@ -104,5 +104,5 @@ for m in re.finditer(dialog_sequence_pattern, data):
 
 # write yaml output
 data = yaml.safe_load(output_yaml)
-with open('output.yaml', 'w', encoding='utf8') as file:
-    yaml.dump(data, file)
+with open('translations/scenario.yaml', 'w') as file:
+    yaml.dump(data, file, default_flow_style = False, allow_unicode = True)
