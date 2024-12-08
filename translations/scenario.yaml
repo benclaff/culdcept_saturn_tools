@@ -1,9 +1,15 @@
 block_0:
   index: 0
   offsets:
+
     start: c0bab0
     end: c0bc1a
     byte_length: 360
+
+    start: c0bab2
+    end: c0bc1a
+    byte_length: 358
+
   portrait: 0f02
   text:
     windows: 7
@@ -12,13 +18,20 @@ block_0:
 block_1:
   index: 1
   offsets:
+
     start: c0bc1a
     end: c0bc3f
     byte_length: 35
+
+    start: c0bc1c
+    end: c0bc3f
+    byte_length: 33
+
   portrait: 0f0a
   text:
     windows: 2
     original: ちょっと待ちな#0A#聞き捨てならないぜ！
+
     translated: Hold on.#0A#What do you mean ?!
     windows: 2
 block_10:
@@ -1236,573 +1249,54 @@ block_2:
     start: c0bc3f
     end: c0bc7d
     byte_length: 60
+
+    translated: ちょっと待ちな#0A#聞き捨てならないぜ！
+block_2:
+  index: 2
+  offsets:
+    start: c0bc41
+    end: c0bc7d
+    byte_length: 58
+
   portrait: 0f01
   text:
     windows: 1
     original: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
-    translated: Who's that?#07#…!#A0#…this feeling…#07#You're a Cepter too!
-    windows: 1
-block_20:
-  index: 20
-  offsets:
-    byte_length: 60
-    end: c0c547
-    start: c0c509
-  portrait: 0f0f
-  text:
-    original: そうかい・・・#07#でも、本当にこんなことしていて#0A#いいのかなあ？
-    translated: そうかい・・・#07#でも、本当にこんなことしていて#0A#いいのかなあ？
-    windows: 2
-block_200:
-  index: 200
-  offsets:
-    byte_length: 78
-    end: c10ca4
-    start: c10c54
-  portrait: 0f0b
-  text:
-    original: null
-    translated: null
-    windows: 2
-block_201:
-  index: 201
-  offsets:
-    byte_length: 61
-    end: c10ce7
-    start: c10ca8
-  portrait: 0f3c
-  text:
-    original: 神が実在するかどうかは問題ではない#0A#信じる心こそが大切なのです
-    translated: 神が実在するかどうかは問題ではない#0A#信じる心こそが大切なのです
-    windows: 2
-block_202:
-  index: 202
-  offsets:
-    byte_length: 69
-    end: c10d33
-    start: c10cec
-  portrait: 0f0a
-  text:
-    original: 俺は、全ての者をひれ伏させるのだ#0A#それが例えバルテアスであろうともな！
-    translated: 俺は、全ての者をひれ伏させるのだ#0A#それが例えバルテアスであろうともな！
-    windows: 2
-block_203:
-  index: 203
-  offsets:
-    byte_length: 167
-    end: c10ddd
-    start: c10d34
-  portrait: 0f38
-  text:
-    original: バルティス大山脈のふもとに#0A#最近暗雲が集まっています#07#バルテアスはおそらくそこに・・・#07#しかし、いくら最強のセプターとはいえ#0A#人間が神を倒すことなど、できるので#0A#しょうか？
-    translated: バルティス大山脈のふもとに#0A#最近暗雲が集まっています#07#バルテアスはおそらくそこに・・・#07#しかし、いくら最強のセプターとはいえ#0A#人間が神を倒すことなど、できるので#0A#しょうか？
-    windows: 4
-block_204:
-  index: 204
-  offsets:
-    byte_length: 25
-    end: c10df8
-    start: c10ddd
-  portrait: 0f03
-  text:
-    original: しかし、やらねばなるまい#07#
-    translated: しかし、やらねばなるまい#07#
-    windows: 1
-block_205:
-  index: 205
-  offsets:
-    byte_length: 150
-    end: c10f15
-    start: c10e7d
-  portrait: 0f0a
-  text:
-    original: null
-    translated: null
-    windows: 4
-block_206:
-  index: 206
-  offsets:
-    byte_length: 90
-    end: c10f93
-    start: c10f37
-  portrait: 0f38
-  text:
-    original: みなさん、お気をつけて#07#あなた方にモルダビア様の加護のあらん・・・#07#いや、これは不適当ですな
-    translated: みなさん、お気をつけて#07#あなた方にモルダビア様の加護のあらん・・・#07#いや、これは不適当ですな
-    windows: 1
-block_207:
-  index: 207
-  offsets:
-    byte_length: 31
-    end: c10fb4
-    start: c10f93
-  portrait: 0f02
-  text:
-    original: ありがとう#0A#気持ちはもらっとくよ
-    translated: ありがとう#0A#気持ちはもらっとくよ
-    windows: 2
-block_208:
-  index: 208
-  offsets:
-    byte_length: 63
-    end: c10ff6
-    start: c10fb5
-  portrait: 0f01
-  text:
-    original: 抑制神バルテアス・・・#0A#完全に力を取り戻す前に、やつを倒さねば！
-    translated: 抑制神バルテアス・・・#0A#完全に力を取り戻す前に、やつを倒さねば！
-    windows: 2
-block_209:
-  index: 209
-  offsets:
-    byte_length: 211
-    end: c110cc
-    start: c10ff7
-  portrait: 0f00
-  text:
-    original: どうやらこの亀裂が、バルテアスの住まう場所への入り口らしいですな#07#神話によると、彼は神としての姿と力を#0A#奪われたと伝えられています#07#彼が地上に姿を現さないのは、まだ#0A#全ての力を取り戻していないためでは#0A#ないでしょうか
-    translated: どうやらこの亀裂が、バルテアスの住まう場所への入り口らしいですな#07#神話によると、彼は神としての姿と力を#0A#奪われたと伝えられています#07#彼が地上に姿を現さないのは、まだ#0A#全ての力を取り戻していないためでは#0A#ないでしょうか
-    windows: 4
-block_21:
-  index: 21
-  offsets:
-    byte_length: 113
-    end: c0c5ba
-    start: c0c547
-  portrait: 0f19
-  text:
-    original: ポコポコポ〜！#07#（いいポコ！君は強いポコ！#0A#世界は君のものになって当然ポコ！#07#そうすればお母さんの病気も直るポコ！）
-    translated: ポコポコポ〜！#07#（いいポコ！君は強いポコ！#0A#世界は君のものになって当然ポコ！#07#そうすればお母さんの病気も直るポコ！）
-    windows: 2
-block_210:
-  index: 210
-  offsets:
-    byte_length: 73
-    end: c11117
-    start: c110cc
-  portrait: 0f0a
-  text:
-    original: 今なら、人間である俺たちでも、やつを倒せる#0A#かもしれない、ということだな？
-    translated: 今なら、人間である俺たちでも、やつを倒せる#0A#かもしれない、ということだな？
-    windows: 2
-block_211:
-  index: 211
-  offsets:
-    byte_length: 83
-    end: c1116c
-    start: c11117
-  portrait: 0f00
-  text:
-    original: さよう#07#しかし、ゼネスよ・・・#0A#おぬしには荷が重過ぎる#07#ここは全て#PN#殿にまかせて・・・
-    translated: さよう#07#しかし、ゼネスよ・・・#0A#おぬしには荷が重過ぎる#07#ここは全て#PN#殿にまかせて・・・
-    windows: 2
-block_212:
-  index: 212
-  offsets:
-    byte_length: 268
-    end: c1127a
-    start: c1116c
-  portrait: 0f0a
-  text:
-    original: 指図は受けん！#07#貴様は、#PN#の心配だけして#0A#いればいい#07#俺は、#PN#のように善人面した#0A#やつは虫が好かんのだ#07#だいたい、こいつだって分かったものか#07#どこからか突然現れて、世界を救う#0A#などと・・・#07#いかなる望みも、かなえられるとなった時に#0A#世界の平和を望む人間など、俺には#0A#信じられん！
-    translated: 指図は受けん！#07#貴様は、#PN#の心配だけして#0A#いればいい#07#俺は、#PN#のように善人面した#0A#やつは虫が好かんのだ#07#だいたい、こいつだって分かったものか#07#どこからか突然現れて、世界を救う#0A#などと・・・#07#いかなる望みも、かなえられるとなった時に#0A#世界の平和を望む人間など、俺には#0A#信じられん！
-    windows: 6
-block_213:
-  index: 213
-  offsets:
-    byte_length: 50
-    end: c112ae
-    start: c1127a
-  portrait: 0f03
-  text:
-    original: ゼネス・・・#0A#おぬしは、本当にそう思っているのか？#07#
-    translated: ゼネス・・・#0A#おぬしは、本当にそう思っているのか？#07#
-    windows: 2
-block_214:
-  index: 214
-  offsets:
-    byte_length: 121
-    end: c11381
-    start: c11306
-  portrait: 0f3e
-  text:
-    original: null
-    translated: null
-    windows: 4
-block_215:
-  index: 215
-  offsets:
-    byte_length: 26
-    end: c1139d
-    start: c11381
-  portrait: 0f0b
-  text:
-    original: ゴリガン！！・・・貴様は！
-    translated: ゴリガン！！・・・貴様は！
-    windows: 1
-block_216:
-  index: 216
-  offsets:
-    byte_length: 320
-    end: c114df
-    start: c1139d
-  portrait: 0f3e
-  text:
-    original: さよう#0A#その杖は、私が残りわずかな力で創り上げた#0A#アーティファクトなのだ#07#やつに力あるセプターを選ばせ、その者に#0A#バブラシュカ大陸の他のセプターを倒させる#07#そうして得られたカードを、ここへ運ばせれば#0A#我が復活もたやすいこと#07#カルドセプトさえ支配することができれば#0A#カルドラの呪縛など・・・#07#いや、カルドラ自身さえ恐るるに足りん！#07#
-    translated: さよう#0A#その杖は、私が残りわずかな力で創り上げた#0A#アーティファクトなのだ#07#やつに力あるセプターを選ばせ、その者に#0A#バブラシュカ大陸の他のセプターを倒させる#07#そうして得られたカードを、ここへ運ばせれば#0A#我が復活もたやすいこと#07#カルドセプトさえ支配することができれば#0A#カルドラの呪縛など・・・#07#いや、カルドラ自身さえ恐るるに足りん！#07#
-    windows: 6
-block_217:
-  index: 217
-  offsets:
-    byte_length: 75
-    end: c11585
-    start: c11538
-  portrait: 0f03
-  text:
-    original: ・・・・・・#07#そうであったか・・・#0A#私は、大変な事をしてしまったようだ・・・#07#
-    translated: ・・・・・・#07#そうであったか・・・#0A#私は、大変な事をしてしまったようだ・・・#07#
-    windows: 2
-block_218:
-  index: 218
-  offsets:
-    byte_length: 267
-    end: c1173f
-    start: c11632
-  portrait: 0f0e
-  text:
-    original: バルテアス、腹心にも裏切られたようだな#07#それに貴様は、大きな過ちをおかしている#07#大陸中のセプターを打ち破って来た#0A##PN#は・・・#07#今や貴様でさえ、容易に倒すことはできん#0A#相手になってしまったということさ#07#さらに貴様は、大陸２番目の俺をも倒さねば#0A#カルドセプトの支配者にはなれない
-    translated: バルテアス、腹心にも裏切られたようだな#07#それに貴様は、大きな過ちをおかしている#07#大陸中のセプターを打ち破って来た#0A##PN#は・・・#07#今や貴様でさえ、容易に倒すことはできん#0A#相手になってしまったということさ#07#さらに貴様は、大陸２番目の俺をも倒さねば#0A#カルドセプトの支配者にはなれない
-    windows: 4
-block_219:
-  index: 219
-  offsets:
-    byte_length: 73
-    end: c1178a
-    start: c1173f
-  portrait: 0f40
-  text:
-    original: フフ・・・#07#死すべき定めの人間どもが、神である私に#0A#刃向かおうというのか？#07#
-    translated: フフ・・・#07#死すべき定めの人間どもが、神である私に#0A#刃向かおうというのか？#07#
-    windows: 2
-block_22:
-  index: 22
-  offsets:
-    byte_length: 39
-    end: c0c5e3
-    start: c0c5ba
-  portrait: 0f10
-  text:
-    original: 分かった！#0A#ぼく、がんばるよ、ポコポコ！
-    translated: 分かった！#0A#ぼく、がんばるよ、ポコポコ！
-    windows: 2
-block_220:
-  index: 220
-  offsets:
-    byte_length: 16
-    end: c117c9
-    start: c117b7
-  portrait: 0f00
-  text:
-    original: null
-    translated: null
-    windows: 1
-block_221:
-  index: 221
-  offsets:
-    byte_length: 20
-    end: c117df
-    start: c117c9
-  portrait: 0f0e
-  text:
-    original: 協力はしないぜ、#PN#！
-    translated: 協力はしないぜ、#PN#！
-    windows: 1
-block_222:
-  index: 222
-  offsets:
-    byte_length: 303
-    end: c1191d
-    start: c117ec
-  portrait: 0f41
-  text:
-    original: 人間どもが・・・#07#たかが、我々神によって創られた#0A#クリーチャーが・・・#07#神をも越える力を、持つようになろう#0A#とは・・・#07#私は負けた・・・#07#しかし主神カルドラよ、貴様に対する#0A#復讐だけはとげられそうだぞ#07#なぜなら・・・この人間たちが、いずれ#0A#その力で、貴様を滅ぼすであろうからな・・・#07#うおっ！！か・・・体が・・・#07#
-    translated: 人間どもが・・・#07#たかが、我々神によって創られた#0A#クリーチャーが・・・#07#神をも越える力を、持つようになろう#0A#とは・・・#07#私は負けた・・・#07#しかし主神カルドラよ、貴様に対する#0A#復讐だけはとげられそうだぞ#07#なぜなら・・・この人間たちが、いずれ#0A#その力で、貴様を滅ぼすであろうからな・・・#07#うおっ！！か・・・体が・・・#07#
-    windows: 5
-block_223:
-  index: 223
-  offsets:
-    byte_length: 68
-    end: c11980
-    start: c1193a
-  portrait: 0f01
-  text:
-    original: おおっ！！#07#やりましたぞ、#PN#殿！#0A#バルテアスは完全に力を失いました！！
-    translated: おおっ！！#07#やりましたぞ、#PN#殿！#0A#バルテアスは完全に力を失いました！！
-    windows: 2
-block_224:
-  index: 224
-  offsets:
-    byte_length: 181
-    end: c11a37
-    start: c11980
-  portrait: 0f0e
-  text:
-    original: さすがだな・・・#PN##07#俺は、もう貴様に付きまとうのはやめるぜ#07#神をも倒した貴様なんかに#0A#戦いを挑むほど、俺は愚かではない#07#ただ、貴様がどんな世界を望んでいたのか、#0A#それだけは見せてもらおう
-    translated: さすがだな・・・#PN##07#俺は、もう貴様に付きまとうのはやめるぜ#07#神をも倒した貴様なんかに#0A#戦いを挑むほど、俺は愚かではない#07#ただ、貴様がどんな世界を望んでいたのか、#0A#それだけは見せてもらおう
-    windows: 3
-block_225:
-  index: 225
-  offsets:
-    byte_length: 156
-    end: c11ad5
-    start: c11a37
-  portrait: 0f00
-  text:
-    original: どうやらこの先にある神殿は、天空にある#0A#カルドラの住まいを模した物のようです#07#この中なら、主神カルドラとの会話を#0A#試みられるかもしれません#07##PN#殿、さあ中へ・・・
-    translated: どうやらこの先にある神殿は、天空にある#0A#カルドラの住まいを模した物のようです#07#この中なら、主神カルドラとの会話を#0A#試みられるかもしれません#07##PN#殿、さあ中へ・・・
-    windows: 3
-block_226:
-  index: 226
-  offsets:
-    byte_length: 273
-    end: c11be9
-    start: c11ad6
-  portrait: 0f40
-  text:
-    original: これでカルドセプトの力は我が手に！！#07#フハハハハ・・・カルドラよ！契約どおり#0A#貴様に我が願いをかなえてもらうぞ！#07#我が願い・・・それは貴様の力を我がものとし#0A#私が新たな世界の創造者となることだ！！#07#そして手始めに、貴様の創り上げたものは#0A#全て破壊してやる！#07#フッハッハッハッハ！！
-    translated: これでカルドセプトの力は我が手に！！#07#フハハハハ・・・カルドラよ！契約どおり#0A#貴様に我が願いをかなえてもらうぞ！#07#我が願い・・・それは貴様の力を我がものとし#0A#私が新たな世界の創造者となることだ！！#07#そして手始めに、貴様の創り上げたものは#0A#全て破壊してやる！#07#フッハッハッハッハ！！
-    windows: 4
-block_227:
-  index: 227
-  offsets:
-    byte_length: 32
-    end: c11c0c
-    start: c11bea
-  portrait: 0f3f
-  text:
-    original: この私が・・・人間ごときに・・・
-    translated: この私が・・・人間ごときに・・・
-    windows: 1
-block_228:
-  index: 228
-  offsets:
-    byte_length: 63
-    end: c11c4d
-    start: c11c0c
-  portrait: 0f0c
-  text:
-    original: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
-    translated: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
-    windows: 2
-block_23:
-  index: 23
-  offsets:
-    byte_length: 74
-    end: c0c62f
-    start: c0c5e3
-  portrait: 0f18
-  text:
-    original: しめしめ、単純なやつだぜ#07#セバスを利用して、世界を俺たちのものに#0A#してやる！
-    translated: しめしめ、単純なやつだぜ#07#セバスを利用して、世界を俺たちのものに#0A#してやる！
-    windows: 2
-block_24:
-  index: 24
-  offsets:
-    byte_length: 12
-    end: c0c641
-    start: c0c633
-  portrait: 0f0f
-  text:
-    original: あ！#PN#さんだ
-    translated: あ！#PN#さんだ
-    windows: 1
-block_25:
-  index: 25
-  offsets:
-    byte_length: 8
-    end: c0c64b
-    start: c0c641
-  portrait: 0f19
-  text:
-    original: ポコ〜！
-    translated: ポコ〜！
-    windows: 1
-block_26:
-  index: 26
-  offsets:
-    byte_length: 54
-    end: c0c683
-    start: c0c64b
-  portrait: 0f10
-  text:
-    original: そうだね、#PN#さんに#0A#協力してあげよう！#07#ようし！本気だぞ
-    translated: そうだね、#PN#さんに#0A#協力してあげよう！#07#ようし！本気だぞ
-    windows: 2
-block_27:
-  index: 27
-  offsets:
-    byte_length: 34
-    end: c0c6ac
-    start: c0c688
-  portrait: 0f17
-  text:
-    original: チッ、どうやら俺たちの負けらしいな
-    translated: チッ、どうやら俺たちの負けらしいな
-    windows: 1
-block_28:
-  index: 28
-  offsets:
-    byte_length: 22
-    end: c0c6c4
-    start: c0c6ac
-  portrait: 0f12
-  text:
-    original: ごめんよ・・・ポコポコ
-    translated: ごめんよ・・・ポコポコ
-    windows: 1
-block_29:
-  index: 29
-  offsets:
-    byte_length: 117
-    end: c0c73b
-    start: c0c6c4
-  portrait: 0f00
-  text:
-    original: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
-    translated: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
-    windows: 3
+    translated: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
 block_3:
   index: 3
   offsets:
+
     start: c0bc7e
     end: c0bccc
     byte_length: 76
+
+    start: c0bc80
+    end: c0bccc
+    byte_length: 74
+
   portrait: 0f00
   text:
     windows: 3
     original: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
-    translated: It's a nice spot.#0A#Let's continue after#07#polishing up your skills#0A#, shall we?
-    windows: 3
-block_30:
-  index: 30
-  offsets:
-    byte_length: 119
-    end: c0c7b4
-    start: c0c73b
-  portrait: 0f17
-  text:
-    original: この子に手を出さないでくれ！#0A#みんな俺が悪いんだ！#07#こいつは能力を持っていただけで、#0A#何も知らずにやっていたことなんだよ！
-    translated: この子に手を出さないでくれ！#0A#みんな俺が悪いんだ！#07#こいつは能力を持っていただけで、#0A#何も知らずにやっていたことなんだよ！
-    windows: 3
-block_31:
-  index: 31
-  offsets:
-    byte_length: 14
-    end: c0c7c4
-    start: c0c7b4
-  portrait: 0f12
-  text:
-    original: ポコポコ・・・
-    translated: ポコポコ・・・
-    windows: 1
-block_32:
-  index: 32
-  offsets:
-    byte_length: 128
-    end: c0c846
-    start: c0c7c4
-  portrait: 0f00
-  text:
-    original: ・・・・・・#07#どうやらこの魔族の者の言葉には#0A#偽りはないようです#07#子供を利用しながらも、心は通っていた#0A#ようですな#07#さあ、御決断を！#07#
-    translated: ・・・・・・#07#どうやらこの魔族の者の言葉には#0A#偽りはないようです#07#子供を利用しながらも、心は通っていた#0A#ようですな#07#さあ、御決断を！#07#
-    windows: 3
-block_33:
-  index: 33
-  offsets:
-    byte_length: 14
-    end: c0c887
-    start: c0c877
-  portrait: 0f0f
-  text:
-    original: えっ・・・！？
-    translated: えっ・・・！？
-    windows: 1
-block_34:
-  index: 34
-  offsets:
-    byte_length: 118
-    end: c0c8ff
-    start: c0c887
-  portrait: 0f14
-  text:
-    original: すまねえ・・・#0A#あんた、心の広い人だな#07#俺も、もう悪事は働かねえよ#0A#こいつの面倒をみながら、この町の平和の#0A#ためにつくすぜ
-    translated: すまねえ・・・#0A#あんた、心の広い人だな#07#俺も、もう悪事は働かねえよ#0A#こいつの面倒をみながら、この町の平和の#0A#ためにつくすぜ
-    windows: 4
-block_35:
-  index: 35
-  offsets:
-    byte_length: 39
-    end: c0c92d
-    start: c0c904
-  portrait: 0f0f
-  text:
-    original: やっぱり、#PN#さんには#0A#かなわないや・・・
-    translated: やっぱり、#PN#さんには#0A#かなわないや・・・
-    windows: 2
-block_36:
-  index: 36
-  offsets:
-    byte_length: 41
-    end: c0c958
-    start: c0c92d
-  portrait: 0f14
-  text:
-    original: ポコ〜！#07#（セバスも充分がんばったポコ！）
-    translated: ポコ〜！#07#（セバスも充分がんばったポコ！）
-    windows: 1
-block_37:
-  index: 37
-  offsets:
-    byte_length: 70
-    end: c0c9a4
-    start: c0c95c
-  portrait: 0f16
-  text:
-    original: グハハハハ！#07#俺の頭脳と、お前のパワーがあれば#0A#世界は俺たちのものだぜ！
-    translated: グハハハハ！#07#俺の頭脳と、お前のパワーがあれば#0A#世界は俺たちのものだぜ！
-    windows: 2
-block_38:
-  index: 38
-  offsets:
-    byte_length: 32
-    end: c0c9c6
-    start: c0c9a4
-  portrait: 0f11
-  text:
-    original: ポ・・・ポコポコ？どうしたの？？
-    translated: ポ・・・ポコポコ？どうしたの？？
-    windows: 1
-block_39:
-  index: 39
-  offsets:
-    byte_length: 32
-    end: c0c9ec
-    start: c0c9ca
-  portrait: 0f11
-  text:
-    original: ちょっと、本気を出しすぎたかな？
-    translated: ちょっと、本気を出しすぎたかな？
-    windows: 1
+    translated: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
 block_4:
   index: 4
   offsets:
+
     start: c0bcd0
     end: c0bd43
     byte_length: 113
+
+    start: c0bcd2
+    end: c0bd43
+    byte_length: 111
+
   portrait: 0f0a
   text:
     windows: 2
     original: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
+
     translated: The name's Zeneth,#0A# the Dragon-Eyed.#07#You wretch...#0A#How powerful are you?#07#Before you leave,#0A#I will find out!
     windows: 2
 block_40:
@@ -1920,6 +1414,15 @@ block_5:
     start: c0bd43
     end: c0bdcd
     byte_length: 136
+
+    translated: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
+block_5:
+  index: 5
+  offsets:
+    start: c0bd45
+    end: c0bdcd
+    byte_length: 134
+
   portrait: 0f01
   text:
     windows: 3
@@ -1928,9 +1431,15 @@ block_5:
 block_6:
   index: 6
   offsets:
+
     start: c0bdcd
     end: c0bec5
     byte_length: 246
+
+    start: c0bdcf
+    end: c0bec5
+    byte_length: 244
+
   portrait: 0f0c
   text:
     windows: 5
@@ -1939,9 +1448,15 @@ block_6:
 block_7:
   index: 7
   offsets:
+
     start: c0beeb
     end: c0bf2b
     byte_length: 62
+
+    start: c0beed
+    end: c0bf2b
+    byte_length: 60
+
   portrait: 0f03
   text:
     windows: 1
@@ -1950,9 +1465,15 @@ block_7:
 block_8:
   index: 8
   offsets:
+
     start: c0bf95
     end: c0bfc6
     byte_length: 47
+
+    start: c0bf97
+    end: c0bfc6
+    byte_length: 45
+
   portrait: 0f0c
   text:
     windows: 2
@@ -1961,9 +1482,15 @@ block_8:
 block_9:
   index: 9
   offsets:
+
     start: c0bfca
     end: c0c03e
     byte_length: 114
+
+    start: c0bfcc
+    end: c0c03e
+    byte_length: 112
+
   portrait: 0f0d
   text:
     windows: 3
@@ -1972,9 +1499,15 @@ block_9:
 block_10:
   index: 10
   offsets:
+
     start: c0c042
     end: c0c089
     byte_length: 69
+
+    start: c0c044
+    end: c0c089
+    byte_length: 67
+
   portrait: 0f0d
   text:
     windows: 2
@@ -1983,9 +1516,15 @@ block_10:
 block_11:
   index: 11
   offsets:
+
     start: c0c0d6
     end: c0c124
     byte_length: 76
+
+    start: c0c0d8
+    end: c0c124
+    byte_length: 74
+
   portrait: 0f0a
   text:
     windows: 2
@@ -1994,9 +1533,15 @@ block_11:
 block_12:
   index: 12
   offsets:
+
     start: c0c125
     end: c0c1a4
     byte_length: 125
+
+    start: c0c127
+    end: c0c1a4
+    byte_length: 123
+
   portrait: 0f02
   text:
     windows: 3
@@ -2005,9 +1550,15 @@ block_12:
 block_13:
   index: 13
   offsets:
+
     start: c0c2ec
     end: c0c33e
     byte_length: 80
+
+    start: c0c2ee
+    end: c0c33e
+    byte_length: 78
+
   portrait: 0f00
   text:
     windows: 2
@@ -2016,9 +1567,15 @@ block_13:
 block_14:
   index: 14
   offsets:
+
     start: c0c33f
     end: c0c41d
     byte_length: 220
+
+    start: c0c341
+    end: c0c41d
+    byte_length: 218
+
   portrait: 0f00
   text:
     windows: 4
@@ -2027,9 +1584,15 @@ block_14:
 block_15:
   index: 15
   offsets:
+
     start: c0c41e
     end: c0c44f
     byte_length: 47
+
+    start: c0c420
+    end: c0c44f
+    byte_length: 45
+
   portrait: 0f00
   text:
     windows: 2
@@ -2038,9 +1601,15 @@ block_15:
 block_16:
   index: 16
   offsets:
+
     start: c0c454
     end: c0c47a
     byte_length: 36
+
+    start: c0c456
+    end: c0c47a
+    byte_length: 34
+
   portrait: 0f0f
   text:
     windows: 1
@@ -2049,9 +1618,15 @@ block_16:
 block_17:
   index: 17
   offsets:
+
     start: c0c47a
     end: c0c490
     byte_length: 20
+
+    start: c0c47c
+    end: c0c490
+    byte_length: 18
+
   portrait: 0f19
   text:
     windows: 1
@@ -2060,9 +1635,15 @@ block_17:
 block_18:
   index: 18
   offsets:
+
     start: c0c490
     end: c0c4ff
     byte_length: 109
+
+    start: c0c492
+    end: c0c4ff
+    byte_length: 107
+
   portrait: 0f0f
   text:
     windows: 3
@@ -2071,9 +1652,15 @@ block_18:
 block_19:
   index: 19
   offsets:
+
     start: c0c4ff
     end: c0c509
     byte_length: 8
+
+    start: c0c501
+    end: c0c509
+    byte_length: 6
+
   portrait: 0f14
   text:
     windows: 1
@@ -2082,9 +1669,15 @@ block_19:
 block_20:
   index: 20
   offsets:
+
     start: c0c509
     end: c0c547
     byte_length: 60
+
+    start: c0c50b
+    end: c0c547
+    byte_length: 58
+
   portrait: 0f0f
   text:
     windows: 2
@@ -2093,9 +1686,15 @@ block_20:
 block_21:
   index: 21
   offsets:
+
     start: c0c547
     end: c0c5ba
     byte_length: 113
+
+    start: c0c549
+    end: c0c5ba
+    byte_length: 111
+
   portrait: 0f19
   text:
     windows: 2
@@ -2104,9 +1703,15 @@ block_21:
 block_22:
   index: 22
   offsets:
+
     start: c0c5ba
     end: c0c5e3
     byte_length: 39
+
+    start: c0c5bc
+    end: c0c5e3
+    byte_length: 37
+
   portrait: 0f10
   text:
     windows: 2
@@ -2115,9 +1720,15 @@ block_22:
 block_23:
   index: 23
   offsets:
+
     start: c0c5e3
     end: c0c62f
     byte_length: 74
+
+    start: c0c5e5
+    end: c0c62f
+    byte_length: 72
+
   portrait: 0f18
   text:
     windows: 2
@@ -2126,9 +1737,15 @@ block_23:
 block_24:
   index: 24
   offsets:
+
     start: c0c633
     end: c0c641
     byte_length: 12
+
+    start: c0c635
+    end: c0c641
+    byte_length: 10
+
   portrait: 0f0f
   text:
     windows: 1
@@ -2137,9 +1754,15 @@ block_24:
 block_25:
   index: 25
   offsets:
+
     start: c0c641
     end: c0c64b
     byte_length: 8
+
+    start: c0c643
+    end: c0c64b
+    byte_length: 6
+
   portrait: 0f19
   text:
     windows: 1
@@ -2148,9 +1771,15 @@ block_25:
 block_26:
   index: 26
   offsets:
+
     start: c0c64b
     end: c0c683
     byte_length: 54
+
+    start: c0c64d
+    end: c0c683
+    byte_length: 52
+
   portrait: 0f10
   text:
     windows: 2
@@ -2159,9 +1788,9 @@ block_26:
 block_27:
   index: 27
   offsets:
-    start: c0c688
+    start: c0c68a
     end: c0c6ac
-    byte_length: 34
+    byte_length: 32
   portrait: 0f17
   text:
     windows: 1
@@ -2170,9 +1799,9 @@ block_27:
 block_28:
   index: 28
   offsets:
-    start: c0c6ac
+    start: c0c6ae
     end: c0c6c4
-    byte_length: 22
+    byte_length: 20
   portrait: 0f12
   text:
     windows: 1
@@ -2181,9 +1810,15 @@ block_28:
 block_29:
   index: 29
   offsets:
+
     start: c0c6c4
     end: c0c73b
     byte_length: 117
+
+    start: c0c6c6
+    end: c0c73b
+    byte_length: 115
+
   portrait: 0f00
   text:
     windows: 3
@@ -2192,9 +1827,15 @@ block_29:
 block_30:
   index: 30
   offsets:
+
     start: c0c73b
     end: c0c7b4
     byte_length: 119
+
+    start: c0c73d
+    end: c0c7b4
+    byte_length: 117
+
   portrait: 0f17
   text:
     windows: 3
@@ -2203,9 +1844,15 @@ block_30:
 block_31:
   index: 31
   offsets:
+
     start: c0c7b4
     end: c0c7c4
     byte_length: 14
+
+    start: c0c7b6
+    end: c0c7c4
+    byte_length: 12
+
   portrait: 0f12
   text:
     windows: 1
@@ -2214,9 +1861,15 @@ block_31:
 block_32:
   index: 32
   offsets:
+
     start: c0c7c4
     end: c0c846
     byte_length: 128
+
+    start: c0c7c6
+    end: c0c846
+    byte_length: 126
+
   portrait: 0f00
   text:
     windows: 3
@@ -2225,9 +1878,15 @@ block_32:
 block_33:
   index: 33
   offsets:
+
     start: c0c877
     end: c0c887
     byte_length: 14
+
+    start: c0c879
+    end: c0c887
+    byte_length: 12
+
   portrait: 0f0f
   text:
     windows: 1
@@ -2236,9 +1895,15 @@ block_33:
 block_34:
   index: 34
   offsets:
+
     start: c0c887
     end: c0c8ff
     byte_length: 118
+
+    start: c0c889
+    end: c0c8ff
+    byte_length: 116
+
   portrait: 0f14
   text:
     windows: 4
@@ -2247,9 +1912,15 @@ block_34:
 block_35:
   index: 35
   offsets:
+
     start: c0c904
     end: c0c92d
     byte_length: 39
+
+    start: c0c906
+    end: c0c92d
+    byte_length: 37
+
   portrait: 0f0f
   text:
     windows: 2
@@ -2258,9 +1929,15 @@ block_35:
 block_36:
   index: 36
   offsets:
+
     start: c0c92d
     end: c0c958
     byte_length: 41
+
+    start: c0c92f
+    end: c0c958
+    byte_length: 39
+
   portrait: 0f14
   text:
     windows: 1
@@ -2269,9 +1946,15 @@ block_36:
 block_37:
   index: 37
   offsets:
+
     start: c0c95c
     end: c0c9a4
     byte_length: 70
+
+    start: c0c95e
+    end: c0c9a4
+    byte_length: 68
+
   portrait: 0f16
   text:
     windows: 2
@@ -2280,9 +1963,15 @@ block_37:
 block_38:
   index: 38
   offsets:
+
     start: c0c9a4
     end: c0c9c6
     byte_length: 32
+
+    start: c0c9a6
+    end: c0c9c6
+    byte_length: 30
+
   portrait: 0f11
   text:
     windows: 1
@@ -2291,9 +1980,15 @@ block_38:
 block_39:
   index: 39
   offsets:
+
     start: c0c9ca
     end: c0c9ec
     byte_length: 32
+
+    start: c0c9cc
+    end: c0c9ec
+    byte_length: 30
+
   portrait: 0f11
   text:
     windows: 1
@@ -2302,9 +1997,15 @@ block_39:
 block_40:
   index: 40
   offsets:
+
     start: c0c9ec
     end: c0ca25
     byte_length: 55
+
+    start: c0c9ee
+    end: c0ca25
+    byte_length: 53
+
   portrait: 0f16
   text:
     windows: 2
@@ -2313,9 +2014,15 @@ block_40:
 block_41:
   index: 41
   offsets:
+
     start: c0ca26
     end: c0ca46
     byte_length: 30
+
+    start: c0ca28
+    end: c0ca46
+    byte_length: 28
+
   portrait: 0f0f
   text:
     windows: 1
@@ -2324,9 +2031,15 @@ block_41:
 block_42:
   index: 42
   offsets:
+
     start: c0ca46
     end: c0ca4e
     byte_length: 6
+
+    start: c0ca48
+    end: c0ca4e
+    byte_length: 4
+
   portrait: 0f14
   text:
     windows: 1
@@ -2335,9 +2048,15 @@ block_42:
 block_43:
   index: 43
   offsets:
+
     start: c0ca4e
     end: c0caaa
     byte_length: 90
+
+    start: c0ca50
+    end: c0caaa
+    byte_length: 88
+
   portrait: 0f02
   text:
     windows: 2
@@ -2346,9 +2065,15 @@ block_43:
 block_44:
   index: 44
   offsets:
+
     start: c0caab
     end: c0cae0
     byte_length: 51
+
+    start: c0caad
+    end: c0cae0
+    byte_length: 49
+
   portrait: 0f00
   text:
     windows: 2
@@ -2357,9 +2082,15 @@ block_44:
 block_45:
   index: 45
   offsets:
+
     start: c0cae1
     end: c0cb92
     byte_length: 175
+
+    start: c0cae3
+    end: c0cb92
+    byte_length: 173
+
   portrait: 0f00
   text:
     windows: 4
@@ -2368,9 +2099,15 @@ block_45:
 block_46:
   index: 46
   offsets:
+
     start: c0cb93
     end: c0cbd2
     byte_length: 61
+
+    start: c0cb95
+    end: c0cbd2
+    byte_length: 59
+
   portrait: 0f00
   text:
     windows: 2
@@ -2379,9 +2116,15 @@ block_46:
 block_47:
   index: 47
   offsets:
+
     start: c0cbd6
     end: c0cc1c
     byte_length: 68
+
+    start: c0cbd8
+    end: c0cc1c
+    byte_length: 66
+
   portrait: 0f1a
   text:
     windows: 2
@@ -2390,9 +2133,15 @@ block_47:
 block_48:
   index: 48
   offsets:
+
     start: c0cc1c
     end: c0cc9a
     byte_length: 124
+
+    start: c0cc1e
+    end: c0cc9a
+    byte_length: 122
+
   portrait: 0f01
   text:
     windows: 3
@@ -2401,9 +2150,15 @@ block_48:
 block_49:
   index: 49
   offsets:
+
     start: c0cc9a
     end: c0cdb4
     byte_length: 280
+
+    start: c0cc9c
+    end: c0cdb4
+    byte_length: 278
+
   portrait: 0f1b
   text:
     windows: 6
@@ -2412,9 +2167,15 @@ block_49:
 block_50:
   index: 50
   offsets:
+
     start: c0cdb9
     end: c0cdf2
     byte_length: 55
+
+    start: c0cdbb
+    end: c0cdf2
+    byte_length: 53
+
   portrait: 0f1c
   text:
     windows: 2
@@ -2423,9 +2184,15 @@ block_50:
 block_51:
   index: 51
   offsets:
+
     start: c0cdf3
     end: c0ce20
     byte_length: 43
+
+    start: c0cdf5
+    end: c0ce20
+    byte_length: 41
+
   portrait: 0f00
   text:
     windows: 2
@@ -2434,9 +2201,15 @@ block_51:
 block_52:
   index: 52
   offsets:
+
     start: c0ce20
     end: c0ce7b
     byte_length: 89
+
+    start: c0ce22
+    end: c0ce7b
+    byte_length: 87
+
   portrait: 0f1d
   text:
     windows: 2
@@ -2445,9 +2218,15 @@ block_52:
 block_53:
   index: 53
   offsets:
+
     start: c0cee9
     end: c0cf28
     byte_length: 61
+
+    start: c0ceeb
+    end: c0cf28
+    byte_length: 59
+
   portrait: 0f1d
   text:
     windows: 2
@@ -2456,9 +2235,15 @@ block_53:
 block_54:
   index: 54
   offsets:
+
     start: c0cf2c
     end: c0cf7f
     byte_length: 81
+
+    start: c0cf2e
+    end: c0cf7f
+    byte_length: 79
+
   portrait: 0f1e
   text:
     windows: 2
@@ -2467,9 +2252,15 @@ block_54:
 block_55:
   index: 55
   offsets:
+
     start: c0cf80
     end: c0cfb9
     byte_length: 55
+
+    start: c0cf82
+    end: c0cfb9
+    byte_length: 53
+
   portrait: 0f1a
   text:
     windows: 2
@@ -2478,9 +2269,15 @@ block_55:
 block_56:
   index: 56
   offsets:
+
     start: c0cfba
     end: c0d008
     byte_length: 76
+
+    start: c0cfbc
+    end: c0d008
+    byte_length: 74
+
   portrait: 0f1a
   text:
     windows: 2
@@ -2489,9 +2286,15 @@ block_56:
 block_57:
   index: 57
   offsets:
+
     start: c0d008
     end: c0d044
     byte_length: 58
+
+    start: c0d00a
+    end: c0d044
+    byte_length: 56
+
   portrait: 0f02
   text:
     windows: 2
@@ -2500,9 +2303,15 @@ block_57:
 block_58:
   index: 58
   offsets:
+
     start: c0d0d9
     end: c0d10e
     byte_length: 51
+
+    start: c0d0db
+    end: c0d10e
+    byte_length: 49
+
   portrait: 0f1d
   text:
     windows: 2
@@ -2511,9 +2320,15 @@ block_58:
 block_59:
   index: 59
   offsets:
+
     start: c0d10f
     end: c0d21b
     byte_length: 266
+
+    start: c0d111
+    end: c0d21b
+    byte_length: 264
+
   portrait: 0f00
   text:
     windows: 6
@@ -2522,9 +2337,15 @@ block_59:
 block_60:
   index: 60
   offsets:
+
     start: c0d21c
     end: c0d26c
     byte_length: 78
+
+    start: c0d21e
+    end: c0d26c
+    byte_length: 76
+
   portrait: 0f00
   text:
     windows: 3
@@ -2533,9 +2354,15 @@ block_60:
 block_61:
   index: 61
   offsets:
+
     start: c0d270
     end: c0d355
     byte_length: 227
+
+    start: c0d272
+    end: c0d355
+    byte_length: 225
+
   portrait: 0f1f
   text:
     windows: 4
@@ -2544,9 +2371,15 @@ block_61:
 block_62:
   index: 62
   offsets:
+
     start: c0d394
     end: c0d3c1
     byte_length: 43
+
+    start: c0d396
+    end: c0d3c1
+    byte_length: 41
+
   portrait: 0f01
   text:
     windows: 2
@@ -2555,9 +2388,15 @@ block_62:
 block_63:
   index: 63
   offsets:
+
     start: c0d3c1
     end: c0d3ec
     byte_length: 41
+
+    start: c0d3c3
+    end: c0d3ec
+    byte_length: 39
+
   portrait: 0f0e
   text:
     windows: 1
@@ -2566,9 +2405,15 @@ block_63:
 block_64:
   index: 64
   offsets:
+
     start: c0d3ec
     end: c0d419
     byte_length: 43
+
+    start: c0d3ee
+    end: c0d419
+    byte_length: 41
+
   portrait: 0f01
   text:
     windows: 2
@@ -2577,9 +2422,15 @@ block_64:
 block_65:
   index: 65
   offsets:
+
     start: c0d419
     end: c0d470
     byte_length: 85
+
+    start: c0d41b
+    end: c0d470
+    byte_length: 83
+
   portrait: 0f0e
   text:
     windows: 3
@@ -2588,9 +2439,15 @@ block_65:
 block_66:
   index: 66
   offsets:
+
     start: c0d4b4
     end: c0d4e6
     byte_length: 48
+
+    start: c0d4b6
+    end: c0d4e6
+    byte_length: 46
+
   portrait: 0f03
   text:
     windows: 2
@@ -2599,9 +2456,15 @@ block_66:
 block_67:
   index: 67
   offsets:
+
     start: c0d505
     end: c0d568
     byte_length: 97
+
+    start: c0d507
+    end: c0d568
+    byte_length: 95
+
   portrait: 0f21
   text:
     windows: 3
@@ -2610,9 +2473,15 @@ block_67:
 block_68:
   index: 68
   offsets:
+
     start: c0d568
     end: c0d5b2
     byte_length: 72
+
+    start: c0d56a
+    end: c0d5b2
+    byte_length: 70
+
   portrait: 0f0e
   text:
     windows: 2
@@ -2621,9 +2490,15 @@ block_68:
 block_69:
   index: 69
   offsets:
+
     start: c0d5b3
     end: c0d5ea
     byte_length: 53
+
+    start: c0d5b5
+    end: c0d5ea
+    byte_length: 51
+
   portrait: 0f0d
   text:
     windows: 2
@@ -2632,9 +2507,15 @@ block_69:
 block_70:
   index: 70
   offsets:
+
     start: c0d5ea
     end: c0d625
     byte_length: 57
+
+    start: c0d5ec
+    end: c0d625
+    byte_length: 55
+
   portrait: 0f22
   text:
     windows: 2
@@ -2643,9 +2524,15 @@ block_70:
 block_71:
   index: 71
   offsets:
+
     start: c0d625
     end: c0d660
     byte_length: 57
+
+    start: c0d627
+    end: c0d660
+    byte_length: 55
+
   portrait: 0f00
   text:
     windows: 2
@@ -2654,9 +2541,15 @@ block_71:
 block_72:
   index: 72
   offsets:
+
     start: c0d660
     end: c0d6db
     byte_length: 121
+
+    start: c0d662
+    end: c0d6db
+    byte_length: 119
+
   portrait: 0f22
   text:
     windows: 3
@@ -2665,9 +2558,15 @@ block_72:
 block_73:
   index: 73
   offsets:
+
     start: c0d797
     end: c0d7b9
     byte_length: 32
+
+    start: c0d799
+    end: c0d7b9
+    byte_length: 30
+
   portrait: 0f02
   text:
     windows: 1
@@ -2676,9 +2575,15 @@ block_73:
 block_74:
   index: 74
   offsets:
+
     start: c0d7be
     end: c0d7fe
     byte_length: 62
+
+    start: c0d7c0
+    end: c0d7fe
+    byte_length: 60
+
   portrait: 0f1f
   text:
     windows: 3
@@ -2687,9 +2592,15 @@ block_74:
 block_75:
   index: 75
   offsets:
+
     start: c0d7fe
     end: c0d810
     byte_length: 16
+
+    start: c0d800
+    end: c0d810
+    byte_length: 14
+
   portrait: 0f0d
   text:
     windows: 1
@@ -2698,9 +2609,15 @@ block_75:
 block_76:
   index: 76
   offsets:
+
     start: c0d814
     end: c0d85a
     byte_length: 68
+
+    start: c0d816
+    end: c0d85a
+    byte_length: 66
+
   portrait: 0f21
   text:
     windows: 2
@@ -2709,9 +2626,15 @@ block_76:
 block_77:
   index: 77
   offsets:
+
     start: c0d89e
     end: c0d8f2
     byte_length: 82
+
+    start: c0d8a0
+    end: c0d8f2
+    byte_length: 80
+
   portrait: 0f0b
   text:
     windows: 2
@@ -2720,9 +2643,15 @@ block_77:
 block_78:
   index: 78
   offsets:
+
     start: c0d8f3
     end: c0d93a
     byte_length: 69
+
+    start: c0d8f5
+    end: c0d93a
+    byte_length: 67
+
   portrait: 0f21
   text:
     windows: 1
@@ -2731,9 +2660,15 @@ block_78:
 block_79:
   index: 79
   offsets:
+
     start: c0d93e
     end: c0d974
     byte_length: 52
+
+    start: c0d940
+    end: c0d974
+    byte_length: 50
+
   portrait: 0f0c
   text:
     windows: 3
@@ -2742,9 +2677,15 @@ block_79:
 block_80:
   index: 80
   offsets:
+
     start: c0d975
     end: c0da00
     byte_length: 137
+
+    start: c0d977
+    end: c0da00
+    byte_length: 135
+
   portrait: 0f1f
   text:
     windows: 2
@@ -2753,9 +2694,15 @@ block_80:
 block_81:
   index: 81
   offsets:
+
     start: c0da00
     end: c0da25
     byte_length: 35
+
+    start: c0da02
+    end: c0da25
+    byte_length: 33
+
   portrait: 0f02
   text:
     windows: 1
@@ -2764,9 +2711,15 @@ block_81:
 block_82:
   index: 82
   offsets:
+
     start: c0dae5
     end: c0db2a
     byte_length: 67
+
+    start: c0dae7
+    end: c0db2a
+    byte_length: 65
+
   portrait: 0f00
   text:
     windows: 2
@@ -2775,9 +2728,15 @@ block_82:
 block_83:
   index: 83
   offsets:
+
     start: c0db2b
     end: c0dc27
     byte_length: 250
+
+    start: c0db2d
+    end: c0dc27
+    byte_length: 248
+
   portrait: 0f00
   text:
     windows: 6
@@ -2786,9 +2745,15 @@ block_83:
 block_84:
   index: 84
   offsets:
+
     start: c0dc28
     end: c0dc6f
     byte_length: 69
+
+    start: c0dc2a
+    end: c0dc6f
+    byte_length: 67
+
   portrait: 0f02
   text:
     windows: 2
@@ -2797,9 +2762,15 @@ block_84:
 block_85:
   index: 85
   offsets:
+
     start: c0dc74
     end: c0dc98
     byte_length: 34
+
+    start: c0dc76
+    end: c0dc98
+    byte_length: 32
+
   portrait: 0f01
   text:
     windows: 1
@@ -2808,9 +2779,15 @@ block_85:
 block_86:
   index: 86
   offsets:
+
     start: c0dc98
     end: c0dd09
     byte_length: 111
+
+    start: c0dc9a
+    end: c0dd09
+    byte_length: 109
+
   portrait: 0f26
   text:
     windows: 3
@@ -2819,9 +2796,15 @@ block_86:
 block_87:
   index: 87
   offsets:
+
     start: c0dd09
     end: c0dd9b
     byte_length: 144
+
+    start: c0dd0b
+    end: c0dd9b
+    byte_length: 142
+
   portrait: 0f01
   text:
     windows: 3
@@ -2830,9 +2813,15 @@ block_87:
 block_88:
   index: 88
   offsets:
+
     start: c0dd9f
     end: c0ddda
     byte_length: 57
+
+    start: c0dda1
+    end: c0ddda
+    byte_length: 55
+
   portrait: 0f25
   text:
     windows: 2
@@ -2841,9 +2830,15 @@ block_88:
 block_89:
   index: 89
   offsets:
+
     start: c0ddde
     end: c0defc
     byte_length: 284
+
+    start: c0dde0
+    end: c0defc
+    byte_length: 282
+
   portrait: 0f27
   text:
     windows: 4
@@ -2852,9 +2847,15 @@ block_89:
 block_90:
   index: 90
   offsets:
+
     start: c0defc
     end: c0df14
     byte_length: 22
+
+    start: c0defe
+    end: c0df14
+    byte_length: 20
+
   portrait: 0f00
   text:
     windows: 1
@@ -2863,9 +2864,15 @@ block_90:
 block_91:
   index: 91
   offsets:
+
     start: c0df14
     end: c0df8b
     byte_length: 117
+
+    start: c0df16
+    end: c0df8b
+    byte_length: 115
+
   portrait: 0f24
   text:
     windows: 3
@@ -2874,9 +2881,15 @@ block_91:
 block_92:
   index: 92
   offsets:
+
     start: c0df8c
     end: c0dfbd
     byte_length: 47
+
+    start: c0df8e
+    end: c0dfbd
+    byte_length: 45
+
   portrait: 0f24
   text:
     windows: 2
@@ -2885,9 +2898,15 @@ block_92:
 block_93:
   index: 93
   offsets:
+
     start: c0dfc2
     end: c0e00e
     byte_length: 74
+
+    start: c0dfc4
+    end: c0e00e
+    byte_length: 72
+
   portrait: 0f26
   text:
     windows: 2
@@ -2896,9 +2915,15 @@ block_93:
 block_94:
   index: 94
   offsets:
+
     start: c0e00f
     end: c0e02e
     byte_length: 29
+
+    start: c0e011
+    end: c0e02e
+    byte_length: 27
+
   portrait: 0f26
   text:
     windows: 2
@@ -2907,9 +2932,15 @@ block_94:
 block_95:
   index: 95
   offsets:
+
     start: c0e02f
     end: c0e07d
     byte_length: 76
+
+    start: c0e031
+    end: c0e07d
+    byte_length: 74
+
   portrait: 0f02
   text:
     windows: 2
@@ -2918,9 +2949,15 @@ block_95:
 block_96:
   index: 96
   offsets:
+
     start: c0e0f5
     end: c0e12e
     byte_length: 55
+
+    start: c0e0f7
+    end: c0e12e
+    byte_length: 53
+
   portrait: 0f03
   text:
     windows: 2
@@ -2929,9 +2966,15 @@ block_96:
 block_97:
   index: 97
   offsets:
+
     start: c0e12f
     end: c0e1ee
     byte_length: 189
+
+    start: c0e131
+    end: c0e1ee
+    byte_length: 187
+
   portrait: 0f00
   text:
     windows: 3
@@ -2940,9 +2983,15 @@ block_97:
 block_98:
   index: 98
   offsets:
+
     start: c0e1ef
     end: c0e233
     byte_length: 66
+
+    start: c0e1f1
+    end: c0e233
+    byte_length: 64
+
   portrait: 0f02
   text:
     windows: 3
@@ -2951,9 +3000,15 @@ block_98:
 block_99:
   index: 99
   offsets:
+
     start: c0e238
     end: c0e259
     byte_length: 31
+
+    start: c0e23a
+    end: c0e259
+    byte_length: 29
+
   portrait: 0f01
   text:
     windows: 2
@@ -2962,9 +3017,15 @@ block_99:
 block_100:
   index: 100
   offsets:
+
     start: c0e259
     end: c0e28a
     byte_length: 47
+
+    start: c0e25b
+    end: c0e28a
+    byte_length: 45
+
   portrait: 0f0c
   text:
     windows: 2
@@ -2973,9 +3034,15 @@ block_100:
 block_101:
   index: 101
   offsets:
+
     start: c0e28a
     end: c0e2c3
     byte_length: 55
+
+    start: c0e28c
+    end: c0e2c3
+    byte_length: 53
+
   portrait: 0f00
   text:
     windows: 2
@@ -2984,9 +3051,15 @@ block_101:
 block_102:
   index: 102
   offsets:
+
     start: c0e2c3
     end: c0e2f0
     byte_length: 43
+
+    start: c0e2c5
+    end: c0e2f0
+    byte_length: 41
+
   portrait: 0f2b
   text:
     windows: 2
@@ -2995,9 +3068,15 @@ block_102:
 block_103:
   index: 103
   offsets:
+
     start: c0e2f0
     end: c0e338
     byte_length: 70
+
+    start: c0e2f2
+    end: c0e338
+    byte_length: 68
+
   portrait: 0f0a
   text:
     windows: 2
@@ -3006,9 +3085,15 @@ block_103:
 block_104:
   index: 104
   offsets:
+
     start: c0e338
     end: c0e374
     byte_length: 58
+
+    start: c0e33a
+    end: c0e374
+    byte_length: 56
+
   portrait: 0f29
   text:
     windows: 1
@@ -3017,9 +3102,15 @@ block_104:
 block_105:
   index: 105
   offsets:
+
     start: c0e3a7
     end: c0e436
     byte_length: 141
+
+    start: c0e3a9
+    end: c0e436
+    byte_length: 139
+
   portrait: 0f00
   text:
     windows: 3
@@ -3028,9 +3119,15 @@ block_105:
 block_106:
   index: 106
   offsets:
+
     start: c0e436
     end: c0e4b3
     byte_length: 123
+
+    start: c0e438
+    end: c0e4b3
+    byte_length: 121
+
   portrait: 0f2b
   text:
     windows: 3
@@ -3039,9 +3136,15 @@ block_106:
 block_107:
   index: 107
   offsets:
+
     start: c0e4b3
     end: c0e4e6
     byte_length: 49
+
+    start: c0e4b5
+    end: c0e4e6
+    byte_length: 47
+
   portrait: 0f0b
   text:
     windows: 2
@@ -3050,9 +3153,15 @@ block_107:
 block_108:
   index: 108
   offsets:
+
     start: c0e4e6
     end: c0e59f
     byte_length: 183
+
+    start: c0e4e8
+    end: c0e59f
+    byte_length: 181
+
   portrait: 0f01
   text:
     windows: 4
@@ -3061,9 +3170,15 @@ block_108:
 block_109:
   index: 109
   offsets:
+
     start: c0e5a3
     end: c0e60d
     byte_length: 104
+
+    start: c0e5a5
+    end: c0e60d
+    byte_length: 102
+
   portrait: 0f2b
   text:
     windows: 4
@@ -3072,9 +3187,15 @@ block_109:
 block_110:
   index: 110
   offsets:
+
     start: c0e60e
     end: c0e65b
     byte_length: 75
+
+    start: c0e610
+    end: c0e65b
+    byte_length: 73
+
   portrait: 0f2c
   text:
     windows: 3
@@ -3083,9 +3204,15 @@ block_110:
 block_111:
   index: 111
   offsets:
+
     start: c0e65b
     end: c0e6aa
     byte_length: 77
+
+    start: c0e65d
+    end: c0e6aa
+    byte_length: 75
+
   portrait: 0f02
   text:
     windows: 1
@@ -3094,9 +3221,15 @@ block_111:
 block_112:
   index: 112
   offsets:
+
     start: c0e6aa
     end: c0e6dd
     byte_length: 49
+
+    start: c0e6ac
+    end: c0e6dd
+    byte_length: 47
+
   portrait: 0f2a
   text:
     windows: 2
@@ -3105,9 +3238,15 @@ block_112:
 block_113:
   index: 113
   offsets:
+
     start: c0e6dd
     end: c0e718
     byte_length: 57
+
+    start: c0e6df
+    end: c0e718
+    byte_length: 55
+
   portrait: 0f01
   text:
     windows: 2
@@ -3116,9 +3255,15 @@ block_113:
 block_114:
   index: 114
   offsets:
+
     start: c0e718
     end: c0e796
     byte_length: 124
+
+    start: c0e71a
+    end: c0e796
+    byte_length: 122
+
   portrait: 0f2c
   text:
     windows: 3
@@ -3127,9 +3272,15 @@ block_114:
 block_115:
   index: 115
   offsets:
+
     start: c0e796
     end: c0e821
     byte_length: 137
+
+    start: c0e798
+    end: c0e821
+    byte_length: 135
+
   portrait: 0f03
   text:
     windows: 2
@@ -3138,9 +3289,15 @@ block_115:
 block_116:
   index: 116
   offsets:
+
     start: c0e84a
     end: c0e86c
     byte_length: 32
+
+    start: c0e84c
+    end: c0e86c
+    byte_length: 30
+
   portrait: 0f2c
   text:
     windows: 1
@@ -3149,9 +3306,15 @@ block_116:
 block_117:
   index: 117
   offsets:
+
     start: c0e86c
     end: c0e8a9
     byte_length: 59
+
+    start: c0e86e
+    end: c0e8a9
+    byte_length: 57
+
   portrait: 0f0d
   text:
     windows: 2
@@ -3160,9 +3323,15 @@ block_117:
 block_118:
   index: 118
   offsets:
+
     start: c0e8aa
     end: c0e8e3
     byte_length: 55
+
+    start: c0e8ac
+    end: c0e8e3
+    byte_length: 53
+
   portrait: 0f2b
   text:
     windows: 2
@@ -3171,9 +3340,15 @@ block_118:
 block_119:
   index: 119
   offsets:
+
     start: c0e8e3
     end: c0e900
     byte_length: 27
+
+    start: c0e8e5
+    end: c0e900
+    byte_length: 25
+
   portrait: 0f0d
   text:
     windows: 2
@@ -3182,9 +3357,15 @@ block_119:
 block_120:
   index: 120
   offsets:
+
     start: c0e904
     end: c0e970
     byte_length: 106
+
+    start: c0e906
+    end: c0e970
+    byte_length: 104
+
   portrait: 0f0b
   text:
     windows: 4
@@ -3193,9 +3374,15 @@ block_120:
 block_121:
   index: 121
   offsets:
+
     start: c0e971
     end: c0e9b9
     byte_length: 70
+
+    start: c0e973
+    end: c0e9b9
+    byte_length: 68
+
   portrait: 0f2b
   text:
     windows: 3
@@ -3204,9 +3391,15 @@ block_121:
 block_122:
   index: 122
   offsets:
+
     start: c0e9ba
     end: c0e9e4
     byte_length: 40
+
+    start: c0e9bc
+    end: c0e9e4
+    byte_length: 38
+
   portrait: 0f0e
   text:
     windows: 1
@@ -3215,9 +3408,15 @@ block_122:
 block_123:
   index: 123
   offsets:
+
     start: c0e9e5
     end: c0ea44
     byte_length: 93
+
+    start: c0e9e7
+    end: c0ea44
+    byte_length: 91
+
   portrait: 0f0b
   text:
     windows: 3
@@ -3226,9 +3425,15 @@ block_123:
 block_124:
   index: 124
   offsets:
+
     start: c0ea44
     end: c0eab7
     byte_length: 113
+
+    start: c0ea46
+    end: c0eab7
+    byte_length: 111
+
   portrait: 0f01
   text:
     windows: 3
@@ -3237,9 +3442,15 @@ block_124:
 block_125:
   index: 125
   offsets:
+
     start: c0eb35
     end: c0eb4d
     byte_length: 22
+
+    start: c0eb37
+    end: c0eb4d
+    byte_length: 20
+
   portrait: 0f02
   text:
     windows: 1
@@ -3248,9 +3459,15 @@ block_125:
 block_126:
   index: 126
   offsets:
+
     start: c0eb4e
     end: c0ec8b
     byte_length: 315
+
+    start: c0eb50
+    end: c0ec8b
+    byte_length: 313
+
   portrait: 0f00
   text:
     windows: 7
@@ -3259,9 +3476,15 @@ block_126:
 block_127:
   index: 127
   offsets:
+
     start: c0ec8c
     end: c0ecae
     byte_length: 32
+
+    start: c0ec8e
+    end: c0ecae
+    byte_length: 30
+
   portrait: 0f00
   text:
     windows: 2
@@ -3270,9 +3493,15 @@ block_127:
 block_128:
   index: 128
   offsets:
+
     start: c0ed04
     end: c0ed45
     byte_length: 63
+
+    start: c0ed06
+    end: c0ed45
+    byte_length: 61
+
   portrait: 0f0a
   text:
     windows: 2
@@ -3281,9 +3510,15 @@ block_128:
 block_129:
   index: 129
   offsets:
+
     start: c0ed45
     end: c0edec
     byte_length: 165
+
+    start: c0ed47
+    end: c0edec
+    byte_length: 163
+
   portrait: 0f2e
   text:
     windows: 4
@@ -3292,9 +3527,15 @@ block_129:
 block_130:
   index: 130
   offsets:
+
     start: c0edec
     end: c0ee2c
     byte_length: 62
+
+    start: c0edee
+    end: c0ee2c
+    byte_length: 60
+
   portrait: 0f0b
   text:
     windows: 3
@@ -3303,9 +3544,15 @@ block_130:
 block_131:
   index: 131
   offsets:
+
     start: c0ee2c
     end: c0eeef
     byte_length: 193
+
+    start: c0ee2e
+    end: c0eeef
+    byte_length: 191
+
   portrait: 0f2e
   text:
     windows: 4
@@ -3314,9 +3561,15 @@ block_131:
 block_132:
   index: 132
   offsets:
+
     start: c0ef13
     end: c0ef67
     byte_length: 82
+
+    start: c0ef15
+    end: c0ef67
+    byte_length: 80
+
   portrait: 0f03
   text:
     windows: 3
@@ -3325,9 +3578,15 @@ block_132:
 block_133:
   index: 133
   offsets:
+
     start: c0ef67
     end: c0ef7c
     byte_length: 19
+
+    start: c0ef69
+    end: c0ef7c
+    byte_length: 17
+
   portrait: 0f0d
   text:
     windows: 1
@@ -3336,9 +3595,15 @@ block_133:
 block_134:
   index: 134
   offsets:
+
     start: c0efc5
     end: c0f006
     byte_length: 63
+
+    start: c0efc7
+    end: c0f006
+    byte_length: 61
+
   portrait: 0f2f
   text:
     windows: 1
@@ -3347,9 +3612,15 @@ block_134:
 block_135:
   index: 135
   offsets:
+
     start: c0f00b
     end: c0f040
     byte_length: 51
+
+    start: c0f00d
+    end: c0f040
+    byte_length: 49
+
   portrait: 0f30
   text:
     windows: 2
@@ -3358,9 +3629,15 @@ block_135:
 block_136:
   index: 136
   offsets:
+
     start: c0f040
     end: c0f075
     byte_length: 51
+
+    start: c0f042
+    end: c0f075
+    byte_length: 49
+
   portrait: 0f0b
   text:
     windows: 2
@@ -3369,9 +3646,15 @@ block_136:
 block_137:
   index: 137
   offsets:
+
     start: c0f075
     end: c0f0cb
     byte_length: 84
+
+    start: c0f077
+    end: c0f0cb
+    byte_length: 82
+
   portrait: 0f32
   text:
     windows: 2
@@ -3380,9 +3663,15 @@ block_137:
 block_138:
   index: 138
   offsets:
+
     start: c0f0d0
     end: c0f160
     byte_length: 142
+
+    start: c0f0d2
+    end: c0f160
+    byte_length: 140
+
   portrait: 0f30
   text:
     windows: 3
@@ -3391,9 +3680,15 @@ block_138:
 block_139:
   index: 139
   offsets:
+
     start: c0f160
     end: c0f1ac
     byte_length: 74
+
+    start: c0f162
+    end: c0f1ac
+    byte_length: 72
+
   portrait: 0f00
   text:
     windows: 3
@@ -3402,9 +3697,15 @@ block_139:
 block_140:
   index: 140
   offsets:
+
     start: c0f1ac
     end: c0f2ab
     byte_length: 253
+
+    start: c0f1ae
+    end: c0f2ab
+    byte_length: 251
+
   portrait: 0f30
   text:
     windows: 5
@@ -3413,9 +3714,15 @@ block_140:
 block_141:
   index: 141
   offsets:
+
     start: c0f2ab
     end: c0f30b
     byte_length: 94
+
+    start: c0f2ad
+    end: c0f30b
+    byte_length: 92
+
   portrait: 0f02
   text:
     windows: 2
@@ -3424,9 +3731,15 @@ block_141:
 block_142:
   index: 142
   offsets:
+
     start: c0f30b
     end: c0f369
     byte_length: 92
+
+    start: c0f30d
+    end: c0f369
+    byte_length: 90
+
   portrait: 0f30
   text:
     windows: 3
@@ -3435,9 +3748,15 @@ block_142:
 block_143:
   index: 143
   offsets:
+
     start: c0f36e
     end: c0f3e1
     byte_length: 113
+
+    start: c0f370
+    end: c0f3e1
+    byte_length: 111
+
   portrait: 0f0d
   text:
     windows: 3
@@ -3446,9 +3765,15 @@ block_143:
 block_144:
   index: 144
   offsets:
+
     start: c0f3e6
     end: c0f43c
     byte_length: 84
+
+    start: c0f3e8
+    end: c0f43c
+    byte_length: 82
+
   portrait: 0f31
   text:
     windows: 2
@@ -3457,9 +3782,15 @@ block_144:
 block_145:
   index: 145
   offsets:
+
     start: c0f440
     end: c0f4b3
     byte_length: 113
+
+    start: c0f442
+    end: c0f4b3
+    byte_length: 111
+
   portrait: 0f30
   text:
     windows: 2
@@ -3468,9 +3799,15 @@ block_145:
 block_146:
   index: 146
   offsets:
+
     start: c0f4b3
     end: c0f4e3
     byte_length: 46
+
+    start: c0f4b5
+    end: c0f4e3
+    byte_length: 44
+
   portrait: 0f0c
   text:
     windows: 2
@@ -3479,9 +3816,15 @@ block_146:
 block_147:
   index: 147
   offsets:
+
     start: c0f515
     end: c0f54a
     byte_length: 51
+
+    start: c0f517
+    end: c0f54a
+    byte_length: 49
+
   portrait: 0f2e
   text:
     windows: 2
@@ -3490,9 +3833,15 @@ block_147:
 block_148:
   index: 148
   offsets:
+
     start: c0f54e
     end: c0f58b
     byte_length: 59
+
+    start: c0f550
+    end: c0f58b
+    byte_length: 57
+
   portrait: 0f2e
   text:
     windows: 2
@@ -3501,9 +3850,15 @@ block_148:
 block_149:
   index: 149
   offsets:
+
     start: c0f58b
     end: c0f5c6
     byte_length: 57
+
+    start: c0f58d
+    end: c0f5c6
+    byte_length: 55
+
   portrait: 0f0b
   text:
     windows: 2
@@ -3512,9 +3867,15 @@ block_149:
 block_150:
   index: 150
   offsets:
+
     start: c0f5c7
     end: c0f65d
     byte_length: 148
+
+    start: c0f5c9
+    end: c0f65d
+    byte_length: 146
+
   portrait: 0f2e
   text:
     windows: 4
@@ -3523,9 +3884,15 @@ block_150:
 block_151:
   index: 151
   offsets:
+
     start: c0f65d
     end: c0f6e8
     byte_length: 137
+
+    start: c0f65f
+    end: c0f6e8
+    byte_length: 135
+
   portrait: 0f03
   text:
     windows: 4
@@ -3534,9 +3901,15 @@ block_151:
 block_152:
   index: 152
   offsets:
+
     start: c0f6e8
     end: c0f70c
     byte_length: 34
+
+    start: c0f6ea
+    end: c0f70c
+    byte_length: 32
+
   portrait: 0f30
   text:
     windows: 1
@@ -3545,9 +3918,15 @@ block_152:
 block_153:
   index: 153
   offsets:
+
     start: c0f70d
     end: c0f797
     byte_length: 136
+
+    start: c0f70f
+    end: c0f797
+    byte_length: 134
+
   portrait: 0f03
   text:
     windows: 4
@@ -3556,9 +3935,15 @@ block_153:
 block_154:
   index: 154
   offsets:
+
     start: c0f798
     end: c0f881
     byte_length: 231
+
+    start: c0f79a
+    end: c0f881
+    byte_length: 229
+
   portrait: 0f00
   text:
     windows: 5
@@ -3567,9 +3952,15 @@ block_154:
 block_155:
   index: 155
   offsets:
+
     start: c0f882
     end: c0f8f7
     byte_length: 115
+
+    start: c0f884
+    end: c0f8f7
+    byte_length: 113
+
   portrait: 0f00
   text:
     windows: 3
@@ -3578,9 +3969,15 @@ block_155:
 block_156:
   index: 156
   offsets:
+
     start: c0f8fc
     end: c0f902
     byte_length: 4
+
+    start: c0f8fe
+    end: c0f902
+    byte_length: 2
+
   portrait: 0f01
   text:
     windows: 1
@@ -3589,9 +3986,15 @@ block_156:
 block_157:
   index: 157
   offsets:
+
     start: c0f902
     end: c0f9f0
     byte_length: 236
+
+    start: c0f904
+    end: c0f9f0
+    byte_length: 234
+
   portrait: 0f35
   text:
     windows: 4
@@ -3600,9 +4003,15 @@ block_157:
 block_158:
   index: 158
   offsets:
+
     start: c0f9f0
     end: c0fa71
     byte_length: 127
+
+    start: c0f9f2
+    end: c0fa71
+    byte_length: 125
+
   portrait: 0f0b
   text:
     windows: 2
@@ -3611,9 +4020,15 @@ block_158:
 block_159:
   index: 159
   offsets:
+
     start: c0fa71
     end: c0fafa
     byte_length: 135
+
+    start: c0fa73
+    end: c0fafa
+    byte_length: 133
+
   portrait: 0f37
   text:
     windows: 3
@@ -3622,9 +4037,15 @@ block_159:
 block_160:
   index: 160
   offsets:
+
     start: c0fafa
     end: c0fb55
     byte_length: 89
+
+    start: c0fafc
+    end: c0fb55
+    byte_length: 87
+
   portrait: 0f0a
   text:
     windows: 3
@@ -3633,9 +4054,15 @@ block_160:
 block_161:
   index: 161
   offsets:
+
     start: c0fb55
     end: c0fb7e
     byte_length: 39
+
+    start: c0fb57
+    end: c0fb7e
+    byte_length: 37
+
   portrait: 0f36
   text:
     windows: 1
@@ -3644,9 +4071,15 @@ block_161:
 block_162:
   index: 162
   offsets:
+
     start: c0fbd9
     end: c0fc3e
     byte_length: 99
+
+    start: c0fbdb
+    end: c0fc3e
+    byte_length: 97
+
   portrait: 0f35
   text:
     windows: 3
@@ -3655,9 +4088,15 @@ block_162:
 block_163:
   index: 163
   offsets:
+
     start: c0fc3e
     end: c0fc7b
     byte_length: 59
+
+    start: c0fc40
+    end: c0fc7b
+    byte_length: 57
+
   portrait: 0f0c
   text:
     windows: 2
@@ -3666,9 +4105,15 @@ block_163:
 block_164:
   index: 164
   offsets:
+
     start: c0fc7c
     end: c0fca4
     byte_length: 38
+
+    start: c0fc7e
+    end: c0fca4
+    byte_length: 36
+
   portrait: 0f0d
   text:
     windows: 2
@@ -3677,9 +4122,15 @@ block_164:
 block_165:
   index: 165
   offsets:
+
     start: c0fd30
     end: c0fdd4
     byte_length: 162
+
+    start: c0fd32
+    end: c0fdd4
+    byte_length: 160
+
   portrait: 0f33
   text:
     windows: 3
@@ -3688,9 +4139,15 @@ block_165:
 block_166:
   index: 166
   offsets:
+
     start: c0fdd4
     end: c0fdfc
     byte_length: 38
+
+    start: c0fdd6
+    end: c0fdfc
+    byte_length: 36
+
   portrait: 0f00
   text:
     windows: 1
@@ -3699,9 +4156,15 @@ block_166:
 block_167:
   index: 167
   offsets:
+
     start: c0fdfc
     end: c0fe30
     byte_length: 50
+
+    start: c0fdfe
+    end: c0fe30
+    byte_length: 48
+
   portrait: 0f35
   text:
     windows: 2
@@ -3710,9 +4173,15 @@ block_167:
 block_168:
   index: 168
   offsets:
+
     start: c0fe84
     end: c0fe93
     byte_length: 13
+
+    start: c0fe86
+    end: c0fe93
+    byte_length: 11
+
   portrait: 0f00
   text:
     windows: 1
@@ -3721,9 +4190,15 @@ block_168:
 block_169:
   index: 169
   offsets:
+
     start: c0feb2
     end: c0fee9
     byte_length: 53
+
+    start: c0feb4
+    end: c0fee9
+    byte_length: 51
+
   portrait: 0f35
   text:
     windows: 2
@@ -3732,9 +4207,15 @@ block_169:
 block_170:
   index: 170
   offsets:
+
     start: c0fee9
     end: c0ff0a
     byte_length: 31
+
+    start: c0feeb
+    end: c0ff0a
+    byte_length: 29
+
   portrait: 0f0d
   text:
     windows: 2
@@ -3743,9 +4224,15 @@ block_170:
 block_171:
   index: 171
   offsets:
+
     start: c0ff0e
     end: c0ffc0
     byte_length: 176
+
+    start: c0ff10
+    end: c0ffc0
+    byte_length: 174
+
   portrait: 0f37
   text:
     windows: 4
@@ -3754,9 +4241,15 @@ block_171:
 block_172:
   index: 172
   offsets:
+
     start: c0ffc4
     end: c10067
     byte_length: 161
+
+    start: c0ffc6
+    end: c10067
+    byte_length: 159
+
   portrait: 0f0c
   text:
     windows: 3
@@ -3765,9 +4258,15 @@ block_172:
 block_173:
   index: 173
   offsets:
+
     start: c1006c
     end: c100bd
     byte_length: 79
+
+    start: c1006e
+    end: c100bd
+    byte_length: 77
+
   portrait: 0f37
   text:
     windows: 1
@@ -3776,9 +4275,15 @@ block_173:
 block_174:
   index: 174
   offsets:
+
     start: c100c2
     end: c1012e
     byte_length: 106
+
+    start: c100c4
+    end: c1012e
+    byte_length: 104
+
   portrait: 0f0b
   text:
     windows: 4
@@ -3787,9 +4292,15 @@ block_174:
 block_175:
   index: 175
   offsets:
+
     start: c1012f
     end: c1018c
     byte_length: 91
+
+    start: c10131
+    end: c1018c
+    byte_length: 89
+
   portrait: 0f35
   text:
     windows: 2
@@ -3798,9 +4309,15 @@ block_175:
 block_176:
   index: 176
   offsets:
+
     start: c1022d
     end: c10280
     byte_length: 81
+
+    start: c1022f
+    end: c10280
+    byte_length: 79
+
   portrait: 0f00
   text:
     windows: 2
@@ -3809,9 +4326,15 @@ block_176:
 block_177:
   index: 177
   offsets:
+
     start: c102a1
     end: c102dc
     byte_length: 57
+
+    start: c102a3
+    end: c102dc
+    byte_length: 55
+
   portrait: 0f00
   text:
     windows: 2
@@ -3820,9 +4343,15 @@ block_177:
 block_178:
   index: 178
   offsets:
+
     start: c102dd
     end: c103b8
     byte_length: 217
+
+    start: c102df
+    end: c103b8
+    byte_length: 215
+
   portrait: 0f00
   text:
     windows: 5
@@ -3831,9 +4360,15 @@ block_178:
 block_179:
   index: 179
   offsets:
+
     start: c10419
     end: c1045f
     byte_length: 68
+
+    start: c1041b
+    end: c1045f
+    byte_length: 66
+
   portrait: 0f00
   text:
     windows: 3
@@ -3842,9 +4377,15 @@ block_179:
 block_180:
   index: 180
   offsets:
+
     start: c10464
     end: c104ab
     byte_length: 69
+
+    start: c10466
+    end: c104ab
+    byte_length: 67
+
   portrait: 0f3a
   text:
     windows: 2
@@ -3853,9 +4394,15 @@ block_180:
 block_181:
   index: 181
   offsets:
+
     start: c104ab
     end: c10502
     byte_length: 85
+
+    start: c104ad
+    end: c10502
+    byte_length: 83
+
   portrait: 0f0e
   text:
     windows: 3
@@ -3864,9 +4411,15 @@ block_181:
 block_182:
   index: 182
   offsets:
+
     start: c10502
     end: c1058f
     byte_length: 139
+
+    start: c10504
+    end: c1058f
+    byte_length: 137
+
   portrait: 0f38
   text:
     windows: 4
@@ -3875,9 +4428,15 @@ block_182:
 block_183:
   index: 183
   offsets:
+
     start: c10618
     end: c10661
     byte_length: 71
+
+    start: c1061a
+    end: c10661
+    byte_length: 69
+
   portrait: 0f03
   text:
     windows: 3
@@ -3886,9 +4445,15 @@ block_183:
 block_184:
   index: 184
   offsets:
+
     start: c10675
     end: c106b4
     byte_length: 61
+
+    start: c10677
+    end: c106b4
+    byte_length: 59
+
   portrait: 0f0e
   text:
     windows: 2
@@ -3897,9 +4462,15 @@ block_184:
 block_185:
   index: 185
   offsets:
+
     start: c106b4
     end: c10742
     byte_length: 140
+
+    start: c106b6
+    end: c10742
+    byte_length: 138
+
   portrait: 0f3c
   text:
     windows: 3
@@ -3908,9 +4479,15 @@ block_185:
 block_186:
   index: 186
   offsets:
+
     start: c10747
     end: c107ba
     byte_length: 113
+
+    start: c10749
+    end: c107ba
+    byte_length: 111
+
   portrait: 0f3a
   text:
     windows: 3
@@ -3919,9 +4496,15 @@ block_186:
 block_187:
   index: 187
   offsets:
+
     start: c107ba
     end: c107de
     byte_length: 34
+
+    start: c107bc
+    end: c107de
+    byte_length: 32
+
   portrait: 0f03
   text:
     windows: 1
@@ -3930,9 +4513,15 @@ block_187:
 block_188:
   index: 188
   offsets:
+
     start: c107de
     end: c10824
     byte_length: 68
+
+    start: c107e0
+    end: c10824
+    byte_length: 66
+
   portrait: 0f0c
   text:
     windows: 3
@@ -3941,9 +4530,15 @@ block_188:
 block_189:
   index: 189
   offsets:
+
     start: c10828
     end: c108b6
     byte_length: 140
+
+    start: c1082a
+    end: c108b6
+    byte_length: 138
+
   portrait: 0f3b
   text:
     windows: 3
@@ -3952,9 +4547,15 @@ block_189:
 block_190:
   index: 190
   offsets:
+
     start: c108b6
     end: c108f3
     byte_length: 59
+
+    start: c108b8
+    end: c108f3
+    byte_length: 57
+
   portrait: 0f00
   text:
     windows: 2
@@ -3963,9 +4564,15 @@ block_190:
 block_191:
   index: 191
   offsets:
+
     start: c108f3
     end: c1096e
     byte_length: 121
+
+    start: c108f5
+    end: c1096e
+    byte_length: 119
+
   portrait: 0f3b
   text:
     windows: 3
@@ -3974,9 +4581,15 @@ block_191:
 block_192:
   index: 192
   offsets:
+
     start: c1096e
     end: c109a5
     byte_length: 53
+
+    start: c10970
+    end: c109a5
+    byte_length: 51
+
   portrait: 0f01
   text:
     windows: 2
@@ -3985,9 +4598,15 @@ block_192:
 block_193:
   index: 193
   offsets:
+
     start: c109a8
     end: c10a2a
     byte_length: 128
+
+    start: c109aa
+    end: c10a2a
+    byte_length: 126
+
   portrait: 0f3d
   text:
     windows: 3
@@ -3996,9 +4615,15 @@ block_193:
 block_194:
   index: 194
   offsets:
+
     start: c10a2a
     end: c10a7a
     byte_length: 78
+
+    start: c10a2c
+    end: c10a7a
+    byte_length: 76
+
   portrait: 0f39
   text:
     windows: 2
@@ -4007,9 +4632,15 @@ block_194:
 block_195:
   index: 195
   offsets:
+
     start: c10a7a
     end: c10ab9
     byte_length: 61
+
+    start: c10a7c
+    end: c10ab9
+    byte_length: 59
+
   portrait: 0f3d
   text:
     windows: 1
@@ -4018,9 +4649,15 @@ block_195:
 block_196:
   index: 196
   offsets:
+
     start: c10ab9
     end: c10b5e
     byte_length: 163
+
+    start: c10abb
+    end: c10b5e
+    byte_length: 161
+
   portrait: 0f39
   text:
     windows: 4
@@ -4029,9 +4666,15 @@ block_196:
 block_197:
   index: 197
   offsets:
+
     start: c10b62
     end: c10b88
     byte_length: 36
+
+    start: c10b64
+    end: c10b88
+    byte_length: 34
+
   portrait: 0f3b
   text:
     windows: 1
@@ -4040,9 +4683,15 @@ block_197:
 block_198:
   index: 198
   offsets:
+
     start: c10b88
     end: c10bc4
     byte_length: 58
+
+    start: c10b8a
+    end: c10bc4
+    byte_length: 56
+
   portrait: 0f0d
   text:
     windows: 3
@@ -4051,9 +4700,15 @@ block_198:
 block_199:
   index: 199
   offsets:
+
     start: c10bc8
     end: c10c19
     byte_length: 79
+
+    start: c10bca
+    end: c10c19
+    byte_length: 77
+
   portrait: 0f3a
   text:
     windows: 2
@@ -4062,9 +4717,15 @@ block_199:
 block_200:
   index: 200
   offsets:
+
     start: c10c54
     end: c10ca4
     byte_length: 78
+
+    start: c10c56
+    end: c10ca4
+    byte_length: 76
+
   portrait: 0f0b
   text:
     windows: 2
@@ -4073,9 +4734,15 @@ block_200:
 block_201:
   index: 201
   offsets:
+
     start: c10ca8
     end: c10ce7
     byte_length: 61
+
+    start: c10caa
+    end: c10ce7
+    byte_length: 59
+
   portrait: 0f3c
   text:
     windows: 2
@@ -4084,9 +4751,15 @@ block_201:
 block_202:
   index: 202
   offsets:
+
     start: c10cec
     end: c10d33
     byte_length: 69
+
+    start: c10cee
+    end: c10d33
+    byte_length: 67
+
   portrait: 0f0a
   text:
     windows: 2
@@ -4095,9 +4768,15 @@ block_202:
 block_203:
   index: 203
   offsets:
+
     start: c10d34
     end: c10ddd
     byte_length: 167
+
+    start: c10d36
+    end: c10ddd
+    byte_length: 165
+
   portrait: 0f38
   text:
     windows: 4
@@ -4106,9 +4785,15 @@ block_203:
 block_204:
   index: 204
   offsets:
+
     start: c10ddd
     end: c10df8
     byte_length: 25
+
+    start: c10ddf
+    end: c10df8
+    byte_length: 23
+
   portrait: 0f03
   text:
     windows: 1
@@ -4117,9 +4802,15 @@ block_204:
 block_205:
   index: 205
   offsets:
+
     start: c10e7d
     end: c10f15
     byte_length: 150
+
+    start: c10e7f
+    end: c10f15
+    byte_length: 148
+
   portrait: 0f0a
   text:
     windows: 4
@@ -4128,9 +4819,15 @@ block_205:
 block_206:
   index: 206
   offsets:
+
     start: c10f37
     end: c10f93
     byte_length: 90
+
+    start: c10f39
+    end: c10f93
+    byte_length: 88
+
   portrait: 0f38
   text:
     windows: 1
@@ -4139,9 +4836,15 @@ block_206:
 block_207:
   index: 207
   offsets:
+
     start: c10f93
     end: c10fb4
     byte_length: 31
+
+    start: c10f95
+    end: c10fb4
+    byte_length: 29
+
   portrait: 0f02
   text:
     windows: 2
@@ -4150,9 +4853,15 @@ block_207:
 block_208:
   index: 208
   offsets:
+
     start: c10fb5
     end: c10ff6
     byte_length: 63
+
+    start: c10fb7
+    end: c10ff6
+    byte_length: 61
+
   portrait: 0f01
   text:
     windows: 2
@@ -4161,9 +4870,15 @@ block_208:
 block_209:
   index: 209
   offsets:
+
     start: c10ff7
     end: c110cc
     byte_length: 211
+
+    start: c10ff9
+    end: c110cc
+    byte_length: 209
+
   portrait: 0f00
   text:
     windows: 4
@@ -4172,9 +4887,15 @@ block_209:
 block_210:
   index: 210
   offsets:
+
     start: c110cc
     end: c11117
     byte_length: 73
+
+    start: c110ce
+    end: c11117
+    byte_length: 71
+
   portrait: 0f0a
   text:
     windows: 2
@@ -4183,9 +4904,15 @@ block_210:
 block_211:
   index: 211
   offsets:
+
     start: c11117
     end: c1116c
     byte_length: 83
+
+    start: c11119
+    end: c1116c
+    byte_length: 81
+
   portrait: 0f00
   text:
     windows: 2
@@ -4194,9 +4921,15 @@ block_211:
 block_212:
   index: 212
   offsets:
+
     start: c1116c
     end: c1127a
     byte_length: 268
+
+    start: c1116e
+    end: c1127a
+    byte_length: 266
+
   portrait: 0f0a
   text:
     windows: 6
@@ -4205,9 +4938,15 @@ block_212:
 block_213:
   index: 213
   offsets:
+
     start: c1127a
     end: c112ae
     byte_length: 50
+
+    start: c1127c
+    end: c112ae
+    byte_length: 48
+
   portrait: 0f03
   text:
     windows: 2
@@ -4216,9 +4955,15 @@ block_213:
 block_214:
   index: 214
   offsets:
+
     start: c11306
     end: c11381
     byte_length: 121
+
+    start: c11308
+    end: c11381
+    byte_length: 119
+
   portrait: 0f3e
   text:
     windows: 4
@@ -4227,9 +4972,15 @@ block_214:
 block_215:
   index: 215
   offsets:
+
     start: c11381
     end: c1139d
     byte_length: 26
+
+    start: c11383
+    end: c1139d
+    byte_length: 24
+
   portrait: 0f0b
   text:
     windows: 1
@@ -4238,9 +4989,15 @@ block_215:
 block_216:
   index: 216
   offsets:
+
     start: c1139d
     end: c114df
     byte_length: 320
+
+    start: c1139f
+    end: c114df
+    byte_length: 318
+
   portrait: 0f3e
   text:
     windows: 6
@@ -4249,9 +5006,15 @@ block_216:
 block_217:
   index: 217
   offsets:
+
     start: c11538
     end: c11585
     byte_length: 75
+
+    start: c1153a
+    end: c11585
+    byte_length: 73
+
   portrait: 0f03
   text:
     windows: 2
@@ -4260,9 +5023,15 @@ block_217:
 block_218:
   index: 218
   offsets:
+
     start: c11632
     end: c1173f
     byte_length: 267
+
+    start: c11634
+    end: c1173f
+    byte_length: 265
+
   portrait: 0f0e
   text:
     windows: 4
@@ -4271,9 +5040,15 @@ block_218:
 block_219:
   index: 219
   offsets:
+
     start: c1173f
     end: c1178a
     byte_length: 73
+
+    start: c11741
+    end: c1178a
+    byte_length: 71
+
   portrait: 0f40
   text:
     windows: 2
@@ -4282,9 +5057,15 @@ block_219:
 block_220:
   index: 220
   offsets:
+
     start: c117b7
     end: c117c9
     byte_length: 16
+
+    start: c117b9
+    end: c117c9
+    byte_length: 14
+
   portrait: 0f00
   text:
     windows: 1
@@ -4293,9 +5074,15 @@ block_220:
 block_221:
   index: 221
   offsets:
+
     start: c117c9
     end: c117df
     byte_length: 20
+
+    start: c117cb
+    end: c117df
+    byte_length: 18
+
   portrait: 0f0e
   text:
     windows: 1
@@ -4304,9 +5091,15 @@ block_221:
 block_222:
   index: 222
   offsets:
+
     start: c117ec
     end: c1191d
     byte_length: 303
+
+    start: c117ee
+    end: c1191d
+    byte_length: 301
+
   portrait: 0f41
   text:
     windows: 5
@@ -4315,9 +5108,15 @@ block_222:
 block_223:
   index: 223
   offsets:
+
     start: c1193a
     end: c11980
     byte_length: 68
+
+    start: c1193c
+    end: c11980
+    byte_length: 66
+
   portrait: 0f01
   text:
     windows: 2
@@ -4326,9 +5125,15 @@ block_223:
 block_224:
   index: 224
   offsets:
+
     start: c11980
     end: c11a37
     byte_length: 181
+
+    start: c11982
+    end: c11a37
+    byte_length: 179
+
   portrait: 0f0e
   text:
     windows: 3
@@ -4337,9 +5142,15 @@ block_224:
 block_225:
   index: 225
   offsets:
+
     start: c11a37
     end: c11ad5
     byte_length: 156
+
+    start: c11a39
+    end: c11ad5
+    byte_length: 154
+
   portrait: 0f00
   text:
     windows: 3
@@ -4348,9 +5159,15 @@ block_225:
 block_226:
   index: 226
   offsets:
+
     start: c11ad6
     end: c11be9
     byte_length: 273
+
+    start: c11ad8
+    end: c11be9
+    byte_length: 271
+
   portrait: 0f40
   text:
     windows: 4
@@ -4359,9 +5176,15 @@ block_226:
 block_227:
   index: 227
   offsets:
+
     start: c11bea
     end: c11c0c
     byte_length: 32
+
+    start: c11bec
+    end: c11c0c
+    byte_length: 30
+
   portrait: 0f3f
   text:
     windows: 1
@@ -4370,11 +5193,18 @@ block_227:
 block_228:
   index: 228
   offsets:
+
     start: c11c0c
     end: c11c4d
     byte_length: 63
+
+    start: c11c0e
+    end: c11c4d
+    byte_length: 61
+
   portrait: 0f0c
   text:
     windows: 2
     original: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
     translated: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
+:q

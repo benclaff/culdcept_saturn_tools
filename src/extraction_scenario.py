@@ -94,7 +94,8 @@ for m in re.finditer(dialog_sequence_pattern, data):
     if int(_OFFSET_START, 16) <= m.start() < int(_OFFSET_END, 16):
         # print('%02x-%02x: ' % (m.start(), m.end()), bytes.hex(m.group(0), " ", 1))
         output_yaml += "block_" + str(counter) + ":\n"
-        res = pretty_block_siftJIS(counter, m.groupdict(), m.start(), m.end(), indent=2, shift=1)
+        # start off is +2 to take into account the 2 bytes related to portrait control code
+        res = pretty_block_siftJIS(counter, m.groupdict(), m.start()+2, m.end(), indent=2, shift=1)
         output_yaml += res
         print(output_yaml)
         counter += 1
