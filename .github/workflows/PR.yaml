@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: 
       - master
+      - github_test
 
 jobs:
   test_python:
