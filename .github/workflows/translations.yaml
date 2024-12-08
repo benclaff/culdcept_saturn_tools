@@ -2,7 +2,7 @@ name: Translation validations
 run-name: ${{ github.actor }} is testing translation validity 🚀
 on:
   push:
-    branches: master
+    branches: master, github_test
 
 jobs:
   test_python:
