@@ -1,4 +1,7 @@
 # YAML
+import os
+from pathlib import Path
+
 _YAML_PADDING = 4
 
 # saturn specifics
@@ -11,7 +14,7 @@ _END_OF_DIALOG = '\x00'
 
 # extracted iso files
 _BIN = ""
-_DT0 = "/home/ben/Dropbox/GAMES/SATURN_CULDCEPT/Culdcept (Japan) (Rev A) (10M) - Extracted/CULDCEPT.DT0"
+DT0 = os.path.join(str(Path.home()), "Dropbox/GAMES/SATURN_CULDCEPT/Culdcept (Japan) (Rev A) (10M) - Extracted/CULDCEPT.DT0")
 _DT1 = ""
 
 # shift-JIS

@@ -80,7 +80,7 @@ def pretty_block_siftJIS(idx, groupdict, start, end, indent=0, shift=0):
 
 
 # open saturn file
-with open(meta._DT0, 'rb') as f:
+with open(meta.DT0, 'rb') as f:
     data = f.read()
 
 # look for this dialog pattern

@@ -62,7 +62,7 @@ _OFFSET_START = "xBA312E"
 _OFFSET_END = "xBAC823"
 
 # open file
-with open(meta._DT0, 'rb') as f:
+with open(meta.DT0, 'rb') as f:
     data = f.read()
 
 card_pattern = re.compile(b'\\x83\\x8F\\x83\\x43\\x83\\x8B\\x83\\x68\\x83\\x4F\\x83\\x8D\\x81\\x5B\\x83\\x58')

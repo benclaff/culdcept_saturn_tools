@@ -1,2 +1,1 @@
-pyaml
-python-nmap
+PyYAML~=6.0.2
