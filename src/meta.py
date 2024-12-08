@@ -23,6 +23,23 @@ _DT1 = ""
 # euromix      839E-8491
 # kan2         889F-9FFC
 # kan3         E040-EAA2
+
+# Shift-JIS Encoding
+# https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/International-Character-Set-Support/Japanese-Encodings-and-Mapping-Standards/Shift-JIS-DOS-Kanji-Encoding/Selected-Characters-for-Shift-JIS-Kanji
+# Hex Representation of Shift-JIS	Shift-JIS Implementation
+# 0x00-0x7E, 0xA1-0xDF	JIS X 0201
+# 0x81-0x9F, 0xE0-0xFC	First byte of double-byte representation. Its mapping is as follows:
+# 1. 0x81-0x9F--Contains rows 1 to 62 from JIS X 0208.
+#
+# 2. 0xE0-0xEF--Contains rows 63 to 94 from JIS X 0208.
+#
+# 3. 0xF0-0xF9--Contains 1,880 Gaiji characters.
+#
+# 4. 0xFA-0xFC--Contains IBM-defined characters.
+#
+# 0x40-0x7E, 0x80-0xFC	Second byte of double-byte representation.
+
+
 _SHIFTJIS_ROMAN_START = "x20"
 _SHIFTJIS_ROMAN_END = "x7E"
 _SHIFTJIS_KAN_LOW_START = "x8140"

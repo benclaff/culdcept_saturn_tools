@@ -19,12 +19,7 @@ block_1:
   text:
     windows: 2
     original: ちょっと待ちな#0A#聞き捨てならないぜ！
-<<<<<<< HEAD
-<<<<<<< HEAD
-    translated: Hold on a second.#0A#What's that supposed to mean ?！
-=======
-    translated: Hold on.#0A#What do you imply ?!
->>>>>>> aa23e67 (test)
+    translated: Hold on.#0A#What do you mean ?!
     windows: 2
 block_10:
   index: 10
@@ -1235,10 +1230,6 @@ block_199:
   text:
     original: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
     translated: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
-    windows: 2
-=======
-    translated: ちょっと待ちな#0A#聞き捨てならないぜ！
->>>>>>> refs/rewritten/master-2
 block_2:
   index: 2
   offsets:
@@ -1249,7 +1240,6 @@ block_2:
   text:
     windows: 1
     original: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
-<<<<<<< HEAD
     translated: Who's that?#07#…!#A0#…this feeling…#07#You're a Cepter too!
     windows: 1
 block_20:
@@ -1681,9 +1671,6 @@ block_29:
     original: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
     translated: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
     windows: 3
-=======
-    translated: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
->>>>>>> refs/rewritten/master-2
 block_3:
   index: 3
   offsets:
@@ -1694,12 +1681,7 @@ block_3:
   text:
     windows: 3
     original: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
-<<<<<<< HEAD
-<<<<<<< HEAD
-    translated: This is a nice spot.#0A#Let's continue after#07#polishing up your skills#0A#a little bit, shall we?#07#I think it would be helpful.
-=======
     translated: It's a nice spot.#0A#Let's continue after#07#polishing up your skills#0A#, shall we?
->>>>>>> aa23e67 (test)
     windows: 3
 block_30:
   index: 30
@@ -1811,9 +1793,6 @@ block_39:
     original: ちょっと、本気を出しすぎたかな？
     translated: ちょっと、本気を出しすぎたかな？
     windows: 1
-=======
-    translated: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
->>>>>>> refs/rewritten/master-2
 block_4:
   index: 4
   offsets:
@@ -1824,12 +1803,7 @@ block_4:
   text:
     windows: 2
     original: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
-<<<<<<< HEAD
-<<<<<<< HEAD
-    translated: The name's Zeneth,#0A# the Dragon-Eyed.#07#You wretch... I'm not#0A#sure how powerful#07#you are, but before#0A#you leave, I will find out!
-=======
     translated: The name's Zeneth,#0A# the Dragon-Eyed.#07#You wretch...#0A#How powerful are you?#07#Before you leave,#0A#I will find out!
->>>>>>> aa23e67 (test)
     windows: 2
 block_40:
   index: 40
@@ -1940,10 +1914,6 @@ block_49:
   text:
     original: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
     translated: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
-    windows: 6
-=======
-    translated: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
->>>>>>> refs/rewritten/master-2
 block_5:
   index: 5
   offsets:
