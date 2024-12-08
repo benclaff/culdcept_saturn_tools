@@ -1,23 +1,25 @@
 block_0:
   index: 0
   offsets:
-    byte_length: 360
-    end: c0bc1a
     start: c0bab0
+    end: c0bc1a
+    byte_length: 360
   portrait: 0f02
   text:
+    windows: 7
     original: null
     translated: null
-    windows: 7
 block_1:
   index: 1
   offsets:
-    byte_length: 35
-    end: c0bc3f
     start: c0bc1a
+    end: c0bc3f
+    byte_length: 35
   portrait: 0f0a
   text:
+    windows: 2
     original: ちょっと待ちな#0A#聞き捨てならないぜ！
+<<<<<<< HEAD
     translated: Hold on a second.#0A#What's that supposed to mean ?！
     windows: 2
 block_10:
@@ -1230,15 +1232,20 @@ block_199:
     original: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
     translated: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
     windows: 2
+=======
+    translated: ちょっと待ちな#0A#聞き捨てならないぜ！
+>>>>>>> refs/rewritten/master-2
 block_2:
   index: 2
   offsets:
-    byte_length: 60
-    end: c0bc7d
     start: c0bc3f
+    end: c0bc7d
+    byte_length: 60
   portrait: 0f01
   text:
+    windows: 1
     original: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
+<<<<<<< HEAD
     translated: Who's that?#07#…!#A0#…this feeling…#07#You're a Cepter too!
     windows: 1
 block_20:
@@ -1670,15 +1677,20 @@ block_29:
     original: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
     translated: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
     windows: 3
+=======
+    translated: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
+>>>>>>> refs/rewritten/master-2
 block_3:
   index: 3
   offsets:
-    byte_length: 76
-    end: c0bccc
     start: c0bc7e
+    end: c0bccc
+    byte_length: 76
   portrait: 0f00
   text:
+    windows: 3
     original: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
+<<<<<<< HEAD
     translated: This is a nice spot.#0A#Let's continue after#07#polishing up your skills#0A#a little bit, shall we?#07#I think it would be helpful.
     windows: 3
 block_30:
@@ -1791,15 +1803,20 @@ block_39:
     original: ちょっと、本気を出しすぎたかな？
     translated: ちょっと、本気を出しすぎたかな？
     windows: 1
+=======
+    translated: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
+>>>>>>> refs/rewritten/master-2
 block_4:
   index: 4
   offsets:
-    byte_length: 113
-    end: c0bd43
     start: c0bcd0
+    end: c0bd43
+    byte_length: 113
   portrait: 0f0a
   text:
+    windows: 2
     original: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
+<<<<<<< HEAD
     translated: The name's Zeneth,#0A# the Dragon-Eyed.#07#You wretch... I'm not#0A#sure how powerful#07#you are, but before#0A#you leave, I will find out!
     windows: 2
 block_40:
@@ -1912,608 +1929,2470 @@ block_49:
     original: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
     translated: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
     windows: 6
+=======
+    translated: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
+>>>>>>> refs/rewritten/master-2
 block_5:
   index: 5
   offsets:
-    byte_length: 136
-    end: c0bdcd
     start: c0bd43
+    end: c0bdcd
+    byte_length: 136
   portrait: 0f01
   text:
+    windows: 3
     original: 何をバカな事を！#07#この#PN#殿は、この大陸の人々の#0A#希望を託された、大切な任務を持つお方#0A#なのだぞ！#07#おぬしなどの相手をしているひまは無いのだ！
     translated: 何をバカな事を！#07#この#PN#殿は、この大陸の人々の#0A#希望を託された、大切な任務を持つお方#0A#なのだぞ！#07#おぬしなどの相手をしているひまは無いのだ！
-    windows: 3
-block_50:
-  index: 50
-  offsets:
-    byte_length: 55
-    end: c0cdf2
-    start: c0cdb9
-  portrait: 0f1c
-  text:
-    original: null
-    translated: null
-    windows: 2
-block_51:
-  index: 51
-  offsets:
-    byte_length: 43
-    end: c0ce20
-    start: c0cdf3
-  portrait: 0f00
-  text:
-    original: コーテツとやらよ、#PN#殿の力#0A#思い知ったか！？
-    translated: コーテツとやらよ、#PN#殿の力#0A#思い知ったか！？
-    windows: 2
-block_52:
-  index: 52
-  offsets:
-    byte_length: 89
-    end: c0ce7b
-    start: c0ce20
-  portrait: 0f1d
-  text:
-    original: 世の中には強いやつがいるもんだ・・・#07#目が覚めたぜ！#0A#オレ様はここだけを守って生きていこう#07#
-    translated: 世の中には強いやつがいるもんだ・・・#07#目が覚めたぜ！#0A#オレ様はここだけを守って生きていこう#07#
-    windows: 2
-block_53:
-  index: 53
-  offsets:
-    byte_length: 61
-    end: c0cf28
-    start: c0cee9
-  portrait: 0f1d
-  text:
-    original: ゴホ！！今のは、調子が悪かったんだ#0A#もう一度チャンスをくれ！！
-    translated: ゴホ！！今のは、調子が悪かったんだ#0A#もう一度チャンスをくれ！！
-    windows: 2
-block_54:
-  index: 54
-  offsets:
-    byte_length: 81
-    end: c0cf7f
-    start: c0cf2c
-  portrait: 0f1e
-  text:
-    original: オホッ！！やっぱりオレ様は世界一ィ！！#0A#今日からお前を、オレ様の子分にしてやるぜ！
-    translated: オホッ！！やっぱりオレ様は世界一ィ！！#0A#今日からお前を、オレ様の子分にしてやるぜ！
-    windows: 2
-block_55:
-  index: 55
-  offsets:
-    byte_length: 55
-    end: c0cfb9
-    start: c0cf80
-  portrait: 0f1a
-  text:
-    original: そんなことじゃだめだ！#0A#よし、何度でも相手してやるぞ！！
-    translated: そんなことじゃだめだ！#0A#よし、何度でも相手してやるぞ！！
-    windows: 2
-block_56:
-  index: 56
-  offsets:
-    byte_length: 76
-    end: c0d008
-    start: c0cfba
-  portrait: 0f1a
-  text:
-    original: もしお前が修業したくなったら#0A#ここに戻ってこい！#07#いつでも相手してやるからな！
-    translated: もしお前が修業したくなったら#0A#ここに戻ってこい！#07#いつでも相手してやるからな！
-    windows: 2
-block_57:
-  index: 57
-  offsets:
-    byte_length: 58
-    end: c0d044
-    start: c0d008
-  portrait: 0f02
-  text:
-    original: コーテツとやら、見かけほど悪いやつでは#0A#無かったようですな#07#
-    translated: コーテツとやら、見かけほど悪いやつでは#0A#無かったようですな#07#
-    windows: 2
-block_58:
-  index: 58
-  offsets:
-    byte_length: 51
-    end: c0d10e
-    start: c0d0d9
-  portrait: 0f1d
-  text:
-    original: なんだ、もう帰るのか？#0A#もう少しゆっくりして行けよ！
-    translated: なんだ、もう帰るのか？#0A#もう少しゆっくりして行けよ！
-    windows: 2
-block_59:
-  index: 59
-  offsets:
-    byte_length: 266
-    end: c0d21b
-    start: c0d10f
-  portrait: 0f00
-  text:
-    original: ここは、バブラシュカの東西を分ける#0A#ゴザ砂漠です#07#ここから東にはキルヒ王の統治もおよばぬ#0A#広大な未開の地が広がっております#07#しかし・・・その前に、ここで感じられる#0A#強力な怨念の主を倒さねばならないよう#0A#ですな・・・#07#彼はここを通るもの全てにその怨念を#0A#ぶつけているようです！
-    translated: ここは、バブラシュカの東西を分ける#0A#ゴザ砂漠です#07#ここから東にはキルヒ王の統治もおよばぬ#0A#広大な未開の地が広がっております#07#しかし・・・その前に、ここで感じられる#0A#強力な怨念の主を倒さねばならないよう#0A#ですな・・・#07#彼はここを通るもの全てにその怨念を#0A#ぶつけているようです！
-    windows: 6
 block_6:
   index: 6
   offsets:
-    byte_length: 246
-    end: c0bec5
     start: c0bdcd
+    end: c0bec5
+    byte_length: 246
   portrait: 0f0c
   text:
+    windows: 5
     original: 人々の希望だと？#0A#フッ、笑わせるぜ！#07#おろかな民どもの希望などかなえて、それで#0A#大陸が平和になるとでも思っているのか？#07#俺は貴様と同じように大陸をめぐり、#0A#セプター達を倒そうと思っている#07#しかし、人々のためなどではない#0A#俺がこの世界を支配するためにだ！#07#
     translated: 人々の希望だと？#0A#フッ、笑わせるぜ！#07#おろかな民どもの希望などかなえて、それで#0A#大陸が平和になるとでも思っているのか？#07#俺は貴様と同じように大陸をめぐり、#0A#セプター達を倒そうと思っている#07#しかし、人々のためなどではない#0A#俺がこの世界を支配するためにだ！#07#
-    windows: 5
-block_60:
-  index: 60
-  offsets:
-    byte_length: 78
-    end: c0d26c
-    start: c0d21c
-  portrait: 0f00
-  text:
-    original: ゴザ砂漠です#0A#必要ならここに立ち寄って、ヴァイデンに#0A#会っていくのも良いでしょう
-    translated: ゴザ砂漠です#0A#必要ならここに立ち寄って、ヴァイデンに#0A#会っていくのも良いでしょう
-    windows: 3
-block_61:
-  index: 61
-  offsets:
-    byte_length: 227
-    end: c0d355
-    start: c0d270
-  portrait: 0f1f
-  text:
-    original: 余の名はヴァイデン#07#余は、愚かな民衆たちによってザカリアを#0A#追われてから、この砂漠を我が領土と決め#0A#いつの日か復讐すると誓ったのだ#07#復讐には金と力が必要#07#ここを通る民には金品を、セプターたちには#0A#カードを税としておさめてもらっておる#07#
-    translated: 余の名はヴァイデン#07#余は、愚かな民衆たちによってザカリアを#0A#追われてから、この砂漠を我が領土と決め#0A#いつの日か復讐すると誓ったのだ#07#復讐には金と力が必要#07#ここを通る民には金品を、セプターたちには#0A#カードを税としておさめてもらっておる#07#
-    windows: 4
-block_62:
-  index: 62
-  offsets:
-    byte_length: 43
-    end: c0d3c1
-    start: c0d394
-  portrait: 0f01
-  text:
-    original: セプターが二人？#0A#・・・それはいったい・・・
-    translated: セプターが二人？#0A#・・・それはいったい・・・
-    windows: 2
-block_63:
-  index: 63
-  offsets:
-    byte_length: 41
-    end: c0d3ec
-    start: c0d3c1
-  portrait: 0f0e
-  text:
-    original: null
-    translated: null
-    windows: 1
-block_64:
-  index: 64
-  offsets:
-    byte_length: 43
-    end: c0d419
-    start: c0d3ec
-  portrait: 0f01
-  text:
-    original: 竜眼のゼネス！#0A#まさか、追ってくるとは・・・
-    translated: 竜眼のゼネス！#0A#まさか、追ってくるとは・・・
-    windows: 2
-block_65:
-  index: 65
-  offsets:
-    byte_length: 85
-    end: c0d470
-    start: c0d419
-  portrait: 0f0e
-  text:
-    original: 俺の目的はバブラシュカの支配だ#0A#だがな、その前にやっておかねばならない事が#0A#あるようだ#07#
-    translated: 俺の目的はバブラシュカの支配だ#0A#だがな、その前にやっておかねばならない事が#0A#あるようだ#07#
-    windows: 3
-block_66:
-  index: 66
-  offsets:
-    byte_length: 48
-    end: c0d4e6
-    start: c0d4b4
-  portrait: 0f03
-  text:
-    original: 何と、ここで二人を相手にせねばならぬとは#0A#・・・#07#
-    translated: 何と、ここで二人を相手にせねばならぬとは#0A#・・・#07#
-    windows: 2
-block_67:
-  index: 67
-  offsets:
-    byte_length: 97
-    end: c0d568
-    start: c0d505
-  portrait: 0f21
-  text:
-    original: 余に再び会いに来ようとは#0A#よいこころがけぞ！#07#余もひまを持て余していたところ#0A#さっそくお相手いたそう
-    translated: 余に再び会いに来ようとは#0A#よいこころがけぞ！#07#余もひまを持て余していたところ#0A#さっそくお相手いたそう
-    windows: 3
-block_68:
-  index: 68
-  offsets:
-    byte_length: 72
-    end: c0d5b2
-    start: c0d568
-  portrait: 0f0e
-  text:
-    original: ちょうどいい、ちょっとした肩ならしに#0A#させてもらおうか#07#俺は容赦しないぜ！
-    translated: ちょうどいい、ちょっとした肩ならしに#0A#させてもらおうか#07#俺は容赦しないぜ！
-    windows: 2
-block_69:
-  index: 69
-  offsets:
-    byte_length: 53
-    end: c0d5ea
-    start: c0d5b3
-  portrait: 0f0d
-  text:
-    original: くそっ！・・・覚えてろよ・・・#0A#おれは、あきらめんぞ！
-    translated: くそっ！・・・覚えてろよ・・・#0A#おれは、あきらめんぞ！
-    windows: 2
 block_7:
   index: 7
   offsets:
-    byte_length: 62
-    end: c0bf2b
     start: c0beeb
+    end: c0bf2b
+    byte_length: 62
   portrait: 0f03
   text:
+    windows: 1
     original: なんたること・・・#07#止むを得ません、ここは戦うしか無いようです#07#
     translated: なんたること・・・#07#止むを得ません、ここは戦うしか無いようです#07#
-    windows: 1
-block_70:
-  index: 70
-  offsets:
-    byte_length: 57
-    end: c0d625
-    start: c0d5ea
-  portrait: 0f22
-  text:
-    original: うう・・・やはり余は、真の王では無いと#0A#いうことのか・・・
-    translated: うう・・・やはり余は、真の王では無いと#0A#いうことのか・・・
-    windows: 2
-block_71:
-  index: 71
-  offsets:
-    byte_length: 57
-    end: c0d660
-    start: c0d625
-  portrait: 0f00
-  text:
-    original: ヴァイデンよ、王であることがそれほど#0A#大切なことなのかな？
-    translated: ヴァイデンよ、王であることがそれほど#0A#大切なことなのかな？
-    windows: 2
-block_72:
-  index: 72
-  offsets:
-    byte_length: 121
-    end: c0d6db
-    start: c0d660
-  portrait: 0f22
-  text:
-    original: ・・・・・・#07#余は人々に王として認めてもらうことを#0A#願っていた・・・#07#だが・・・確かにそれにこだわりすぎていたの#0A#かもしれぬ#07#
-    translated: ・・・・・・#07#余は人々に王として認めてもらうことを#0A#願っていた・・・#07#だが・・・確かにそれにこだわりすぎていたの#0A#かもしれぬ#07#
-    windows: 3
-block_73:
-  index: 73
-  offsets:
-    byte_length: 32
-    end: c0d7b9
-    start: c0d797
-  portrait: 0f02
-  text:
-    original: がんこな性格は直らんとみえるわい
-    translated: がんこな性格は直らんとみえるわい
-    windows: 1
-block_74:
-  index: 74
-  offsets:
-    byte_length: 62
-    end: c0d7fe
-    start: c0d7be
-  portrait: 0f1f
-  text:
-    original: 余の負けだ#0A#負けを素直に認めるのも、真の王の心がけと#0A#いうものよ
-    translated: 余の負けだ#0A#負けを素直に認めるのも、真の王の心がけと#0A#いうものよ
-    windows: 3
-block_75:
-  index: 75
-  offsets:
-    byte_length: 16
-    end: c0d810
-    start: c0d7fe
-  portrait: 0f0d
-  text:
-    original: 俺は認めないぜ！
-    translated: 俺は認めないぜ！
-    windows: 1
-block_76:
-  index: 76
-  offsets:
-    byte_length: 68
-    end: c0d85a
-    start: c0d814
-  portrait: 0f21
-  text:
-    original: おお！！手かせがはずれたぞ！！#0A#これで余は１００％の力を発揮できる！#07#
-    translated: おお！！手かせがはずれたぞ！！#0A#これで余は１００％の力を発揮できる！#07#
-    windows: 2
-block_77:
-  index: 77
-  offsets:
-    byte_length: 82
-    end: c0d8f2
-    start: c0d89e
-  portrait: 0f0b
-  text:
-    original: どうやら俺の力が、貴様のそれを#0A#上まわったようだな#07#フッ、２度と勇者づらなどするな！
-    translated: どうやら俺の力が、貴様のそれを#0A#上まわったようだな#07#フッ、２度と勇者づらなどするな！
-    windows: 2
-block_78:
-  index: 78
-  offsets:
-    byte_length: 69
-    end: c0d93a
-    start: c0d8f3
-  portrait: 0f21
-  text:
-    original: 久しぶりに、王の気分を味わうことが出来たぞ#07#ホッホッホ・・・愉快、愉快
-    translated: 久しぶりに、王の気分を味わうことが出来たぞ#07#ホッホッホ・・・愉快、愉快
-    windows: 1
-block_79:
-  index: 79
-  offsets:
-    byte_length: 52
-    end: c0d974
-    start: c0d93e
-  portrait: 0f0c
-  text:
-    original: null
-    translated: null
-    windows: 3
 block_8:
   index: 8
   offsets:
-    byte_length: 47
-    end: c0bfc6
     start: c0bf95
+    end: c0bfc6
+    byte_length: 47
   portrait: 0f0c
   text:
+    windows: 2
     original: また会ったな、#PN##0A#今度こそ貴様を倒してみせるぜ！
     translated: また会ったな、#PN##0A#今度こそ貴様を倒してみせるぜ！
-    windows: 2
-block_80:
-  index: 80
-  offsets:
-    byte_length: 137
-    end: c0da00
-    start: c0d975
-  portrait: 0f1f
-  text:
-    original: 余はもう、ここを通る者を阻むことはすまい#07#しかし、もし余と再び戦いたいことがあれば#0A#遠慮するでないぞ#07#余も、一人でここにいるのは退屈なのでな
-    translated: 余はもう、ここを通る者を阻むことはすまい#07#しかし、もし余と再び戦いたいことがあれば#0A#遠慮するでないぞ#07#余も、一人でここにいるのは退屈なのでな
-    windows: 2
-block_81:
-  index: 81
-  offsets:
-    byte_length: 35
-    end: c0da25
-    start: c0da00
-  portrait: 0f02
-  text:
-    original: 彼を改心させられて、よかったですな#07#
-    translated: 彼を改心させられて、よかったですな#07#
-    windows: 1
-block_82:
-  index: 82
-  offsets:
-    byte_length: 67
-    end: c0db2a
-    start: c0dae5
-  portrait: 0f00
-  text:
-    original: ゼネスも、少しずつ強くなっているようです#0A#気を抜いてはいけませんぞ！
-    translated: ゼネスも、少しずつ強くなっているようです#0A#気を抜いてはいけませんぞ！
-    windows: 2
-block_83:
-  index: 83
-  offsets:
-    byte_length: 250
-    end: c0dc27
-    start: c0db2b
-  portrait: 0f00
-  text:
-    original: 寒いのも当たり前#0A#ここは、バブラシュカでも最も北に位置する#0A#ガーベリヤ地方ですぞ#07#この地方唯一の集落ケルダー村に、不思議な#0A#力を持つ少女がいるという話です#07#彼女が本当に邪悪なセプターなのかは#0A#分かりませんが・・・#07#とにかく村で話を聞いて#0A#みることにしましょう
-    translated: 寒いのも当たり前#0A#ここは、バブラシュカでも最も北に位置する#0A#ガーベリヤ地方ですぞ#07#この地方唯一の集落ケルダー村に、不思議な#0A#力を持つ少女がいるという話です#07#彼女が本当に邪悪なセプターなのかは#0A#分かりませんが・・・#07#とにかく村で話を聞いて#0A#みることにしましょう
-    windows: 6
-block_84:
-  index: 84
-  offsets:
-    byte_length: 69
-    end: c0dc6f
-    start: c0dc28
-  portrait: 0f02
-  text:
-    original: ケルダー村ですが、寄ってみますかな？#0A#ミランダもきっと喜ぶことでしょう
-    translated: ケルダー村ですが、寄ってみますかな？#0A#ミランダもきっと喜ぶことでしょう
-    windows: 2
-block_85:
-  index: 85
-  offsets:
-    byte_length: 34
-    end: c0dc98
-    start: c0dc74
-  portrait: 0f01
-  text:
-    original: なんと！村の人々がみな氷づけに！！
-    translated: なんと！村の人々がみな氷づけに！！
-    windows: 1
-block_86:
-  index: 86
-  offsets:
-    byte_length: 111
-    end: c0dd09
-    start: c0dc98
-  portrait: 0f26
-  text:
-    original: みんな、私の編み物の邪魔をするから#0A#よ・・・#07#あなたたちも私の邪魔をするのね？#0A#いいわ、みんな氷づけにしてあげる！
-    translated: みんな、私の編み物の邪魔をするから#0A#よ・・・#07#あなたたちも私の邪魔をするのね？#0A#いいわ、みんな氷づけにしてあげる！
-    windows: 3
-block_87:
-  index: 87
-  offsets:
-    byte_length: 144
-    end: c0dd9b
-    start: c0dd09
-  portrait: 0f01
-  text:
-    original: 彼女は、間違いなくセプターです！#07#しかし・・・まずいですぞ！#0A#早く彼女を止めて呪文を解かないと#0A#村の人々は死んでしまいます！#07#急いでくだされ、#PN#殿！
-    translated: 彼女は、間違いなくセプターです！#07#しかし・・・まずいですぞ！#0A#早く彼女を止めて呪文を解かないと#0A#村の人々は死んでしまいます！#07#急いでくだされ、#PN#殿！
-    windows: 3
-block_88:
-  index: 88
-  offsets:
-    byte_length: 57
-    end: c0ddda
-    start: c0dd9f
-  portrait: 0f25
-  text:
-    original: null
-    translated: null
-    windows: 2
-block_89:
-  index: 89
-  offsets:
-    byte_length: 284
-    end: c0defc
-    start: c0ddde
-  portrait: 0f27
-  text:
-    original: ・・・・・・#07#私を止めたの、あなたが初めてよ#07#私、村の人々や両親までが、私を怖がるのを#0A#見てさびしかったの#07#どうせさびしいのなら、みんないなくなれば#0A#いいって、そう思って・・・#07#でも、だれも私を止めてくれなかった・・・#0A#私のような能力を持つ人は、村にはいなかったわ#07##PN#、あなたに会えてよかった
-    translated: ・・・・・・#07#私を止めたの、あなたが初めてよ#07#私、村の人々や両親までが、私を怖がるのを#0A#見てさびしかったの#07#どうせさびしいのなら、みんないなくなれば#0A#いいって、そう思って・・・#07#でも、だれも私を止めてくれなかった・・・#0A#私のような能力を持つ人は、村にはいなかったわ#07##PN#、あなたに会えてよかった
-    windows: 4
 block_9:
   index: 9
   offsets:
-    byte_length: 114
-    end: c0c03e
     start: c0bfca
+    end: c0c03e
+    byte_length: 114
   portrait: 0f0d
   text:
+    windows: 3
     original: この、竜眼のゼネスの力をしのぐセプターが#0A#存在しようとは・・・#07#ここは退くが・・・#07##PN#！#0A#俺は貴様を必ず倒してみせる！
     translated: この、竜眼のゼネスの力をしのぐセプターが#0A#存在しようとは・・・#07#ここは退くが・・・#07##PN#！#0A#俺は貴様を必ず倒してみせる！
+block_10:
+  index: 10
+  offsets:
+    start: c0c042
+    end: c0c089
+    byte_length: 69
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: 何と言うことだ・・・この俺が、また敗北を#0A#味わうことになろうとは・・・
+    translated: 何と言うことだ・・・この俺が、また敗北を#0A#味わうことになろうとは・・・
+block_11:
+  index: 11
+  offsets:
+    start: c0c0d6
+    end: c0c124
+    byte_length: 76
+  portrait: 0f0a
+  text:
+    windows: 2
+    original: 貴様が、その程度のセプターであるわけが#0A#ない！#07#今度こそ本気を出してもらおう！
+    translated: 貴様が、その程度のセプターであるわけが#0A#ない！#07#今度こそ本気を出してもらおう！
+block_12:
+  index: 12
+  offsets:
+    start: c0c125
+    end: c0c1a4
+    byte_length: 125
+  portrait: 0f02
+  text:
     windows: 3
+    original: お見事です、#PN#殿！#07#ゼネスも、かなりのパワーを持つセプター#0A#でしたが・・・#07#あまりたいしたカードを持っては#0A#いなかったようですな#07#
+    translated: お見事です、#PN#殿！#07#ゼネスも、かなりのパワーを持つセプター#0A#でしたが・・・#07#あまりたいしたカードを持っては#0A#いなかったようですな#07#
+block_13:
+  index: 13
+  offsets:
+    start: c0c2ec
+    end: c0c33e
+    byte_length: 80
+  portrait: 0f00
+  text:
+    windows: 2
+    original: ここでゼネスとばかり戦っていても#0A#良いカードは手に入りませんぞ#07#さあ、参りましょう
+    translated: ここでゼネスとばかり戦っていても#0A#良いカードは手に入りませんぞ#07#さあ、参りましょう
+block_14:
+  index: 14
+  offsets:
+    start: c0c33f
+    end: c0c41d
+    byte_length: 220
+  portrait: 0f00
+  text:
+    windows: 4
+    original: ここは港町スネフです#07#ここはかつてロカの都とも交流が盛ん#0A#だったのですが・・・#07#近ごろ現れたセプターによって、町は#0A#その機能を失いつつあると聞きます#07#う〜む・・・確かに、美しいこの地に似つかわし#0A#からぬ、凶悪な存在を感じますぞ
+    translated: ここは港町スネフです#07#ここはかつてロカの都とも交流が盛ん#0A#だったのですが・・・#07#近ごろ現れたセプターによって、町は#0A#その機能を失いつつあると聞きます#07#う〜む・・・確かに、美しいこの地に似つかわし#0A#からぬ、凶悪な存在を感じますぞ
+block_15:
+  index: 15
+  offsets:
+    start: c0c41e
+    end: c0c44f
+    byte_length: 47
+  portrait: 0f00
+  text:
+    windows: 2
+    original: 港町スネフです#0A#あの二人はどうしているでしょうな
+    translated: 港町スネフです#0A#あの二人はどうしているでしょうな
+block_16:
+  index: 16
+  offsets:
+    start: c0c454
+    end: c0c47a
+    byte_length: 36
+  portrait: 0f0f
+  text:
+    windows: 1
+    original: また誰かやってきたのかい、ポコポコ？
+    translated: また誰かやってきたのかい、ポコポコ？
+block_17:
+  index: 17
+  offsets:
+    start: c0c47a
+    end: c0c490
+    byte_length: 20
+  portrait: 0f19
+  text:
+    windows: 1
+    original: ポコ〜！ポッポコ〜！
+    translated: ポコ〜！ポッポコ〜！
+block_18:
+  index: 18
+  offsets:
+    start: c0c490
+    end: c0c4ff
+    byte_length: 109
+  portrait: 0f0f
+  text:
+    windows: 3
+    original: えっ？#0A#あいつもぼくの邪魔しようとしているの？#07#じゃあ、あいつも倒さないと、母さんの病気は#0A#直らないんだね・・・
+    translated: えっ？#0A#あいつもぼくの邪魔しようとしているの？#07#じゃあ、あいつも倒さないと、母さんの病気は#0A#直らないんだね・・・
+block_19:
+  index: 19
+  offsets:
+    start: c0c4ff
+    end: c0c509
+    byte_length: 8
+  portrait: 0f14
+  text:
+    windows: 1
+    original: ポコ〜！
+    translated: ポコ〜！
+block_20:
+  index: 20
+  offsets:
+    start: c0c509
+    end: c0c547
+    byte_length: 60
+  portrait: 0f0f
+  text:
+    windows: 2
+    original: そうかい・・・#07#でも、本当にこんなことしていて#0A#いいのかなあ？
+    translated: そうかい・・・#07#でも、本当にこんなことしていて#0A#いいのかなあ？
+block_21:
+  index: 21
+  offsets:
+    start: c0c547
+    end: c0c5ba
+    byte_length: 113
+  portrait: 0f19
+  text:
+    windows: 2
+    original: ポコポコポ〜！#07#（いいポコ！君は強いポコ！#0A#世界は君のものになって当然ポコ！#07#そうすればお母さんの病気も直るポコ！）
+    translated: ポコポコポ〜！#07#（いいポコ！君は強いポコ！#0A#世界は君のものになって当然ポコ！#07#そうすればお母さんの病気も直るポコ！）
+block_22:
+  index: 22
+  offsets:
+    start: c0c5ba
+    end: c0c5e3
+    byte_length: 39
+  portrait: 0f10
+  text:
+    windows: 2
+    original: 分かった！#0A#ぼく、がんばるよ、ポコポコ！
+    translated: 分かった！#0A#ぼく、がんばるよ、ポコポコ！
+block_23:
+  index: 23
+  offsets:
+    start: c0c5e3
+    end: c0c62f
+    byte_length: 74
+  portrait: 0f18
+  text:
+    windows: 2
+    original: しめしめ、単純なやつだぜ#07#セバスを利用して、世界を俺たちのものに#0A#してやる！
+    translated: しめしめ、単純なやつだぜ#07#セバスを利用して、世界を俺たちのものに#0A#してやる！
+block_24:
+  index: 24
+  offsets:
+    start: c0c633
+    end: c0c641
+    byte_length: 12
+  portrait: 0f0f
+  text:
+    windows: 1
+    original: あ！#PN#さんだ
+    translated: あ！#PN#さんだ
+block_25:
+  index: 25
+  offsets:
+    start: c0c641
+    end: c0c64b
+    byte_length: 8
+  portrait: 0f19
+  text:
+    windows: 1
+    original: ポコ〜！
+    translated: ポコ〜！
+block_26:
+  index: 26
+  offsets:
+    start: c0c64b
+    end: c0c683
+    byte_length: 54
+  portrait: 0f10
+  text:
+    windows: 2
+    original: そうだね、#PN#さんに#0A#協力してあげよう！#07#ようし！本気だぞ
+    translated: そうだね、#PN#さんに#0A#協力してあげよう！#07#ようし！本気だぞ
+block_27:
+  index: 27
+  offsets:
+    start: c0c688
+    end: c0c6ac
+    byte_length: 34
+  portrait: 0f17
+  text:
+    windows: 1
+    original: チッ、どうやら俺たちの負けらしいな
+    translated: チッ、どうやら俺たちの負けらしいな
+block_28:
+  index: 28
+  offsets:
+    start: c0c6ac
+    end: c0c6c4
+    byte_length: 22
+  portrait: 0f12
+  text:
+    windows: 1
+    original: ごめんよ・・・ポコポコ
+    translated: ごめんよ・・・ポコポコ
+block_29:
+  index: 29
+  offsets:
+    start: c0c6c4
+    end: c0c73b
+    byte_length: 117
+  portrait: 0f00
+  text:
+    windows: 3
+    original: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
+    translated: どうやらこの子供は、ポコポコと呼ばれる#0A#魔族の者にそそのかされていたようです#07#さて、この者たちをどうされますかな#0A##PN#殿？
+block_30:
+  index: 30
+  offsets:
+    start: c0c73b
+    end: c0c7b4
+    byte_length: 119
+  portrait: 0f17
+  text:
+    windows: 3
+    original: この子に手を出さないでくれ！#0A#みんな俺が悪いんだ！#07#こいつは能力を持っていただけで、#0A#何も知らずにやっていたことなんだよ！
+    translated: この子に手を出さないでくれ！#0A#みんな俺が悪いんだ！#07#こいつは能力を持っていただけで、#0A#何も知らずにやっていたことなんだよ！
+block_31:
+  index: 31
+  offsets:
+    start: c0c7b4
+    end: c0c7c4
+    byte_length: 14
+  portrait: 0f12
+  text:
+    windows: 1
+    original: ポコポコ・・・
+    translated: ポコポコ・・・
+block_32:
+  index: 32
+  offsets:
+    start: c0c7c4
+    end: c0c846
+    byte_length: 128
+  portrait: 0f00
+  text:
+    windows: 3
+    original: ・・・・・・#07#どうやらこの魔族の者の言葉には#0A#偽りはないようです#07#子供を利用しながらも、心は通っていた#0A#ようですな#07#さあ、御決断を！#07#
+    translated: ・・・・・・#07#どうやらこの魔族の者の言葉には#0A#偽りはないようです#07#子供を利用しながらも、心は通っていた#0A#ようですな#07#さあ、御決断を！#07#
+block_33:
+  index: 33
+  offsets:
+    start: c0c877
+    end: c0c887
+    byte_length: 14
+  portrait: 0f0f
+  text:
+    windows: 1
+    original: えっ・・・！？
+    translated: えっ・・・！？
+block_34:
+  index: 34
+  offsets:
+    start: c0c887
+    end: c0c8ff
+    byte_length: 118
+  portrait: 0f14
+  text:
+    windows: 4
+    original: すまねえ・・・#0A#あんた、心の広い人だな#07#俺も、もう悪事は働かねえよ#0A#こいつの面倒をみながら、この町の平和の#0A#ためにつくすぜ
+    translated: すまねえ・・・#0A#あんた、心の広い人だな#07#俺も、もう悪事は働かねえよ#0A#こいつの面倒をみながら、この町の平和の#0A#ためにつくすぜ
+block_35:
+  index: 35
+  offsets:
+    start: c0c904
+    end: c0c92d
+    byte_length: 39
+  portrait: 0f0f
+  text:
+    windows: 2
+    original: やっぱり、#PN#さんには#0A#かなわないや・・・
+    translated: やっぱり、#PN#さんには#0A#かなわないや・・・
+block_36:
+  index: 36
+  offsets:
+    start: c0c92d
+    end: c0c958
+    byte_length: 41
+  portrait: 0f14
+  text:
+    windows: 1
+    original: ポコ〜！#07#（セバスも充分がんばったポコ！）
+    translated: ポコ〜！#07#（セバスも充分がんばったポコ！）
+block_37:
+  index: 37
+  offsets:
+    start: c0c95c
+    end: c0c9a4
+    byte_length: 70
+  portrait: 0f16
+  text:
+    windows: 2
+    original: グハハハハ！#07#俺の頭脳と、お前のパワーがあれば#0A#世界は俺たちのものだぜ！
+    translated: グハハハハ！#07#俺の頭脳と、お前のパワーがあれば#0A#世界は俺たちのものだぜ！
+block_38:
+  index: 38
+  offsets:
+    start: c0c9a4
+    end: c0c9c6
+    byte_length: 32
+  portrait: 0f11
+  text:
+    windows: 1
+    original: ポ・・・ポコポコ？どうしたの？？
+    translated: ポ・・・ポコポコ？どうしたの？？
+block_39:
+  index: 39
+  offsets:
+    start: c0c9ca
+    end: c0c9ec
+    byte_length: 32
+  portrait: 0f11
+  text:
+    windows: 1
+    original: ちょっと、本気を出しすぎたかな？
+    translated: ちょっと、本気を出しすぎたかな？
+block_40:
+  index: 40
+  offsets:
+    start: c0c9ec
+    end: c0ca25
+    byte_length: 55
+  portrait: 0f16
+  text:
+    windows: 2
+    original: （これならまだ、世界征服#0A#狙えるんじゃねえか・・・？？）
+    translated: （これならまだ、世界征服#0A#狙えるんじゃねえか・・・？？）
+block_41:
+  index: 41
+  offsets:
+    start: c0ca26
+    end: c0ca46
+    byte_length: 30
+  portrait: 0f0f
+  text:
+    windows: 1
+    original: null
+    translated: null
+block_42:
+  index: 42
+  offsets:
+    start: c0ca46
+    end: c0ca4e
+    byte_length: 6
+  portrait: 0f14
+  text:
+    windows: 1
+    original: ポコ！
+    translated: ポコ！
+block_43:
+  index: 43
+  offsets:
+    start: c0ca4e
+    end: c0caaa
+    byte_length: 90
+  portrait: 0f02
+  text:
+    windows: 2
+    original: 良いことをしましたな、#PN#殿#07#あの二人がバブラシュカをおびやかすことは#0A#もう２度とありますまい
+    translated: 良いことをしましたな、#PN#殿#07#あの二人がバブラシュカをおびやかすことは#0A#もう２度とありますまい
+block_44:
+  index: 44
+  offsets:
+    start: c0caab
+    end: c0cae0
+    byte_length: 51
+  portrait: 0f00
+  text:
+    windows: 2
+    original: 修業の成果はありましたかな？#0A#では、先を急ぎましょう
+    translated: 修業の成果はありましたかな？#0A#では、先を急ぎましょう
+block_45:
+  index: 45
+  offsets:
+    start: c0cae1
+    end: c0cb92
+    byte_length: 175
+  portrait: 0f00
+  text:
+    windows: 4
+    original: ここは、霧深きカリン山脈の中ほどに位置する#0A#コーエン山のふもとです#07#ここにも強力なセプターの気配を感じます#0A#が・・・#07#こんな山奥に人が住んでいるという話は#0A#聞いたことがありませんな
+    translated: ここは、霧深きカリン山脈の中ほどに位置する#0A#コーエン山のふもとです#07#ここにも強力なセプターの気配を感じます#0A#が・・・#07#こんな山奥に人が住んでいるという話は#0A#聞いたことがありませんな
+block_46:
+  index: 46
+  offsets:
+    start: c0cb93
+    end: c0cbd2
+    byte_length: 61
+  portrait: 0f00
+  text:
+    windows: 2
+    original: カリン山脈ですぞ#0A#またコーテツと一勝負していくつもりですかな？
+    translated: カリン山脈ですぞ#0A#またコーテツと一勝負していくつもりですかな？
+block_47:
+  index: 47
+  offsets:
+    start: c0cbd6
+    end: c0cc1c
+    byte_length: 68
+  portrait: 0f1a
+  text:
+    windows: 2
+    original: ウホホッ！#07#オレ様が支配するこの地に、足を踏み入れる#0A#やつは誰だっ！？
+    translated: ウホホッ！#07#オレ様が支配するこの地に、足を踏み入れる#0A#やつは誰だっ！？
+block_48:
+  index: 48
+  offsets:
+    start: c0cc1c
+    end: c0cc9a
+    byte_length: 124
+  portrait: 0f01
+  text:
+    windows: 3
+    original: な・・・なんと！？#0A#サルではないか！#07#しかし、確かにこの猿から強いパワーを#0A#感じます！#07#こやつが、この地を支配するセプターとは！
+    translated: な・・・なんと！？#0A#サルではないか！#07#しかし、確かにこの猿から強いパワーを#0A#感じます！#07#こやつが、この地を支配するセプターとは！
+block_49:
+  index: 49
+  offsets:
+    start: c0cc9a
+    end: c0cdb4
+    byte_length: 280
+  portrait: 0f1b
+  text:
+    windows: 6
+    original: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
+    translated: そうとも！#0A#オレ様の名はコーテツ、猿族の王だ！#07#オレ様の力は世界一！#0A#腕力も、それにセプター能力もな#07#ちょうどいい#07#オレ様は、お前らみたいな#0A#ひ弱な人間どもが・・・#07#この世界で、でかい顔をしているのを見て#0A#腹が立っていたところだ！#07#お前を手始めにして、この世界をオレ様の#0A#ものにしてやるぜ！
+block_50:
+  index: 50
+  offsets:
+    start: c0cdb9
+    end: c0cdf2
+    byte_length: 55
+  portrait: 0f1c
+  text:
+    windows: 2
+    original: null
+    translated: null
+block_51:
+  index: 51
+  offsets:
+    start: c0cdf3
+    end: c0ce20
+    byte_length: 43
+  portrait: 0f00
+  text:
+    windows: 2
+    original: コーテツとやらよ、#PN#殿の力#0A#思い知ったか！？
+    translated: コーテツとやらよ、#PN#殿の力#0A#思い知ったか！？
+block_52:
+  index: 52
+  offsets:
+    start: c0ce20
+    end: c0ce7b
+    byte_length: 89
+  portrait: 0f1d
+  text:
+    windows: 2
+    original: 世の中には強いやつがいるもんだ・・・#07#目が覚めたぜ！#0A#オレ様はここだけを守って生きていこう#07#
+    translated: 世の中には強いやつがいるもんだ・・・#07#目が覚めたぜ！#0A#オレ様はここだけを守って生きていこう#07#
+block_53:
+  index: 53
+  offsets:
+    start: c0cee9
+    end: c0cf28
+    byte_length: 61
+  portrait: 0f1d
+  text:
+    windows: 2
+    original: ゴホ！！今のは、調子が悪かったんだ#0A#もう一度チャンスをくれ！！
+    translated: ゴホ！！今のは、調子が悪かったんだ#0A#もう一度チャンスをくれ！！
+block_54:
+  index: 54
+  offsets:
+    start: c0cf2c
+    end: c0cf7f
+    byte_length: 81
+  portrait: 0f1e
+  text:
+    windows: 2
+    original: オホッ！！やっぱりオレ様は世界一ィ！！#0A#今日からお前を、オレ様の子分にしてやるぜ！
+    translated: オホッ！！やっぱりオレ様は世界一ィ！！#0A#今日からお前を、オレ様の子分にしてやるぜ！
+block_55:
+  index: 55
+  offsets:
+    start: c0cf80
+    end: c0cfb9
+    byte_length: 55
+  portrait: 0f1a
+  text:
+    windows: 2
+    original: そんなことじゃだめだ！#0A#よし、何度でも相手してやるぞ！！
+    translated: そんなことじゃだめだ！#0A#よし、何度でも相手してやるぞ！！
+block_56:
+  index: 56
+  offsets:
+    start: c0cfba
+    end: c0d008
+    byte_length: 76
+  portrait: 0f1a
+  text:
+    windows: 2
+    original: もしお前が修業したくなったら#0A#ここに戻ってこい！#07#いつでも相手してやるからな！
+    translated: もしお前が修業したくなったら#0A#ここに戻ってこい！#07#いつでも相手してやるからな！
+block_57:
+  index: 57
+  offsets:
+    start: c0d008
+    end: c0d044
+    byte_length: 58
+  portrait: 0f02
+  text:
+    windows: 2
+    original: コーテツとやら、見かけほど悪いやつでは#0A#無かったようですな#07#
+    translated: コーテツとやら、見かけほど悪いやつでは#0A#無かったようですな#07#
+block_58:
+  index: 58
+  offsets:
+    start: c0d0d9
+    end: c0d10e
+    byte_length: 51
+  portrait: 0f1d
+  text:
+    windows: 2
+    original: なんだ、もう帰るのか？#0A#もう少しゆっくりして行けよ！
+    translated: なんだ、もう帰るのか？#0A#もう少しゆっくりして行けよ！
+block_59:
+  index: 59
+  offsets:
+    start: c0d10f
+    end: c0d21b
+    byte_length: 266
+  portrait: 0f00
+  text:
+    windows: 6
+    original: ここは、バブラシュカの東西を分ける#0A#ゴザ砂漠です#07#ここから東にはキルヒ王の統治もおよばぬ#0A#広大な未開の地が広がっております#07#しかし・・・その前に、ここで感じられる#0A#強力な怨念の主を倒さねばならないよう#0A#ですな・・・#07#彼はここを通るもの全てにその怨念を#0A#ぶつけているようです！
+    translated: ここは、バブラシュカの東西を分ける#0A#ゴザ砂漠です#07#ここから東にはキルヒ王の統治もおよばぬ#0A#広大な未開の地が広がっております#07#しかし・・・その前に、ここで感じられる#0A#強力な怨念の主を倒さねばならないよう#0A#ですな・・・#07#彼はここを通るもの全てにその怨念を#0A#ぶつけているようです！
+block_60:
+  index: 60
+  offsets:
+    start: c0d21c
+    end: c0d26c
+    byte_length: 78
+  portrait: 0f00
+  text:
+    windows: 3
+    original: ゴザ砂漠です#0A#必要ならここに立ち寄って、ヴァイデンに#0A#会っていくのも良いでしょう
+    translated: ゴザ砂漠です#0A#必要ならここに立ち寄って、ヴァイデンに#0A#会っていくのも良いでしょう
+block_61:
+  index: 61
+  offsets:
+    start: c0d270
+    end: c0d355
+    byte_length: 227
+  portrait: 0f1f
+  text:
+    windows: 4
+    original: 余の名はヴァイデン#07#余は、愚かな民衆たちによってザカリアを#0A#追われてから、この砂漠を我が領土と決め#0A#いつの日か復讐すると誓ったのだ#07#復讐には金と力が必要#07#ここを通る民には金品を、セプターたちには#0A#カードを税としておさめてもらっておる#07#
+    translated: 余の名はヴァイデン#07#余は、愚かな民衆たちによってザカリアを#0A#追われてから、この砂漠を我が領土と決め#0A#いつの日か復讐すると誓ったのだ#07#復讐には金と力が必要#07#ここを通る民には金品を、セプターたちには#0A#カードを税としておさめてもらっておる#07#
+block_62:
+  index: 62
+  offsets:
+    start: c0d394
+    end: c0d3c1
+    byte_length: 43
+  portrait: 0f01
+  text:
+    windows: 2
+    original: セプターが二人？#0A#・・・それはいったい・・・
+    translated: セプターが二人？#0A#・・・それはいったい・・・
+block_63:
+  index: 63
+  offsets:
+    start: c0d3c1
+    end: c0d3ec
+    byte_length: 41
+  portrait: 0f0e
+  text:
+    windows: 1
+    original: null
+    translated: null
+block_64:
+  index: 64
+  offsets:
+    start: c0d3ec
+    end: c0d419
+    byte_length: 43
+  portrait: 0f01
+  text:
+    windows: 2
+    original: 竜眼のゼネス！#0A#まさか、追ってくるとは・・・
+    translated: 竜眼のゼネス！#0A#まさか、追ってくるとは・・・
+block_65:
+  index: 65
+  offsets:
+    start: c0d419
+    end: c0d470
+    byte_length: 85
+  portrait: 0f0e
+  text:
+    windows: 3
+    original: 俺の目的はバブラシュカの支配だ#0A#だがな、その前にやっておかねばならない事が#0A#あるようだ#07#
+    translated: 俺の目的はバブラシュカの支配だ#0A#だがな、その前にやっておかねばならない事が#0A#あるようだ#07#
+block_66:
+  index: 66
+  offsets:
+    start: c0d4b4
+    end: c0d4e6
+    byte_length: 48
+  portrait: 0f03
+  text:
+    windows: 2
+    original: 何と、ここで二人を相手にせねばならぬとは#0A#・・・#07#
+    translated: 何と、ここで二人を相手にせねばならぬとは#0A#・・・#07#
+block_67:
+  index: 67
+  offsets:
+    start: c0d505
+    end: c0d568
+    byte_length: 97
+  portrait: 0f21
+  text:
+    windows: 3
+    original: 余に再び会いに来ようとは#0A#よいこころがけぞ！#07#余もひまを持て余していたところ#0A#さっそくお相手いたそう
+    translated: 余に再び会いに来ようとは#0A#よいこころがけぞ！#07#余もひまを持て余していたところ#0A#さっそくお相手いたそう
+block_68:
+  index: 68
+  offsets:
+    start: c0d568
+    end: c0d5b2
+    byte_length: 72
+  portrait: 0f0e
+  text:
+    windows: 2
+    original: ちょうどいい、ちょっとした肩ならしに#0A#させてもらおうか#07#俺は容赦しないぜ！
+    translated: ちょうどいい、ちょっとした肩ならしに#0A#させてもらおうか#07#俺は容赦しないぜ！
+block_69:
+  index: 69
+  offsets:
+    start: c0d5b3
+    end: c0d5ea
+    byte_length: 53
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: くそっ！・・・覚えてろよ・・・#0A#おれは、あきらめんぞ！
+    translated: くそっ！・・・覚えてろよ・・・#0A#おれは、あきらめんぞ！
+block_70:
+  index: 70
+  offsets:
+    start: c0d5ea
+    end: c0d625
+    byte_length: 57
+  portrait: 0f22
+  text:
+    windows: 2
+    original: うう・・・やはり余は、真の王では無いと#0A#いうことのか・・・
+    translated: うう・・・やはり余は、真の王では無いと#0A#いうことのか・・・
+block_71:
+  index: 71
+  offsets:
+    start: c0d625
+    end: c0d660
+    byte_length: 57
+  portrait: 0f00
+  text:
+    windows: 2
+    original: ヴァイデンよ、王であることがそれほど#0A#大切なことなのかな？
+    translated: ヴァイデンよ、王であることがそれほど#0A#大切なことなのかな？
+block_72:
+  index: 72
+  offsets:
+    start: c0d660
+    end: c0d6db
+    byte_length: 121
+  portrait: 0f22
+  text:
+    windows: 3
+    original: ・・・・・・#07#余は人々に王として認めてもらうことを#0A#願っていた・・・#07#だが・・・確かにそれにこだわりすぎていたの#0A#かもしれぬ#07#
+    translated: ・・・・・・#07#余は人々に王として認めてもらうことを#0A#願っていた・・・#07#だが・・・確かにそれにこだわりすぎていたの#0A#かもしれぬ#07#
+block_73:
+  index: 73
+  offsets:
+    start: c0d797
+    end: c0d7b9
+    byte_length: 32
+  portrait: 0f02
+  text:
+    windows: 1
+    original: がんこな性格は直らんとみえるわい
+    translated: がんこな性格は直らんとみえるわい
+block_74:
+  index: 74
+  offsets:
+    start: c0d7be
+    end: c0d7fe
+    byte_length: 62
+  portrait: 0f1f
+  text:
+    windows: 3
+    original: 余の負けだ#0A#負けを素直に認めるのも、真の王の心がけと#0A#いうものよ
+    translated: 余の負けだ#0A#負けを素直に認めるのも、真の王の心がけと#0A#いうものよ
+block_75:
+  index: 75
+  offsets:
+    start: c0d7fe
+    end: c0d810
+    byte_length: 16
+  portrait: 0f0d
+  text:
+    windows: 1
+    original: 俺は認めないぜ！
+    translated: 俺は認めないぜ！
+block_76:
+  index: 76
+  offsets:
+    start: c0d814
+    end: c0d85a
+    byte_length: 68
+  portrait: 0f21
+  text:
+    windows: 2
+    original: おお！！手かせがはずれたぞ！！#0A#これで余は１００％の力を発揮できる！#07#
+    translated: おお！！手かせがはずれたぞ！！#0A#これで余は１００％の力を発揮できる！#07#
+block_77:
+  index: 77
+  offsets:
+    start: c0d89e
+    end: c0d8f2
+    byte_length: 82
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: どうやら俺の力が、貴様のそれを#0A#上まわったようだな#07#フッ、２度と勇者づらなどするな！
+    translated: どうやら俺の力が、貴様のそれを#0A#上まわったようだな#07#フッ、２度と勇者づらなどするな！
+block_78:
+  index: 78
+  offsets:
+    start: c0d8f3
+    end: c0d93a
+    byte_length: 69
+  portrait: 0f21
+  text:
+    windows: 1
+    original: 久しぶりに、王の気分を味わうことが出来たぞ#07#ホッホッホ・・・愉快、愉快
+    translated: 久しぶりに、王の気分を味わうことが出来たぞ#07#ホッホッホ・・・愉快、愉快
+block_79:
+  index: 79
+  offsets:
+    start: c0d93e
+    end: c0d974
+    byte_length: 52
+  portrait: 0f0c
+  text:
+    windows: 3
+    original: null
+    translated: null
+block_80:
+  index: 80
+  offsets:
+    start: c0d975
+    end: c0da00
+    byte_length: 137
+  portrait: 0f1f
+  text:
+    windows: 2
+    original: 余はもう、ここを通る者を阻むことはすまい#07#しかし、もし余と再び戦いたいことがあれば#0A#遠慮するでないぞ#07#余も、一人でここにいるのは退屈なのでな
+    translated: 余はもう、ここを通る者を阻むことはすまい#07#しかし、もし余と再び戦いたいことがあれば#0A#遠慮するでないぞ#07#余も、一人でここにいるのは退屈なのでな
+block_81:
+  index: 81
+  offsets:
+    start: c0da00
+    end: c0da25
+    byte_length: 35
+  portrait: 0f02
+  text:
+    windows: 1
+    original: 彼を改心させられて、よかったですな#07#
+    translated: 彼を改心させられて、よかったですな#07#
+block_82:
+  index: 82
+  offsets:
+    start: c0dae5
+    end: c0db2a
+    byte_length: 67
+  portrait: 0f00
+  text:
+    windows: 2
+    original: ゼネスも、少しずつ強くなっているようです#0A#気を抜いてはいけませんぞ！
+    translated: ゼネスも、少しずつ強くなっているようです#0A#気を抜いてはいけませんぞ！
+block_83:
+  index: 83
+  offsets:
+    start: c0db2b
+    end: c0dc27
+    byte_length: 250
+  portrait: 0f00
+  text:
+    windows: 6
+    original: 寒いのも当たり前#0A#ここは、バブラシュカでも最も北に位置する#0A#ガーベリヤ地方ですぞ#07#この地方唯一の集落ケルダー村に、不思議な#0A#力を持つ少女がいるという話です#07#彼女が本当に邪悪なセプターなのかは#0A#分かりませんが・・・#07#とにかく村で話を聞いて#0A#みることにしましょう
+    translated: 寒いのも当たり前#0A#ここは、バブラシュカでも最も北に位置する#0A#ガーベリヤ地方ですぞ#07#この地方唯一の集落ケルダー村に、不思議な#0A#力を持つ少女がいるという話です#07#彼女が本当に邪悪なセプターなのかは#0A#分かりませんが・・・#07#とにかく村で話を聞いて#0A#みることにしましょう
+block_84:
+  index: 84
+  offsets:
+    start: c0dc28
+    end: c0dc6f
+    byte_length: 69
+  portrait: 0f02
+  text:
+    windows: 2
+    original: ケルダー村ですが、寄ってみますかな？#0A#ミランダもきっと喜ぶことでしょう
+    translated: ケルダー村ですが、寄ってみますかな？#0A#ミランダもきっと喜ぶことでしょう
+block_85:
+  index: 85
+  offsets:
+    start: c0dc74
+    end: c0dc98
+    byte_length: 34
+  portrait: 0f01
+  text:
+    windows: 1
+    original: なんと！村の人々がみな氷づけに！！
+    translated: なんと！村の人々がみな氷づけに！！
+block_86:
+  index: 86
+  offsets:
+    start: c0dc98
+    end: c0dd09
+    byte_length: 111
+  portrait: 0f26
+  text:
+    windows: 3
+    original: みんな、私の編み物の邪魔をするから#0A#よ・・・#07#あなたたちも私の邪魔をするのね？#0A#いいわ、みんな氷づけにしてあげる！
+    translated: みんな、私の編み物の邪魔をするから#0A#よ・・・#07#あなたたちも私の邪魔をするのね？#0A#いいわ、みんな氷づけにしてあげる！
+block_87:
+  index: 87
+  offsets:
+    start: c0dd09
+    end: c0dd9b
+    byte_length: 144
+  portrait: 0f01
+  text:
+    windows: 3
+    original: 彼女は、間違いなくセプターです！#07#しかし・・・まずいですぞ！#0A#早く彼女を止めて呪文を解かないと#0A#村の人々は死んでしまいます！#07#急いでくだされ、#PN#殿！
+    translated: 彼女は、間違いなくセプターです！#07#しかし・・・まずいですぞ！#0A#早く彼女を止めて呪文を解かないと#0A#村の人々は死んでしまいます！#07#急いでくだされ、#PN#殿！
+block_88:
+  index: 88
+  offsets:
+    start: c0dd9f
+    end: c0ddda
+    byte_length: 57
+  portrait: 0f25
+  text:
+    windows: 2
+    original: null
+    translated: null
+block_89:
+  index: 89
+  offsets:
+    start: c0ddde
+    end: c0defc
+    byte_length: 284
+  portrait: 0f27
+  text:
+    windows: 4
+    original: ・・・・・・#07#私を止めたの、あなたが初めてよ#07#私、村の人々や両親までが、私を怖がるのを#0A#見てさびしかったの#07#どうせさびしいのなら、みんないなくなれば#0A#いいって、そう思って・・・#07#でも、だれも私を止めてくれなかった・・・#0A#私のような能力を持つ人は、村にはいなかったわ#07##PN#、あなたに会えてよかった
+    translated: ・・・・・・#07#私を止めたの、あなたが初めてよ#07#私、村の人々や両親までが、私を怖がるのを#0A#見てさびしかったの#07#どうせさびしいのなら、みんないなくなれば#0A#いいって、そう思って・・・#07#でも、だれも私を止めてくれなかった・・・#0A#私のような能力を持つ人は、村にはいなかったわ#07##PN#、あなたに会えてよかった
 block_90:
   index: 90
   offsets:
-    byte_length: 22
-    end: c0df14
     start: c0defc
+    end: c0df14
+    byte_length: 22
   portrait: 0f00
   text:
+    windows: 1
     original: では、村の人々を・・・
     translated: では、村の人々を・・・
-    windows: 1
 block_91:
   index: 91
   offsets:
-    byte_length: 117
-    end: c0df8b
     start: c0df14
+    end: c0df8b
+    byte_length: 117
   portrait: 0f24
   text:
+    windows: 3
     original: うん、元に戻すわ#0A#私、もうさびしくないし・・・#07#世界には、あなたみたいに私と同じ力を#0A#持つ人がいるんだって、分かったから
     translated: うん、元に戻すわ#0A#私、もうさびしくないし・・・#07#世界には、あなたみたいに私と同じ力を#0A#持つ人がいるんだって、分かったから
-    windows: 3
 block_92:
   index: 92
   offsets:
-    byte_length: 47
-    end: c0dfbd
     start: c0df8c
+    end: c0dfbd
+    byte_length: 47
   portrait: 0f24
   text:
+    windows: 2
     original: また負けちゃった・・・#0A#でも、おもしろかったよ！
     translated: また負けちゃった・・・#0A#でも、おもしろかったよ！
-    windows: 2
 block_93:
   index: 93
   offsets:
-    byte_length: 74
-    end: c0e00e
     start: c0dfc2
+    end: c0e00e
+    byte_length: 74
   portrait: 0f26
   text:
+    windows: 2
     original: やっと静かになった・・・#0A#これで続きが編めるわ#07#私の編み物帝国の続きが・・・
     translated: やっと静かになった・・・#0A#これで続きが編めるわ#07#私の編み物帝国の続きが・・・
-    windows: 2
 block_94:
   index: 94
   offsets:
-    byte_length: 29
-    end: c0e02e
     start: c0e00f
+    end: c0e02e
+    byte_length: 29
   portrait: 0f26
   text:
+    windows: 2
     original: うふふ#0A#私も強くなったでしょ？
     translated: うふふ#0A#私も強くなったでしょ？
-    windows: 2
 block_95:
   index: 95
   offsets:
-    byte_length: 76
-    end: c0e07d
     start: c0e02f
+    end: c0e07d
+    byte_length: 76
   portrait: 0f02
   text:
+    windows: 2
     original: 村の人も元に戻ったし、あの娘も元気に#0A#なったようだし、良いことずくめですなあ#07#
     translated: 村の人も元に戻ったし、あの娘も元気に#0A#なったようだし、良いことずくめですなあ#07#
-    windows: 2
 block_96:
   index: 96
   offsets:
-    byte_length: 55
-    end: c0e12e
     start: c0e0f5
+    end: c0e12e
+    byte_length: 55
   portrait: 0f03
   text:
+    windows: 2
     original: さあ、次の場所へ向かいましょう#0A#ここは寒くてかないません
     translated: さあ、次の場所へ向かいましょう#0A#ここは寒くてかないません
-    windows: 2
 block_97:
   index: 97
   offsets:
-    byte_length: 189
-    end: c0e1ee
     start: c0e12f
+    end: c0e1ee
+    byte_length: 189
   portrait: 0f00
   text:
+    windows: 3
     original: ここは、タリオの村ですな#07#気候がおだやかで、村の人々のほとんどが#0A#農業で生活を営んでおります#07#争い事には無縁の場所にみえますが・・・#0A#やはり、セプターの存在を感じます#07#しかも、とても奇妙な・・・
     translated: ここは、タリオの村ですな#07#気候がおだやかで、村の人々のほとんどが#0A#農業で生活を営んでおります#07#争い事には無縁の場所にみえますが・・・#0A#やはり、セプターの存在を感じます#07#しかも、とても奇妙な・・・
-    windows: 3
 block_98:
   index: 98
   offsets:
-    byte_length: 66
-    end: c0e233
     start: c0e1ef
+    end: c0e233
+    byte_length: 66
   portrait: 0f02
   text:
+    windows: 3
     original: タリオの村です#0A#オライリーは約束通り、おとなしくしている#0A#ようですな
     translated: タリオの村です#0A#オライリーは約束通り、おとなしくしている#0A#ようですな
-    windows: 3
 block_99:
   index: 99
   offsets:
-    byte_length: 31
-    end: c0e259
     start: c0e238
+    end: c0e259
+    byte_length: 31
   portrait: 0f01
   text:
+    windows: 2
     original: ややっ！！#0A#あれは・・・ゼネス！
     translated: ややっ！！#0A#あれは・・・ゼネス！
+block_100:
+  index: 100
+  offsets:
+    start: c0e259
+    end: c0e28a
+    byte_length: 47
+  portrait: 0f0c
+  text:
     windows: 2
+    original: 待っていたぞ、#PN##0A#貴様が必ずここを通ると思ってな
+    translated: 待っていたぞ、#PN##0A#貴様が必ずここを通ると思ってな
+block_101:
+  index: 101
+  offsets:
+    start: c0e28a
+    end: c0e2c3
+    byte_length: 55
+  portrait: 0f00
+  text:
+    windows: 2
+    original: では・・・あの奇妙なセプターの感覚は#0A#おぬしだったのか？
+    translated: では・・・あの奇妙なセプターの感覚は#0A#おぬしだったのか？
+block_102:
+  index: 102
+  offsets:
+    start: c0e2c3
+    end: c0e2f0
+    byte_length: 43
+  portrait: 0f2b
+  text:
+    windows: 2
+    original: 違うだよ#0A#それは多分、このオライリーの事だよ
+    translated: 違うだよ#0A#それは多分、このオライリーの事だよ
+block_103:
+  index: 103
+  offsets:
+    start: c0e2f0
+    end: c0e338
+    byte_length: 70
+  portrait: 0f0a
+  text:
+    windows: 2
+    original: 何だ？貴様は#07#俺たちの戦いに口をはさむならば#0A#痛い目をみることになるぞ！
+    translated: 何だ？貴様は#07#俺たちの戦いに口をはさむならば#0A#痛い目をみることになるぞ！
+block_104:
+  index: 104
+  offsets:
+    start: c0e338
+    end: c0e374
+    byte_length: 58
+  portrait: 0f29
+  text:
+    windows: 1
+    original: あんたたちに、勝手なまねはさせないだよ#07#ここはおらの花畑だ#07#
+    translated: あんたたちに、勝手なまねはさせないだよ#07#ここはおらの花畑だ#07#
+block_105:
+  index: 105
+  offsets:
+    start: c0e3a7
+    end: c0e436
+    byte_length: 141
+  portrait: 0f00
+  text:
+    windows: 3
+    original: そうか・・・奇妙な感覚は、この村人から#0A#発せられてのだな#07#どうやら彼は、背中のデラネシア草によって#0A#精神と肉体を、支配されてしまっているようです
+    translated: そうか・・・奇妙な感覚は、この村人から#0A#発せられてのだな#07#どうやら彼は、背中のデラネシア草によって#0A#精神と肉体を、支配されてしまっているようです
+block_106:
+  index: 106
+  offsets:
+    start: c0e436
+    end: c0e4b3
+    byte_length: 123
+  portrait: 0f2b
+  text:
+    windows: 3
+    original: おらは、この花をたくさん増やして#0A#世界中の人に、この美しさを知ってもらうだ#07#まず最初に、あんたたちにこの花を分けて#0A#やるだよ！
+    translated: おらは、この花をたくさん増やして#0A#世界中の人に、この美しさを知ってもらうだ#07#まず最初に、あんたたちにこの花を分けて#0A#やるだよ！
+block_107:
+  index: 107
+  offsets:
+    start: c0e4b3
+    end: c0e4e6
+    byte_length: 49
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: くだらんことを！#0A#二人とも、まとめて葬ってやるぜ！
+    translated: くだらんことを！#0A#二人とも、まとめて葬ってやるぜ！
+block_108:
+  index: 108
+  offsets:
+    start: c0e4e6
+    end: c0e59f
+    byte_length: 183
+  portrait: 0f01
+  text:
+    windows: 4
+    original: この花は危険ですぞ！#0A#オライリーを倒さねば、世界中の人の体が#0A#この花に乗っ取られてしまいます#07#もしゼネスが勝ったとしても、やつが#0A#この花を利用するかもしれません#07#やつらを阻止してくだされ！
+    translated: この花は危険ですぞ！#0A#オライリーを倒さねば、世界中の人の体が#0A#この花に乗っ取られてしまいます#07#もしゼネスが勝ったとしても、やつが#0A#この花を利用するかもしれません#07#やつらを阻止してくだされ！
+block_109:
+  index: 109
+  offsets:
+    start: c0e5a3
+    end: c0e60d
+    byte_length: 104
+  portrait: 0f2b
+  text:
+    windows: 4
+    original: null
+    translated: null
+block_110:
+  index: 110
+  offsets:
+    start: c0e60e
+    end: c0e65b
+    byte_length: 75
+  portrait: 0f2c
+  text:
+    windows: 3
+    original: はっ！#0A#おらは何をしていただ？#07#なんか、長い夢を見てたような気がするだ#0A#・・・
+    translated: はっ！#0A#おらは何をしていただ？#07#なんか、長い夢を見てたような気がするだ#0A#・・・
+block_111:
+  index: 111
+  offsets:
+    start: c0e65b
+    end: c0e6aa
+    byte_length: 77
+  portrait: 0f02
+  text:
+    windows: 1
+    original: ようやく自分の意識を取り戻したようですな#07#さあ、その花を切り取ってしまいなさい
+    translated: ようやく自分の意識を取り戻したようですな#07#さあ、その花を切り取ってしまいなさい
+block_112:
+  index: 112
+  offsets:
+    start: c0e6aa
+    end: c0e6dd
+    byte_length: 49
+  portrait: 0f2a
+  text:
+    windows: 2
+    original: 切るなんてとんでもねえ！#0A#これはおらの大切な花だ！
+    translated: 切るなんてとんでもねえ！#0A#これはおらの大切な花だ！
+block_113:
+  index: 113
+  offsets:
+    start: c0e6dd
+    end: c0e718
+    byte_length: 57
+  portrait: 0f01
+  text:
+    windows: 2
+    original: 何を言っておる！おぬしはその花に#0A#乗っ取られていたのだぞ！
+    translated: 何を言っておる！おぬしはその花に#0A#乗っ取られていたのだぞ！
+block_114:
+  index: 114
+  offsets:
+    start: c0e718
+    end: c0e796
+    byte_length: 124
+  portrait: 0f2c
+  text:
+    windows: 3
+    original: もう悪いことはしねえように#0A#おらが言い聞かせるだ#07#だからかんべんしてくれ#07#おら、この花がなくなったらさびしくて#0A#死んでしまうだよ
+    translated: もう悪いことはしねえように#0A#おらが言い聞かせるだ#07#だからかんべんしてくれ#07#おら、この花がなくなったらさびしくて#0A#死んでしまうだよ
+block_115:
+  index: 115
+  offsets:
+    start: c0e796
+    end: c0e821
+    byte_length: 137
+  portrait: 0f03
+  text:
+    windows: 2
+    original: ・・・・・・#07#しかたありませんな・・・#07#確かに、この花は彼の体に食い込んでいる#07#花を無理に抜いたりすれば、本当に死んで#0A#しまうかもしれません#07#
+    translated: ・・・・・・#07#しかたありませんな・・・#07#確かに、この花は彼の体に食い込んでいる#07#花を無理に抜いたりすれば、本当に死んで#0A#しまうかもしれません#07#
+block_116:
+  index: 116
+  offsets:
+    start: c0e84a
+    end: c0e86c
+    byte_length: 32
+  portrait: 0f2c
+  text:
+    windows: 1
+    original: やっぱり、あんたにゃ勝てねえだよ
+    translated: やっぱり、あんたにゃ勝てねえだよ
+block_117:
+  index: 117
+  offsets:
+    start: c0e86c
+    end: c0e8a9
+    byte_length: 59
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: ちっ！もう少しのところを・・・#0A#今度こそ貴様を倒してみせる！
+    translated: ちっ！もう少しのところを・・・#0A#今度こそ貴様を倒してみせる！
+block_118:
+  index: 118
+  offsets:
+    start: c0e8aa
+    end: c0e8e3
+    byte_length: 55
+  portrait: 0f2b
+  text:
+    windows: 2
+    original: おらの勝ちだな#0A#じゃあ、あんた達にも花をわけてやるだよ！
+    translated: おらの勝ちだな#0A#じゃあ、あんた達にも花をわけてやるだよ！
+block_119:
+  index: 119
+  offsets:
+    start: c0e8e3
+    end: c0e900
+    byte_length: 27
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: うわっ！#0A#や、やめろーっ！！
+    translated: うわっ！#0A#や、やめろーっ！！
+block_120:
+  index: 120
+  offsets:
+    start: c0e904
+    end: c0e970
+    byte_length: 106
+  portrait: 0f0b
+  text:
+    windows: 4
+    original: ハッハッハッ！勝ったっ！#0A##PN#に勝ったぞ！#07#貴様のカードは、世界支配のために#0A#俺が使ってやろう#0A#ありがたく思え！
+    translated: ハッハッハッ！勝ったっ！#0A##PN#に勝ったぞ！#07#貴様のカードは、世界支配のために#0A#俺が使ってやろう#0A#ありがたく思え！
+block_121:
+  index: 121
+  offsets:
+    start: c0e971
+    end: c0e9b9
+    byte_length: 70
+  portrait: 0f2b
+  text:
+    windows: 3
+    original: おらの勝ちだな！#0A#ほんじゃ、あんたらには畑仕事でも#0A#手伝ってもらうだかな
+    translated: おらの勝ちだな！#0A#ほんじゃ、あんたらには畑仕事でも#0A#手伝ってもらうだかな
+block_122:
+  index: 122
+  offsets:
+    start: c0e9ba
+    end: c0e9e4
+    byte_length: 40
+  portrait: 0f0e
+  text:
+    windows: 1
+    original: リュエードの神々は、俺に味方したようだな
+    translated: リュエードの神々は、俺に味方したようだな
+block_123:
+  index: 123
+  offsets:
+    start: c0e9e5
+    end: c0ea44
+    byte_length: 93
+  portrait: 0f0b
+  text:
+    windows: 3
+    original: フッ！今回は村人の邪魔に助けられたな#0A##PN#！#07#だが、俺の実力はこんなものではないぞ！#0A#さらばだっ！
+    translated: フッ！今回は村人の邪魔に助けられたな#0A##PN#！#07#だが、俺の実力はこんなものではないぞ！#0A#さらばだっ！
+block_124:
+  index: 124
+  offsets:
+    start: c0ea44
+    end: c0eab7
+    byte_length: 113
+  portrait: 0f01
+  text:
+    windows: 3
+    original: またやつに逃げられましたな#07##PN#殿、あなたは少し人が#0A#良すぎます#07#優しさだけで、この世界を生き抜く事は#0A#できませんぞ！#07#
+    translated: またやつに逃げられましたな#07##PN#殿、あなたは少し人が#0A#良すぎます#07#優しさだけで、この世界を生き抜く事は#0A#できませんぞ！#07#
+block_125:
+  index: 125
+  offsets:
+    start: c0eb35
+    end: c0eb4d
+    byte_length: 22
+  portrait: 0f02
+  text:
+    windows: 1
+    original: 戦果はありましたかな？
+    translated: 戦果はありましたかな？
+block_126:
+  index: 126
+  offsets:
+    start: c0eb4e
+    end: c0ec8b
+    byte_length: 315
+  portrait: 0f00
+  text:
+    windows: 7
+    original: バブラシュカの極東に位置する、活火山島#0A#ギルマンです#07#ここには、ホロビッツという炎を操る偉大な#0A#魔術師が住んでおり、多くの弟子たちを#0A#育てていたと聞きます#07#しかし、最近ではそのホロビッツ自身が#0A#カルドセプトに魅せられ、近隣の人々を#0A#脅かしているというウワサ・・・#07#それが本当だとすれば、我々にとっても#0A#脅威といえるでしょうな
+    translated: バブラシュカの極東に位置する、活火山島#0A#ギルマンです#07#ここには、ホロビッツという炎を操る偉大な#0A#魔術師が住んでおり、多くの弟子たちを#0A#育てていたと聞きます#07#しかし、最近ではそのホロビッツ自身が#0A#カルドセプトに魅せられ、近隣の人々を#0A#脅かしているというウワサ・・・#07#それが本当だとすれば、我々にとっても#0A#脅威といえるでしょうな
+block_127:
+  index: 127
+  offsets:
+    start: c0ec8c
+    end: c0ecae
+    byte_length: 32
+  portrait: 0f00
+  text:
+    windows: 2
+    original: null
+    translated: null
+block_128:
+  index: 128
+  offsets:
+    start: c0ed04
+    end: c0ed45
+    byte_length: 63
+  portrait: 0f0a
+  text:
+    windows: 2
+    original: どうしても、俺の願いが聞き入れられないと#0A#言うのか、ホロビッツ？
+    translated: どうしても、俺の願いが聞き入れられないと#0A#言うのか、ホロビッツ？
+block_129:
+  index: 129
+  offsets:
+    start: c0ed45
+    end: c0edec
+    byte_length: 165
+  portrait: 0f2e
+  text:
+    windows: 4
+    original: 確かに、お前の師サルバトールとわしは#0A#共に修業をした仲だ#07#サルバトールが、彼を恐れる村人たちに#0A#殺されたことも知っておる#07#しかし、今お前にわしの力を与えるわけには#0A#行かん
+    translated: 確かに、お前の師サルバトールとわしは#0A#共に修業をした仲だ#07#サルバトールが、彼を恐れる村人たちに#0A#殺されたことも知っておる#07#しかし、今お前にわしの力を与えるわけには#0A#行かん
+block_130:
+  index: 130
+  offsets:
+    start: c0edec
+    end: c0ee2c
+    byte_length: 62
+  portrait: 0f0b
+  text:
+    windows: 3
+    original: なぜだ？#0A#かつて、あれほど多くの弟子に教えを説いて#0A#いたお前が！
+    translated: なぜだ？#0A#かつて、あれほど多くの弟子に教えを説いて#0A#いたお前が！
+block_131:
+  index: 131
+  offsets:
+    start: c0ee2c
+    end: c0eeef
+    byte_length: 193
+  portrait: 0f2e
+  text:
+    windows: 4
+    original: わしは、未来を見たのだよ#07#これほどの力を持つわしも、もはや生い先#0A#長くはないことを・・・#07#わしが死ぬのであれば、この世界なぞ#0A#存在する価値はない#07#わしは決めたのだ#0A#いずれこの世界を全て破壊しようとな#07#
+    translated: わしは、未来を見たのだよ#07#これほどの力を持つわしも、もはや生い先#0A#長くはないことを・・・#07#わしが死ぬのであれば、この世界なぞ#0A#存在する価値はない#07#わしは決めたのだ#0A#いずれこの世界を全て破壊しようとな#07#
+block_132:
+  index: 132
+  offsets:
+    start: c0ef13
+    end: c0ef67
+    byte_length: 82
+  portrait: 0f03
+  text:
+    windows: 3
+    original: null
+    translated: null
+block_133:
+  index: 133
+  offsets:
+    start: c0ef67
+    end: c0ef7c
+    byte_length: 19
+  portrait: 0f0d
+  text:
+    windows: 1
+    original: null
+    translated: null
+block_134:
+  index: 134
+  offsets:
+    start: c0efc5
+    end: c0f006
+    byte_length: 63
+  portrait: 0f2f
+  text:
+    windows: 1
+    original: null
+    translated: null
+block_135:
+  index: 135
+  offsets:
+    start: c0f00b
+    end: c0f040
+    byte_length: 51
+  portrait: 0f30
+  text:
+    windows: 2
+    original: null
+    translated: null
+block_136:
+  index: 136
+  offsets:
+    start: c0f040
+    end: c0f075
+    byte_length: 51
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: ホロビッツ！今度こそお前のカードを#0A#渡してもらうぞ！
+    translated: ホロビッツ！今度こそお前のカードを#0A#渡してもらうぞ！
+block_137:
+  index: 137
+  offsets:
+    start: c0f075
+    end: c0f0cb
+    byte_length: 84
+  portrait: 0f32
+  text:
+    windows: 2
+    original: ほう、ゼネスもか#0A#よろしい、わしを倒した者に力を与えようぞ#07#さあ二人とも、来るがよい！
+    translated: ほう、ゼネスもか#0A#よろしい、わしを倒した者に力を与えようぞ#07#さあ二人とも、来るがよい！
+block_138:
+  index: 138
+  offsets:
+    start: c0f0d0
+    end: c0f160
+    byte_length: 142
+  portrait: 0f30
+  text:
+    windows: 3
+    original: 見事だ・・・#PN#よ#07#わしの知らぬ所に、まだこれほどの力を#0A#持つものがいたとはな・・・#07#約束通り、わしの力・・・すなわち#0A#わしのカードを手にするが良い
+    translated: 見事だ・・・#PN#よ#07#わしの知らぬ所に、まだこれほどの力を#0A#持つものがいたとはな・・・#07#約束通り、わしの力・・・すなわち#0A#わしのカードを手にするが良い
+block_139:
+  index: 139
+  offsets:
+    start: c0f160
+    end: c0f1ac
+    byte_length: 74
+  portrait: 0f00
+  text:
+    windows: 3
+    original: しかし、ホロビッツよ#0A#あんたほどの賢者が、なぜ世界の破滅などを#0A#望んだのだ？
+    translated: しかし、ホロビッツよ#0A#あんたほどの賢者が、なぜ世界の破滅などを#0A#望んだのだ？
+block_140:
+  index: 140
+  offsets:
+    start: c0f1ac
+    end: c0f2ab
+    byte_length: 253
+  portrait: 0f30
+  text:
+    windows: 5
+    original: フオッフオッフオッ・・・#07#わしは、我が力を授けるに値するセプターを#0A#待っていたのだ#07#破滅をもたらすとわしが言えば、大陸中から#0A#力あるセプターが集まってくる#07#そのセプターらの中には、わしの力を使って#0A#この世界を正しい方向に導いてくれる者も#0A#おるだろうと思ったのだ
+    translated: フオッフオッフオッ・・・#07#わしは、我が力を授けるに値するセプターを#0A#待っていたのだ#07#破滅をもたらすとわしが言えば、大陸中から#0A#力あるセプターが集まってくる#07#そのセプターらの中には、わしの力を使って#0A#この世界を正しい方向に導いてくれる者も#0A#おるだろうと思ったのだ
+block_141:
+  index: 141
+  offsets:
+    start: c0f2ab
+    end: c0f30b
+    byte_length: 94
+  portrait: 0f02
+  text:
+    windows: 2
+    original: そういうことだったのか・・・#07#なるほど・・・これで私も納得しましたぞ#0A#やはり、あんたは偉大な方だ
+    translated: そういうことだったのか・・・#07#なるほど・・・これで私も納得しましたぞ#0A#やはり、あんたは偉大な方だ
+block_142:
+  index: 142
+  offsets:
+    start: c0f30b
+    end: c0f369
+    byte_length: 92
+  portrait: 0f30
+  text:
+    windows: 3
+    original: もっとも、セプターたちがこのまま破壊を#0A#続けるようならば、本当に破滅させて#0A#いたかもしれんがな
+    translated: もっとも、セプターたちがこのまま破壊を#0A#続けるようならば、本当に破滅させて#0A#いたかもしれんがな
+block_143:
+  index: 143
+  offsets:
+    start: c0f36e
+    end: c0f3e1
+    byte_length: 113
+  portrait: 0f0d
+  text:
+    windows: 3
+    original: ホロビッツの力は、またしても貴様に#0A#与えられるのか・・・#07#くそっ！こうなったら、何度でも#0A#ホロビッツに挑んでやるぜ！
+    translated: ホロビッツの力は、またしても貴様に#0A#与えられるのか・・・#07#くそっ！こうなったら、何度でも#0A#ホロビッツに挑んでやるぜ！
+block_144:
+  index: 144
+  offsets:
+    start: c0f3e6
+    end: c0f43c
+    byte_length: 84
+  portrait: 0f31
+  text:
+    windows: 2
+    original: お前たちもその程度なのか#07#やはりこの世界、残しておくほどの価値は#0A#ないと見えるな・・・
+    translated: お前たちもその程度なのか#07#やはりこの世界、残しておくほどの価値は#0A#ないと見えるな・・・
+block_145:
+  index: 145
+  offsets:
+    start: c0f440
+    end: c0f4b3
+    byte_length: 113
+  portrait: 0f30
+  text:
+    windows: 2
+    original: 見事だ・・・ゼネス#0A#さすが我が友の弟子#07#約束通り、我が力をお前に授けようぞ#07#その力をどう用いようが、それはお前次第だ
+    translated: 見事だ・・・ゼネス#0A#さすが我が友の弟子#07#約束通り、我が力をお前に授けようぞ#07#その力をどう用いようが、それはお前次第だ
+block_146:
+  index: 146
+  offsets:
+    start: c0f4b3
+    end: c0f4e3
+    byte_length: 46
+  portrait: 0f0c
+  text:
+    windows: 2
+    original: フッフッフ・・・#0A##PN#も倒し、古の力も手に入れた#07#
+    translated: フッフッフ・・・#0A##PN#も倒し、古の力も手に入れた#07#
+block_147:
+  index: 147
+  offsets:
+    start: c0f515
+    end: c0f54a
+    byte_length: 51
+  portrait: 0f2e
+  text:
+    windows: 2
+    original: 敵は自分の内におる#0A#慢心こそがもっとも危険な敵なのだ
+    translated: 敵は自分の内におる#0A#慢心こそがもっとも危険な敵なのだ
+block_148:
+  index: 148
+  offsets:
+    start: c0f54e
+    end: c0f58b
+    byte_length: 59
+  portrait: 0f2e
+  text:
+    windows: 2
+    original: ゼネスよ、腕を上げたな#0A#さあ、わしのカードを持って行くがよい
+    translated: ゼネスよ、腕を上げたな#0A#さあ、わしのカードを持って行くがよい
+block_149:
+  index: 149
+  offsets:
+    start: c0f58b
+    end: c0f5c6
+    byte_length: 57
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: 見たか、#PN#！これからは#0A#俺がお前の代わりをつとめてやるぜ！
+    translated: 見たか、#PN#！これからは#0A#俺がお前の代わりをつとめてやるぜ！
+block_150:
+  index: 150
+  offsets:
+    start: c0f5c7
+    end: c0f65d
+    byte_length: 148
+  portrait: 0f2e
+  text:
+    windows: 4
+    original: しかし・・・ゴリガンよ#0A#おぬしは、さぞ名のある魔道士が創り出した#0A#アーティファクトであろうな・・・#07#差し支えなくば、おぬしの創り手を教えて#0A#もらえぬか？
+    translated: しかし・・・ゴリガンよ#0A#おぬしは、さぞ名のある魔道士が創り出した#0A#アーティファクトであろうな・・・#07#差し支えなくば、おぬしの創り手を教えて#0A#もらえぬか？
+block_151:
+  index: 151
+  offsets:
+    start: c0f65d
+    end: c0f6e8
+    byte_length: 137
+  portrait: 0f03
+  text:
+    windows: 4
+    original: ・・・・・・#07#実はその事について、私も全く記憶が#0A#無いのだ・・・#07#この旅が終わったら、#PN#殿に#0A#手伝ってもらい、調べてみようとも#0A#思っとるのだが
+    translated: ・・・・・・#07#実はその事について、私も全く記憶が#0A#無いのだ・・・#07#この旅が終わったら、#PN#殿に#0A#手伝ってもらい、調べてみようとも#0A#思っとるのだが
+block_152:
+  index: 152
+  offsets:
+    start: c0f6e8
+    end: c0f70c
+    byte_length: 34
+  portrait: 0f30
+  text:
+    windows: 1
+    original: では、その旅の無事を祈っていますぞ
+    translated: では、その旅の無事を祈っていますぞ
+block_153:
+  index: 153
+  offsets:
+    start: c0f70d
+    end: c0f797
+    byte_length: 136
+  portrait: 0f03
+  text:
+    windows: 4
+    original: 私は何のために、誰によって創られたのか#0A#わからない・・・#07#しかし、旅が終わるまでには、何か#0A#手がかりが見つかるのではないかと#0A#思っております
+    translated: 私は何のために、誰によって創られたのか#0A#わからない・・・#07#しかし、旅が終わるまでには、何か#0A#手がかりが見つかるのではないかと#0A#思っております
+block_154:
+  index: 154
+  offsets:
+    start: c0f798
+    end: c0f881
+    byte_length: 231
+  portrait: 0f00
+  text:
+    windows: 5
+    original: ここはビスティームの森、別名を#0A#”帰らずの森”と呼ばれとります#07#多くの人々がここに入ったきり、行方知れずに#0A#なっておるようですぞ#07#この森の中から、また邪悪なセプターの力を#0A#感じるのですが・・・#07#ここを抜けるのは容易#0A#ならざることでしょうな
+    translated: ここはビスティームの森、別名を#0A#”帰らずの森”と呼ばれとります#07#多くの人々がここに入ったきり、行方知れずに#0A#なっておるようですぞ#07#この森の中から、また邪悪なセプターの力を#0A#感じるのですが・・・#07#ここを抜けるのは容易#0A#ならざることでしょうな
+block_155:
+  index: 155
+  offsets:
+    start: c0f882
+    end: c0f8f7
+    byte_length: 115
+  portrait: 0f00
+  text:
+    windows: 3
+    original: ビスティームの森です#0A#この森は何度来ても迷いますな#07#グルベル無しでも、充分”帰らずの森”の名に#0A#ふさわしい場所ですわい
+    translated: ビスティームの森です#0A#この森は何度来ても迷いますな#07#グルベル無しでも、充分”帰らずの森”の名に#0A#ふさわしい場所ですわい
+block_156:
+  index: 156
+  offsets:
+    start: c0f8fc
+    end: c0f902
+    byte_length: 4
+  portrait: 0f01
+  text:
+    windows: 1
+    original: ！！
+    translated: ！！
+block_157:
+  index: 157
+  offsets:
+    start: c0f902
+    end: c0f9f0
+    byte_length: 236
+  portrait: 0f35
+  text:
+    windows: 4
+    original: あら、またお客さんがやってきたようね#07#さしずめ、花に群がる蜜蜂、という所かしら#0A#時々、自分の美しさに怖くなることがあるわ#07#今までこの森に入って来た人は、みんな森の#0A#木々になってるのよ#07#美しい私のそばに、永遠にいられるんだから#0A#幸せってものよね
+    translated: あら、またお客さんがやってきたようね#07#さしずめ、花に群がる蜜蜂、という所かしら#0A#時々、自分の美しさに怖くなることがあるわ#07#今までこの森に入って来た人は、みんな森の#0A#木々になってるのよ#07#美しい私のそばに、永遠にいられるんだから#0A#幸せってものよね
+block_158:
+  index: 158
+  offsets:
+    start: c0f9f0
+    end: c0fa71
+    byte_length: 127
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: だまって聞いていれば、勝手なことを#07#俺はカードさえ手に入れば、貴様のような女に#0A#用はない！#07#さあ、だまってカードを渡してもらおう！
+    translated: だまって聞いていれば、勝手なことを#07#俺はカードさえ手に入れば、貴様のような女に#0A#用はない！#07#さあ、だまってカードを渡してもらおう！
+block_159:
+  index: 159
+  offsets:
+    start: c0fa71
+    end: c0fafa
+    byte_length: 135
+  portrait: 0f37
+  text:
+    windows: 3
+    original: オホホホホ！#07#私はここに来る人間を一人残らず#0A#木にして・・・#07#ゆくゆくはこの森を大陸全土に#0A#広げるつもりなのよ#07#セプターだって例外じゃないわ
+    translated: オホホホホ！#07#私はここに来る人間を一人残らず#0A#木にして・・・#07#ゆくゆくはこの森を大陸全土に#0A#広げるつもりなのよ#07#セプターだって例外じゃないわ
+block_160:
+  index: 160
+  offsets:
+    start: c0fafa
+    end: c0fb55
+    byte_length: 89
+  portrait: 0f0a
+  text:
+    windows: 3
+    original: 木にするなら、そこの#PN#だけに#0A#しておいてくれ#07#俺は貴様などにつきあっているほど#0A#ヒマではない
+    translated: 木にするなら、そこの#PN#だけに#0A#しておいてくれ#07#俺は貴様などにつきあっているほど#0A#ヒマではない
+block_161:
+  index: 161
+  offsets:
+    start: c0fb55
+    end: c0fb7e
+    byte_length: 39
+  portrait: 0f36
+  text:
+    windows: 1
+    original: あなた・・・私を怒らせてしまったようね#07#
+    translated: あなた・・・私を怒らせてしまったようね#07#
+block_162:
+  index: 162
+  offsets:
+    start: c0fbd9
+    end: c0fc3e
+    byte_length: 99
+  portrait: 0f35
+  text:
+    windows: 3
+    original: 最近ここへ迷い込む人もすっかり減って#0A#しまったわ#07#二人とも、せっかく来たんだから#0A#ゆっくりして行ってよ
+    translated: 最近ここへ迷い込む人もすっかり減って#0A#しまったわ#07#二人とも、せっかく来たんだから#0A#ゆっくりして行ってよ
+block_163:
+  index: 163
+  offsets:
+    start: c0fc3e
+    end: c0fc7b
+    byte_length: 59
+  portrait: 0f0c
+  text:
+    windows: 2
+    original: ゆっくりだと？#0A#フッ、一瞬のうちに貴様らを片付けてみせるぜ！
+    translated: ゆっくりだと？#0A#フッ、一瞬のうちに貴様らを片付けてみせるぜ！
+block_164:
+  index: 164
+  offsets:
+    start: c0fc7c
+    end: c0fca4
+    byte_length: 38
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: ちっ！#0A#また貴様を勝たせてしまうとはな#07#
+    translated: ちっ！#0A#また貴様を勝たせてしまうとはな#07#
+block_165:
+  index: 165
+  offsets:
+    start: c0fd30
+    end: c0fdd4
+    byte_length: 162
+  portrait: 0f33
+  text:
+    windows: 3
+    original: 私も負けたのね・・・#07#セプターの掟だから、カードは渡すわ#0A#それに、木にした人たちも元に戻しましょう#07#でも、私はこの森から出るつもりはないわ#0A#私はここが気に入ってるのよ
+    translated: 私も負けたのね・・・#07#セプターの掟だから、カードは渡すわ#0A#それに、木にした人たちも元に戻しましょう#07#でも、私はこの森から出るつもりはないわ#0A#私はここが気に入ってるのよ
+block_166:
+  index: 166
+  offsets:
+    start: c0fdd4
+    end: c0fdfc
+    byte_length: 38
+  portrait: 0f00
+  text:
+    windows: 1
+    original: また、旅人を木に変えたりせんだろうな？
+    translated: また、旅人を木に変えたりせんだろうな？
+block_167:
+  index: 167
+  offsets:
+    start: c0fdfc
+    end: c0fe30
+    byte_length: 50
+  portrait: 0f35
+  text:
+    windows: 2
+    original: 今度から、森に迷い込んだ人には#0A#道を教えてあげるわ#07#
+    translated: 今度から、森に迷い込んだ人には#0A#道を教えてあげるわ#07#
+block_168:
+  index: 168
+  offsets:
+    start: c0fe84
+    end: c0fe93
+    byte_length: 13
+  portrait: 0f00
+  text:
+    windows: 1
+    original: ・・・・・・#07#
+    translated: ・・・・・・#07#
+block_169:
+  index: 169
+  offsets:
+    start: c0feb2
+    end: c0fee9
+    byte_length: 53
+  portrait: 0f35
+  text:
+    windows: 2
+    original: やっぱりこの３人の中では#0A##PN#さんが、１番実力あるようね
+    translated: やっぱりこの３人の中では#0A##PN#さんが、１番実力あるようね
+block_170:
+  index: 170
+  offsets:
+    start: c0fee9
+    end: c0ff0a
+    byte_length: 31
+  portrait: 0f0d
+  text:
+    windows: 2
+    original: くそっ・・・#0A#いい気になるなよ！
+    translated: くそっ・・・#0A#いい気になるなよ！
+block_171:
+  index: 171
+  offsets:
+    start: c0ff0e
+    end: c0ffc0
+    byte_length: 176
+  portrait: 0f37
+  text:
+    windows: 4
+    original: あなたたち、なかなかいい形の木に#0A#なれそうよ#07#それじゃ、これから朽ち果てるまで#0A#ずっと私をながめていてもらうわ#07#触れることはおろか、近づくことさえ#0A#できないけどね#07#オ〜ッホホホホッ！
+    translated: あなたたち、なかなかいい形の木に#0A#なれそうよ#07#それじゃ、これから朽ち果てるまで#0A#ずっと私をながめていてもらうわ#07#触れることはおろか、近づくことさえ#0A#できないけどね#07#オ〜ッホホホホッ！
+block_172:
+  index: 172
+  offsets:
+    start: c0ffc4
+    end: c10067
+    byte_length: 161
+  portrait: 0f0c
+  text:
+    windows: 3
+    original: グルベル、#PN#！カードは#0A#もらって行くぜ#07#貴様らは一生この森にいればいい#07#もっとも、俺がバブラシュカを支配した日には#0A#ここは全て焼き払ってやるつもりだがな#07#ハッハッハ！
+    translated: グルベル、#PN#！カードは#0A#もらって行くぜ#07#貴様らは一生この森にいればいい#07#もっとも、俺がバブラシュカを支配した日には#0A#ここは全て焼き払ってやるつもりだがな#07#ハッハッハ！
+block_173:
+  index: 173
+  offsets:
+    start: c1006c
+    end: c100bd
+    byte_length: 79
+  portrait: 0f37
+  text:
+    windows: 1
+    original: ちょっと甘く見たようね、お二人さん#07#それとも、私の美しさに気を取られたのかしら？
+    translated: ちょっと甘く見たようね、お二人さん#07#それとも、私の美しさに気を取られたのかしら？
+block_174:
+  index: 174
+  offsets:
+    start: c100c2
+    end: c1012e
+    byte_length: 106
+  portrait: 0f0b
+  text:
+    windows: 4
+    original: 今度こそ貴様らを、地にたたき落とすことが#0A#出来たぜ！#07#グルベル、悪く思うな#0A#全てこの、#PN#のせいなの#0A#だからな！
+    translated: 今度こそ貴様らを、地にたたき落とすことが#0A#出来たぜ！#07#グルベル、悪く思うな#0A#全てこの、#PN#のせいなの#0A#だからな！
+block_175:
+  index: 175
+  offsets:
+    start: c1012f
+    end: c1018c
+    byte_length: 91
+  portrait: 0f35
+  text:
+    windows: 2
+    original: あら、見送りのお礼なんていらないわよ#07#それより、あなたの今後を、私の鏡で#0A#うらなってあげるわ#07#
+    translated: あら、見送りのお礼なんていらないわよ#07#それより、あなたの今後を、私の鏡で#0A#うらなってあげるわ#07#
+block_176:
+  index: 176
+  offsets:
+    start: c1022d
+    end: c10280
+    byte_length: 81
+  portrait: 0f00
+  text:
+    windows: 2
+    original: 不吉な・・・#07#実は私も近ごろ、セプターの物とは異なる#0A#刺すような気を感じとるのです#07#
+    translated: 不吉な・・・#07#実は私も近ごろ、セプターの物とは異なる#0A#刺すような気を感じとるのです#07#
+block_177:
+  index: 177
+  offsets:
+    start: c102a1
+    end: c102dc
+    byte_length: 57
+  portrait: 0f00
+  text:
+    windows: 2
+    original: さて、先に進みますか、それとも#0A#元の道を引き返しますかな？
+    translated: さて、先に進みますか、それとも#0A#元の道を引き返しますかな？
+block_178:
+  index: 178
+  offsets:
+    start: c102dd
+    end: c103b8
+    byte_length: 217
+  portrait: 0f00
+  text:
+    windows: 5
+    original: ここはかつて、ナバトという大きな都でしたが#0A#争いが絶えず、ついには廃墟と化して#0A#しまったのです#07#住人もわずかに残っているようですが#0A#彼らは邪悪な宗教に身を染めており・・・#07#世界が闇につつまれることすら望んでいると#0A#聞きます#07#
+    translated: ここはかつて、ナバトという大きな都でしたが#0A#争いが絶えず、ついには廃墟と化して#0A#しまったのです#07#住人もわずかに残っているようですが#0A#彼らは邪悪な宗教に身を染めており・・・#07#世界が闇につつまれることすら望んでいると#0A#聞きます#07#
+block_179:
+  index: 179
+  offsets:
+    start: c10419
+    end: c1045f
+    byte_length: 68
+  portrait: 0f00
+  text:
+    windows: 3
+    original: ナバトの町です#0A#人々も希望を取り戻し、町の復興に#0A#乗り出したようですな
+    translated: ナバトの町です#0A#人々も希望を取り戻し、町の復興に#0A#乗り出したようですな
+block_180:
+  index: 180
+  offsets:
+    start: c10464
+    end: c104ab
+    byte_length: 69
+  portrait: 0f3a
+  text:
+    windows: 2
+    original: さあ子羊たちよ、お集まりなさい#0A#モルダビア様は、あなたたちをお待ちです
+    translated: さあ子羊たちよ、お集まりなさい#0A#モルダビア様は、あなたたちをお待ちです
+block_181:
+  index: 181
+  offsets:
+    start: c104ab
+    end: c10502
+    byte_length: 85
+  portrait: 0f0e
+  text:
+    windows: 3
+    original: null
+    translated: null
+block_182:
+  index: 182
+  offsets:
+    start: c10502
+    end: c1058f
+    byte_length: 139
+  portrait: 0f38
+  text:
+    windows: 4
+    original: この世は光に満ちている#0A#しかし、果たしてそれが正しいのか？#07#世界は光から始まったという#0A#しかし、光が生まれる前、世界は闇だったの#0A#ではないか？#07#
+    translated: この世は光に満ちている#0A#しかし、果たしてそれが正しいのか？#07#世界は光から始まったという#0A#しかし、光が生まれる前、世界は闇だったの#0A#ではないか？#07#
+block_183:
+  index: 183
+  offsets:
+    start: c10618
+    end: c10661
+    byte_length: 71
+  portrait: 0f03
+  text:
+    windows: 3
+    original: ばかばかしい！#0A#おぬしがそのような教えを広めるから#0A#この町は復興せんのだ#07#
+    translated: ばかばかしい！#0A#おぬしがそのような教えを広めるから#0A#この町は復興せんのだ#07#
+block_184:
+  index: 184
+  offsets:
+    start: c10675
+    end: c106b4
+    byte_length: 61
+  portrait: 0f0e
+  text:
+    windows: 2
+    original: 話も尽きたようだな#0A#では、きさまらのカードをいただくとしよう！
+    translated: 話も尽きたようだな#0A#では、きさまらのカードをいただくとしよう！
+block_185:
+  index: 185
+  offsets:
+    start: c106b4
+    end: c10742
+    byte_length: 140
+  portrait: 0f3c
+  text:
+    windows: 3
+    original: 物分かりの悪い方々だ#07#よろしい#0A#復活の儀式はすでに終わっている#07#モルダビア様復活の前に、あなた方を倒し#0A#主のいけにえにささげることとしましょう！
+    translated: 物分かりの悪い方々だ#07#よろしい#0A#復活の儀式はすでに終わっている#07#モルダビア様復活の前に、あなた方を倒し#0A#主のいけにえにささげることとしましょう！
+block_186:
+  index: 186
+  offsets:
+    start: c10747
+    end: c107ba
+    byte_length: 113
+  portrait: 0f3a
+  text:
+    windows: 3
+    original: 私の心の中には、まだモルダビア様が#0A#いらっしゃいます#07#あなた方を倒せば、それこそがモルダビア様の#0A#力だと言えましょう
+    translated: 私の心の中には、まだモルダビア様が#0A#いらっしゃいます#07#あなた方を倒せば、それこそがモルダビア様の#0A#力だと言えましょう
+block_187:
+  index: 187
+  offsets:
+    start: c107ba
+    end: c107de
+    byte_length: 34
+  portrait: 0f03
+  text:
+    windows: 1
+    original: まだそんな事を言っておるのか・・・
+    translated: まだそんな事を言っておるのか・・・
+block_188:
+  index: 188
+  offsets:
+    start: c107de
+    end: c10824
+    byte_length: 68
+  portrait: 0f0c
+  text:
+    windows: 3
+    original: 俺の信じるものは俺自身だ#0A#俺が貴様らを、ゼネス教の信者にして#0A#やろう！
+    translated: 俺の信じるものは俺自身だ#0A#俺が貴様らを、ゼネス教の信者にして#0A#やろう！
+block_189:
+  index: 189
+  offsets:
+    start: c10828
+    end: c108b6
+    byte_length: 140
+  portrait: 0f3b
+  text:
+    windows: 3
+    original: モルダビア様・・・#0A#なぜ力をお貸し下さらぬのか#07#まさか・・・あなたは、本当に存在しないと#0A#いうのですか・・・#07#私の心の中にしか存在しないと・・・
+    translated: モルダビア様・・・#0A#なぜ力をお貸し下さらぬのか#07#まさか・・・あなたは、本当に存在しないと#0A#いうのですか・・・#07#私の心の中にしか存在しないと・・・
+block_190:
+  index: 190
+  offsets:
+    start: c108b6
+    end: c108f3
+    byte_length: 59
+  portrait: 0f00
+  text:
+    windows: 2
+    original: そういうことだ#0A#もう町の人を惑わしたりするのは、やめるのだな
+    translated: そういうことだ#0A#もう町の人を惑わしたりするのは、やめるのだな
+block_191:
+  index: 191
+  offsets:
+    start: c108f3
+    end: c1096e
+    byte_length: 121
+  portrait: 0f3b
+  text:
+    windows: 3
+    original: では・・・私に儀式を行えと命令された#0A#あの地底からの声は、一体誰だったの#0A#でしょう？#07#あれは、町の人全てが聞いているのですよ
+    translated: では・・・私に儀式を行えと命令された#0A#あの地底からの声は、一体誰だったの#0A#でしょう？#07#あれは、町の人全てが聞いているのですよ
+block_192:
+  index: 192
+  offsets:
+    start: c1096e
+    end: c109a5
+    byte_length: 53
+  portrait: 0f01
+  text:
+    windows: 2
+    original: なんだと！？#0A#本当に、地から声が聞こえたと申すのか！？
+    translated: なんだと！？#0A#本当に、地から声が聞こえたと申すのか！？
+block_193:
+  index: 193
+  offsets:
+    start: c109a8
+    end: c10a2a
+    byte_length: 128
+  portrait: 0f3d
+  text:
+    windows: 3
+    original: フハハハハハ・・・#07#ベルカイルよ、お前の儀式、無駄にはならな#0A#かったぞ#07#おかげで、カルドラの最後の呪縛を解く#0A#ことができたのだからな
+    translated: フハハハハハ・・・#07#ベルカイルよ、お前の儀式、無駄にはならな#0A#かったぞ#07#おかげで、カルドラの最後の呪縛を解く#0A#ことができたのだからな
+block_194:
+  index: 194
+  offsets:
+    start: c10a2a
+    end: c10a7a
+    byte_length: 78
+  portrait: 0f39
+  text:
+    windows: 2
+    original: この声はあの時の！#07#あなたは・・・一体誰です！？#0A#モルダビア様では無いのですか？
+    translated: この声はあの時の！#07#あなたは・・・一体誰です！？#0A#モルダビア様では無いのですか？
+block_195:
+  index: 195
+  offsets:
+    start: c10a7a
+    end: c10ab9
+    byte_length: 61
+  portrait: 0f3d
+  text:
+    windows: 1
+    original: 我が名はバルテアス！#07#神々の戦いで追放された、三極神の一人だ！
+    translated: 我が名はバルテアス！#07#神々の戦いで追放された、三極神の一人だ！
+block_196:
+  index: 196
+  offsets:
+    start: c10ab9
+    end: c10b5e
+    byte_length: 163
+  portrait: 0f39
+  text:
+    windows: 4
+    original: まさか・・・そんな！！#07#主神カルドラに戦いを挑み#0A#リュエードを己の物にしようとしたという#0A#あのバルテアス！？#07#私は、そんな恐ろしいものを呼び出して#0A#しまったというのか！
+    translated: まさか・・・そんな！！#07#主神カルドラに戦いを挑み#0A#リュエードを己の物にしようとしたという#0A#あのバルテアス！？#07#私は、そんな恐ろしいものを呼び出して#0A#しまったというのか！
+block_197:
+  index: 197
+  offsets:
+    start: c10b62
+    end: c10b88
+    byte_length: 36
+  portrait: 0f3b
+  text:
+    windows: 1
+    original: 信心が足りなかったようです・・・無念
+    translated: 信心が足りなかったようです・・・無念
+block_198:
+  index: 198
+  offsets:
+    start: c10b88
+    end: c10bc4
+    byte_length: 58
+  portrait: 0f0d
+  text:
+    windows: 3
+    original: null
+    translated: null
+block_199:
+  index: 199
+  offsets:
+    start: c10bc8
+    end: c10c19
+    byte_length: 79
+  portrait: 0f3a
+  text:
+    windows: 2
+    original: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
+    translated: 皆のもの、ひれ伏すが良い！#0A#今こそモルダビア様復活の時！#07#・・・モルダビア様？？#07#
+block_200:
+  index: 200
+  offsets:
+    start: c10c54
+    end: c10ca4
+    byte_length: 78
+  portrait: 0f0b
+  text:
+    windows: 2
+    original: null
+    translated: null
+block_201:
+  index: 201
+  offsets:
+    start: c10ca8
+    end: c10ce7
+    byte_length: 61
+  portrait: 0f3c
+  text:
+    windows: 2
+    original: 神が実在するかどうかは問題ではない#0A#信じる心こそが大切なのです
+    translated: 神が実在するかどうかは問題ではない#0A#信じる心こそが大切なのです
+block_202:
+  index: 202
+  offsets:
+    start: c10cec
+    end: c10d33
+    byte_length: 69
+  portrait: 0f0a
+  text:
+    windows: 2
+    original: 俺は、全ての者をひれ伏させるのだ#0A#それが例えバルテアスであろうともな！
+    translated: 俺は、全ての者をひれ伏させるのだ#0A#それが例えバルテアスであろうともな！
+block_203:
+  index: 203
+  offsets:
+    start: c10d34
+    end: c10ddd
+    byte_length: 167
+  portrait: 0f38
+  text:
+    windows: 4
+    original: バルティス大山脈のふもとに#0A#最近暗雲が集まっています#07#バルテアスはおそらくそこに・・・#07#しかし、いくら最強のセプターとはいえ#0A#人間が神を倒すことなど、できるので#0A#しょうか？
+    translated: バルティス大山脈のふもとに#0A#最近暗雲が集まっています#07#バルテアスはおそらくそこに・・・#07#しかし、いくら最強のセプターとはいえ#0A#人間が神を倒すことなど、できるので#0A#しょうか？
+block_204:
+  index: 204
+  offsets:
+    start: c10ddd
+    end: c10df8
+    byte_length: 25
+  portrait: 0f03
+  text:
+    windows: 1
+    original: しかし、やらねばなるまい#07#
+    translated: しかし、やらねばなるまい#07#
+block_205:
+  index: 205
+  offsets:
+    start: c10e7d
+    end: c10f15
+    byte_length: 150
+  portrait: 0f0a
+  text:
+    windows: 4
+    original: null
+    translated: null
+block_206:
+  index: 206
+  offsets:
+    start: c10f37
+    end: c10f93
+    byte_length: 90
+  portrait: 0f38
+  text:
+    windows: 1
+    original: みなさん、お気をつけて#07#あなた方にモルダビア様の加護のあらん・・・#07#いや、これは不適当ですな
+    translated: みなさん、お気をつけて#07#あなた方にモルダビア様の加護のあらん・・・#07#いや、これは不適当ですな
+block_207:
+  index: 207
+  offsets:
+    start: c10f93
+    end: c10fb4
+    byte_length: 31
+  portrait: 0f02
+  text:
+    windows: 2
+    original: ありがとう#0A#気持ちはもらっとくよ
+    translated: ありがとう#0A#気持ちはもらっとくよ
+block_208:
+  index: 208
+  offsets:
+    start: c10fb5
+    end: c10ff6
+    byte_length: 63
+  portrait: 0f01
+  text:
+    windows: 2
+    original: 抑制神バルテアス・・・#0A#完全に力を取り戻す前に、やつを倒さねば！
+    translated: 抑制神バルテアス・・・#0A#完全に力を取り戻す前に、やつを倒さねば！
+block_209:
+  index: 209
+  offsets:
+    start: c10ff7
+    end: c110cc
+    byte_length: 211
+  portrait: 0f00
+  text:
+    windows: 4
+    original: どうやらこの亀裂が、バルテアスの住まう場所への入り口らしいですな#07#神話によると、彼は神としての姿と力を#0A#奪われたと伝えられています#07#彼が地上に姿を現さないのは、まだ#0A#全ての力を取り戻していないためでは#0A#ないでしょうか
+    translated: どうやらこの亀裂が、バルテアスの住まう場所への入り口らしいですな#07#神話によると、彼は神としての姿と力を#0A#奪われたと伝えられています#07#彼が地上に姿を現さないのは、まだ#0A#全ての力を取り戻していないためでは#0A#ないでしょうか
+block_210:
+  index: 210
+  offsets:
+    start: c110cc
+    end: c11117
+    byte_length: 73
+  portrait: 0f0a
+  text:
+    windows: 2
+    original: 今なら、人間である俺たちでも、やつを倒せる#0A#かもしれない、ということだな？
+    translated: 今なら、人間である俺たちでも、やつを倒せる#0A#かもしれない、ということだな？
+block_211:
+  index: 211
+  offsets:
+    start: c11117
+    end: c1116c
+    byte_length: 83
+  portrait: 0f00
+  text:
+    windows: 2
+    original: さよう#07#しかし、ゼネスよ・・・#0A#おぬしには荷が重過ぎる#07#ここは全て#PN#殿にまかせて・・・
+    translated: さよう#07#しかし、ゼネスよ・・・#0A#おぬしには荷が重過ぎる#07#ここは全て#PN#殿にまかせて・・・
+block_212:
+  index: 212
+  offsets:
+    start: c1116c
+    end: c1127a
+    byte_length: 268
+  portrait: 0f0a
+  text:
+    windows: 6
+    original: 指図は受けん！#07#貴様は、#PN#の心配だけして#0A#いればいい#07#俺は、#PN#のように善人面した#0A#やつは虫が好かんのだ#07#だいたい、こいつだって分かったものか#07#どこからか突然現れて、世界を救う#0A#などと・・・#07#いかなる望みも、かなえられるとなった時に#0A#世界の平和を望む人間など、俺には#0A#信じられん！
+    translated: 指図は受けん！#07#貴様は、#PN#の心配だけして#0A#いればいい#07#俺は、#PN#のように善人面した#0A#やつは虫が好かんのだ#07#だいたい、こいつだって分かったものか#07#どこからか突然現れて、世界を救う#0A#などと・・・#07#いかなる望みも、かなえられるとなった時に#0A#世界の平和を望む人間など、俺には#0A#信じられん！
+block_213:
+  index: 213
+  offsets:
+    start: c1127a
+    end: c112ae
+    byte_length: 50
+  portrait: 0f03
+  text:
+    windows: 2
+    original: ゼネス・・・#0A#おぬしは、本当にそう思っているのか？#07#
+    translated: ゼネス・・・#0A#おぬしは、本当にそう思っているのか？#07#
+block_214:
+  index: 214
+  offsets:
+    start: c11306
+    end: c11381
+    byte_length: 121
+  portrait: 0f3e
+  text:
+    windows: 4
+    original: null
+    translated: null
+block_215:
+  index: 215
+  offsets:
+    start: c11381
+    end: c1139d
+    byte_length: 26
+  portrait: 0f0b
+  text:
+    windows: 1
+    original: ゴリガン！！・・・貴様は！
+    translated: ゴリガン！！・・・貴様は！
+block_216:
+  index: 216
+  offsets:
+    start: c1139d
+    end: c114df
+    byte_length: 320
+  portrait: 0f3e
+  text:
+    windows: 6
+    original: さよう#0A#その杖は、私が残りわずかな力で創り上げた#0A#アーティファクトなのだ#07#やつに力あるセプターを選ばせ、その者に#0A#バブラシュカ大陸の他のセプターを倒させる#07#そうして得られたカードを、ここへ運ばせれば#0A#我が復活もたやすいこと#07#カルドセプトさえ支配することができれば#0A#カルドラの呪縛など・・・#07#いや、カルドラ自身さえ恐るるに足りん！#07#
+    translated: さよう#0A#その杖は、私が残りわずかな力で創り上げた#0A#アーティファクトなのだ#07#やつに力あるセプターを選ばせ、その者に#0A#バブラシュカ大陸の他のセプターを倒させる#07#そうして得られたカードを、ここへ運ばせれば#0A#我が復活もたやすいこと#07#カルドセプトさえ支配することができれば#0A#カルドラの呪縛など・・・#07#いや、カルドラ自身さえ恐るるに足りん！#07#
+block_217:
+  index: 217
+  offsets:
+    start: c11538
+    end: c11585
+    byte_length: 75
+  portrait: 0f03
+  text:
+    windows: 2
+    original: ・・・・・・#07#そうであったか・・・#0A#私は、大変な事をしてしまったようだ・・・#07#
+    translated: ・・・・・・#07#そうであったか・・・#0A#私は、大変な事をしてしまったようだ・・・#07#
+block_218:
+  index: 218
+  offsets:
+    start: c11632
+    end: c1173f
+    byte_length: 267
+  portrait: 0f0e
+  text:
+    windows: 4
+    original: バルテアス、腹心にも裏切られたようだな#07#それに貴様は、大きな過ちをおかしている#07#大陸中のセプターを打ち破って来た#0A##PN#は・・・#07#今や貴様でさえ、容易に倒すことはできん#0A#相手になってしまったということさ#07#さらに貴様は、大陸２番目の俺をも倒さねば#0A#カルドセプトの支配者にはなれない
+    translated: バルテアス、腹心にも裏切られたようだな#07#それに貴様は、大きな過ちをおかしている#07#大陸中のセプターを打ち破って来た#0A##PN#は・・・#07#今や貴様でさえ、容易に倒すことはできん#0A#相手になってしまったということさ#07#さらに貴様は、大陸２番目の俺をも倒さねば#0A#カルドセプトの支配者にはなれない
+block_219:
+  index: 219
+  offsets:
+    start: c1173f
+    end: c1178a
+    byte_length: 73
+  portrait: 0f40
+  text:
+    windows: 2
+    original: フフ・・・#07#死すべき定めの人間どもが、神である私に#0A#刃向かおうというのか？#07#
+    translated: フフ・・・#07#死すべき定めの人間どもが、神である私に#0A#刃向かおうというのか？#07#
+block_220:
+  index: 220
+  offsets:
+    start: c117b7
+    end: c117c9
+    byte_length: 16
+  portrait: 0f00
+  text:
+    windows: 1
+    original: null
+    translated: null
+block_221:
+  index: 221
+  offsets:
+    start: c117c9
+    end: c117df
+    byte_length: 20
+  portrait: 0f0e
+  text:
+    windows: 1
+    original: 協力はしないぜ、#PN#！
+    translated: 協力はしないぜ、#PN#！
+block_222:
+  index: 222
+  offsets:
+    start: c117ec
+    end: c1191d
+    byte_length: 303
+  portrait: 0f41
+  text:
+    windows: 5
+    original: 人間どもが・・・#07#たかが、我々神によって創られた#0A#クリーチャーが・・・#07#神をも越える力を、持つようになろう#0A#とは・・・#07#私は負けた・・・#07#しかし主神カルドラよ、貴様に対する#0A#復讐だけはとげられそうだぞ#07#なぜなら・・・この人間たちが、いずれ#0A#その力で、貴様を滅ぼすであろうからな・・・#07#うおっ！！か・・・体が・・・#07#
+    translated: 人間どもが・・・#07#たかが、我々神によって創られた#0A#クリーチャーが・・・#07#神をも越える力を、持つようになろう#0A#とは・・・#07#私は負けた・・・#07#しかし主神カルドラよ、貴様に対する#0A#復讐だけはとげられそうだぞ#07#なぜなら・・・この人間たちが、いずれ#0A#その力で、貴様を滅ぼすであろうからな・・・#07#うおっ！！か・・・体が・・・#07#
+block_223:
+  index: 223
+  offsets:
+    start: c1193a
+    end: c11980
+    byte_length: 68
+  portrait: 0f01
+  text:
+    windows: 2
+    original: おおっ！！#07#やりましたぞ、#PN#殿！#0A#バルテアスは完全に力を失いました！！
+    translated: おおっ！！#07#やりましたぞ、#PN#殿！#0A#バルテアスは完全に力を失いました！！
+block_224:
+  index: 224
+  offsets:
+    start: c11980
+    end: c11a37
+    byte_length: 181
+  portrait: 0f0e
+  text:
+    windows: 3
+    original: さすがだな・・・#PN##07#俺は、もう貴様に付きまとうのはやめるぜ#07#神をも倒した貴様なんかに#0A#戦いを挑むほど、俺は愚かではない#07#ただ、貴様がどんな世界を望んでいたのか、#0A#それだけは見せてもらおう
+    translated: さすがだな・・・#PN##07#俺は、もう貴様に付きまとうのはやめるぜ#07#神をも倒した貴様なんかに#0A#戦いを挑むほど、俺は愚かではない#07#ただ、貴様がどんな世界を望んでいたのか、#0A#それだけは見せてもらおう
+block_225:
+  index: 225
+  offsets:
+    start: c11a37
+    end: c11ad5
+    byte_length: 156
+  portrait: 0f00
+  text:
+    windows: 3
+    original: どうやらこの先にある神殿は、天空にある#0A#カルドラの住まいを模した物のようです#07#この中なら、主神カルドラとの会話を#0A#試みられるかもしれません#07##PN#殿、さあ中へ・・・
+    translated: どうやらこの先にある神殿は、天空にある#0A#カルドラの住まいを模した物のようです#07#この中なら、主神カルドラとの会話を#0A#試みられるかもしれません#07##PN#殿、さあ中へ・・・
+block_226:
+  index: 226
+  offsets:
+    start: c11ad6
+    end: c11be9
+    byte_length: 273
+  portrait: 0f40
+  text:
+    windows: 4
+    original: これでカルドセプトの力は我が手に！！#07#フハハハハ・・・カルドラよ！契約どおり#0A#貴様に我が願いをかなえてもらうぞ！#07#我が願い・・・それは貴様の力を我がものとし#0A#私が新たな世界の創造者となることだ！！#07#そして手始めに、貴様の創り上げたものは#0A#全て破壊してやる！#07#フッハッハッハッハ！！
+    translated: これでカルドセプトの力は我が手に！！#07#フハハハハ・・・カルドラよ！契約どおり#0A#貴様に我が願いをかなえてもらうぞ！#07#我が願い・・・それは貴様の力を我がものとし#0A#私が新たな世界の創造者となることだ！！#07#そして手始めに、貴様の創り上げたものは#0A#全て破壊してやる！#07#フッハッハッハッハ！！
+block_227:
+  index: 227
+  offsets:
+    start: c11bea
+    end: c11c0c
+    byte_length: 32
+  portrait: 0f3f
+  text:
+    windows: 1
+    original: この私が・・・人間ごときに・・・
+    translated: この私が・・・人間ごときに・・・
+block_228:
+  index: 228
+  offsets:
+    start: c11c0c
+    end: c11c4d
+    byte_length: 63
+  portrait: 0f0c
+  text:
+    windows: 2
+    original: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
+    translated: 俺はついに、神をも越える力を#0A#身につけてしまったというのか・・・
