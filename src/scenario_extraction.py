@@ -119,4 +119,4 @@ for m in re.finditer(dialog_sequence_pattern, data):
 # write yaml output
 data = yaml.safe_load(output_yaml)
 with open('translations/scenario.yaml', 'w') as file:
-    yaml.dump(data, file, default_flow_style = False, allow_unicode = True)
+    yaml.dump(data, file, default_flow_style = False, allow_unicode = True, sort_keys=False)
