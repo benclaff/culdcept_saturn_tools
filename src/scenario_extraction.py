@@ -41,7 +41,7 @@ def pretty_block_siftJIS(idx, groupdict, start, end, indent=0, shift=0):
     block_yaml += "offsets:\n" + \
                   ' ' * indent + "start: " + f'{start:x}' + '\n' + \
                   ' ' * indent + "end: " + f'{end:x}' + '\n' + \
-                  ' ' * indent + "byte_length: " + str(end-start) + \
+                  ' ' * indent + "byte_length: " + str(end-start-2) + \
                   '\n'
     for key, value in groupdict.items():
         if key == "line":
