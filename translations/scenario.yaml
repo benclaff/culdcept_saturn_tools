@@ -18,7 +18,7 @@ block_1:
   portrait: 0f0a
   text:
     original: ちょっと待ちな#0A#聞き捨てならないぜ！
-    translated: ちょっと待ちな#0A#聞き捨てならないぜ！
+    translated: Hold on a second.#0A#What's that supposed to mean ?！
     windows: 2
 block_10:
   index: 10
@@ -29,7 +29,7 @@ block_10:
   portrait: 0f0d
   text:
     original: 何と言うことだ・・・この俺が、また敗北を#0A#味わうことになろうとは・・・
-    translated: 何と言うことだ・・・この俺が、また敗北を#0A#味わうことになろうとは・・・
+    translated: I can't believe it...#07#I am about to taste defeat agains...
     windows: 2
 block_100:
   index: 100
@@ -1239,7 +1239,7 @@ block_2:
   portrait: 0f01
   text:
     original: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
-    translated: 何ものだ！？#07#ムッ！・・・この気は#07#・・・おぬしもセプター！！
+    translated: Who's that?#07#…!#A0#…this feeling…#07#You're a Cepter too!
     windows: 1
 block_20:
   index: 20
@@ -1679,7 +1679,7 @@ block_3:
   portrait: 0f00
   text:
     original: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
-    translated: この場所で、もう少し技をみがいてから#0A#進むのですか？#0A#まあ、それもよいでしょう
+    translated: This is a nice spot.#0A#Let's continue after#07#polishing up your skills#0A#a little bit, shall we?#07#I think it would be helpful.
     windows: 3
 block_30:
   index: 30
@@ -1800,7 +1800,7 @@ block_4:
   portrait: 0f0a
   text:
     original: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
-    translated: 俺の名は、竜眼のゼネス#07#貴様が、どれほどの力を持っているかは#0A#知らんが・・・#07#この町を出る前に俺と勝負してもらおうか
+    translated: The name's Zeneth,#0A# the Dragon-Eyed.#07#You wretch... I'm not#0A#sure how powerful#07#you are, but before#0A#you leave, I will find out!
     windows: 2
 block_40:
   index: 40
