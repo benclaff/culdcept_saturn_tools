@@ -1,0 +1,27 @@
+name: Translation validations
+run-name: ${{ github.actor }} is testing translation validity 🚀
+on:
+  push:
+    branches: master
+
+jobs:
+  test_python:
+    name: Test python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+        run: python --version
+  test_offset:
+    name: Test offsets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+        run: python ./.github/test_scenario.py
