@@ -28,7 +28,7 @@
 # 18 01 11
 # 18 00 01 0D
 # 18 00 01 10
-# I let them untouched at same position, in case the last 2 bytes are offsets
+# I let them untouched at same position, in case the last 2 bytes are pointer offsets
 
 import re
 from base64 import decode
