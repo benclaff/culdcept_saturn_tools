@@ -1,0 +1,13 @@
+scenario_block_46:
+  offsets:
+    byte_length: 60
+    start: 12639647
+    end: 12639707
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 59
+      portrait: 0f25
+      original_txt: \p、遊びに来てくれたのね！\nようし、本気で相手してあげる！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,13 @@
+scenario_block_62:
+  offsets:
+    byte_length: 43
+    start: 12642746
+    end: 12642789
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 42
+      portrait: 0f0e
+      original_txt: リュエードの神々は、俺に味方したようだな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

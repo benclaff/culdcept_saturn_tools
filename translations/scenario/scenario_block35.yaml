@@ -1,0 +1,55 @@
+scenario_block_35:
+  offsets:
+    byte_length: 519
+    start: 12637619
+    end: 12638138
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 55
+      portrait: 0f0d
+      original_txt: くそっ！・・・覚えてろよ・・・\nおれは、あきらめんぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 55
+      end_relative_to_block: 114
+      portrait: 0f22
+      original_txt: うう・・・やはり余は、真の王では無いと\nいうことのか・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 114
+      end_relative_to_block: 173
+      portrait: 0f00
+      original_txt: ヴァイデンよ、王であることがそれほど\n大切なことなのかな？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 173
+      end_relative_to_block: 296
+      portrait: 0f22
+      original_txt: ・・・・・・\w余は人々に王として認めてもらうことを\n願っていた・・・\wだが・・・確かにそれにこだわりすぎていたの\nかもしれぬ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 296
+      end_relative_to_block: 408
+      portrait: 0d1f
+      original_txt: 分かった\n余はもう、王と呼ばれることなど望まんぞ\wおぬしらに負けて、やっと自分の愚かさに\n気づくことができたのだ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 408
+      end_relative_to_block: 484
+      portrait: 0d21
+      original_txt: もっとも、人に呼ばれずとも\n余の心の中でだけは、王であり続ける\nつもりだがな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 484
+      end_relative_to_block: 518
+      portrait: 0f02
+      original_txt: がんこな性格は直らんとみえるわい
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

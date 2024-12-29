@@ -1,0 +1,13 @@
+scenario_block_39:
+  offsets:
+    byte_length: 72
+    start: 12638451
+    end: 12638523
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 71
+      portrait: 0f21
+      original_txt: 久しぶりに、王の気分を味わうことが出来たぞ\wホッホッホ・・・愉快、愉快
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

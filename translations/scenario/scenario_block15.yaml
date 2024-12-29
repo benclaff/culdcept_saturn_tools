@@ -1,0 +1,70 @@
+scenario_block_15:
+  offsets:
+    byte_length: 636
+    start: 12633732
+    end: 12634368
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 40
+      head_hexa: 18000182
+      portrait: 0f17
+      original_txt: チッ、どうやら俺たちの負けらしいな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 40
+      end_relative_to_block: 64
+      portrait: 0f12
+      original_txt: ごめんよ・・・ポコポコ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 64
+      end_relative_to_block: 183
+      portrait: 0f00
+      original_txt: どうやらこの子供は、ポコポコと呼ばれる\n魔族の者にそそのかされていたようです\wさて、この者たちをどうされますかな\n\p殿？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 183
+      end_relative_to_block: 304
+      portrait: 0f17
+      original_txt: この子に手を出さないでくれ！\nみんな俺が悪いんだ！\wこいつは能力を持っていただけで、\n何も知らずにやっていたことなんだよ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 304
+      end_relative_to_block: 320
+      portrait: 0f12
+      original_txt: ポコポコ・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 320
+      end_relative_to_block: 450
+      portrait: 0f00
+      original_txt: ・・・・・・\wどうやらこの魔族の者の言葉には\n偽りはないようです\w子供を利用しながらも、心は通っていた\nようですな\wさあ、御決断を！\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 450
+      end_relative_to_block: 499
+      portrait: 0d01
+      original_txt: ・・・何と、\p殿\n二人を許すとおっしゃるのか！？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 499
+      end_relative_to_block: 515
+      portrait: 0f0f
+      original_txt: えっ・・・！？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_8:
+      start_relative_to_block: 515
+      end_relative_to_block: 635
+      portrait: 0f14
+      original_txt: すまねえ・・・\nあんた、心の広い人だな\w俺も、もう悪事は働かねえよ\nこいつの面倒をみながら、この町の平和の\nためにつくすぜ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

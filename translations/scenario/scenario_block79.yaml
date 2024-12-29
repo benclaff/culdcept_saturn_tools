@@ -1,0 +1,57 @@
+scenario_block_79:
+  offsets:
+    byte_length: 737
+    start: 12646648
+    end: 12647385
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 10
+      head_hexa: 18000180
+      portrait: 0f01
+      original_txt: ！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 10
+      end_relative_to_block: 248
+      portrait: 0f35
+      original_txt: あら、またお客さんがやってきたようね\wさしずめ、花に群がる蜜蜂、という所かしら\n時々、自分の美しさに怖くなることがあるわ\w今までこの森に入って来た人は、みんな森の\n木々になってるのよ\w美しい私のそばに、永遠にいられるんだから\n幸せってものよね
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 248
+      end_relative_to_block: 377
+      portrait: 0f0b
+      original_txt: だまって聞いていれば、勝手なことを\w俺はカードさえ手に入れば、貴様のような女に\n用はない！\wさあ、だまってカードを渡してもらおう！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 377
+      end_relative_to_block: 514
+      portrait: 0f37
+      original_txt: オホホホホ！\w私はここに来る人間を一人残らず\n木にして・・・\wゆくゆくはこの森を大陸全土に\n広げるつもりなのよ\wセプターだって例外じゃないわ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 514
+      end_relative_to_block: 605
+      portrait: 0f0a
+      original_txt: 木にするなら、そこの\pだけに\nしておいてくれ\w俺は貴様などにつきあっているほど\nヒマではない
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 605
+      end_relative_to_block: 646
+      portrait: 0f36
+      original_txt: あなた・・・私を怒らせてしまったようね\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 646
+      end_relative_to_block: 737
+      tail_hexa: 1800000000
+      portrait: 0d34
+      original_txt: いいわ！あなたも、そこの\pさんも\n一緒に木にして、私の一番近くに置いて\nあげるわっ！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,14 @@
+scenario_block_5:
+  offsets:
+    byte_length: 120
+    start: 12632007
+    end: 12632127
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 119
+      head_hexa: 180111
+      portrait: 0f0d
+      original_txt: この、竜眼のゼネスの力をしのぐセプターが\n存在しようとは・・・\wここは退くが・・・\w\p！\n俺は貴様を必ず倒してみせる！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

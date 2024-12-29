@@ -1,0 +1,21 @@
+scenario_block_17:
+  offsets:
+    byte_length: 110
+    start: 12634457
+    end: 12634567
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 75
+      head_hexa: 18010d
+      portrait: 0f16
+      original_txt: グハハハハ！\w俺の頭脳と、お前のパワーがあれば\n世界は俺たちのものだぜ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 75
+      end_relative_to_block: 109
+      portrait: 0f11
+      original_txt: ポ・・・ポコポコ？どうしたの？？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

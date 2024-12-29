@@ -1,0 +1,14 @@
+scenario_block_86:
+  offsets:
+    byte_length: 113
+    start: 12648638
+    end: 12648751
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 112
+      head_hexa: 1800010d
+      portrait: 0f0b
+      original_txt: 今度こそ貴様らを、地にたたき落とすことが\n出来たぜ！\wグルベル、悪く思うな\n全てこの、\pのせいなの\nだからな！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

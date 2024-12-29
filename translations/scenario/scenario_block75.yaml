@@ -1,0 +1,27 @@
+scenario_block_75:
+  offsets:
+    byte_length: 326
+    start: 12645831
+    end: 12646157
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 150
+      portrait: 0f2e
+      original_txt: しかし・・・ゴリガンよ\nおぬしは、さぞ名のある魔道士が創り出した\nアーティファクトであろうな・・・\w差し支えなくば、おぬしの創り手を教えて\nもらえぬか？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 150
+      end_relative_to_block: 289
+      portrait: 0f03
+      original_txt: ・・・・・・\w実はその事について、私も全く記憶が\n無いのだ・・・\wこの旅が終わったら、\p殿に\n手伝ってもらい、調べてみようとも\n思っとるのだが
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 289
+      end_relative_to_block: 325
+      portrait: 0f30
+      original_txt: では、その旅の無事を祈っていますぞ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

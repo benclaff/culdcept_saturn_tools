@@ -1,0 +1,20 @@
+scenario_block_34:
+  offsets:
+    byte_length: 174
+    start: 12637445
+    end: 12637619
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 99
+      portrait: 0f21
+      original_txt: 余に再び会いに来ようとは\nよいこころがけぞ！\w余もひまを持て余していたところ\nさっそくお相手いたそう
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 99
+      end_relative_to_block: 173
+      portrait: 0f0e
+      original_txt: ちょうどいい、ちょっとした肩ならしに\nさせてもらおうか\w俺は容赦しないぜ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

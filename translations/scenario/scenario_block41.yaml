@@ -1,0 +1,27 @@
+scenario_block_41:
+  offsets:
+    byte_length: 368
+    start: 12638581
+    end: 12638949
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 139
+      portrait: 0f1f
+      original_txt: 余はもう、ここを通る者を阻むことはすまい\wしかし、もし余と再び戦いたいことがあれば\n遠慮するでないぞ\w余も、一人でここにいるのは退屈なのでな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 139
+      end_relative_to_block: 176
+      portrait: 0f02
+      original_txt: 彼を改心させられて、よかったですな\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 176
+      end_relative_to_block: 367
+      portrait: 0d00
+      original_txt: ・・・しかし、ゼネスの方は、すでに姿を\nくらませてしまったようですぞ\w全く・・・\p殿もやつに甘過ぎます！\wやつはきっとまた、あなたの邪魔をするに\n違いありません\wこんどこそやつを逃がさんように！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

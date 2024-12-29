@@ -1,0 +1,13 @@
+scenario_block_42:
+  offsets:
+    byte_length: 70
+    start: 12638949
+    end: 12639019
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 69
+      portrait: 0f00
+      original_txt: ゼネスも、少しずつ強くなっているようです\n気を抜いてはいけませんぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

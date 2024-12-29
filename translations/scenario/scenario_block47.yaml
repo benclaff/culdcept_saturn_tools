@@ -1,0 +1,28 @@
+scenario_block_47:
+  offsets:
+    byte_length: 433
+    start: 12639707
+    end: 12640140
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 289
+      head_hexa: 180182
+      portrait: 0f27
+      original_txt: ・・・・・・\w私を止めたの、あなたが初めてよ\w私、村の人々や両親までが、私を怖がるのを\n見てさびしかったの\wどうせさびしいのなら、みんないなくなれば\nいいって、そう思って・・・\wでも、だれも私を止めてくれなかった・・・\n私のような能力を持つ人は、村にはいなかったわ\w\p、あなたに会えてよかった
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 289
+      end_relative_to_block: 313
+      portrait: 0f00
+      original_txt: では、村の人々を・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 313
+      end_relative_to_block: 432
+      portrait: 0f24
+      original_txt: うん、元に戻すわ\n私、もうさびしくないし・・・\w世界には、あなたみたいに私と同じ力を\n持つ人がいるんだって、分かったから
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,85 @@
+scenario_block_55:
+  offsets:
+    byte_length: 879
+    start: 12640820
+    end: 12641699
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 37
+      head_hexa: 18000183
+      portrait: 0f01
+      original_txt: ややっ！！\nあれは・・・ゼネス！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 37
+      end_relative_to_block: 86
+      portrait: 0f0c
+      original_txt: 待っていたぞ、\p\n貴様が必ずここを通ると思ってな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 86
+      end_relative_to_block: 143
+      portrait: 0f00
+      original_txt: では・・・あの奇妙なセプターの感覚は\nおぬしだったのか？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 143
+      end_relative_to_block: 188
+      portrait: 0f2b
+      original_txt: 違うだよ\nそれは多分、このオライリーの事だよ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 188
+      end_relative_to_block: 260
+      portrait: 0f0a
+      original_txt: 何だ？貴様は\w俺たちの戦いに口をはさむならば\n痛い目をみることになるぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 260
+      end_relative_to_block: 320
+      portrait: 0f29
+      original_txt: あんたたちに、勝手なまねはさせないだよ\wここはおらの花畑だ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 320
+      end_relative_to_block: 371
+      portrait: 0d2d
+      original_txt: ここを荒らすことは、このおらの花が\nゆるさないだよ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 371
+      end_relative_to_block: 514
+      portrait: 0f00
+      original_txt: そうか・・・奇妙な感覚は、この村人から\n発せられてのだな\wどうやら彼は、背中のデラネシア草によって\n精神と肉体を、支配されてしまっているようです
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_8:
+      start_relative_to_block: 514
+      end_relative_to_block: 639
+      portrait: 0f2b
+      original_txt: おらは、この花をたくさん増やして\n世界中の人に、この美しさを知ってもらうだ\wまず最初に、あんたたちにこの花を分けて\nやるだよ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_9:
+      start_relative_to_block: 639
+      end_relative_to_block: 690
+      portrait: 0f0b
+      original_txt: くだらんことを！\n二人とも、まとめて葬ってやるぜ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_10:
+      start_relative_to_block: 690
+      end_relative_to_block: 879
+      tail_hexa: 18000000
+      portrait: 0f01
+      original_txt: この花は危険ですぞ！\nオライリーを倒さねば、世界中の人の体が\nこの花に乗っ取られてしまいます\wもしゼネスが勝ったとしても、やつが\nこの花を利用するかもしれません\wやつらを阻止してくだされ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

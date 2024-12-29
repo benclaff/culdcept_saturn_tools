@@ -1,0 +1,13 @@
+scenario_block_20:
+  offsets:
+    byte_length: 54
+    start: 12634795
+    end: 12634849
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 53
+      portrait: 0f00
+      original_txt: 修業の成果はありましたかな？\nでは、先を急ぎましょう
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

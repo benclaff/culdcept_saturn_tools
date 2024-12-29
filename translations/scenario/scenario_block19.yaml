@@ -1,0 +1,27 @@
+scenario_block_19:
+  offsets:
+    byte_length: 133
+    start: 12634662
+    end: 12634795
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 32
+      portrait: 0f0f
+      original_txt: \pさん、旅の無事をいのってます
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 32
+      end_relative_to_block: 40
+      portrait: 0f14
+      original_txt: ポコ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 40
+      end_relative_to_block: 132
+      portrait: 0f02
+      original_txt: 良いことをしましたな、\p殿\wあの二人がバブラシュカをおびやかすことは\nもう２度とありますまい
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

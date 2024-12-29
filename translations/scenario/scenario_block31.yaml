@@ -1,0 +1,13 @@
+scenario_block_31:
+  offsets:
+    byte_length: 269
+    start: 12636431
+    end: 12636700
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 268
+      portrait: 0f00
+      original_txt: ここは、バブラシュカの東西を分ける\nゴザ砂漠です\wここから東にはキルヒ王の統治もおよばぬ\n広大な未開の地が広がっております\wしかし・・・その前に、ここで感じられる\n強力な怨念の主を倒さねばならないよう\nですな・・・\w彼はここを通るもの全てにその怨念を\nぶつけているようです！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

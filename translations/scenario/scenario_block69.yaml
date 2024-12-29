@@ -1,0 +1,42 @@
+scenario_block_69:
+  offsets:
+    byte_length: 670
+    start: 12644556
+    end: 12645226
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 148
+      head_hexa: 18000182
+      portrait: 0f30
+      original_txt: 見事だ・・・\pよ\wわしの知らぬ所に、まだこれほどの力を\n持つものがいたとはな・・・\w約束通り、わしの力・・・すなわち\nわしのカードを手にするが良い
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 148
+      end_relative_to_block: 224
+      portrait: 0f00
+      original_txt: しかし、ホロビッツよ\nあんたほどの賢者が、なぜ世界の破滅などを\n望んだのだ？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 224
+      end_relative_to_block: 479
+      portrait: 0f30
+      original_txt: フオッフオッフオッ・・・\wわしは、我が力を授けるに値するセプターを\n待っていたのだ\w破滅をもたらすとわしが言えば、大陸中から\n力あるセプターが集まってくる\wそのセプターらの中には、わしの力を使って\nこの世界を正しい方向に導いてくれる者も\nおるだろうと思ったのだ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 479
+      end_relative_to_block: 575
+      portrait: 0f02
+      original_txt: そういうことだったのか・・・\wなるほど・・・これで私も納得しましたぞ\nやはり、あんたは偉大な方だ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 575
+      end_relative_to_block: 669
+      portrait: 0f30
+      original_txt: もっとも、セプターたちがこのまま破壊を\n続けるようならば、本当に破滅させて\nいたかもしれんがな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

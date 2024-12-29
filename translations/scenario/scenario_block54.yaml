@@ -1,0 +1,13 @@
+scenario_block_54:
+  offsets:
+    byte_length: 69
+    start: 12640751
+    end: 12640820
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 68
+      portrait: 0f02
+      original_txt: タリオの村です\nオライリーは約束通り、おとなしくしている\nようですな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

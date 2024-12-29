@@ -1,0 +1,34 @@
+scenario_block_63:
+  offsets:
+    byte_length: 336
+    start: 12642789
+    end: 12643125
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 95
+      portrait: 0f0b
+      original_txt: フッ！今回は村人の邪魔に助けられたな\n\p！\wだが、俺の実力はこんなものではないぞ！\nさらばだっ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 95
+      end_relative_to_block: 210
+      portrait: 0f01
+      original_txt: またやつに逃げられましたな\w\p殿、あなたは少し人が\n良すぎます\w優しさだけで、この世界を生き抜く事は\nできませんぞ！\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 210
+      end_relative_to_block: 276
+      portrait: 0d03
+      original_txt: 少しは、このゴリガンの言うことも・・・\w・・・・・・・・・・・・\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 276
+      end_relative_to_block: 335
+      portrait: 0d02
+      original_txt: まあ、いいでしょう\nそれが、あなたの良さかもしれませんから
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,64 @@
+scenario_block_93:
+  offsets:
+    byte_length: 826
+    start: 12650533
+    end: 12651359
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 145
+      head_hexa: 180180
+      portrait: 0f3b
+      original_txt: モルダビア様・・・\nなぜ力をお貸し下さらぬのか\wまさか・・・あなたは、本当に存在しないと\nいうのですか・・・\w私の心の中にしか存在しないと・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 145
+      end_relative_to_block: 206
+      portrait: 0f00
+      original_txt: そういうことだ\nもう町の人を惑わしたりするのは、やめるのだな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 206
+      end_relative_to_block: 329
+      portrait: 0f3b
+      original_txt: では・・・私に儀式を行えと命令された\nあの地底からの声は、一体誰だったの\nでしょう？\wあれは、町の人全てが聞いているのですよ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 329
+      end_relative_to_block: 387
+      tail_hexa: 180183
+      portrait: 0f01
+      original_txt: なんだと！？\n本当に、地から声が聞こえたと申すのか！？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 387
+      end_relative_to_block: 517
+      portrait: 0f3d
+      original_txt: フハハハハハ・・・\wベルカイルよ、お前の儀式、無駄にはならな\nかったぞ\wおかげで、カルドラの最後の呪縛を解く\nことができたのだからな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 517
+      end_relative_to_block: 597
+      portrait: 0f39
+      original_txt: この声はあの時の！\wあなたは・・・一体誰です！？\nモルダビア様では無いのですか？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 597
+      end_relative_to_block: 660
+      portrait: 0f3d
+      original_txt: 我が名はバルテアス！\w神々の戦いで追放された、三極神の一人だ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 660
+      end_relative_to_block: 825
+      portrait: 0f39
+      original_txt: まさか・・・そんな！！\w主神カルドラに戦いを挑み\nリュエードを己の物にしようとしたという\nあのバルテアス！？\w私は、そんな恐ろしいものを呼び出して\nしまったというのか！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

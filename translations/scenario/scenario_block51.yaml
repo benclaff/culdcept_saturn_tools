@@ -1,0 +1,20 @@
+scenario_block_51:
+  offsets:
+    byte_length: 198
+    start: 12640303
+    end: 12640501
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 78
+      portrait: 0f02
+      original_txt: 村の人も元に戻ったし、あの娘も元気に\nなったようだし、良いことずくめですなあ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 78
+      end_relative_to_block: 197
+      portrait: 0d00
+      original_txt: ・・・しかし、あの娘を始め、最近になって\nなぜ、これほどの数のセプターが現れ出したの\nか・・・\w私は、それが気になります
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

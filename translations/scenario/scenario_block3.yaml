@@ -1,0 +1,50 @@
+scenario_block_3:
+  offsets:
+    byte_length: 712
+    start: 12631245
+    end: 12631957
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 118
+      head_hexa: 180183
+      portrait: 0f0a
+      original_txt: 俺の名は、竜眼のゼネス\w貴様が、どれほどの力を持っているかは\n知らんが・・・\wこの町を出る前に俺と勝負してもらおうか
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 118
+      end_relative_to_block: 256
+      portrait: 0f01
+      original_txt: 何をバカな事を！\wこの\p殿は、この大陸の人々の\n希望を託された、大切な任務を持つお方\nなのだぞ！\wおぬしなどの相手をしているひまは無いのだ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 256
+      end_relative_to_block: 504
+      portrait: 0f0c
+      original_txt: 人々の希望だと？\nフッ、笑わせるぜ！\wおろかな民どもの希望などかなえて、それで\n大陸が平和になるとでも思っているのか？\w俺は貴様と同じように大陸をめぐり、\nセプター達を倒そうと思っている\wしかし、人々のためなどではない\n俺がこの世界を支配するためにだ！\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 504
+      end_relative_to_block: 542
+      portrait: 0d0b
+      original_txt: さあ、これでも戦えないというのか！？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 542
+      end_relative_to_block: 606
+      portrait: 0f03
+      original_txt: なんたること・・・\w止むを得ません、ここは戦うしか無いようです\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 606
+      end_relative_to_block: 712
+      tail_hexa: 1800000000
+      portrait: 0d00
+      original_txt: 初陣にしてやっかいな相手にめぐり会って\nしまったものですが・・・\w私は、\p殿の力を\n信じておりますぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

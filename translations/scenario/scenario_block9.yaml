@@ -1,0 +1,27 @@
+scenario_block_9:
+  offsets:
+    byte_length: 455
+    start: 12632357
+    end: 12632812
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 127
+      portrait: 0f02
+      original_txt: お見事です、\p殿！\wゼネスも、かなりのパワーを持つセプター\nでしたが・・・\wあまりたいしたカードを持っては\nいなかったようですな\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 127
+      end_relative_to_block: 391
+      portrait: 0d00
+      original_txt: しかし、あなたも同じ事です\w邪悪なセプター達に打ち勝って、彼らのカードを\n奪って行かなければ、この道中きびしいものに\nなりましょうぞ\wさて、この先道が３つに別れているようですが\nどちらへ進みますかな？\w情報では、東へ行くほど手強いセプターが\n存在するらしいですが・・・\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 391
+      end_relative_to_block: 454
+      portrait: 0d02
+      original_txt: もちろん私は、あなたがどこへ行こうとも\nお供させてもらいますぞ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

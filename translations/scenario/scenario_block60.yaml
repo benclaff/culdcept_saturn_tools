@@ -1,0 +1,14 @@
+scenario_block_60:
+  offsets:
+    byte_length: 112
+    start: 12642561
+    end: 12642673
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 111
+      head_hexa: 18010d
+      portrait: 0f0b
+      original_txt: ハッハッハッ！勝ったっ！\n\pに勝ったぞ！\w貴様のカードは、世界支配のために\n俺が使ってやろう\nありがたく思え！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

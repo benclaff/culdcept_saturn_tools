@@ -1,0 +1,13 @@
+scenario_block_28:
+  offsets:
+    byte_length: 58
+    start: 12636032
+    end: 12636090
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 57
+      portrait: 0f1a
+      original_txt: そんなことじゃだめだ！\nよし、何度でも相手してやるぞ！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

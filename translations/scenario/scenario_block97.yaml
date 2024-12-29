@@ -1,0 +1,14 @@
+scenario_block_97:
+  offsets:
+    byte_length: 67
+    start: 12651685
+    end: 12651752
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 66
+      head_hexa: 18010d
+      portrait: 0f3c
+      original_txt: 神が実在するかどうかは問題ではない\n信じる心こそが大切なのです
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

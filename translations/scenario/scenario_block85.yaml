@@ -1,0 +1,14 @@
+scenario_block_85:
+  offsets:
+    byte_length: 86
+    start: 12648552
+    end: 12648638
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 85
+      head_hexa: 1800010d
+      portrait: 0f37
+      original_txt: ちょっと甘く見たようね、お二人さん\wそれとも、私の美しさに気を取られたのかしら？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,13 @@
+scenario_block_48:
+  offsets:
+    byte_length: 50
+    start: 12640140
+    end: 12640190
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 49
+      portrait: 0f24
+      original_txt: また負けちゃった・・・\nでも、おもしろかったよ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,14 @@
+scenario_block_40:
+  offsets:
+    byte_length: 58
+    start: 12638523
+    end: 12638581
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 57
+      head_hexa: 18010d
+      portrait: 0f0c
+      original_txt: \p！\n修業のつもりで来たのだろうが\n甘かったようだな！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

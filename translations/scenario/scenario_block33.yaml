@@ -1,0 +1,71 @@
+scenario_block_33:
+  offsets:
+    byte_length: 664
+    start: 12636781
+    end: 12637445
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 232
+      head_hexa: 180181
+      portrait: 0f1f
+      original_txt: 余の名はヴァイデン\w余は、愚かな民衆たちによってザカリアを\n追われてから、この砂漠を我が領土と決め\nいつの日か復讐すると誓ったのだ\w復讐には金と力が必要\wここを通る民には金品を、セプターたちには\nカードを税としておさめてもらっておる\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 232
+      end_relative_to_block: 295
+      portrait: 0d23
+      original_txt: ほほう、二人もセプターの客人が現れるとは\n景気の良い日だわい！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 295
+      end_relative_to_block: 340
+      portrait: 0f01
+      original_txt: セプターが二人？\n・・・それはいったい・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 340
+      end_relative_to_block: 383
+      portrait: 0f0e
+      original_txt: \p、さがしたぜ！\wこんな所にいようとはな！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 383
+      end_relative_to_block: 428
+      portrait: 0f01
+      original_txt: 竜眼のゼネス！\nまさか、追ってくるとは・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 428
+      end_relative_to_block: 515
+      portrait: 0f0e
+      original_txt: 俺の目的はバブラシュカの支配だ\nだがな、その前にやっておかねばならない事が\nあるようだ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 515
+      end_relative_to_block: 583
+      portrait: 0d0b
+      original_txt: \p、貴様を倒す！\w貴様がやろうとしていることは\n俺の気に障るのでな！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 583
+      end_relative_to_block: 633
+      portrait: 0f03
+      original_txt: 何と、ここで二人を相手にせねばならぬとは\n・・・\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_8:
+      start_relative_to_block: 633
+      end_relative_to_block: 664
+      tail_hexa: 1800000000
+      portrait: 0d00
+      original_txt: \p殿、油断なりませんぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

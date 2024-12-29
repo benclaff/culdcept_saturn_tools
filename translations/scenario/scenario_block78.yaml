@@ -1,0 +1,13 @@
+scenario_block_78:
+  offsets:
+    byte_length: 118
+    start: 12646530
+    end: 12646648
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 117
+      portrait: 0f00
+      original_txt: ビスティームの森です\nこの森は何度来ても迷いますな\wグルベル無しでも、充分”帰らずの森”の名に\nふさわしい場所ですわい
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

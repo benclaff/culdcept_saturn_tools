@@ -1,0 +1,71 @@
+scenario_block_67:
+  offsets:
+    byte_length: 778
+    start: 12643585
+    end: 12644363
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 68
+      head_hexa: 180181
+      portrait: 0f0a
+      original_txt: どうしても、俺の願いが聞き入れられないと\n言うのか、ホロビッツ？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 68
+      end_relative_to_block: 235
+      portrait: 0f2e
+      original_txt: 確かに、お前の師サルバトールとわしは\n共に修業をした仲だ\wサルバトールが、彼を恐れる村人たちに\n殺されたことも知っておる\wしかし、今お前にわしの力を与えるわけには\n行かん
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 235
+      end_relative_to_block: 299
+      portrait: 0f0b
+      original_txt: なぜだ？\nかつて、あれほど多くの弟子に教えを説いて\nいたお前が！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 299
+      end_relative_to_block: 494
+      portrait: 0f2e
+      original_txt: わしは、未来を見たのだよ\wこれほどの力を持つわしも、もはや生い先\n長くはないことを・・・\wわしが死ぬのであれば、この世界なぞ\n存在する価値はない\wわしは決めたのだ\nいずれこの世界を全て破壊しようとな\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 494
+      end_relative_to_block: 530
+      portrait: 0d2f
+      original_txt: さあ、このわしを止めてみるがよい！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 530
+      end_relative_to_block: 614
+      portrait: 0f03
+      original_txt: \p殿、やはりホロビッツは\n世界の破滅を企てていたようです！\n信じられんことだが・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 614
+      end_relative_to_block: 635
+      portrait: 0f0d
+      original_txt: \p！もう現れたのか\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 635
+      end_relative_to_block: 708
+      portrait: 0d0b
+      original_txt: やむをえん！貴様ともどもホロビッツを倒し\nやつの力を俺のものにしてやる！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_8:
+      start_relative_to_block: 708
+      end_relative_to_block: 778
+      tail_hexa: 1800000000
+      portrait: 0f2f
+      original_txt: \pとやら、お前も来るがよい\wお前たちの力、とくと見せてもらうぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

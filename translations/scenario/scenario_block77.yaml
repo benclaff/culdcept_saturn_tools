@@ -1,0 +1,13 @@
+scenario_block_77:
+  offsets:
+    byte_length: 234
+    start: 12646296
+    end: 12646530
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 233
+      portrait: 0f00
+      original_txt: ここはビスティームの森、別名を\n”帰らずの森”と呼ばれとります\w多くの人々がここに入ったきり、行方知れずに\nなっておるようですぞ\wこの森の中から、また邪悪なセプターの力を\n感じるのですが・・・\wここを抜けるのは容易\nならざることでしょうな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

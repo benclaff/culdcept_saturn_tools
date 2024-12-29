@@ -1,0 +1,27 @@
+scenario_block_14:
+  offsets:
+    byte_length: 81
+    start: 12633651
+    end: 12633732
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 14
+      portrait: 0f0f
+      original_txt: あ！\pさんだ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 14
+      end_relative_to_block: 24
+      portrait: 0f19
+      original_txt: ポコ〜！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 24
+      end_relative_to_block: 80
+      portrait: 0f10
+      original_txt: そうだね、\pさんに\n協力してあげよう！\wようし！本気だぞ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

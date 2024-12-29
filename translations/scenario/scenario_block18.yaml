@@ -1,0 +1,21 @@
+scenario_block_18:
+  offsets:
+    byte_length: 95
+    start: 12634567
+    end: 12634662
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 37
+      head_hexa: 18010d
+      portrait: 0f11
+      original_txt: ちょっと、本気を出しすぎたかな？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 37
+      end_relative_to_block: 94
+      portrait: 0f16
+      original_txt: （これならまだ、世界征服\n狙えるんじゃねえか・・・？？）
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

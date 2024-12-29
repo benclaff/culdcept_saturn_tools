@@ -1,0 +1,28 @@
+scenario_block_72:
+  offsets:
+    byte_length: 216
+    start: 12645437
+    end: 12645653
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 118
+      head_hexa: 18010d
+      portrait: 0f30
+      original_txt: 見事だ・・・ゼネス\nさすが我が友の弟子\w約束通り、我が力をお前に授けようぞ\wその力をどう用いようが、それはお前次第だ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 118
+      end_relative_to_block: 166
+      portrait: 0f0c
+      original_txt: フッフッフ・・・\n\pも倒し、古の力も手に入れた\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 166
+      end_relative_to_block: 215
+      portrait: 0d0b
+      original_txt: これで、俺の大陸支配をはばむものは\n何も無いっ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

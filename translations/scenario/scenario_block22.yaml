@@ -1,0 +1,13 @@
+scenario_block_22:
+  offsets:
+    byte_length: 64
+    start: 12635027
+    end: 12635091
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 63
+      portrait: 0f00
+      original_txt: カリン山脈ですぞ\nまたコーテツと一勝負していくつもりですかな？
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

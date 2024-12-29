@@ -1,0 +1,13 @@
+scenario_block_65:
+  offsets:
+    byte_length: 318
+    start: 12643150
+    end: 12643468
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 317
+      portrait: 0f00
+      original_txt: バブラシュカの極東に位置する、活火山島\nギルマンです\wここには、ホロビッツという炎を操る偉大な\n魔術師が住んでおり、多くの弟子たちを\n育てていたと聞きます\wしかし、最近ではそのホロビッツ自身が\nカルドセプトに魅せられ、近隣の人々を\n脅かしているというウワサ・・・\wそれが本当だとすれば、我々にとっても\n脅威といえるでしょうな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

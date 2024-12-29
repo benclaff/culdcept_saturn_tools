@@ -1,0 +1,64 @@
+scenario_block_91:
+  offsets:
+    byte_length: 743
+    start: 12649568
+    end: 12650311
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 75
+      head_hexa: 18000180
+      portrait: 0f3a
+      original_txt: さあ子羊たちよ、お集まりなさい\nモルダビア様は、あなたたちをお待ちです
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 75
+      end_relative_to_block: 162
+      portrait: 0f0e
+      original_txt: \p、貴様もここへ来ていたのか\wちょうどいい\nこの神父が面白い話を聞かせてくれる\nらしいぜ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 162
+      end_relative_to_block: 303
+      portrait: 0f38
+      original_txt: この世は光に満ちている\nしかし、果たしてそれが正しいのか？\w世界は光から始まったという\nしかし、光が生まれる前、世界は闇だったの\nではないか？\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 303
+      end_relative_to_block: 440
+      portrait: 0d39
+      original_txt: 闇こそが世界の根源！\nそして闇を司るお方こそ邪神モルダビア様\nなのだ！\w見よ、西の峰を！\w今まさに、モルダビア様の復活が迫ろうと\nしている！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 440
+      end_relative_to_block: 513
+      portrait: 0f03
+      original_txt: ばかばかしい！\nおぬしがそのような教えを広めるから\nこの町は復興せんのだ\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 513
+      end_relative_to_block: 533
+      portrait: 0d00
+      original_txt: 目を覚ますがよい！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 533
+      end_relative_to_block: 596
+      portrait: 0f0e
+      original_txt: 話も尽きたようだな\nでは、きさまらのカードをいただくとしよう！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_7:
+      start_relative_to_block: 596
+      end_relative_to_block: 743
+      tail_hexa: 1800000000
+      portrait: 0f3c
+      original_txt: 物分かりの悪い方々だ\wよろしい\n復活の儀式はすでに終わっている\wモルダビア様復活の前に、あなた方を倒し\n主のいけにえにささげることとしましょう！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

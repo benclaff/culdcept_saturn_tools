@@ -42,7 +42,7 @@ _TABLE_END = "C0BAAF"
 
 # look for this dialog pattern
 dialog_sequence_pattern = re.compile(
-    b'(?P<head>\\x18[^\\x0F]+)*(?P<portrait>\\x0F[\\x00-\\xFF])(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+)+(?P<tail>\\x18[^\\x0F]+)*'
+    b'(?P<head>\\x18[^\\x0F]+)*(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+)+(?P<tail>\\x18[^\\x0F]+)*'
 )
 
 def bytes_to_yaml_text(text_block) -> str:
@@ -58,15 +58,15 @@ def bytes_to_yaml_text(text_block) -> str:
             yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
         yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
         dec = match_dic["text"]
-        dec = dec.replace(b'\x13\x07', "#PN#".encode('shift_jisx0213'))
-        dec = dec.replace(b'\x0A', '#0A#'.encode('shift_jisx0213'))
-        dec = dec.replace(b'\x07', '#07#'.encode('shift_jisx0213'))
+        dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
+        dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
+        dec = dec.replace(b'\x07', '\\w'.encode('shift_jisx0213'))
         # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
         try:
             dec = dec.decode('shift_jisx0213', errors='strict')
             yaml_str += "\n      original_txt: " + dec
             yaml_str += "\n      ruler_helper: " + "-----------------------|-----------------------|-----------------------|"
-            yaml_str += "\n      translat_txt: " + dec
+            yaml_str += "\n      translat_txt: "
         except UnicodeError as ex:
             print(ex)
             exit(1)
@@ -105,20 +105,21 @@ for i,(offset_int,offset_str) in enumerate(table_offsets.items()):
         offset_yaml_str = "\nscenario_block_"+str(i)+":"
         offset_yaml_str += "\n  offsets:"
         offset_yaml_str += "\n    byte_length: "+str(len(text_block))
-        offset_yaml_str += "\n    DT0_start: "+hex(start)
-        offset_yaml_str += "\n    DT0_end: "+hex(end)
+        offset_yaml_str += "\n    start: "+hex(start)
+        offset_yaml_str += "\n    end: "+hex(end)
+        offset_yaml_str += "\n  sequences: "
         print("data:\t\t\t"+text_block.hex())
         offset_yaml_str += bytes_to_yaml_text(text_block)
         print(offset_yaml_str)
         # write yaml output
         data_yaml = yaml.safe_load(offset_yaml_str)
-        with open('translations/scenario_test'+str(i)+'.yaml', 'w') as file:
+        with open('translations/scenario/scenario_block'+str(i)+'.yaml', 'w') as file:
             yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
         yaml_str += offset_yaml_str
     prev_offset=offset_int
     prev_offset_str=offset_str
 
 # write yaml output
-data_yaml = yaml.safe_load(yaml_str)
-with open('translations/scenario_test.yaml', 'w') as file:
-    yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+# data_yaml = yaml.safe_load(yaml_str)
+# with open('translations/scenario.yaml', 'w') as file:
+#     yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)

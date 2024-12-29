@@ -1,0 +1,13 @@
+scenario_block_12:
+  offsets:
+    byte_length: 50
+    start: 12633118
+    end: 12633168
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 49
+      portrait: 0f00
+      original_txt: 港町スネフです\nあの二人はどうしているでしょうな
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,14 @@
+scenario_block_98:
+  offsets:
+    byte_length: 76
+    start: 12651752
+    end: 12651828
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 75
+      head_hexa: 1800010d
+      portrait: 0f0a
+      original_txt: 俺は、全ての者をひれ伏させるのだ\nそれが例えバルテアスであろうともな！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

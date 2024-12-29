@@ -1,0 +1,13 @@
+scenario_block_53:
+  offsets:
+    byte_length: 192
+    start: 12640559
+    end: 12640751
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 191
+      portrait: 0f00
+      original_txt: ここは、タリオの村ですな\w気候がおだやかで、村の人々のほとんどが\n農業で生活を営んでおります\w争い事には無縁の場所にみえますが・・・\nやはり、セプターの存在を感じます\wしかも、とても奇妙な・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

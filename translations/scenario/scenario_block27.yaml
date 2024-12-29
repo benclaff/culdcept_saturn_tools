@@ -1,0 +1,14 @@
+scenario_block_27:
+  offsets:
+    byte_length: 87
+    start: 12635945
+    end: 12636032
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 86
+      head_hexa: 18010d
+      portrait: 0f1e
+      original_txt: オホッ！！やっぱりオレ様は世界一ィ！！\n今日からお前を、オレ様の子分にしてやるぜ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

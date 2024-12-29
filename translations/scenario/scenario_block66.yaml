@@ -1,0 +1,20 @@
+scenario_block_66:
+  offsets:
+    byte_length: 117
+    start: 12643468
+    end: 12643585
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 34
+      portrait: 0f00
+      original_txt: \p殿、なぜ再び\nギルマン火山へ？\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 34
+      end_relative_to_block: 116
+      portrait: 0d02
+      original_txt: なるほど・・・ホロビッツの教えを\nこおうというわけですな\wそれなら私も賛成しますぞ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

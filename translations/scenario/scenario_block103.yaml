@@ -1,0 +1,43 @@
+scenario_block_103:
+  offsets:
+    byte_length: 750
+    start: 12654568
+    end: 12655318
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 309
+      head_hexa: 18000182
+      portrait: 0f41
+      original_txt: 人間どもが・・・\wたかが、我々神によって創られた\nクリーチャーが・・・\w神をも越える力を、持つようになろう\nとは・・・\w私は負けた・・・\wしかし主神カルドラよ、貴様に対する\n復讐だけはとげられそうだぞ\wなぜなら・・・この人間たちが、いずれ\nその力で、貴様を滅ぼすであろうからな・・・\wうおっ！！か・・・体が・・・\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 309
+      end_relative_to_block: 338
+      tail_hexa: 180111
+      portrait: 0d42
+      original_txt: ぐあああああっ・・・！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 338
+      end_relative_to_block: 408
+      portrait: 0f01
+      original_txt: おおっ！！\wやりましたぞ、\p殿！\nバルテアスは完全に力を失いました！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 408
+      end_relative_to_block: 591
+      portrait: 0f0e
+      original_txt: さすがだな・・・\p\w俺は、もう貴様に付きまとうのはやめるぜ\w神をも倒した貴様なんかに\n戦いを挑むほど、俺は愚かではない\wただ、貴様がどんな世界を望んでいたのか、\nそれだけは見せてもらおう
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 591
+      end_relative_to_block: 749
+      portrait: 0f00
+      original_txt: どうやらこの先にある神殿は、天空にある\nカルドラの住まいを模した物のようです\wこの中なら、主神カルドラとの会話を\n試みられるかもしれません\w\p殿、さあ中へ・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

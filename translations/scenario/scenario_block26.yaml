@@ -1,0 +1,13 @@
+scenario_block_26:
+  offsets:
+    byte_length: 64
+    start: 12635881
+    end: 12635945
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 63
+      portrait: 0f1d
+      original_txt: ゴホ！！今のは、調子が悪かったんだ\nもう一度チャンスをくれ！！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

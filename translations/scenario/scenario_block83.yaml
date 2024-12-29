@@ -1,0 +1,14 @@
+scenario_block_83:
+  offsets:
+    byte_length: 182
+    start: 12648203
+    end: 12648385
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 181
+      head_hexa: 18010d
+      portrait: 0f37
+      original_txt: あなたたち、なかなかいい形の木に\nなれそうよ\wそれじゃ、これから朽ち果てるまで\nずっと私をながめていてもらうわ\w触れることはおろか、近づくことさえ\nできないけどね\wオ〜ッホホホホッ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

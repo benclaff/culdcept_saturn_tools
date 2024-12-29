@@ -1,0 +1,55 @@
+scenario_block_57:
+  offsets:
+    byte_length: 572
+    start: 12641806
+    end: 12642378
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 77
+      portrait: 0f2c
+      original_txt: はっ！\nおらは何をしていただ？\wなんか、長い夢を見てたような気がするだ\n・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 77
+      end_relative_to_block: 156
+      portrait: 0f02
+      original_txt: ようやく自分の意識を取り戻したようですな\wさあ、その花を切り取ってしまいなさい
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 156
+      end_relative_to_block: 207
+      portrait: 0f2a
+      original_txt: 切るなんてとんでもねえ！\nこれはおらの大切な花だ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_3:
+      start_relative_to_block: 207
+      end_relative_to_block: 266
+      portrait: 0f01
+      original_txt: 何を言っておる！おぬしはその花に\n乗っ取られていたのだぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_4:
+      start_relative_to_block: 266
+      end_relative_to_block: 392
+      portrait: 0f2c
+      original_txt: もう悪いことはしねえように\nおらが言い聞かせるだ\wだからかんべんしてくれ\wおら、この花がなくなったらさびしくて\n死んでしまうだよ
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_5:
+      start_relative_to_block: 392
+      end_relative_to_block: 531
+      portrait: 0f03
+      original_txt: ・・・・・・\wしかたありませんな・・・\w確かに、この花は彼の体に食い込んでいる\w花を無理に抜いたりすれば、本当に死んで\nしまうかもしれません\w
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_6:
+      start_relative_to_block: 531
+      end_relative_to_block: 571
+      portrait: 0d00
+      original_txt: この男の言うことを信用してやりましょう
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,14 @@
+scenario_block_70:
+  offsets:
+    byte_length: 120
+    start: 12645226
+    end: 12645346
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 119
+      head_hexa: 18000111
+      portrait: 0f0d
+      original_txt: ホロビッツの力は、またしても貴様に\n与えられるのか・・・\wくそっ！こうなったら、何度でも\nホロビッツに挑んでやるぜ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

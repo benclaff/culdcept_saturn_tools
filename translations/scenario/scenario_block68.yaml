@@ -1,0 +1,27 @@
+scenario_block_68:
+  offsets:
+    byte_length: 193
+    start: 12644363
+    end: 12644556
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 53
+      portrait: 0f30
+      original_txt: \p、よく来たのう\nさっそく修業を始めるとするか・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_1:
+      start_relative_to_block: 53
+      end_relative_to_block: 106
+      portrait: 0f0b
+      original_txt: ホロビッツ！今度こそお前のカードを\n渡してもらうぞ！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
+    sequence_2:
+      start_relative_to_block: 106
+      end_relative_to_block: 192
+      portrait: 0f32
+      original_txt: ほう、ゼネスもか\nよろしい、わしを倒した者に力を与えようぞ\wさあ二人とも、来るがよい！
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null

@@ -1,0 +1,14 @@
+scenario_block_49:
+  offsets:
+    byte_length: 81
+    start: 12640190
+    end: 12640271
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 80
+      head_hexa: 1800010d
+      portrait: 0f26
+      original_txt: やっと静かになった・・・\nこれで続きが編めるわ\w私の編み物帝国の続きが・・・
+      ruler_helper: '-----------------------|-----------------------|-----------------------|'
+      translat_txt: null
