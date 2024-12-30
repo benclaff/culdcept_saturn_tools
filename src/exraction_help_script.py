@@ -173,10 +173,10 @@ for offset_int,offset_str in sorted_offsets.items():
     prev_offset_str=offset_str
 
 #last block
-_SCENARIO_END = "C11C4D"
+_HELP_SCRIPT_END = "C13583"
 
 start = prev_offset
-end = int(_SCENARIO_END,16)
+end = int(_HELP_SCRIPT_END,16)
 print("file relative:\t"+hex(start)+":"+hex(end))
 text_block=data[start:end]
 offset_yaml_str = "\nhelpscript_block_"+str(i)+":"

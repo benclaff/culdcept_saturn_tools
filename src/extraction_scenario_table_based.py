@@ -72,6 +72,26 @@ def bytes_to_yaml_text(text_block) -> str:
             exit(1)
     return yaml_str
 
+def data_to_yaml(data,i,start,end) -> str:
+    text_block = data[start:end]
+    offset_yaml_str = "\nscenario_block_" + str(i) + ":"
+    offset_yaml_str += "\n  offsets:"
+    offset_yaml_str += "\n    byte_length: " + str(len(text_block))
+    offset_yaml_str += "\n    start: " + hex(start)
+    offset_yaml_str += "\n    end: " + hex(end)
+    offset_yaml_str += "\n  sequences: "
+    print("data:\t\t\t" + text_block.hex())
+    offset_yaml_str += bytes_to_yaml_text(text_block)
+    print(offset_yaml_str)
+    # write yaml output
+    data_yaml = yaml.safe_load(offset_yaml_str)
+    with open('translations/scenario/scenario_block' + str(i) + '.yaml', 'w') as file:
+        yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    return offset_yaml_str
+
+####################################################################
+
+
 # open saturn file
 with open(meta.DT0, 'rb') as f:
     data = f.read()
@@ -94,30 +114,27 @@ prev_offset=0
 prev_offset_str="0000"
 s = int(_TABLE_START,16)
 yaml_str: str = ""
-for i,(offset_int,offset_str) in enumerate(table_offsets.items()):
+i=0
+for offset_int,offset_str in table_offsets.items():
     print("########" + str(i))
     if i>0:
         print("table relative:\t"+prev_offset_str+":"+offset_str)
         start = s + prev_offset
         end = s + offset_int
-        print("file relative:\t"+hex(start)+":"+hex(end))
-        text_block=data[start:end]
-        offset_yaml_str = "\nscenario_block_"+str(i)+":"
-        offset_yaml_str += "\n  offsets:"
-        offset_yaml_str += "\n    byte_length: "+str(len(text_block))
-        offset_yaml_str += "\n    start: "+hex(start)
-        offset_yaml_str += "\n    end: "+hex(end)
-        offset_yaml_str += "\n  sequences: "
-        print("data:\t\t\t"+text_block.hex())
-        offset_yaml_str += bytes_to_yaml_text(text_block)
-        print(offset_yaml_str)
-        # write yaml output
-        data_yaml = yaml.safe_load(offset_yaml_str)
-        with open('translations/scenario/scenario_block'+str(i)+'.yaml', 'w') as file:
-            yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
-        yaml_str += offset_yaml_str
+        print("file relative:\t" + hex(start) + ":" + hex(end))
+        yaml_str += data_to_yaml(data,i,start,end)
     prev_offset=offset_int
     prev_offset_str=offset_str
+    i+=1
+
+#last block
+_SCENARIO_END = "C11C4D"
+start = s + prev_offset
+end = int(_SCENARIO_END,16)
+print("table relative:\t" + prev_offset_str + ":" + offset_str)
+print("file relative:\t" + hex(start) + ":" + hex(end))
+yaml_str += data_to_yaml(data, i, start, end)
+
 
 # write yaml output
 # data_yaml = yaml.safe_load(yaml_str)
