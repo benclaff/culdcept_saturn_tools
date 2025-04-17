@@ -36,6 +36,7 @@ from typing import Dict, Any
 
 import meta
 import yaml
+import ruamel.yaml
 
 _TABLE_START = "C0B9C0"
 _TABLE_END = "C0BAAF"
@@ -53,10 +54,10 @@ def bytes_to_yaml_text(text_block) -> str:
         yaml_str += "\n      start_relative_to_block: " + str(m.start())
         yaml_str += "\n      end_relative_to_block: " + str(m.end())
         if match_dic["head"] is not None:
-            yaml_str += "\n      head_hexa: " + match_dic["head"].hex()
+            yaml_str += "\n      head_hexa: \'" + match_dic["head"].hex()+"\'"
         if match_dic["tail"] is not None:
-            yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
-        yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
+            yaml_str += "\n      tail_hexa: \'" + match_dic["tail"].hex()+"\'"
+        yaml_str += "\n      portrait: \'" + match_dic["portrait"].hex()+"\'"
         dec = match_dic["text"]
         dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
         dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
@@ -64,9 +65,9 @@ def bytes_to_yaml_text(text_block) -> str:
         # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
         try:
             dec = dec.decode('shift_jisx0213', errors='strict')
-            yaml_str += "\n      original_txt: " + dec
-            yaml_str += "\n      ruler_helper: " + "-----------------------|-----------------------|-----------------------|"
-            yaml_str += "\n      translat_txt: "
+            yaml_str += "\n      original_txt: \'" + dec+"\'"
+            yaml_str += "\n      ruler_helper: " + "\'-----------------------|-----------------------|-----------------------|\'"
+            yaml_str += "\n      translat_txt: \'\'"
         except UnicodeError as ex:
             print(ex)
             exit(1)
@@ -84,9 +85,18 @@ def data_to_yaml(data,i,start,end) -> str:
     offset_yaml_str += bytes_to_yaml_text(text_block)
     print(offset_yaml_str)
     # write yaml output
-    data_yaml = yaml.safe_load(offset_yaml_str)
+    #data_yaml = yaml.safe_load(offset_yaml_str)
     with open('translations/scenario/scenario_block' + str(i) + '.yaml', 'w') as file:
-        yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        yaml = ruamel.yaml.YAML()
+        yaml.preserve_quotes = True
+        reload = yaml.load(offset_yaml_str)
+        yaml.dump(reload, file)
+        # yaml.dump(
+        #     data_yaml, file,
+        #     default_flow_style=False,
+        #     allow_unicode=True,
+        #     sort_keys=False
+        # )
     return offset_yaml_str
 
 ####################################################################

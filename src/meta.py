@@ -1,8 +1,11 @@
-# YAML
-import os
+# YAML config
+#################################
+
+import os, yaml
 from pathlib import Path
 
 _YAML_PADDING = 4
+
 
 # saturn specifics
 #################################

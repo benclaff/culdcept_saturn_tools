@@ -1,11 +1,11 @@
 # simple patcher, expects:
-# 1) all following translation files to exists:
-# - translations/scenario.yaml
-#
+# 1) all following files to exists (path relative to GIT directories):
+# - translations/scenario_block[x].yaml, with x an integer
+# - helpscript/helpscript_block[x].yaml, with x an integer
 # 2) following variable to exists (which disc file to patch):
 # - meta._DT0
 #
-# and yaml fields to be used:
+# and currently those yaml fields will be used:
 # scenario_block_XXX:
 #   offsets:
 #     end: c0bc3f
@@ -18,6 +18,7 @@
 #     original_txt: \pよ\nわが
 #     translat_txt: It's \p\nMy
 
+import glob
 import os
 import shutil
 
@@ -49,6 +50,47 @@ def reverse_control_codes(value):
     value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
     return value
 
+def patch_from_yaml(yaml_file, DT0:mmap):
+    with open(yaml_file, 'rb') as ya:
+        yaml_data = yaml.safe_load(ya)
+        for block in yaml_data:
+            print("======== BLOCK: " + block + "\n")
+            # start = int(yaml_data[block]["offsets"]["start"], 16)
+            start = yaml_data[block]["offsets"]["start"]
+            # end = int(yaml_data[block]["offsets"]["end"], 16)
+            end = yaml_data[block]["offsets"]["end"]
+            max_size = yaml_data[block]["offsets"]["byte_length"]
+            data = b''
+            for sequence in yaml_data[block]["sequences"]:
+                # optional head and tails of bytes (function unknown)
+                if "head_hexa" in yaml_data[block]["sequences"][sequence]:
+                    head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_hexa"])
+                    data += head
+                # sequence itself
+                data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
+                txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
+                if txt is None:  # not translated yet
+                    txt = yaml_data[block]["sequences"][sequence]["original_txt"]
+                txt = txt.encode('shift_jisx0213')
+                txt = reverse_control_codes(txt)
+                data += txt
+                # tail
+                if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
+                    tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
+                    data += tail
+            if end - start <= max_size:
+                print("len(data): " + str(len(data)))
+                print("len(original): " + str(end - start))
+                print("filler? : " + str((end - start) - len(data)))
+                DT0[start: start + len(txt)] = txt
+            else:
+                print("block " + block + " : text size > max_size")
+            DT0.flush()
+
+###################################################################################
+# Script
+###################################################################################
+
 # copy iso locally, then edit bytes
 
 OUTPUT_DIR = "./"
@@ -67,24 +109,9 @@ except IOError as err:
 print("patching DT0")
 with open(PATCHED_DT0, mode="r+") as file_obj:
     DT0 = mmap.mmap(file_obj.fileno(), length=0, access=mmap.ACCESS_WRITE)
-    with open("./translations/scenario_test.yaml", 'rb') as scen:
-        scenario_data = yaml.safe_load(scen)
-        for block in scenario_data:
-            print(str(scenario_data[block]["offsets"]["start"]))
-            start = int(scenario_data[block]["offsets"]["start"], 16)
-            end = int(scenario_data[block]["offsets"]["end"], 16)
-            max_size = int(scenario_data[block]["offsets"]["byte_length"])
-            data = b''
-            for sequence in block["sequences"]:
-                head = bytes.fromhex(scenario_data[block]["sequences"][sequence]["head_hexa"])
-                if head is not None:
-                    data += head
-                data += bytes.fromhex(scenario_data[block]["sequences"][sequence]["portrait"])
-                txt = scenario_data[block]["sequences"][sequence]["translat_txt"]
-                txt = txt.encode('shift_jisx0213')
-                txt = reverse_control_codes(txt)
-                data += txt
-
-            if end-start <= max_size:
-                DT0[start: start+len(txt)] = txt
-            DT0.flush()
+    # scenario script
+    block_files = glob.glob('**/../translations/scenario/scenario_block*.yaml')
+    for f in block_files:
+        patch_from_yaml(f, DT0)
+    # help script
+    # block_files = glob.glob("**/../translations/helpscript/helpscript_block*.yaml")
