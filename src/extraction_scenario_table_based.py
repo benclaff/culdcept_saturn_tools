@@ -43,22 +43,43 @@ _TABLE_END = "C0BAAF"
 
 # look for this dialog pattern
 dialog_sequence_pattern = re.compile(
-    b'(?P<head>\\x18[^\\x0F]+)*(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+)+(?P<tail>\\x18[^\\x0F]+)*'
+    b'''
+    (?P<head>
+        (?P<head_preportrait>\\x18[^\\x0F]+)*
+        (?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))
+        (?P<head_postportrait>\\x18[^\\x0F-\\xFF]+)*
+    )
+    (?P<text>
+        (?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+
+        [\\x07|\\x0A]*)+
+    )+
+    (?P<tail>\\x18[^\\x0F]+)*
+    ''',
+    flags=re.VERBOSE
 )
 
 def bytes_to_yaml_text(text_block) -> str:
     yaml_str = ""
+    matched = False
     for i,m in enumerate(re.finditer(dialog_sequence_pattern, text_block)):
+        matched = True
         match_dic = m.groupdict()
         yaml_str += "\n    sequence_" + str(i) + ":"
         yaml_str += "\n      start_relative_to_block: " + str(m.start())
         yaml_str += "\n      end_relative_to_block: " + str(m.end())
         if match_dic["head"] is not None:
             yaml_str += "\n      head_hexa: \'" + match_dic["head"].hex()+"\'"
+        if match_dic["head_preportrait"] is not None:
+            yaml_str += "\n      head_preportrait_hexa: \'" + match_dic["head_preportrait"].hex() + "\'"
+        if match_dic["head_postportrait"] is not None:
+            yaml_str += "\n      head_postportrait_hexa: \'" + match_dic["head_postportrait"].hex() + "\'"
         if match_dic["tail"] is not None:
             yaml_str += "\n      tail_hexa: \'" + match_dic["tail"].hex()+"\'"
         yaml_str += "\n      portrait: \'" + match_dic["portrait"].hex()+"\'"
         dec = match_dic["text"]
+        if len(dec)<1:
+            print("unexpected text block length <1")
+            exit(1)
         dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
         dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
         dec = dec.replace(b'\x07', '\\w'.encode('shift_jisx0213'))
@@ -71,6 +92,10 @@ def bytes_to_yaml_text(text_block) -> str:
         except UnicodeError as ex:
             print(ex)
             exit(1)
+    if not matched:
+        print("Did not match scenario regexp:")
+        print(text_block.hex())
+        exit(1)
     return yaml_str
 
 def data_to_yaml(data,i,start,end) -> str:
