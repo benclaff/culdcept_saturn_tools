@@ -60,29 +60,39 @@ def patch_from_yaml(yaml_file, DT0:mmap):
             # end = int(yaml_data[block]["offsets"]["end"], 16)
             end = yaml_data[block]["offsets"]["end"]
             max_size = yaml_data[block]["offsets"]["byte_length"]
-            data = b''
+            block_data = b''
             for sequence in yaml_data[block]["sequences"]:
                 # optional head and tails of bytes (function unknown)
-                if "head_hexa" in yaml_data[block]["sequences"][sequence]:
-                    head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_hexa"])
-                    data += head
-                # sequence itself
-                data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
+                if "head_preportrait_hexa" in yaml_data[block]["sequences"][sequence]:
+                    head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_preportrait_hexa"])
+                    block_data += head
+                # portrait
+                block_data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
+                # optional head and tails of bytes (function unknown)
+                if "head_postportrait_hexa" in yaml_data[block]["sequences"][sequence]:
+                    head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_postportrait_hexa"])
+                    block_data += head
+                # text itself
                 txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
-                if txt is None:  # not translated yet
+                if (txt is None) or (txt == "null"):  # not translated yet
                     txt = yaml_data[block]["sequences"][sequence]["original_txt"]
                 txt = txt.encode('shift_jisx0213')
                 txt = reverse_control_codes(txt)
-                data += txt
+                block_data += txt
                 # tail
                 if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
                     tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
-                    data += tail
+                    block_data += tail
+            # fill with 0s, for now
+            # todo: need to improve with recomputed offset table
             if end - start <= max_size:
-                print("len(data): " + str(len(data)))
+                print("len(data): " + str(len(block_data)))
                 print("len(original): " + str(end - start))
-                print("filler? : " + str((end - start) - len(data)))
-                DT0[start: start + len(txt)] = txt
+                print("filler? : " + str((end - start) - len(block_data)))
+                DT0[start: start + len(block_data)] = block_data
+                ender = b''
+                for i in range(start + len(block_data) , end):
+                    DT0[i:i+1] = b'\x00'
             else:
                 print("block " + block + " : text size > max_size")
             DT0.flush()
@@ -111,6 +121,7 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
     DT0 = mmap.mmap(file_obj.fileno(), length=0, access=mmap.ACCESS_WRITE)
     # scenario script
     block_files = glob.glob('**/../translations/scenario/scenario_block*.yaml')
+    block_files.sort()
     for f in block_files:
         patch_from_yaml(f, DT0)
     # help script

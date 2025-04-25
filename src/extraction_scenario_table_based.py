@@ -86,9 +86,12 @@ def bytes_to_yaml_text(text_block) -> str:
         # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
         try:
             dec = dec.decode('shift_jisx0213', errors='strict')
-            yaml_str += "\n      original_txt: \'" + dec+"\'"
-            yaml_str += "\n      ruler_helper: " + "\'-----------------------|-----------------------|-----------------------|\'"
-            yaml_str += "\n      translat_txt: \'\'"
+            yaml_str += ("\n      original_txt: >-\n"
+                         "        ") + dec
+            yaml_str += ("\n      ruler_helper: >-\n"
+                         "        -----------------------|-----------------------|-----------------------|")
+            yaml_str += ("\n      translat_txt: >-\n"
+                         "        null")
         except UnicodeError as ex:
             print(ex)
             exit(1)
