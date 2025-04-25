@@ -34,12 +34,14 @@
 # computation of the position to which they point to.
 #
 # There are 2 bytes of unknown function at bytes at C12AA4 ==> text? (need to be confirmed in-game)
-
+import os
 import re
 from typing import Dict
 
 import meta
 import yaml
+import ruamel.yaml
+
 
 _TABLE_START = "C11C50"
 _TABLE_END = "C11C83"
@@ -71,6 +73,41 @@ def pointer_offsets_extraction(block_start_offset: int, data) -> Dict:
         d[new_offset] = hex(new_offset).lstrip("0x")
     return d
 
+
+def bytes_to_yaml_text(text_block) -> str:
+    yaml_str = ""
+    for i,m in enumerate(re.finditer(dialog_sequence_pattern, text_block)):
+        match_dic = m.groupdict()
+        yaml_str += "\n    sequence_" + str(i) + ":"
+        yaml_str += "\n      start_relative_to_block: " + str(m.start())
+        yaml_str += "\n      end_relative_to_block: " + str(m.end()+1)
+        # if match_dic["head"] is not None:
+        #     yaml_str += "\n      head_hexa: " + match_dic["head"].hex()
+        # if match_dic["tail"] is not None:
+        #     yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
+        yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
+        dec = match_dic["text"]
+        dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
+        dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
+        dec = dec.replace(b'\x07', '\\w'.encode('shift_jisx0213'))
+        # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
+        try:
+            dec = dec.decode('shift_jisx0213', errors='strict')
+            yaml_str += ("\n      original_txt: >-\n"
+                         "        ") + dec
+            yaml_str += ("\n      ruler_helper: >-\n"
+                         "        -----------------------|-----------------------|-----------------------|")
+            yaml_str += ("\n      translat_txt: >-\n"
+                         "        null")
+        except UnicodeError as ex:
+            print(ex.with_traceback(ex))
+            exit(1)
+    return yaml_str
+
+
+####################################################################
+
+
 # open saturn file
 with open(meta.DT0, 'rb') as f:
     data = f.read()
@@ -88,8 +125,7 @@ for i in range(0, len(table_bytes)):
 table_offsets = dict(sorted(table_offsets.items()))
 
 #get more offsets from pointers
-
-# get text blocks per offset, convert them to a yaml
+#search in each text block defined by pointer table for pointers
 prev_offset=0
 prev_offset_str="0000"
 s = int(_TABLE_START,16)
@@ -111,37 +147,9 @@ for i,(offset_int,offset_str) in enumerate(table_offsets.items()):
     prev_offset_str=offset_str
 
 print("# text blocks found: "+str(len(table_offsets.keys())))
-print("# text blocks after pointer analysis: "+str(len(new_offsets.keys())))
+print("# supplementary blocks after pointer analysis: "+str(len(new_offsets.keys())))
 
-
-def bytes_to_yaml_text(text_block) -> str:
-    yaml_str = ""
-    for i,m in enumerate(re.finditer(dialog_sequence_pattern, text_block)):
-        match_dic = m.groupdict()
-        yaml_str += "\n    sequence_" + str(i) + ":"
-        yaml_str += "\n      start_relative_to_block: " + str(m.start())
-        yaml_str += "\n      end_relative_to_block: " + str(m.end())
-        # if match_dic["head"] is not None:
-        #     yaml_str += "\n      head_hexa: " + match_dic["head"].hex()
-        # if match_dic["tail"] is not None:
-        #     yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
-        yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
-        dec = match_dic["text"]
-        dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
-        dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
-        dec = dec.replace(b'\x07', '\\w'.encode('shift_jisx0213'))
-        # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
-        try:
-            dec = dec.decode('shift_jisx0213', errors='strict')
-            yaml_str += "\n      original_txt: \'" + dec + "\'"
-            yaml_str += "\n      ruler_helper: " + "-----------------------|-----------------------|-----------------------|"
-            yaml_str += "\n      translat_txt: \'\'"
-        except UnicodeError as ex:
-            print(ex.with_traceback(ex))
-            exit(1)
-    return yaml_str
-
-# output yaml using sorted offsets
+# generate yaml using sorted offsets
 sorted_offsets = dict(sorted(new_offsets.items()))
 prev_offset=0
 prev_offset_str="0000"
@@ -164,9 +172,17 @@ for offset_int,offset_str in sorted_offsets.items():
         offset_yaml_str += bytes_to_yaml_text(text_block)
         print(offset_yaml_str)
         # write yaml output
-        data_yaml = yaml.safe_load(offset_yaml_str)
-        with open('translations/helpscript/helpscript_block'+str(i)+'.yaml', 'w') as file:
-            yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        #data_yaml = yaml.safe_load(offset_yaml_str)
+        #with open('translations/helpscript/helpscript_block'+str(i)+'.yaml', 'w') as file:
+        #    yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        os.makedirs("./translations", exist_ok=True)
+        os.makedirs("./translations/helpscript", exist_ok=True)
+        with open('./translations/helpscript/helpscript_block' + str(i) + '.yaml', 'w') as file:
+            # yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+            yaml = ruamel.yaml.YAML()
+            yaml.preserve_quotes = True
+            reload = yaml.load(offset_yaml_str)
+            yaml.dump(reload, file)
         yaml_str += offset_yaml_str
     i+=1
     prev_offset=offset_int
@@ -189,7 +205,11 @@ print("data:\t\t\t"+text_block.hex())
 offset_yaml_str += bytes_to_yaml_text(text_block)
 print(offset_yaml_str)
 # write yaml output
-data_yaml = yaml.safe_load(offset_yaml_str)
+#data_yaml = yaml.safe_load(offset_yaml_str)
 with open('translations/helpscript/helpscript_block'+str(i)+'.yaml', 'w') as file:
-    yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    #yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    yaml = ruamel.yaml.YAML()
+    yaml.preserve_quotes = True
+    reload = yaml.load(offset_yaml_str)
+    yaml.dump(reload, file)
 yaml_str += offset_yaml_str
