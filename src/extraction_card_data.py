@@ -47,7 +47,7 @@
 #                                                                                                                0100=植物  4
 #                                                                                                                0011=竜    3
 
-# This is followed by 2 blocks of test, the card name and the card abilities.
+# This is followed by 2 blocks of text, the card name and the card abilities.
 # Both are tailed with byte x00 , which indicates the end of the text item.
 # A card without ability description will show x0000
 # then follows a variable length bytes run and the next card pattern starts
@@ -58,8 +58,11 @@
 import re
 import meta
 
-_OFFSET_START = "xBA312E"
-_OFFSET_END = "xBAC823"
+_TABLE_START = "BA2E5C"
+_TABLE_END = "BA312C"
+
+_OFFSET_START = "BA312E"
+_OFFSET_END = "BAC823"
 
 # open file
 with open(meta.DT0, 'rb') as f:
@@ -72,12 +75,12 @@ for m in re.finditer(card_pattern, data):
 card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x01-\\xFF])\\x00([\\x01-\\xFF])\\x00([\\x00-\\x03])')
 for m in re.finditer(card_pattern, data):
     print('x%02x-x%02x: %s ST:%d HP:%d G:%d R:%d' % (
-        m.start(), m.end(),
-        m.group(0), #.decode('shift_jisx0213')
-        int.from_bytes(m.group(1), byteorder='little'),
-        int.from_bytes(m.group(2), byteorder='little'),
-        int.from_bytes(m.group(3), byteorder='little'),
-        int.from_bytes(m.group(4), byteorder='little'),
+            m.start(), m.end(),
+            m.group(0), #.decode('shift_jisx0213')
+            int.from_bytes(m.group(1), byteorder='little'),
+            int.from_bytes(m.group(2), byteorder='little'),
+            int.from_bytes(m.group(3), byteorder='little'),
+            int.from_bytes(m.group(4), byteorder='little'),
         )
     )
 
