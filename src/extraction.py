@@ -70,6 +70,9 @@ def sequence_to_yaml_text(text_block) -> str:
     """
     given bytes of a text block, return a yaml of all sequences in the block
     """
+    if text_block == '\x00':  # it happens that some are empty
+        return ""
+
     yaml_str = ""
     for i,m in enumerate(re.finditer(dialog_sequence_pattern, text_block)):
         match_dic = m.groupdict()
@@ -88,8 +91,10 @@ def sequence_to_yaml_text(text_block) -> str:
         # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
         try:
             dec = dec.decode('shift_jisx0213', errors='strict')
-            yaml_str += ("\n      original_txt: >-\n"
-                         "        ") + dec.replace('\\n','\\n\n        ')
+            yaml_str += (("\n      original_txt: >-\n"
+                         "        ") +
+                         dec.replace("\\n",'\\n\n        ')).replace("\\w",'\\w\n        ')
+            #space in preceeding lines are nessary as yaml indentation
             yaml_str += ("\n      ruler_helper: >-\n"
                          "        -----------------------|-----------------------|-----------------------|")
             yaml_str += ("\n      translat_txt: >-\n"
@@ -143,6 +148,12 @@ def generate_yaml_per_block(data:bytes, sorted_block_offsets:Dict[int,str], end_
             offset_yaml_str += "\n    end: " + hex(end)
             offset_yaml_str += "\n  sequences: "
             print("data:\t\t\t" + text_block.hex())
+            block = sequence_to_yaml_text(text_block)
+            if block == "":
+                i += 1
+                prev_offset = offset_int
+                prev_offset_str = offset_str
+                continue
             offset_yaml_str += sequence_to_yaml_text(text_block)
             print(offset_yaml_str)
             # write yaml output

@@ -46,8 +46,10 @@ def overwrite(fileobj, start: int, end: int, newbytes: bytes):
 
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
-    value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
-    value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
+    #as with use yaml 's ">-" block adds spaces after \n and \w, we ned to remove it
+    #before reencoding
+    value = value.replace('\\n '.encode('shift_jisx0213'), b'\x0A')
+    value = value.replace('\\w '.encode('shift_jisx0213'), b'\x07')
     return value
 
 def patch_from_yaml_scenario(yaml_file, DT0:mmap):
@@ -103,51 +105,58 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
             start = yaml_data[block]["offsets"]["start"]
             end = yaml_data[block]["offsets"]["end"]
             max_size = yaml_data[block]["offsets"]["byte_length"]
-            for sequence in yaml_data[block]["sequences"]:
-                block_data = b''
-                # for text block with pointers, yaml contains 2 fields to shift start/end accordingly
-                # start_relative_to_block ; end_relative_to_block
-                if "start_relative_to_block" in yaml_data[block]["sequences"][sequence]:
-                    shifted_start = start + yaml_data[block]["sequences"][sequence]["start_relative_to_block"]
-                else:
-                    shifted_start = start
-                if "end_relative_to_block" in yaml_data[block]["sequences"][sequence]:
-                    shifted_end = start + yaml_data[block]["sequences"][sequence]["end_relative_to_block"]
-                else:
-                    shifted_end = end
-                # optional head and tails of bytes (function unknown)
-                # if "head_preportrait_hexa" in yaml_data[block]["sequences"][sequence]:
-                #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_preportrait_hexa"])
-                #     block_data += head
-                # portrait
-                block_data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
-                # optional head and tails of bytes (function unknown)
-                # if "head_postportrait_hexa" in yaml_data[block]["sequences"][sequence]:
-                #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_postportrait_hexa"])
-                #     block_data += head
-                # text itself
-                txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
-                if (txt is None) or (txt == "null"):  # not translated yet
-                    txt = yaml_data[block]["sequences"][sequence]["original_txt"]
-                txt = txt.encode('shift_jisx0213')
-                txt = reverse_control_codes(txt)
-                block_data += txt
-                # tail
-                # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
-                #     tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
-                #     block_data += tail
-                # fill with 0s, for now
-                # todo: need to improve with recomputed offset table
-                if end - start <= max_size:
-                    print("len(data): " + str(len(block_data)))
-                    print("len(original): " + str(shifted_end - shifted_start))
-                    print("filler? : " + str((shifted_end - shifted_start) - len(block_data)))
-                    DT0[shifted_start: shifted_start + len(block_data)] = block_data
-                    for i in range(shifted_start + len(block_data), shifted_end-1):
-                        DT0[i:i + 1] = b'\x00'
-                else:
-                    print("block " + block + " : text size > max_size")
-                DT0.flush()
+            if yaml_data[block]["sequences"] is None:
+                # cases where there is actually no data in block
+                # this happens for instance in taunts where offset table point to empty blocks
+                # (no text, but x00 to show end of text block)
+                continue
+            else:
+                for sequence in yaml_data[block]["sequences"]:
+                    block_data = b''
+                    # for text block with pointers, yaml contains 2 fields to shift start/end accordingly
+                    # start_relative_to_block ; end_relative_to_block
+                    if "start_relative_to_block" in yaml_data[block]["sequences"][sequence]:
+                        shifted_start = start + yaml_data[block]["sequences"][sequence]["start_relative_to_block"]
+                    else:
+                        shifted_start = start
+                    if "end_relative_to_block" in yaml_data[block]["sequences"][sequence]:
+                        shifted_end = start + yaml_data[block]["sequences"][sequence]["end_relative_to_block"]
+                    else:
+                        shifted_end = end
+                    # optional head and tails of bytes (function unknown)
+                    # if "head_preportrait_hexa" in yaml_data[block]["sequences"][sequence]:
+                    #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_preportrait_hexa"])
+                    #     block_data += head
+                    # portrait
+                    block_data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
+                    # optional head and tails of bytes (function unknown)
+                    # if "head_postportrait_hexa" in yaml_data[block]["sequences"][sequence]:
+                    #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_postportrait_hexa"])
+                    #     block_data += head
+                    # text itself
+                    txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
+                    if (txt is None) or (txt == "null"):  # not translated yet
+                        print("Not translated yet !")
+                        continue
+                    txt = txt.encode('shift_jisx0213')
+                    txt = reverse_control_codes(txt)
+                    block_data += txt
+                    # tail
+                    # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
+                    #     tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
+                    #     block_data += tail
+                    # fill with 0s, for now
+                    # todo: need to improve with recomputed offset table
+                    if end - start <= max_size:
+                        print("len(data): " + str(len(block_data)))
+                        print("len(original): " + str(shifted_end - shifted_start))
+                        print("filler? : " + str((shifted_end - shifted_start) - len(block_data)))
+                        DT0[shifted_start: shifted_start + len(block_data)] = block_data
+                        for i in range(shifted_start + len(block_data), shifted_end-1):
+                            DT0[i:i + 1] = b'\x00'
+                    else:
+                        print("block " + block + " : text size > max_size")
+                    DT0.flush()
 
 
 
@@ -186,8 +195,13 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
     block_files.sort()
     for f in block_files:
         patch_from_yaml_scenario(f, DT0)
-    ##### scenario script
+    ##### help script
     block_files = glob.glob("**/../translations/helpscript/helpscript_block*.yaml")
+    block_files.sort()
+    for f in block_files:
+        patch_from_yaml_block_with_pointers(f, DT0)
+    ##### taunts
+    block_files = glob.glob("**/../translations/taunts/taunts*_block*.yaml")
     block_files.sort()
     for f in block_files:
         patch_from_yaml_block_with_pointers(f, DT0)
