@@ -118,7 +118,7 @@ def get_uniq_offsets_from_table(table_bytes:bytes) -> Dict[int,str]:
     table_offsets = dict(sorted(table_offsets.items()))
     return table_offsets
 
-def extract_blocks_from_offset_table(data:bytes, table_start_offset_hexa_str:int, table_end_offset_hexa_str:str) -> Dict[int,str]:
+def extract_blocks_from_offset_table(data:bytes, table_start_offset_hexa_str:str, table_end_offset_hexa_str:str) -> Dict[int,str]:
     """
     given data and start/end offsets of an offset table, get a dict of all offsets
     :param data:
