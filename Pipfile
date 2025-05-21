@@ -6,7 +6,8 @@ name = "pypi"
 [packages]
 pyaml = "*"
 python-nmap = "*"
-ruamel = "*"
+"ruamel.yaml" = "*"
+pyyaml = "~=6.0.2"
 
 [dev-packages]
 
