@@ -57,7 +57,7 @@
 # ex from last card (last in pointer table)
 # 83 8F 83 43 83 8B 83 68 83 4F 83 8D 81 5B 83 58 00 93 79 92 6E 82 F0 0E 04 83 0E 01 82 C9 95 CF 89 BB 82 B3 82 B9 82 E9 00
 #                                                                     |icon placehold|
-# Pattern is 0E 04 XX 0E 01, where XX in [80,84] (the 5 elements)
+# Pattern is '0E04[XX]+0E01'
 
 
 #!/usr/bin/env python3
@@ -129,9 +129,15 @@ for m in re.finditer(card_name_pattern, data):
 #                                                                                                                                                                                                                                                                                                                                  17:unknown3
 #                                                                                                                                                                                                                                                                                                                                                      18:unknown4
 #                                                                                                                                                                                                                                                                                                                                                                          19:unknown5
-#                                                                                                                                                                                                                                                                                                                                                                                        20:card_name
-#                                                                                                                                                                                                                                                                                                                                                                                                           21:card_descirption, it may contain icon injection control code: 0e04 8X0e 01
-card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x01-\\xFF])([\\x00-\\x03])([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])[\\x00]{11}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])(?P<card_name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+\\x00(?P<card_description>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)*\\x00') #.+(?P<card_name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00')
+
+card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x01-\\xFF])([\\x00-\\x03])([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])[\\x00]{11}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])')
+
+# card_name is only shift-JIS bytes
+# card_descirption: it may contain icon injection control code: 0e04 8X0e 01   (?=\\x0E\\x04.+\\x0E\\x01)* and may contain line retuns \\x01
+card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]+)\\x00(?P<tail>.*)')
+card_desc_pattern = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*')
+#card_text_pattern = re.compile(b'(?P<card_name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+\\x00(?P<card_description>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*(\\x0E\\x04.+\\x0E\\x01)*([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*[\\x07|\\x0A]*([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)*\\x00')
+
 
 ## search all cards from using offset table
 block_offsets = extract_blocks_from_offset_table(data, _TABLE_START, _TABLE_END);
@@ -145,18 +151,67 @@ for i,item in enumerate(block_offsets.items()):
     end = int(_TABLE_START, 16) + offset
     if i>0:
         subdata = data[prev_offset:end]
-        print(subdata.hex(' ', 2))
         found=False
+        print(subdata.hex(' ', 2))
+        match_end = -1
         for m in re.finditer(card_pattern, subdata):
-            # print('x%02x-x%02x: %s' % (
-            #     m.start(), m.end(),
-            #     m.group(0).hex(' ',2),
-            #     )
-            # )
+            print('x%02x-x%02x: %s' % (
+                m.start(), m.end(),
+                m.group(0).hex(' ',2),
+                )
+            )
+            print(
+                '  ST:%d HP:%d G:%d R:%d\n'
+                '  bools0:%02x bools1:%02x bools2:%02x bools3:%02x\n'
+                '  cost(fire):%d cost(water):%d cost(forest):%d cost(wind):%d squares:%d'
+                '  unk0: %d unk1: %d unk2: %d unk3:%d unk4: %d unk5: %d' % (
+                    int.from_bytes(m.group(1), byteorder='little'),  # ST
+                    int.from_bytes(m.group(2), byteorder='little'),  # HP
+                    int.from_bytes(m.group(3), byteorder='little'),  # G
+                    int.from_bytes(m.group(4), byteorder='little'),  # R
+                    int.from_bytes(m.group(5), byteorder='little'),  # bools0
+                    int.from_bytes(m.group(6), byteorder='little'), #bools1
+                    int.from_bytes(m.group(7), byteorder='little'), #bools3: limits
+                    int.from_bytes(m.group(8), byteorder='little'), #bools4: types + elements
+                    int.from_bytes(m.group(9), byteorder='little'),  # cost: fire
+                    int.from_bytes(m.group(10), byteorder='little'),  # water
+                    int.from_bytes(m.group(11), byteorder='little'),  # forest
+                    int.from_bytes(m.group(12), byteorder='little'),  # wind
+                    int.from_bytes(m.group(13), byteorder='little'),  # squares
+                    int.from_bytes(m.group(14), byteorder='little'),  # unknown
+                    int.from_bytes(m.group(15), byteorder='little'),  # unknown
+                    int.from_bytes(m.group(16), byteorder='little'),  # unknown
+                    int.from_bytes(m.group(17), byteorder='little'),  # unknown
+                    int.from_bytes(m.group(18), byteorder='little'),  # unknown
+                    int.from_bytes(m.group(19), byteorder='little'),  # unknown
+                )
+                )
             found=True
+            match_end=m.end()
             c+=1
-        if not found:
+        if found:
+            txt_data = subdata[match_end:len(subdata)]
+            #print(txt_data.hex(' ', 2))
+            for m in re.finditer(card_text_pattern, txt_data):
+                print(
+                    '  x%02x-x%02x: %s' % (
+                    m.start(), m.end(),
+                    m.group(0).hex(' ', 2),
+                    )
+                )
+                print(
+                    '  name:%s\n  %s' % (
+                    m.groupdict()["name"].decode('shift_jisx0213'),  # card name
+                    m.groupdict()["desc"],
+                    )
+                )
+                #desc_data=txt_data[]
+                #for m in re.finditer(card_desc_pattern, desc_data):
+                print(  "  tail: "+m.groupdict()["tail"].hex(' ',2) )
+
+        else:
             print("CARD PATTERN DID NOT MATCH ! start:"+str(prev_offset)+" end:"+str(end))
+            print(subdata.hex(' ', 2))
     prev_offset=end
 #last elt
 subdata=data[prev_offset:int(_OFFSET_END,16)]
@@ -164,37 +219,3 @@ subdata=data[prev_offset:int(_OFFSET_END,16)]
 
 
 print("Card data pattern found using regexp: " + str(c))
-
-
-exit()
-
-c=0
-for i in range(len(block_offsets.keys())+1):
-    if i>0:
-        for m in re.finditer(card_pattern, data):
-            if m.start() >= int(_OFFSET_START,16) and m.end() <= int(_OFFSET_END,16):
-                print('name: %s\n  ST:%d HP:%d G:%d R:%d\n  bools0:%02x bools1:%02x bools2:%02x bools3:%02x\n  cost(fire):%d cost(water):%d cost(forest):%d cost(wind):%d squares:%d' % (
-
-                    m.groupdict()["card_name"].decode('shift_jisx0213'), # card name
-                    #m.group(15), #.decode('shift_jisx0213'),  # card description
-                    int.from_bytes(m.group(1), byteorder='little'), #ST
-                    int.from_bytes(m.group(2), byteorder='little'), #HP
-                    int.from_bytes(m.group(3), byteorder='little'), #G
-                    int.from_bytes(m.group(4), byteorder='little'), #R
-                    int.from_bytes(m.group(5), byteorder='little'), #bools0
-                    int.from_bytes(m.group(6), byteorder='little'),
-                    int.from_bytes(m.group(7), byteorder='little'),
-                    int.from_bytes(m.group(8), byteorder='little'),
-                    int.from_bytes(m.group(9), byteorder='little'), #cost: fire
-                    int.from_bytes(m.group(10), byteorder='little'), # water
-                    int.from_bytes(m.group(11), byteorder='little'), # forest
-                    int.from_bytes(m.group(12), byteorder='little'), # wind
-                    int.from_bytes(m.group(13), byteorder='little'), # squares
-                    )
-                )
-                c+=1
-
-print("Card blocks found from offset table: "+ str(len(block_offsets.keys())))
-
-
-
