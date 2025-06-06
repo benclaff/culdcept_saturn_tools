@@ -57,9 +57,10 @@
 # card data offsets
 import re
 import meta
+from extraction import extract_blocks_from_offset_table
 
 _TABLE_START = "BA2E5C"
-_TABLE_END = "BA312C"
+_TABLE_END = "BA312D"
 
 _OFFSET_START = "BA312E"
 _OFFSET_END = "BAC823"
@@ -68,11 +69,21 @@ _OFFSET_END = "BAC823"
 with open(meta.DT0, 'rb') as f:
     data = f.read()
 
+
+
 card_pattern = re.compile(b'\\x83\\x8F\\x83\\x43\\x83\\x8B\\x83\\x68\\x83\\x4F\\x83\\x8D\\x81\\x5B\\x83\\x58')
 for m in re.finditer(card_pattern, data):
     print('x%02x-x%02x: %s' % (m.start(), m.end(), m.group(0).decode('shift_jisx0213')))
 
 card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x01-\\xFF])\\x00([\\x01-\\xFF])\\x00([\\x00-\\x03])')
+
+## search all cards from using offset table
+block_offsets = extract_blocks_from_offset_table(data, _TABLE_START, _TABLE_END);
+
+print("Card blocks found from offset table: "+ str(len(block_offsets.keys())))
+
+
+c=0
 for m in re.finditer(card_pattern, data):
     print('x%02x-x%02x: %s ST:%d HP:%d G:%d R:%d' % (
             m.start(), m.end(),
@@ -83,6 +94,10 @@ for m in re.finditer(card_pattern, data):
             int.from_bytes(m.group(4), byteorder='little'),
         )
     )
+    c+=1
+
+print("Card blocks found from offset table: "+ str(len(block_offsets.keys())))
+print("Card data pattern found using regexp: "+str(c))
 
 
 

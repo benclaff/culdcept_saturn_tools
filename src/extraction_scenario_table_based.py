@@ -29,7 +29,7 @@
 # 18 00 01 0D
 # 18 00 01 10
 # I let them untouched at same position, in case the last 2 bytes are pointer offsets
-
+import os
 import re
 from base64 import decode
 from typing import Dict, Any
@@ -114,7 +114,9 @@ def data_to_yaml(data,i,start,end) -> str:
     print(offset_yaml_str)
     # write yaml output
     #data_yaml = yaml.safe_load(offset_yaml_str)
-    with open('translations/scenario/scenario_block' + str(i) + '.yaml', 'w') as file:
+    os.makedirs("../translations", exist_ok=True)
+    os.makedirs("../translations/scenario", exist_ok=True)
+    with open('../translations/scenario/scenario_block' + str(i) + '.yaml', 'w') as file:
         yaml = ruamel.yaml.YAML()
         yaml.preserve_quotes = True
         reload = yaml.load(offset_yaml_str)
