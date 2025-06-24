@@ -19,7 +19,7 @@
 #                                                                      |cost: 森 (forest)
 #                                                                   |cost: 水 (water)
 #                                                                |cost: 火 (fire)
-
+import os
 # Zoom on XX columns, those are boolean for card status or 4bit integers for element and types :
 #                                                                                                |bool for limits          0000=無 0   neutral
 #                                                                                                |風                        0100=風 4   wind
@@ -62,10 +62,12 @@
 
 #!/usr/bin/env python3
 
-# card data offsets
 import re
 import meta
 from extraction import extract_blocks_from_offset_table
+import ruamel.yaml
+
+# card data offsets
 
 _TABLE_START = "BA2E5C"
 _TABLE_END = "BA312D"
@@ -130,19 +132,131 @@ for m in re.finditer(card_name_pattern, data):
 #                                                                                                                                                                                                                                                                                                                                                      18:unknown4
 #                                                                                                                                                                                                                                                                                                                                                                          19:unknown5
 
-card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x01-\\xFF])([\\x00-\\x03])([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])[\\x00]{11}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])')
+card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\x01][\\x01-\\xFF])([\\x00-\\x03])([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])([\\x00-\\xFF])[\\x00]{11}([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])\\x00([\\x00-\\xFF])')
 
 # card_name is only shift-JIS bytes
 # card_descirption: it may contain icon injection control code: 0e04 8X0e 01   (?=\\x0E\\x04.+\\x0E\\x01)* and may contain line retuns \\x01
-card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]+)\\x00(?P<tail>.*)')
+card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]+)(?P<tail>.*)')
 card_desc_pattern = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*')
-#card_text_pattern = re.compile(b'(?P<card_name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+\\x00(?P<card_description>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*(\\x0E\\x04.+\\x0E\\x01)*([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*[\\x07|\\x0A]*([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)*\\x00')
 
+
+def card_bytes_to_yaml(subdata):
+
+    card_yaml = ""
+    found = False
+    # print(subdata.hex(' ', 2))
+    match_end = -1
+    for m in re.finditer(card_pattern, subdata):
+        # print('x%02x-x%02x: %s' % (
+        #     m.start(), m.end(),
+        #    m.group(0).hex(' ',2),
+        #    )
+        # )
+        print("----")
+        print(
+            '  ST:%d HP:%d G:%d R:%d\n'
+            '  bools0:%02x bools1:%02x bools2:%02x bools3:%02x\n'
+            '  cost(fire):%d cost(water):%d cost(forest):%d cost(wind):%d squares:%d'
+            '  unk0: %d unk1: %d unk2: %d unk3:%d unk4: %d unk5: %d' % (
+                int.from_bytes(m.group(1), byteorder='little'),  # ST
+                int.from_bytes(m.group(2), byteorder='little'),  # HP
+                int.from_bytes(m.group(3), byteorder='big'),  # G
+                int.from_bytes(m.group(4), byteorder='little'),  # R
+                int.from_bytes(m.group(5), byteorder='little'),  # bools0
+                int.from_bytes(m.group(6), byteorder='little'),  # bools1
+                int.from_bytes(m.group(7), byteorder='little'),  # bools3: limits
+                int.from_bytes(m.group(8), byteorder='little'),  # bools4: types + elements
+                int.from_bytes(m.group(9), byteorder='little'),  # cost: fire
+                int.from_bytes(m.group(10), byteorder='little'),  # water
+                int.from_bytes(m.group(11), byteorder='little'),  # forest
+                int.from_bytes(m.group(12), byteorder='little'),  # wind
+                int.from_bytes(m.group(13), byteorder='little'),  # squares
+                int.from_bytes(m.group(14), byteorder='little'),  # unknown
+                int.from_bytes(m.group(15), byteorder='little'),  # unknown
+                int.from_bytes(m.group(16), byteorder='little'),  # unknown
+                int.from_bytes(m.group(17), byteorder='little'),  # unknown
+                int.from_bytes(m.group(18), byteorder='little'),  # unknown
+                int.from_bytes(m.group(19), byteorder='little'),  # unknown
+            ))
+        card_yaml += "\n  statistics:"
+        card_yaml += "\n    ST: "+str(int.from_bytes(m.group(1), byteorder='little'))  # ST
+        card_yaml += "\n    HP: "+str(int.from_bytes(m.group(2), byteorder='little'))  # HP
+        card_yaml += "\n    gold: "+str(int.from_bytes(m.group(3), byteorder='little'))  # G
+        card_yaml += "\n    rarity: "+str(int.from_bytes(m.group(4), byteorder='little'))  # R
+        card_yaml += "\n    bools_0: "+str(int.from_bytes(m.group(5), byteorder='little'))  # bools0
+        card_yaml += "\n    bools_1: "+str(int.from_bytes(m.group(6), byteorder='little'))  # bools1
+        card_yaml += "\n    bools_limit: "+str(int.from_bytes(m.group(7), byteorder='little'))  # bools3: limits
+        card_yaml += "\n    bools_type_element: "+str(int.from_bytes(m.group(8), byteorder='little'))  # bools4: types + elements
+        card_yaml += "\n    cost_fire: "+str(int.from_bytes(m.group(9), byteorder='little'))  # cost: fire
+        card_yaml += "\n    cost_water: "+str(int.from_bytes(m.group(10), byteorder='little'))  # water
+        card_yaml += "\n    cost_forest: "+str(int.from_bytes(m.group(11), byteorder='little'))  # forest
+        card_yaml += "\n    cost_wind: "+str(int.from_bytes(m.group(12), byteorder='little'))  # wind
+        card_yaml += "\n    cost_card: "+str(int.from_bytes(m.group(13), byteorder='little'))  # squares
+        card_yaml += "\n    Unk0: "+str(int.from_bytes(m.group(14), byteorder='little'))  # unknown
+        card_yaml += "\n    Unk1: "+str(int.from_bytes(m.group(15), byteorder='little'))  # unknown
+        card_yaml += "\n    Unk2: "+str(int.from_bytes(m.group(16), byteorder='little'))  # unknown
+        card_yaml += "\n    Unk3: "+str(int.from_bytes(m.group(17), byteorder='little'))  # unknown
+        card_yaml += "\n    Unk4: "+str(int.from_bytes(m.group(18), byteorder='little'))  # unknown
+        card_yaml += "\n    Unk5: "+str(int.from_bytes(m.group(19), byteorder='little'))  # unknown
+
+        found = True
+        match_end = m.end()
+
+    if found:
+        txt_data = subdata[match_end:len(subdata)]
+        # print(txt_data.hex(' ', 2))
+        for m in re.finditer(card_text_pattern, txt_data):
+            # print(
+            #    '  x%02x-x%02x: %s' % (
+            #    m.start(), m.end(),
+            #    m.group(0).hex(' ', 2),
+            #    )
+            # )
+            # print(
+            #    '  name: %s\n  desc:%s' % (
+            #    m.groupdict()["name"].decode('shift_jisx0213'),  # card name
+            #    m.groupdict()["desc"].hex(' ',2),
+            #    )
+            # )
+            card_yaml += "\n  text:"
+            print("  name: " + m.groupdict()["name"].decode('shift_jisx0213'))
+            card_yaml += "\n    name: " + m.groupdict()["name"].decode('shift_jisx0213')
+            tail = m.groupdict()["tail"]
+            desc_data = txt_data[len(m.groupdict()["name"]) + 1:]
+            line_count = 0
+            desc_yaml_string = ""
+            for m in re.finditer(card_desc_pattern, desc_data):
+                if (line_count > 0):
+                    desc_yaml_string += '\\n'
+                # print("d1:"+m.groupdict()["d1"].hex(' ',2))
+                desc_yaml_string += m.groupdict()["d1"].decode('shift_jisx0213')
+                # print("d2:"+m.groupdict()["icon"].hex(' ',2))
+                icon_bytes = m.groupdict()["icon"]
+                if len(icon_bytes) > 0:
+                    desc_yaml_string += '\\i{' + icon_bytes[2:-2].hex() + '}'
+                # print("d3:"+m.groupdict()["d2"].hex(' ',2))
+                desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
+                line_count = line_count + 1
+            print("    desc: " + desc_yaml_string)
+            print("    tail: " + tail.hex())
+            card_yaml += "\n    desc: " + desc_yaml_string
+            card_yaml += "\n  tail: " + tail.hex()
+        return card_yaml
+
+    else:
+        print("CARD PATTERN DID NOT MATCH ! start:" + str(prev_offset) + " end:" + str(end))
+        print(subdata.hex(' ', 2))
+        return "\n    error: NOT_MATCHED"
+
+#############################################################################################
+#############################################################################################
 
 ## search all cards from using offset table
 block_offsets = extract_blocks_from_offset_table(data, _TABLE_START, _TABLE_END);
 
 print("Card blocks found from offset table: "+ str(len(block_offsets.keys())))
+
+output_yaml = ""
 
 c=0
 prev_offset=-1
@@ -150,72 +264,28 @@ for i,item in enumerate(block_offsets.items()):
     offset = item[0]
     end = int(_TABLE_START, 16) + offset
     if i>0:
+        output_yaml += "\ncard_"+str(i)+":"
+        output_yaml += "\n  offsets: "
+        output_yaml += "\n    byte_length: " + str(end-prev_offset)
+        output_yaml += "\n    start: " + hex(prev_offset)
+        output_yaml += "\n    end: " + hex(end)
         subdata = data[prev_offset:end]
-        found=False
-        print(subdata.hex(' ', 2))
-        match_end = -1
-        for m in re.finditer(card_pattern, subdata):
-            print('x%02x-x%02x: %s' % (
-                m.start(), m.end(),
-                m.group(0).hex(' ',2),
-                )
-            )
-            print(
-                '  ST:%d HP:%d G:%d R:%d\n'
-                '  bools0:%02x bools1:%02x bools2:%02x bools3:%02x\n'
-                '  cost(fire):%d cost(water):%d cost(forest):%d cost(wind):%d squares:%d'
-                '  unk0: %d unk1: %d unk2: %d unk3:%d unk4: %d unk5: %d' % (
-                    int.from_bytes(m.group(1), byteorder='little'),  # ST
-                    int.from_bytes(m.group(2), byteorder='little'),  # HP
-                    int.from_bytes(m.group(3), byteorder='little'),  # G
-                    int.from_bytes(m.group(4), byteorder='little'),  # R
-                    int.from_bytes(m.group(5), byteorder='little'),  # bools0
-                    int.from_bytes(m.group(6), byteorder='little'), #bools1
-                    int.from_bytes(m.group(7), byteorder='little'), #bools3: limits
-                    int.from_bytes(m.group(8), byteorder='little'), #bools4: types + elements
-                    int.from_bytes(m.group(9), byteorder='little'),  # cost: fire
-                    int.from_bytes(m.group(10), byteorder='little'),  # water
-                    int.from_bytes(m.group(11), byteorder='little'),  # forest
-                    int.from_bytes(m.group(12), byteorder='little'),  # wind
-                    int.from_bytes(m.group(13), byteorder='little'),  # squares
-                    int.from_bytes(m.group(14), byteorder='little'),  # unknown
-                    int.from_bytes(m.group(15), byteorder='little'),  # unknown
-                    int.from_bytes(m.group(16), byteorder='little'),  # unknown
-                    int.from_bytes(m.group(17), byteorder='little'),  # unknown
-                    int.from_bytes(m.group(18), byteorder='little'),  # unknown
-                    int.from_bytes(m.group(19), byteorder='little'),  # unknown
-                )
-                )
-            found=True
-            match_end=m.end()
-            c+=1
-        if found:
-            txt_data = subdata[match_end:len(subdata)]
-            #print(txt_data.hex(' ', 2))
-            for m in re.finditer(card_text_pattern, txt_data):
-                print(
-                    '  x%02x-x%02x: %s' % (
-                    m.start(), m.end(),
-                    m.group(0).hex(' ', 2),
-                    )
-                )
-                print(
-                    '  name:%s\n  %s' % (
-                    m.groupdict()["name"].decode('shift_jisx0213'),  # card name
-                    m.groupdict()["desc"],
-                    )
-                )
-                #desc_data=txt_data[]
-                #for m in re.finditer(card_desc_pattern, desc_data):
-                print(  "  tail: "+m.groupdict()["tail"].hex(' ',2) )
-
-        else:
-            print("CARD PATTERN DID NOT MATCH ! start:"+str(prev_offset)+" end:"+str(end))
-            print(subdata.hex(' ', 2))
+        output_yaml += card_bytes_to_yaml(subdata)
+        c += 1
     prev_offset=end
 #last elt
+output_yaml += "\ncard_"+str(len(block_offsets.items()))+":"
 subdata=data[prev_offset:int(_OFFSET_END,16)]
-# TODO
-
+output_yaml += card_bytes_to_yaml(subdata)
+c += 1
 
 print("Card data pattern found using regexp: " + str(c))
+
+os.makedirs("../translations", exist_ok=True)
+os.makedirs("../translations/cards", exist_ok=True)
+print(output_yaml)
+with open( "../translations/cards/cards.yaml", 'w') as file:
+    yaml = ruamel.yaml.YAML()
+    yaml.preserve_quotes = True
+    reload = yaml.load(output_yaml)
+    yaml.dump(reload, file)

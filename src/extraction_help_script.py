@@ -35,13 +35,8 @@
 #
 # There are 2 bytes of unknown function at bytes at C12AA4 ==> text? (need to be confirmed in-game)
 import os
-import re
-from typing import Dict
-
 import extraction
 import meta
-import ruamel.yaml
-from extraction import pointer_offsets_extraction, sequence_to_yaml_text
 
 _TABLE_START = "C11C50"
 _TABLE_END = "C11C83"
