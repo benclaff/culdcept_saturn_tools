@@ -1,3 +1,6 @@
+from ast import Bytes
+
+
 def shift_jis2unicode(charcode):
     """
     decode jis to unicode
@@ -16,3 +19,12 @@ def shift_jis2unicode(charcode):
     assert len(unicode_string) == 1
     return ord(unicode_string)
 
+def is_bit_set(bytes, n):
+    """
+    test if nth bit is set
+    :param num:
+    :param pos:
+    :return:
+    """
+    mask = 1 << n
+    return (int.from_bytes(bytes) & mask) != 0

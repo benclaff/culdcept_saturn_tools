@@ -1,7 +1,7 @@
 # Card data is organised as follows:
 #
 # Some card
-#                           ST    HP     G  R XX XX 00 XX XX 00              |square                            |=> vbytes of unkown function, followed by card name and description
+#                           ST    HP G1 G2  R XX XX 00 XX XX 00              |square                            |=> vbytes of unkown function, followed by card name and description
 # Card 75    00 00 00 00 00 00 00 3C 00 46 00 0D 1A 00 02 52 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 00 00 00 00 00 00 00 00 00
 # Card 79    00 00 00 00 00 00 00 3C 00 5A 02 14 BE 00 13 52 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 29 00 5C 00 00 00 00 00 00 00 00
 # Card 93    00 00 00 00 00 0A 00 32 00 50 01 09 A9 00 02 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 4D 00 78 00 12 00 00 00 00 00 00
@@ -64,6 +64,7 @@ import os
 
 import re
 import meta
+from etc import is_bit_set
 from extraction import extract_blocks_from_offset_table
 import ruamel.yaml
 
@@ -181,12 +182,50 @@ def card_bytes_to_yaml(subdata):
         card_yaml += "\n  statistics:"
         card_yaml += "\n    ST: "+str(int.from_bytes(m.group(1), byteorder='little'))  # ST
         card_yaml += "\n    HP: "+str(int.from_bytes(m.group(2), byteorder='little'))  # HP
-        card_yaml += "\n    gold: "+str(int.from_bytes(m.group(3), byteorder='little'))  # G
+        card_yaml += "\n    gold: "+str(int.from_bytes(m.group(3), byteorder='big'))  # G
         card_yaml += "\n    rarity: "+str(int.from_bytes(m.group(4), byteorder='little'))  # R
         card_yaml += "\n    bools_0: "+str(int.from_bytes(m.group(5), byteorder='little'))  # bools0
         card_yaml += "\n    bools_1: "+str(int.from_bytes(m.group(6), byteorder='little'))  # bools1
-        card_yaml += "\n    bools_limit: "+str(int.from_bytes(m.group(7), byteorder='little'))  # bools3: limits
-        card_yaml += "\n    bools_type_element: "+str(int.from_bytes(m.group(8), byteorder='little'))  # bools4: types + elements
+        #the 5 possible card limits are set on 1 byte, with 3 1st bits unused
+        #000X XXXX
+        #   | |||| bool for limits
+        #   |風 : wind
+        #     |森 : forest
+        #      |水 : water
+        #       |火 : fire
+        #        |無 : neutral
+        limits_byte = m.group(7)  # bools3: limits
+        card_yaml += "\n    limit: "
+        card_yaml += "\n      wind: " + str(is_bit_set(limits_byte,4))
+        card_yaml += "\n      forest: " + str(is_bit_set(limits_byte,3))
+        card_yaml += "\n      water: " + str(is_bit_set(limits_byte,2))
+        card_yaml += "\n      fire: " + str(is_bit_set(limits_byte,1))
+        card_yaml += "\n      neutral: " + str(is_bit_set(limits_byte,0))
+        #types and elements are on 1 byte, 4 leftmost bits are types, 4 rightmost bits are elements
+        # TTTT EEEE
+        #      0000=無 0   neutral
+        #      0100=風 4   wind
+        #      0011=森 3   forest
+        #      0001=火 1   fire
+        #      0010=水 2   water
+        # 0101=不死  5  undead
+        # 0010=獣    2  beast
+        # 0001=人    1  human
+        # 0100=植物  4  plant
+        # 0011=竜    3  dragon
+        type_element_bytes = int.from_bytes(m.group(8)) # bools4: types + elements
+        card_yaml += "\n    element: "
+        card_yaml += "\n      wind: " + str( (type_element_bytes & (1 << 4)) == 4)
+        card_yaml += "\n      forest: " + str( (type_element_bytes & (1 << 4)) == 3)
+        card_yaml += "\n      water: " + str( (type_element_bytes & (1 << 4)) == 2)
+        card_yaml += "\n      fire: " + str( (type_element_bytes & (1 << 4)) == 1)
+        card_yaml += "\n      neutral: " + str( (type_element_bytes & (1 << 4)) == 0)
+        card_yaml += "\n    type: "
+        card_yaml += "\n      undead: " + str((type_element_bytes >> 4) == 5)
+        card_yaml += "\n      plant: " + str((type_element_bytes >> 4) == 4)
+        card_yaml += "\n      dragon: " + str((type_element_bytes >> 4) == 3)
+        card_yaml += "\n      beast: " + str((type_element_bytes >> 4) == 2)
+        card_yaml += "\n      human: " + str((type_element_bytes >> 4) == 1)
         card_yaml += "\n    cost_fire: "+str(int.from_bytes(m.group(9), byteorder='little'))  # cost: fire
         card_yaml += "\n    cost_water: "+str(int.from_bytes(m.group(10), byteorder='little'))  # water
         card_yaml += "\n    cost_forest: "+str(int.from_bytes(m.group(11), byteorder='little'))  # forest
