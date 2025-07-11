@@ -64,13 +64,13 @@ print("# supplementary blocks after pointer extraction: "+str(len(new_offsets.ke
 table_offsets.update(new_offsets)
 sorted_offsets = dict(sorted(new_offsets.items()))
 
-os.makedirs("./translations", exist_ok=True)
-os.makedirs("./translations/helpscript", exist_ok=True)
+os.makedirs("../translations", exist_ok=True)
+os.makedirs("../translations/helpscript", exist_ok=True)
 
 extraction.generate_yaml_per_block(
     data,
     sorted_offsets,
     _HELP_SCRIPT_END,
-    "./translations/helpscript/helpscript"
+    "../translations/helpscript/helpscript"
 )
 

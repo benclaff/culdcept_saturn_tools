@@ -20,6 +20,7 @@
 
 import glob
 import os
+import re
 import shutil
 
 import resource
@@ -44,12 +45,15 @@ def overwrite(fileobj, start: int, end: int, newbytes: bytes):
     data = mmap(fileobj.fileno(), offset=offset, length=length)
     data[startremainder:startremainder + end - start] = newbytes
 
+pattern_icon=r"\\i\{(.*)\}"
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
     #as with use yaml 's ">-" block adds spaces after \n and \w, we ned to remove it
     #before reencoding
-    value = value.replace('\\n '.encode('shift_jisx0213'), b'\x0A')
-    value = value.replace('\\w '.encode('shift_jisx0213'), b'\x07')
+    value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
+    value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
+    value = re.sub(r"\\i\{(.*)\}", r"\\x\{0e04\g<1>0e01\\}", value) # icon pointers
+    # todo : control code replacement
     return value
 
 def patch_from_yaml_scenario(yaml_file, DT0:mmap):
@@ -159,7 +163,39 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                     DT0.flush()
 
 
+def patch_from_yaml_cards(yaml_file, DT0: mmap):
+    with open(yaml_file, 'rb') as ya:
+        yaml_data = yaml.safe_load(ya)
+        for block in yaml_data:
+            print("======== CARD: " + block + "\n")
+            start = yaml_data[block]["offsets"]["start"]
+            end = yaml_data[block]["offsets"]["end"]
+            max_size = yaml_data[block]["offsets"]["byte_length"]
+            block_data = b''
+            head = yaml_data[block]["head"]
+            name = yaml_data[block]["text"]["name"]["translat_txt"]
+            if (name is None) or (txt == "null"):  # not translated yet
+                print("Not translated yet !")
+                continue
+            name = name.encode('shift_jisx0213')
 
+            #todo: add head
+            txt = reverse_control_codes(txt)
+            block_data += txt
+            # todo add tail
+            # tail
+            # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
+            #     tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
+            #     block_data += tail
+            # fill with 0s, for now
+
+
+            # todo: need to improve with recomputed offset table
+            if end - start <= max_size:
+                DT0[start: len(block_data)] = block_data
+            else:
+                print("block " + block + " : text size > max_size")
+            DT0.flush()
 
 
 
@@ -205,3 +241,7 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
     block_files.sort()
     for f in block_files:
         patch_from_yaml_block_with_pointers(f, DT0)
+    #### cards
+    file = "../translations/cards/cards.yaml"
+    patch_from_yaml_cards(file, DT0)
+
