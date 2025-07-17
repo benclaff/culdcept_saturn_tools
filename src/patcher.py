@@ -52,7 +52,8 @@ def reverse_control_codes(value):
     #before reencoding
     value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
     value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
-    value = re.sub(r"\\i\{(.*)\}", r"\\x\{0e04\g<1>0e01\\}", value) # icon pointers
+
+    value = re.sub(rb'\\i\{(.*)\}', b'\x0e\x04\g<1>\x0e\x01\\}', value) # icon pointers
     # todo : control code replacement
     return value
 
@@ -173,21 +174,19 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             max_size = yaml_data[block]["offsets"]["byte_length"]
             block_data = b''
             head = yaml_data[block]["head"]
+            block_data += bytes.fromhex(head)
             name = yaml_data[block]["text"]["name"]["translat_txt"]
-            if (name is None) or (txt == "null"):  # not translated yet
+            if (name is None) or (name == "null"):  # not translated yet
                 print("Not translated yet !")
                 continue
             name = name.encode('shift_jisx0213')
-
-            #todo: add head
-            txt = reverse_control_codes(txt)
-            block_data += txt
-            # todo add tail
-            # tail
-            # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
-            #     tail = bytes.fromhex(yaml_data[block]["sequences"][sequence]["tail_hexa"])
-            #     block_data += tail
-            # fill with 0s, for now
+            name = reverse_control_codes(name)
+            block_data += name
+            block_data += b'\x00'
+            #todo description
+            block_data += b'\x00'
+            tail = yaml_data[block]["tail"]
+            block_data += bytes.fromhex(tail)
 
 
             # todo: need to improve with recomputed offset table
@@ -210,8 +209,8 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
 
 # copy iso locally, then edit bytes
 
-OUTPUT_DIR = "./"
-PATCHED_DT0 = os.path.join(OUTPUT_DIR, os.path.basename(meta.DT0))
+OUTPUT_DIR = "../"
+PATCHED_DT0 = os.path.join(OUTPUT_DIR, os.path.basename(meta.DT0+"_patched"))
 
 print("copying from " + meta.DT0 + " to " + PATCHED_DT0)
 if not os.path.exists(meta.DT0):
