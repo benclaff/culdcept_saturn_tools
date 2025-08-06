@@ -140,7 +140,7 @@ card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\
 
 # card_name is only shift-JIS bytes
 # card_descirption: it may contain icon injection control code: 0e04 8X0e 01   (?=\\x0E\\x04.+\\x0E\\x01)* and may contain line retuns \\x01
-card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]+)(?P<tail>.*)')
+card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]*)\\x00(?P<tail>.*)')
 card_desc_pattern = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*')
 
 
@@ -287,6 +287,9 @@ def card_bytes_to_yaml(subdata):
                 # print("d3:"+m.groupdict()["d2"].hex(' ',2))
                 desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
                 line_count = line_count + 1
+            #for card without desciprtion, let's be explicit
+            if len(desc_yaml_string)<1:
+                desc_yaml_string = "null"
             print("    desc: " + desc_yaml_string)
             print("    tail: " + tail.hex())
             card_yaml += "\n    desc:"
