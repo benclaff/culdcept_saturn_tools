@@ -283,7 +283,7 @@ def card_bytes_to_yaml(subdata):
                 # print("d2:"+m.groupdict()["icon"].hex(' ',2))
                 icon_bytes = m.groupdict()["icon"]
                 if len(icon_bytes) > 0:
-                    desc_yaml_string += '\\i{' + icon_bytes[2:-2].hex() + '}'
+                    desc_yaml_string += '\\i[' + icon_bytes[2:-2].hex() + ']'
                 # print("d3:"+m.groupdict()["d2"].hex(' ',2))
                 desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
                 line_count = line_count + 1

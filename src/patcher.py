@@ -24,14 +24,18 @@ import re
 import shutil
 
 import resource
+
+import ruamel.yaml
 import yaml
 import mmap
+
+from ruamel.yaml import YAML
 
 import meta
 
 try:
     PAGESIZE = resource.getpagesize()
-    print("page size is: "+str(PAGESIZE))
+    print("page size is: " + str(PAGESIZE))
 except NameError:
     print("page size issue?")
     exit(1)
@@ -45,7 +49,10 @@ def overwrite(fileobj, start: int, end: int, newbytes: bytes):
     data = mmap(fileobj.fileno(), offset=offset, length=length)
     data[startremainder:startremainder + end - start] = newbytes
 
-pattern_icon=r"\\i\{(.*)\}"
+
+pattern_icon = r"\\i\{(.*)\}"
+
+
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
     #as with use yaml 's ">-" block adds spaces after \n and \w, we ned to remove it
@@ -53,11 +60,12 @@ def reverse_control_codes(value):
     value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
     value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
 
-    value = re.sub(rb'\\i\{(.*)\}', b'\x0e\x04\g<1>\x0e\x01\\}', value) # icon pointers
+    value = re.sub(rb'\\i\[(.*)\]', b'\x0e\x04\\g<1>\x0e\x01', value)  # icon pointers
     # todo : control code replacement
     return value
 
-def patch_from_yaml_scenario(yaml_file, DT0:mmap):
+
+def patch_from_yaml_scenario(yaml_file, DT0: mmap):
     with open(yaml_file, 'rb') as ya:
         yaml_data = yaml.safe_load(ya)
         for block in yaml_data:
@@ -67,6 +75,10 @@ def patch_from_yaml_scenario(yaml_file, DT0:mmap):
             max_size = yaml_data[block]["offsets"]["byte_length"]
             block_data = b''
             for sequence in yaml_data[block]["sequences"]:
+                txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
+                if (txt is None) or (txt == "null"):  # not translated yet
+                    print("Not translated yet !")
+                    continue
                 # optional head and tails of bytes (function unknown)
                 if "head_preportrait_hexa" in yaml_data[block]["sequences"][sequence]:
                     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_preportrait_hexa"])
@@ -96,11 +108,12 @@ def patch_from_yaml_scenario(yaml_file, DT0:mmap):
                 print("filler? : " + str((end - start) - len(block_data)))
                 DT0[start: start + len(block_data)] = block_data
                 ender = b''
-                for i in range(start + len(block_data) , end):
-                    DT0[i:i+1] = b'\x00'
+                for i in range(start + len(block_data), end):
+                    DT0[i:i + 1] = b'\x00'
             else:
                 print("block " + block + " : text size > max_size")
             DT0.flush()
+
 
 def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
     with open(yaml_file, 'rb') as ya:
@@ -157,7 +170,7 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                         print("len(original): " + str(shifted_end - shifted_start))
                         print("filler? : " + str((shifted_end - shifted_start) - len(block_data)))
                         DT0[shifted_start: shifted_start + len(block_data)] = block_data
-                        for i in range(shifted_start + len(block_data), shifted_end-1):
+                        for i in range(shifted_start + len(block_data), shifted_end - 1):
                             DT0[i:i + 1] = b'\x00'
                     else:
                         print("block " + block + " : text size > max_size")
@@ -166,7 +179,8 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
 
 def patch_from_yaml_cards(yaml_file, DT0: mmap):
     with open(yaml_file, 'rb') as ya:
-        yaml_data = yaml.safe_load(ya)
+        yamll = YAML(typ="safe", pure=True)
+        yaml_data = yamll.load(ya)
         for block in yaml_data:
             print("======== CARD: " + block + "\n")
             start = yaml_data[block]["offsets"]["start"]
@@ -184,10 +198,14 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             block_data += name
             block_data += b'\x00'
             #todo description
+            desc = yaml_data[block]["text"]["desc"]["translat_txt"]
+            desc = re.sub(r'\\+', r'\\', desc) #avoids case where yaml parser replace \ with \\
+            desc = desc.encode('shift_jisx0213')
+            desc = reverse_control_codes(desc)
+            block_data += desc
             block_data += b'\x00'
             tail = yaml_data[block]["tail"]
             block_data += bytes.fromhex(tail)
-
 
             # todo: need to improve with recomputed offset table
             if end - start <= max_size:
@@ -197,12 +215,6 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             DT0.flush()
 
 
-
-
-
-
-
-
 ###################################################################################
 # Script
 ###################################################################################
@@ -210,37 +222,36 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
 # copy iso locally, then edit bytes
 
 OUTPUT_DIR = "../"
-PATCHED_DT0 = os.path.join(OUTPUT_DIR, os.path.basename(meta.DT0+"_patched"))
+PATCHED_DT0 = os.path.join(OUTPUT_DIR, os.path.basename(meta.DT0 + "_patched"))
 
 print("copying from " + meta.DT0 + " to " + PATCHED_DT0)
 if not os.path.exists(meta.DT0):
-    print("expected file not found: "+meta.DT0)
+    print("expected file not found: " + meta.DT0)
     exit(1)
 try:
     shutil.copy2(meta.DT0, PATCHED_DT0)
 except IOError as err:
-    print("DTO file copy failed: "+PATCHED_DT0)
+    print("DTO file copy failed: " + PATCHED_DT0)
     exit(1)
 
 print("patching DT0")
 with open(PATCHED_DT0, mode="r+") as file_obj:
     DT0 = mmap.mmap(file_obj.fileno(), length=0, access=mmap.ACCESS_WRITE)
     ##### scenario script
-    block_files = glob.glob('**/../translations/scenario/scenario_block*.yaml')
+    block_files = glob.glob('../translations/scenario/scenario_block*.yaml')
     block_files.sort()
     for f in block_files:
         patch_from_yaml_scenario(f, DT0)
     ##### help script
-    block_files = glob.glob("**/../translations/helpscript/helpscript_block*.yaml")
+    block_files = glob.glob("../translations/helpscript/helpscript_block*.yaml")
     block_files.sort()
     for f in block_files:
         patch_from_yaml_block_with_pointers(f, DT0)
     ##### taunts
-    block_files = glob.glob("**/../translations/taunts/taunts*_block*.yaml")
+    block_files = glob.glob("../translations/taunts/taunts*_block*.yaml")
     block_files.sort()
     for f in block_files:
         patch_from_yaml_block_with_pointers(f, DT0)
     #### cards
     file = "../translations/cards/cards.yaml"
     patch_from_yaml_cards(file, DT0)
-
