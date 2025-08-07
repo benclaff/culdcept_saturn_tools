@@ -50,8 +50,7 @@ def overwrite(fileobj, start: int, end: int, newbytes: bytes):
     data[startremainder:startremainder + end - start] = newbytes
 
 
-pattern_icon = r"\\i\{(.*)\}"
-
+pattern_icon = re.compile(b'x\\[([^\]]+)\\]')
 
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
@@ -59,9 +58,15 @@ def reverse_control_codes(value):
     #before reencoding
     value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
     value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
-
-    value = re.sub(rb'\\i\[(.*)\]', b'\x0e\x04\\g<1>\x0e\x01', value)  # icon pointers
-    # todo : control code replacement
+    v = b''
+    for m in re.finditer(pattern_icon, value): #retrive icon pointer value(s)
+        hex_str = str(m.group(1))[2:-1]  #this line is a bit hacky, may be a better way ?
+        v = bytes.fromhex(hex_str)
+    if len(v)>0:  # icon pointers present in byte string
+        pre = b'\x0e\x04'
+        post = b'\x0e\x01'
+        new = pre + v + post
+        value = re.sub(pattern_icon, new, value)
     return value
 
 
@@ -205,13 +210,18 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             block_data += desc
             block_data += b'\x00'
             tail = yaml_data[block]["tail"]
+            #add tail
             block_data += bytes.fromhex(tail)
-
             # todo: need to improve with recomputed offset table
-            if end - start <= max_size:
-                DT0[start: len(block_data)] = block_data
+            #filler
+            block_len = yaml_data[block]["offsets"]["byte_length"]
+            text_len_diff = (block_len - len(tail)/2) - len(head)/2 - len(name) -1  - len(desc) -1 #head&tail are str
+            if text_len_diff > 0:
+                block_data += b'\x00' * int(text_len_diff)
             else:
                 print("block " + block + " : text size > max_size")
+                exit(1)
+            DT0[start: start+len(block_data)] = block_data
             DT0.flush()
 
 

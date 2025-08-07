@@ -250,7 +250,7 @@ def card_bytes_to_yaml(subdata):
     if found:
         pre_txt_bytes = subdata[0:match_end]
         txt_data = subdata[match_end:len(subdata)]
-        card_yaml += "\n  head: "+pre_txt_bytes.hex()
+        card_yaml += "\n  head: \""+pre_txt_bytes.hex()+"\"" # " to avoid to be parsed as int
         # print(txt_data.hex(' ', 2))
         for m in re.finditer(card_text_pattern, txt_data):
             # print(
@@ -283,7 +283,7 @@ def card_bytes_to_yaml(subdata):
                 # print("d2:"+m.groupdict()["icon"].hex(' ',2))
                 icon_bytes = m.groupdict()["icon"]
                 if len(icon_bytes) > 0:
-                    desc_yaml_string += '\\i[' + icon_bytes[2:-2].hex() + ']'
+                    desc_yaml_string += 'x[' + icon_bytes[2:-2].hex() + ']'
                 # print("d3:"+m.groupdict()["d2"].hex(' ',2))
                 desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
                 line_count = line_count + 1
@@ -296,7 +296,7 @@ def card_bytes_to_yaml(subdata):
             card_yaml += "\n      original_txt: >-\n        "+desc_yaml_string
             card_yaml += "\n      ruler_helper: >-\n        ------------" #todo: determine max char per card line
             card_yaml += "\n      translat_txt: >-\n        null"
-            card_yaml += "\n  tail: " + tail.hex()
+            card_yaml += "\n  tail: \"" + tail.hex() + "\"" # " to avoid to be parsed as int
         return card_yaml
 
     else:
