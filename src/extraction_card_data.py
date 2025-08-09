@@ -84,13 +84,6 @@ with open(meta.DT0, 'rb') as f:
     data = f.read()
 
 
-
-card_name_pattern = re.compile(b"\\x83\\x8F\\x83\\x43\\x83\\x8B"+
-                               b"\\x83\\x68\\x83\\x4F\\x83\\x8D\\x81\\x5B\\x83\\x58")
-for m in re.finditer(card_name_pattern, data):
-    print('x%02x-x%02x: %s' % (m.start(), m.end(), m.group(0).decode('shift_jisx0213')))
-
-
 # first card blocks extracted from table
 # stats:      ST   HP    G  R
 # bools:                     XX XX00 XXXX
