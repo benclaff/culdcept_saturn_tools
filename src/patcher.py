@@ -225,6 +225,56 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             DT0.flush()
 
 
+def patch_from_yaml_shrineffects(yaml_file, DT0: mmap):
+    with open(yaml_file, 'rb') as ya:
+        yamll = YAML(typ="safe", pure=True)
+        yaml_data = yamll.load(ya)
+        for block in yaml_data:
+            print("======== SHRINE_EFFECT: " + block + "\n")
+            start = yaml_data[block]["offsets"]["start"]
+            end = yaml_data[block]["offsets"]["end"]
+            max_size = yaml_data[block]["offsets"]["byte_length"]
+            block_data = b''
+            name = yaml_data[block]["text"]["name"]["translat_txt"]
+            if (name is None) or (name == "null"):  # not translated yet
+                print("Not translated yet !")
+                continue
+            name = name.encode('shift_jisx0213')
+            name = reverse_control_codes(name)
+            block_data += name
+            block_data += b'\x00'
+            desc = yaml_data[block]["text"]["description"]["translat_txt"]
+            desc = desc.encode('shift_jisx0213')
+            desc = reverse_control_codes(desc)
+            block_data += desc
+            spacer = yaml_data[block]["spacer"]
+            spacer = bytes.fromhex(spacer)
+            tail = yaml_data[block]["tail"]
+            tail = bytes.fromhex(tail)
+            #filler
+            block_len = yaml_data[block]["offsets"]["byte_length"]
+            text_len_diff = (block_len - len(tail) -len(spacer)) - len(name) -1  - len(desc) #spacer&tail are str
+            if text_len_diff > 0:
+                block_data += b'\x00' * int(text_len_diff)
+            else:
+                print("block " + block + " : text size > max_size")
+                exit(1)
+            # add spacer
+            block_data += spacer
+            # add tail
+            block_data += tail
+            #patch pointer table
+            o1 = yaml_data[block]["offsets"]["pointer_name_offset"]
+            o1 = int(o1[2:],16)
+            o2 = yaml_data[block]["offsets"]["pointer_description_offset"]
+            o2 = int(o2[2:],16)
+            #todo: finish pointer calculation
+            #n_pos =
+            #DT0[p2:p2+1] =
+            #patch entry
+            DT0[start: start+len(block_data)] = block_data
+            DT0.flush()
+
 ###################################################################################
 # Script
 ###################################################################################
@@ -265,3 +315,6 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
     #### cards
     file = "../translations/cards/cards.yaml"
     patch_from_yaml_cards(file, DT0)
+    #### shrine effects
+    file = "../translations/shrineeffect/shrineeffect.yaml"
+    patch_from_yaml_shrineffects(file, DT0)

@@ -194,3 +194,29 @@ def generate_yaml_per_block(data:bytes, sorted_block_offsets:Dict[int,str], end_
         yaml.dump(reload, file)
     yaml_str += offset_yaml_str
     return True
+
+
+
+desc_pattern = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*[\\x00]*')
+
+def decode_icon_pointers(data: bytes) -> str:
+    """
+    decode text containing icon pointers (which are 0E04[.+]0E01 bytes)
+    :param data:
+    :return:
+    """
+    line_count = 0
+    yaml_str = ""
+    for m in re.finditer(desc_pattern, data):
+        if (line_count > 0):
+            yaml_str += '\\n'
+        # print("d1:"+m.groupdict()["d1"].hex(' ',2))
+        yaml_str += m.groupdict()["d1"].decode('shift_jisx0213')
+        # print("d2:"+m.groupdict()["icon"].hex(' ',2))
+        icon_bytes = m.groupdict()["icon"]
+        if len(icon_bytes) > 0:
+            yaml_str += 'x[' + icon_bytes[2:-2].hex() + ']'
+        # print("d3:"+m.groupdict()["d2"].hex(' ',2))
+        yaml_str += m.groupdict()["d2"].decode('shift_jisx0213')
+        line_count = line_count + 1
+    return yaml_str
