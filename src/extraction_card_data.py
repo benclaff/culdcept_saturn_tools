@@ -66,7 +66,7 @@ import os
 import re
 import meta
 from etc import is_bit_set
-from extraction import extract_blocks_from_offset_table
+from extraction import extract_blocks_from_offset_table, decode_icon_pointers
 import ruamel.yaml
 
 _OUTPUT_CARD_STATS = False
@@ -134,8 +134,6 @@ card_pattern = re.compile(b'\\x00{5}([\\x00-\\xFF])\\x00([\\x00-\\xFF])([\\x00-\
 # card_name is only shift-JIS bytes
 # card_descirption: it may contain icon injection control code: 0e04 8X0e 01   (?=\\x0E\\x04.+\\x0E\\x01)* and may contain line retuns \\x01
 card_text_pattern = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00(?P<desc>[^\\x00]*)\\x00(?P<tail>.*)')
-card_desc_pattern = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*')
-
 
 def card_bytes_to_yaml(subdata):
 
@@ -266,20 +264,7 @@ def card_bytes_to_yaml(subdata):
             card_yaml += "\n      translat_txt: >-\n        null"
             tail = m.groupdict()["tail"]
             desc_data = txt_data[len(m.groupdict()["name"]) + 1:]
-            line_count = 0
-            desc_yaml_string = ""
-            for m in re.finditer(card_desc_pattern, desc_data):
-                if (line_count > 0):
-                    desc_yaml_string += '\\n'
-                # print("d1:"+m.groupdict()["d1"].hex(' ',2))
-                desc_yaml_string += m.groupdict()["d1"].decode('shift_jisx0213')
-                # print("d2:"+m.groupdict()["icon"].hex(' ',2))
-                icon_bytes = m.groupdict()["icon"]
-                if len(icon_bytes) > 0:
-                    desc_yaml_string += 'x[' + icon_bytes[2:-2].hex() + ']'
-                # print("d3:"+m.groupdict()["d2"].hex(' ',2))
-                desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
-                line_count = line_count + 1
+            desc_yaml_string = decode_icon_pointers(desc_data) # card descriptions can contain icons
             #for card without desciprtion, let's be explicit
             if len(desc_yaml_string)<1:
                 desc_yaml_string = "null"

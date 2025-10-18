@@ -59,6 +59,7 @@ from typing import List, Tuple
 
 import meta
 import ruamel.yaml
+from extraction import decode_icon_pointers
 
 _TABLE_START = "BB1C9D"
 _TABLE_END = "BB21C7"
@@ -102,7 +103,7 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     :param offsets:
     :return:
     """
-    output_yaml=""
+    output_yaml = "\n  text: "
     name = data[0:offsets[2]-offsets[1]-1].decode('shift_jisx0213') # -1 because ends with \x00
     output_yaml += "\n    name: "
     output_yaml += "\n      original_txt: >-\n        " + name
@@ -114,9 +115,7 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     spacer_pos=len(description)
     for m in re.finditer(pattern_spacer, description):
         spacer_pos=m.start(1)
-    output_yaml += "\n    spacer: " + str(description[spacer_pos:])
-    description_txt = (description[0:spacer_pos])
-    #todo icon txt replacement via pattern_desc, like in cards
+    description_data = (description[0:spacer_pos])
     line_count = 0
     desc_yaml_string = ""
     #because of spacer introduction, this pattern does not end with \x00
@@ -139,6 +138,7 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     output_yaml += "\n      original_txt: >-\n        " + desc_yaml_string
     output_yaml += "\n      ruler_helper: >-\n        ------------"  # todo: determine max char per card line
     output_yaml += "\n      translat_txt: >-\n        null"
+    output_yaml += "\n  spacer: \"" + description[spacer_pos:].hex() + "\"" # " to avoid to be parsed as int
     tail = data[offsets[3]-offsets[1]:]
     output_yaml += "\n  tail: \"" + tail.hex() + "\""  # " to avoid to be parsed as int
 
@@ -160,6 +160,7 @@ with open(meta.DT0, 'rb') as f:
     pt_data = data[int(_TABLE_START,16):int(_TABLE_END,16)+1]
     l = extract_pointer_table_offsets(pt_data)
     print("\n".join([str(i)+":"+str(t) for i,t in enumerate(l)]))
+    print("Found "+str(len(l))+" entries in table")
 
     #extraction shrine name and description for each entry
     for i,offset_tuple in enumerate(l):
@@ -171,8 +172,14 @@ with open(meta.DT0, 'rb') as f:
             end = l[i+1][0]+l[i+1][1]#start of next name
         #print("shrineeffect_"+str(i))
         #yaml
-        output_yaml += "\nshrineeffect_"+str(i)+":"
+        output_yaml += "\nshrineeffect_"+str(i+1)+":"
         output_yaml += "\n  offsets: "
+        output_yaml += "\n    pointer_name_offset: " + hex(l[i][0])
+        output_yaml += "\n    pointer_description_offset: " + hex(l[i][0]+1)
+        output_yaml += "\n    pointer_tail_offset: " + hex(l[i][0]+14)
+        output_yaml += "\n    pointer_name_val: " + hex(l[i][1])
+        output_yaml += "\n    pointer_description_val: " + hex(l[i][2])
+        output_yaml += "\n    pointer_tail_val: " + hex(l[i][3])
         output_yaml += "\n    byte_length: " + str(end-start)
         output_yaml += "\n    start: " + hex(start)
         output_yaml += "\n    end: " + hex(end)
@@ -186,3 +193,11 @@ with open(meta.DT0, 'rb') as f:
         yaml.dump(reload, file)
 
 print(output_yaml)
+
+os.makedirs("../translations", exist_ok=True)
+os.makedirs("../translations/shrineeffect", exist_ok=True)
+with open( "../translations/shrineeffect/shrineeffect.yaml", 'w') as file:
+    yaml = ruamel.yaml.YAML()
+    yaml.preserve_quotes = True
+    reload = yaml.load(output_yaml)
+    yaml.dump(reload, file)
