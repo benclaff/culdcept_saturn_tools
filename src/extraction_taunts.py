@@ -145,9 +145,9 @@ for counter,offsets in enumerate(tables):
             print("data:\t\t\t"+text_block.hex())
             offset_yaml_str += sequence_to_yaml_text(text_block)
             print(offset_yaml_str)
-            os.makedirs("./translations", exist_ok=True)
-            os.makedirs("./translations/taunts", exist_ok=True)
-            with open('./translations/taunts/taunts'+str(counter)+'_block' + str(i) + '.yaml', 'w') as file:
+            os.makedirs("../translations", exist_ok=True)
+            os.makedirs("../translations/taunts", exist_ok=True)
+            with open('../translations/taunts/taunts'+str(counter)+'_block' + str(i) + '.yaml', 'w') as file:
                 # yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
                 yaml = ruamel.yaml.YAML()
                 yaml.preserve_quotes = True

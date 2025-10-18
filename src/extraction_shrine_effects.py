@@ -14,11 +14,11 @@
 #      13 0A 13 15   06 00 00 00 01 07 00 00 00 2D   13 3A   00 00 00 00
 #      |_offsets 1,2 and 3 are relative to this pos, e.g. each table entry (not 1st position of table)
 #      |offset 1 (effect name)
-#            |offeset 2 (descirption)
+#            |offset 2 (description)
 #                                                    |offset 3 (see below)
 #
 #   For each pointer table entry, the 1st and 2nd pointers go to some effect name, then effect description.
-#   The 3rd points to a tail of bytes, until the end of the effect block, which is x0000.
+#   The 3rd points to a tail of bytes, until the end of the effect block, which is either x0000 or can be also x000009.
 #
 #   Text may contain control codes related to icons insertions, as in cards.
 #   see exemple of effect "eruption", below :
@@ -41,7 +41,7 @@
 #   This tail do not seem to match any pointer... can they be shifted  with text if necessary ??
 #   Are they even used ? because all table entries are 20 bytes long, part may be zero fillers ?
 
-#   Finally, this tail ends with x00x00 and the next block of effects starts.
+#   Finally, this tail ends with x00x00 and the next entry starts.
 #   3rd pointer points to this tail, just after the x00x0X ending the description
 #   ex:
 #   82E9   00 09   02 00 20 04 01 6E                                                                  00 00 91E4                                                                                                        |letter of next effect name
@@ -49,9 +49,13 @@
 #   82A4   00 01   64 01 01                                                                           00 00 8AE8
 #   82E9   00 02   00 20 00 01 08 04 14 80 00 00 00 00 00 40 05 80 00 00 14 00 00 00 08 00 0F 00 00   00 00 90C2
 #   |last kanji of description
-#                                                                                                           |kanji of name (next entry)
+#                  | start of the bytes block pointed by 3rd entry in pointer table                   | separator
+#                                                                                                           |kanji of next name (next entry)
 #
-#   Note: 3rd pointer can be null as value x0000 when corresponding effect block do not show a tail !!!
+#   Note: 3rd pointer can point to the \x0000 (entry separator).
+#         In this case, the entry does not have a tail, this is set as null in the yaml !!
+
+
 
 import os
 import re
@@ -109,7 +113,13 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     output_yaml += "\n      original_txt: >-\n        " + name
     output_yaml += "\n      ruler_helper: >-\n        ------------"  # todo: determine max char per name line
     output_yaml += "\n      translat_txt: >-\n        null"
-    description = data[offsets[2]-offsets[1]:offsets[3]-offsets[1]]
+    # when 3rd element in pointer table is 0, this entry had no pointer to bytes tail after description.
+    # so description ends the data
+    # otherwise, end description at start of byte tail
+    if offset_tuple[3] == 0:
+        description = data[offsets[2]-offsets[1]:]
+    else:
+        description = data[offsets[2]-offsets[1]:offsets[3]-offsets[1]]
     #description can end with x00 or x0009, as shown by pointer table
     #we introduce a "spacer" field to differenciate them
     spacer_pos=len(description)
@@ -119,7 +129,7 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     line_count = 0
     desc_yaml_string = ""
     #because of spacer introduction, this pattern does not end with \x00
-    for m in re.finditer(pattern_desc, description_txt):
+    for m in re.finditer(pattern_desc, description_data):
         if (line_count > 0):
             desc_yaml_string += '\\n'
         # print("d1:"+m.groupdict()["d1"].hex(' ',2))
@@ -139,8 +149,12 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     output_yaml += "\n      ruler_helper: >-\n        ------------"  # todo: determine max char per card line
     output_yaml += "\n      translat_txt: >-\n        null"
     output_yaml += "\n  spacer: \"" + description[spacer_pos:].hex() + "\"" # " to avoid to be parsed as int
-    tail = data[offsets[3]-offsets[1]:]
-    output_yaml += "\n  tail: \"" + tail.hex() + "\""  # " to avoid to be parsed as int
+    if offsets[3] != 0:
+        tail = data[offsets[3]-offsets[1]:]
+        output_yaml += "\n  tail: \"" + tail.hex() + "\""  # " to avoid to be parsed as int
+    else:
+        tail = ''
+        output_yaml += "\n  tail: \"0000\""  # " to avoid to be parsed as int
 
     return output_yaml
 
