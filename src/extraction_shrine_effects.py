@@ -58,6 +58,7 @@ import re
 from typing import List, Tuple
 
 import meta
+import ruamel.yaml
 
 _TABLE_START = "BB1C9D"
 _TABLE_END = "BB21C7"
@@ -69,8 +70,9 @@ _SHRINE_EFFET_END = "BB3567"
 #      12 D8 12 DD   00 00 00 00 01 01 00 00 00 02   12 FC   00 00 00 00
 #      13 0A 13 15   06 00 00 00 01 07 00 00 00 2D   13 3A   00 00 00 00
 pattern_pointer_table = re.compile(b'([\x00-\xFF]{2})([\x00-\xFF]{2})[\x00-\xFF]\x00\x00\x00\x01[\x00-\xFF]\x00\x00\x00[\x00-\xFF]([\x00-\xFF]{2})\x00\x00\x00\x00')
-pattern_name = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00')
-pattern_desc = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*\x00')
+#pattern_name = re.compile(b'(?P<name>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)\\x00')
+pattern_desc = re.compile(b'(?P<d1>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])*)(?P<icon>(\\x0E\\x04.+\\x0E\\x01)*)(?P<d2>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+)(\\x0A)*')
+pattern_spacer = re.compile(b'(\x00[\x01-\xFF]*)$')
 
 
 def extract_pointer_table_offsets(data: bytes) -> List[Tuple[int,int,int,int]]:
@@ -107,32 +109,49 @@ def entry_to_yaml(data: bytes, offsets: Tuple[int,int,int,int]) -> str:
     output_yaml += "\n      ruler_helper: >-\n        ------------"  # todo: determine max char per name line
     output_yaml += "\n      translat_txt: >-\n        null"
     description = data[offsets[2]-offsets[1]:offsets[3]-offsets[1]]
-    #description can end with x00 or x0009
-    #we set a "spacer" field to differenciate them
-    pattern_spacer = re.compile(b'(\x00[\x00-\xFF]*)$')
+    #description can end with x00 or x0009, as shown by pointer table
+    #we introduce a "spacer" field to differenciate them
     spacer_pos=len(description)
     for m in re.finditer(pattern_spacer, description):
         spacer_pos=m.start(1)
     output_yaml += "\n    spacer: " + str(description[spacer_pos:])
     description_txt = (description[0:spacer_pos])
     #todo icon txt replacement via pattern_desc, like in cards
-    description_txt = description_txt.decode('shift_jisx0213')
-    output_yaml += "\n    description: "
-    output_yaml += "\n      original_txt: >-\n        " + description_txt
+    line_count = 0
+    desc_yaml_string = ""
+    #because of spacer introduction, this pattern does not end with \x00
+    for m in re.finditer(pattern_desc, description_txt):
+        if (line_count > 0):
+            desc_yaml_string += '\\n'
+        # print("d1:"+m.groupdict()["d1"].hex(' ',2))
+        desc_yaml_string += m.groupdict()["d1"].decode('shift_jisx0213')
+        # print("d2:"+m.groupdict()["icon"].hex(' ',2))
+        icon_bytes = m.groupdict()["icon"]
+        if len(icon_bytes) > 0:
+            desc_yaml_string += 'x[' + icon_bytes[2:-2].hex() + ']'
+        # print("d3:"+m.groupdict()["d2"].hex(' ',2))
+        desc_yaml_string += m.groupdict()["d2"].decode('shift_jisx0213')
+        line_count = line_count + 1
+    # for card without desciprition, let's be explicit
+    if len(desc_yaml_string) < 1:
+        desc_yaml_string = "null"
+    output_yaml += "\n    desc:"
+    output_yaml += "\n      original_txt: >-\n        " + desc_yaml_string
     output_yaml += "\n      ruler_helper: >-\n        ------------"  # todo: determine max char per card line
     output_yaml += "\n      translat_txt: >-\n        null"
     tail = data[offsets[3]-offsets[1]:]
     output_yaml += "\n  tail: \"" + tail.hex() + "\""  # " to avoid to be parsed as int
-    print(output_yaml)
 
     return output_yaml
 
+
+#########################################################################
+#########################################################################
 
 os.makedirs("../translations", exist_ok=True)
 os.makedirs("../translations/shrineeffect", exist_ok=True)
 
 output_yaml = ""
-
 # open file
 with open(meta.DT0, 'rb') as f:
     data = f.read()
@@ -140,8 +159,9 @@ with open(meta.DT0, 'rb') as f:
     #read pointer table
     pt_data = data[int(_TABLE_START,16):int(_TABLE_END,16)+1]
     l = extract_pointer_table_offsets(pt_data)
-    print("\n".join([str(t) for t in l]))
+    print("\n".join([str(i)+":"+str(t) for i,t in enumerate(l)]))
 
+    #extraction shrine name and description for each entry
     for i,offset_tuple in enumerate(l):
         # l[1] is offset start, next entry is l[1]+20 (all entries are 20 bytes long)
         start = offset_tuple[0]+offset_tuple[1] #start of name
@@ -149,7 +169,7 @@ with open(meta.DT0, 'rb') as f:
             end = int(_SHRINE_EFFET_END,16) +1
         else:
             end = l[i+1][0]+l[i+1][1]#start of next name
-        print("shrineeffect_"+str(i))
+        #print("shrineeffect_"+str(i))
         #yaml
         output_yaml += "\nshrineeffect_"+str(i)+":"
         output_yaml += "\n  offsets: "
@@ -158,5 +178,11 @@ with open(meta.DT0, 'rb') as f:
         output_yaml += "\n    end: " + hex(end)
         subdata = data[start:end]
         output_yaml += entry_to_yaml(subdata,offset_tuple)
+    with open('../translations/shrineeffect/shrineeffect.yaml', 'w') as file:
+        # yaml.dump(data_yaml, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
+        yaml = ruamel.yaml.YAML()
+        yaml.preserve_quotes = True
+        reload = yaml.load(output_yaml)
+        yaml.dump(reload, file)
 
 print(output_yaml)
