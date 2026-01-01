@@ -24,6 +24,7 @@ import re
 import shutil
 
 import resource
+from operator import truediv
 
 import ruamel.yaml
 import yaml
@@ -243,7 +244,7 @@ def patch_from_yaml_shrineffects(yaml_file, DT0: mmap):
             name = reverse_control_codes(name)
             block_data += name
             block_data += b'\x00'
-            desc = yaml_data[block]["text"]["description"]["translat_txt"]
+            desc = yaml_data[block]["text"]["desc"]["translat_txt"]
             desc = desc.encode('shift_jisx0213')
             desc = reverse_control_codes(desc)
             block_data += desc
@@ -253,24 +254,27 @@ def patch_from_yaml_shrineffects(yaml_file, DT0: mmap):
             tail = bytes.fromhex(tail)
             #filler
             block_len = yaml_data[block]["offsets"]["byte_length"]
+            #some checks, using current name and description, does it fit after adding tail and spacer ?
             text_len_diff = (block_len - len(tail) -len(spacer)) - len(name) -1  - len(desc) #spacer&tail are str
-            if text_len_diff > 0:
+            if text_len_diff >= 0:
                 block_data += b'\x00' * int(text_len_diff)
             else:
-                print("block " + block + " : text size > max_size")
+                print("block " + block + " : block size > max_size")
+                print("bytes diff (if negative, reduce text): "+str(text_len_diff))
                 exit(1)
             # add spacer
             block_data += spacer
             # add tail
             block_data += tail
             #patch pointer table
-            o1 = yaml_data[block]["offsets"]["pointer_name_offset"]
-            o1 = int(o1[2:],16)
-            o2 = yaml_data[block]["offsets"]["pointer_description_offset"]
-            o2 = int(o2[2:],16)
-            #todo: finish pointer calculation
-            #n_pos =
-            #DT0[p2:p2+1] =
+            pno = yaml_data[block]["offsets"]["pointer_name_offset"]
+            pdo = yaml_data[block]["offsets"]["pointer_description_offset"]
+            pto = yaml_data[block]["offsets"]["pointer_tail_offset"]
+            #todo: could be improved by shifting left the tail bytes instead of paading x00 after the description
+            #pno remains unchanged, but pdo and pto will be shifted accordingly to translation length.
+            pdo_new = yaml_data[block]["offsets"]["pointer_name_val"] + len(name) + 1
+            #patch pointer table
+            DT0[pdo: pdo+2] = int.to_bytes(pdo_new, 2)
             #patch entry
             DT0[start: start+len(block_data)] = block_data
             DT0.flush()
@@ -294,27 +298,39 @@ except IOError as err:
     print("DTO file copy failed: " + PATCHED_DT0)
     exit(1)
 
+# debug
+skip_scenario = True
+skip_helpscript = True
+skip_taunts = True
+skip_cards = True
+skip_shrineeffects = False
+
 print("patching DT0")
 with open(PATCHED_DT0, mode="r+") as file_obj:
     DT0 = mmap.mmap(file_obj.fileno(), length=0, access=mmap.ACCESS_WRITE)
     ##### scenario script
-    block_files = glob.glob('../translations/scenario/scenario_block*.yaml')
-    block_files.sort()
-    for f in block_files:
-        patch_from_yaml_scenario(f, DT0)
+    if not skip_scenario:
+        block_files = glob.glob('../translations/scenario/scenario_block*.yaml')
+        block_files.sort()
+        for f in block_files:
+            patch_from_yaml_scenario(f, DT0)
     ##### help script
-    block_files = glob.glob("../translations/helpscript/helpscript_block*.yaml")
-    block_files.sort()
-    for f in block_files:
-        patch_from_yaml_block_with_pointers(f, DT0)
+    if not skip_helpscript:
+        block_files = glob.glob("../translations/helpsscenariocript/helpscript_block*.yaml")
+        block_files.sort()
+        for f in block_files:
+            patch_from_yaml_block_with_pointers(f, DT0)
     ##### taunts
-    block_files = glob.glob("../translations/taunts/taunts*_block*.yaml")
-    block_files.sort()
-    for f in block_files:
-        patch_from_yaml_block_with_pointers(f, DT0)
+    if not skip_taunts:
+        block_files = glob.glob("../translations/taunts/taunts*_block*.yaml")
+        block_files.sort()
+        for f in block_files:
+            patch_from_yaml_block_with_pointers(f, DT0)
     #### cards
-    file = "../translations/cards/cards.yaml"
-    patch_from_yaml_cards(file, DT0)
+    if not skip_cards:
+        file = "../translations/cards/cards.yaml"
+        patch_from_yaml_cards(file, DT0)
     #### shrine effects
-    file = "../translations/shrineeffect/shrineeffect.yaml"
-    patch_from_yaml_shrineffects(file, DT0)
+    if not skip_shrineeffects:
+        file = "../translations/shrineeffect/shrineeffect.yaml"
+        patch_from_yaml_shrineffects(file, DT0)

@@ -42,7 +42,7 @@
 #   Are they even used ? because all table entries are 20 bytes long, part may be zero fillers ?
 
 #   Finally, this tail ends with x00x00 and the next entry starts.
-#   3rd pointer points to this tail, just after the x00x0X ending the description
+#   3rd pointer points to this tail, just after the x00x0[0-9] ending the description
 #   ex:
 #   82E9   00 09   02 00 20 04 01 6E                                                                  00 00 91E4                                                                                                        |letter of next effect name
 #   82E9   00 09   01 02 04 0C 40 30 80 00 00 05 00 00 00 08 00 00                                    00 00 8FE1
@@ -189,7 +189,7 @@ with open(meta.DT0, 'rb') as f:
         output_yaml += "\nshrineeffect_"+str(i+1)+":"
         output_yaml += "\n  offsets: "
         output_yaml += "\n    pointer_name_offset: " + hex(l[i][0])
-        output_yaml += "\n    pointer_description_offset: " + hex(l[i][0]+1)
+        output_yaml += "\n    pointer_description_offset: " + hex(l[i][0]+2)
         output_yaml += "\n    pointer_tail_offset: " + hex(l[i][0]+14)
         output_yaml += "\n    pointer_name_val: " + hex(l[i][1])
         output_yaml += "\n    pointer_description_val: " + hex(l[i][2])
