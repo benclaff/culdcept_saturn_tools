@@ -55,6 +55,7 @@ pattern_icon = re.compile(b'x\\[([^\]]+)\\]')
 
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
+    value = value.replace('\\P'.encode('shift_jisx0213'), b'\x13\x08')
     #as with use yaml 's ">-" block adds spaces after \n and \w, we ned to remove it
     #before reencoding
     value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')

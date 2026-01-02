@@ -6,7 +6,7 @@ import ruamel.yaml
 
 # look for this dialog pattern
 dialog_sequence_pattern = re.compile(
-    b'(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07])+[\\x07|\\x0A]*)+)+'
+    b'(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07\\x08])+[\\x07|\\x0A]*)+)+'
 )
 
 # look for this pointer pattern
@@ -86,6 +86,7 @@ def sequence_to_yaml_text(text_block) -> str:
         yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
         dec = match_dic["text"]
         dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
+        dec = dec.replace(b'\x13\x08', "\\P".encode('shift_jisx0213'))
         dec = dec.replace(b'\x0A', '\\n'.encode('shift_jisx0213'))
         dec = dec.replace(b'\x07', '\\w'.encode('shift_jisx0213'))
         # value = value.replace(b'\x00', '[00]'.encode('shift_jisx0213'))
