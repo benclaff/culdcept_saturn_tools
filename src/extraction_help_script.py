@@ -20,20 +20,66 @@
 # [...] 82B5 82E5 82A4 00        | 18 01 83 | 0F0A       89B4 82CC 96BC 82CD [...] 00
 #       end of text sequence A   | unknown  | portrait   start of text sequence B
 #
+#
 # There is some pointers inside the text blocks.
-# Offset x06F1 is the 1st of the offset table to point to a list of 1 to many consecutive pointers(?).
-# Each of these putative pointers has this structure:
+# Each of these pointers has this structure:
 #     10 FX 02 [variable number of 00] [1-byte index] [2-bytes offset]
 # ex: 10 F1 02  00 00 00 00 00 00       02             FA 5F
 #
-# Not that the example offset is FXXX, this is acutally a negative offset: FA5F-FFFF = -5A0
-# Which relatively to the position preceeding FA, indeed points to the start of a text block.
+# Below are the pointers including in the "Top" text block,
+# reached from offset x06f1 in the Help Script offset table.
+#
+# This top block contains lots of text AND
+# includes many pointers that target subblocks of texts.
+# if following them, there are even some loops.
+# this seems to correspond to menu text behaviours.
+#
+# Not that the example offset is FA5F, this is actually a negative offset: FA5F-FFFF = -5A0
+# Relatively to the position of FA, indeed this points to the start of a text block.
 # (-1 shift, compared to FA position)
 #
-# Accessing all text block is as a consequence a matter of 1) parsing the offset table, then all pointer with
-# computation of the position to which they point to.
+#                              |XX XX| <<= offset to sub-block
+# 10 F1 02 00 00 00          02 01 D3
+# 10 F1 02 00 00 00 00 00 00 01 02 83
+# 10 F1 02 00 00 00 00 00 00 03 02 F9
+# 10 F1 02 00 00 00 00 00 00 04 02 ED
+# 10 F1 02 00 00 00 00 00 00 05 03 1A
+# 10 F1 02 00 00 00 00 00 00 08 05 4B
+# 10 F1 02 00 00 00 00 00 00 06 03 E3
+# 10 F1 02 00 00 00 00 00 00 07 04 EF
+# [next, isolated between texts]
+# 10 F0 02 00 00 00 00 00 00 01 03 E3 *B
+# 10 F0 02 00 00 00 00       01 03 27
+# 10 F0 02 00 00 00          01 03 03
+# 10 F0 02 00 00 00 00       01 01 8B
+# 10 F0 02 00 00 00 00 00    01 00 73
+# 10 F0 02 00 00 00          01 00 2F
+# 10 F0 02 00 00 00 00       01 00 03  *C
+# 10 F1 02 00 00 00 00 00 00 00 F8 91 <<= F891-FFFF=-76E or  FFFF xor F891 => start of 1st big block at -1
+# 10 F1 02 00 00 00 00 00 00 02 FA 5F <<= FA5F-FFFF=-5AO => start of some text at -1, after *B
+# 10 F0 02 00 00 00 00 00    01 FD BF <<= FDBF-FFFF=-240 => start of some text at -1, after *C
+# [big block again]
+# 10 F1 02 00 00 00 00 00 00 01 00 A5
+# 10 F1 02 00 00 00 00 00 00 03 00 DF
+# 10 F1 02 00 00 00 00 00 00 04 00 D3
+# 10 F1 02 00 00 00 00 00 00 05 00 81
+# 10 F1 02 00 00 00 00 00 00 08 00 75
+# 10 F1 02 00 00 00 00 00 00 06 00 69
+# 10 F1 02 00 00 00 00 00 00 07 00 5D
+# [last one isolated]
+# 10 F0 02 00 00 00 00 00 00 01 FC 17 <<= FC17-FFFF=-3E8 => start of some text at -1, after *C
 #
-# There are 2 bytes of unknown function at bytes at C12AA4 ==> text? (need to be confirmed in-game)
+# Extracting all text block is as a consequence a matter of
+# 1) parsing the offset table to reach each top text block
+# 2) then extract all pointers from each top block, to reach more text sub-blocks.
+#
+# To do so, we get a list of table offset, then parse each top block to seek
+# more sublock using pointers. We obtain a list of start / stop of all text blocks.
+#
+# Note : There are sometimes tail bytes after the text of the text block.
+# Does this trigger something ? See at C12AA4 ==> (need to be confirmed in-game)
+
+
 import os
 import extraction
 import meta

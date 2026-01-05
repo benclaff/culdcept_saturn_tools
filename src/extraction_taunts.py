@@ -1,4 +1,4 @@
-# Taunts are NPC-specific dialogs throwed depending on game events. script data is organised as follows
+# Taunts are NPC-specific dialogs threw depending on game events.
 # Text extraction works similarly to extraction_help_script.py, see corresponding code for more explanations
 #
 #

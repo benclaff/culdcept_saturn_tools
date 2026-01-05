@@ -5,9 +5,12 @@ from typing import *
 import ruamel.yaml
 
 # look for this dialog pattern
+# complicated by the fact that in some instances portrait and text are split by pointers...
+# the pointer pattern must be set here to allow match, but will be used later.
 dialog_sequence_pattern = re.compile(
-    b'(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07\\x08])+[\\x07|\\x0A]*)+)+'
+    b'(?P<portrait>(\\x0F[\\x00-\\xFF])|(\\x0D[\\x00-\\xFF]))*(?P<text>(?P<line>([\\x81-\\x9F\\x13][\\x40-\\xFC\\x07\\x08])+[\\x07|\\x0A]*)+)+' #(?P<tail>.*)
 )
+#(?P<pointer>(\\x10[\\xF0-\\xF9]\\x02)([\\x00]{1,7}))*
 
 # look for this pointer pattern
 pointer_pattern = re.compile(
@@ -77,13 +80,14 @@ def sequence_to_yaml_text(text_block) -> str:
     for i,m in enumerate(re.finditer(dialog_sequence_pattern, text_block)):
         match_dic = m.groupdict()
         yaml_str += "\n    sequence_" + str(i) + ":"
-        yaml_str += "\n      start_relative_to_block: " + str(m.start())
-        yaml_str += "\n      end_relative_to_block: " + str(m.end()+1)
+        yaml_str += "\n      start_relative_to_block: " + str(m.start('portrait')) # index 1 to get portrait
+        yaml_str += "\n      end_relative_to_block: " + str(m.end('text'))
         # if match_dic["head"] is not None:
         #     yaml_str += "\n      head_hexa: " + match_dic["head"].hex()
-        # if match_dic["tail"] is not None:
-        #     yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
-        yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
+        #if match_dic["tail"] is not None:
+        #   yaml_str += "\n      tail_hexa: " + match_dic["tail"].hex()
+        if match_dic["portrait"] is not None:
+            yaml_str += "\n      portrait: " + match_dic["portrait"].hex()
         dec = match_dic["text"]
         dec = dec.replace(b'\x13\x07', "\\p".encode('shift_jisx0213'))
         dec = dec.replace(b'\x13\x08', "\\P".encode('shift_jisx0213'))
@@ -151,6 +155,7 @@ def generate_yaml_per_block(data:bytes, sorted_block_offsets:Dict[int,str], end_
             print("data:\t\t\t" + text_block.hex())
             block = sequence_to_yaml_text(text_block)
             if block == "":
+                print("warning: text pattern did not match at "+hex(start)+" - "+hex(end))
                 i += 1
                 prev_offset = offset_int
                 prev_offset_str = offset_str

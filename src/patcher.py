@@ -51,7 +51,7 @@ def overwrite(fileobj, start: int, end: int, newbytes: bytes):
     data[startremainder:startremainder + end - start] = newbytes
 
 
-pattern_icon = re.compile(b'x\\[([^\]]+)\\]')
+pattern_icon = re.compile(b'x\\[([^\\]]+)\\]')
 
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
@@ -61,7 +61,7 @@ def reverse_control_codes(value):
     value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
     value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
     v = b''
-    for m in re.finditer(pattern_icon, value): #retrive icon pointer value(s)
+    for m in re.finditer(pattern_icon, value): #retrieve icon pointer value(s)
         hex_str = str(m.group(1))[2:-1]  #this line is a bit hacky, may be a better way ?
         v = bytes.fromhex(hex_str)
     if len(v)>0:  # icon pointers present in byte string
@@ -110,9 +110,12 @@ def patch_from_yaml_scenario(yaml_file, DT0: mmap):
             # fill with 0s, for now
             # todo: need to improve with recomputed offset table
             if end - start <= max_size:
-                print("len(data): " + str(len(block_data)))
+                print("len(translation): " + str(len(block_data)))
                 print("len(original): " + str(end - start))
-                print("filler? : " + str((end - start) - len(block_data)))
+                if ((end - start) - len(block_data)) < 0:
+                    print("text too long...")
+                    exit(1)
+                print("filler : " + str((end - start) - len(block_data)))
                 DT0[start: start + len(block_data)] = block_data
                 ender = b''
                 for i in range(start + len(block_data), end):
@@ -133,7 +136,7 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
             if yaml_data[block]["sequences"] is None:
                 # cases where there is actually no data in block
                 # this happens for instance in taunts where offset table point to empty blocks
-                # (no text, but x00 to show end of text block)
+                # (no text, but x00 to indicate immediate end of text block)
                 continue
             else:
                 for sequence in yaml_data[block]["sequences"]:
@@ -152,12 +155,9 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                     # if "head_preportrait_hexa" in yaml_data[block]["sequences"][sequence]:
                     #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_preportrait_hexa"])
                     #     block_data += head
-                    # portrait
-                    block_data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
-                    # optional head and tails of bytes (function unknown)
-                    # if "head_postportrait_hexa" in yaml_data[block]["sequences"][sequence]:
-                    #     head = bytes.fromhex(yaml_data[block]["sequences"][sequence]["head_postportrait_hexa"])
-                    #     block_data += head
+                    # portrait (optional in tutorial)
+                    if "portrait" in yaml_data[block]["sequences"][sequence]:
+                        block_data += bytes.fromhex(yaml_data[block]["sequences"][sequence]["portrait"])
                     # text itself
                     txt = yaml_data[block]["sequences"][sequence]["translat_txt"]
                     if (txt is None) or (txt == "null"):  # not translated yet
@@ -165,6 +165,8 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                         continue
                     txt = txt.encode('shift_jisx0213')
                     txt = reverse_control_codes(txt)
+                    txt = txt.replace(b'\n ',b'\n')
+                    txt = txt.replace(b'\w ', b'\w')
                     block_data += txt
                     # tail
                     # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
@@ -172,15 +174,18 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                     #     block_data += tail
                     # fill with 0s, for now
                     # todo: need to improve with recomputed offset table
-                    if end - start <= max_size:
-                        print("len(data): " + str(len(block_data)))
+                    if len(block_data)  <= max_size:
+                        print("len(translation): " + str(len(block_data)))
                         print("len(original): " + str(shifted_end - shifted_start))
-                        print("filler? : " + str((shifted_end - shifted_start) - len(block_data)))
-                        DT0[shifted_start: shifted_start + len(block_data)] = block_data
+                        if ((shifted_end - shifted_start) - len(block_data)) < 0:
+                            print("text too long...")
+                            exit(1)
+                        print("filler : " + str((shifted_end - shifted_start) - len(block_data)))
+                        DT0[shifted_start: shifted_start+len(block_data)] = block_data
                         for i in range(shifted_start + len(block_data), shifted_end - 1):
                             DT0[i:i + 1] = b'\x00'
                     else:
-                        print("block " + block + " : text size > max_size")
+                        print("block " + block + " : block size > max_size")
                     DT0.flush()
 
 
@@ -304,7 +309,8 @@ skip_scenario = True
 skip_helpscript = True
 skip_taunts = True
 skip_cards = True
-skip_shrineeffects = False
+skip_shrineeffects = True
+skip_tutorial = False
 
 print("patching DT0")
 with open(PATCHED_DT0, mode="r+") as file_obj:
@@ -335,3 +341,9 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
     if not skip_shrineeffects:
         file = "../translations/shrineeffect/shrineeffect.yaml"
         patch_from_yaml_shrineffects(file, DT0)
+    #### help script
+    if not skip_tutorial:
+        block_files = glob.glob("../translations/tutorial/tutorial_block*.yaml")
+        block_files.sort()
+        for f in block_files:
+            patch_from_yaml_block_with_pointers(f, DT0)
