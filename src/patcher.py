@@ -182,7 +182,7 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                             exit(1)
                         print("filler : " + str((shifted_end - shifted_start) - len(block_data)))
                         DT0[shifted_start: shifted_start+len(block_data)] = block_data
-                        for i in range(shifted_start + len(block_data), shifted_end - 1):
+                        for i in range(shifted_start + len(block_data), shifted_end):
                             DT0[i:i + 1] = b'\x00'
                     else:
                         print("block " + block + " : block size > max_size")
@@ -306,7 +306,7 @@ except IOError as err:
 
 # debug
 skip_scenario = True
-skip_helpscript = True
+skip_helpscript = False
 skip_taunts = True
 skip_cards = True
 skip_shrineeffects = True
@@ -323,9 +323,10 @@ with open(PATCHED_DT0, mode="r+") as file_obj:
             patch_from_yaml_scenario(f, DT0)
     ##### help script
     if not skip_helpscript:
-        block_files = glob.glob("../translations/helpsscenariocript/helpscript_block*.yaml")
+        block_files = glob.glob("../translations/helpscript/helpscript_block*.yaml")
         block_files.sort()
         for f in block_files:
+            print("Applying "+f)
             patch_from_yaml_block_with_pointers(f, DT0)
     ##### taunts
     if not skip_taunts:
