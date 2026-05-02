@@ -21,9 +21,9 @@ The scripts allow to run the following tasks:
   * Main scenario
   * Characters Taunts
   * Tutorials
-  * Card / items texts
-  * ph
-  * ph
+  * Cards / items
+  * Help script
+  * 
 
 * Translated text injection
   * Patching of the DT0 file (that contains all texts).
