@@ -5,7 +5,7 @@ Tools for Sega Saturn's game  "Culcept" : translation and hacks.
 ## Repo content
 
 It contains scripts to extract japanase text from the following disc: 
-(Redump entry)[]
+(Redump entry)[http://redump.org/disc/53088/]
 
 I decided to interuot this project when "Culdcept The First" was annouced for the Saturn Tribute series. Cheers to the company and developers that revive and translate these old games.
 
