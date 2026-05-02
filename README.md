@@ -39,7 +39,15 @@ The scripts allow to run the following tasks:
 * No work on variable font width hacks
 * Card statistics can be extracted, but I did not write the lines necessary to reinject them after modification. Be aware that developping a card editor tool seems a relatively easy task.
 * Offset tables re-computations
-  * currently, translation has to fit into a restrained number of bytes (the inital japanese translation). Allowing longer translated texts will require the addition of updated offset tables computations. That should be easy for main scenario, taunts and tutorials. As far as i can tell, these text blocks do not contain specific pointers to other elements. But the data structure is more complex for the tutorials, cards, etc... and table updtes will require a deeper analysis before updating them.
+  * currently, translation has to fit into a restrained number of bytes (the inital japanese translation). 
+  * Allowing longer translated texts will require the addition of updated offset tables computations. That should be easy for main scenario, taunts and tutorials. As far as i can tell, these text blocks do not contain specific pointers to other elements. But the data structure is more complex for the help script (e.g menus), cards, etc... and table updates will require a deeper analysis before updating them.
+
+Finally,it worse mentionning that this game has only 3 files on the disc !
+    * the bin file contains librairies and code, as well as the Fonts (the very last bytes).
+    * the DT0 file contains texts, assets and other content data. A large proportion is sprites and tiles.
+    * the DT1 file contains probably the videos and sound effects (not verified).
+
+This makes difficult to shift bytes in DT0, because all offset tables from the file need to be updated? meaning that the whole file should be documented ?! (for instaed the very beginning has a table pointing to, as far as I can tell, subsections of assets (background tile, opponents texts and sprites interleaved...).
 
 ## Usage
 
