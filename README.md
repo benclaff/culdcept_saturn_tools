@@ -60,9 +60,9 @@ I did not test if the offsets are still valid for the other version 2.0. Scripts
 
 2) Update the variable `_DTO` in the `meta.py` file with the path to your extracted DT0 file.
 
-3) run any of the following scripts to extract texts from the corresponding section, an output directory with one to many json files will be generated.
+3) run any of the following scripts to extract texts from the corresponding section, an output directory named `translations` with one to many json files will be generated.
   * `scenario_extraction.py` (one json per scenario block)
-  * `help_script_extraction.py` (one json for all)
+  * `help_script_extraction.py` (one json per block)
   * `cards_extraction.py` (one json for all ; a bool variable also allows to extract card statistics to the json)
   * `tutorials_extraction.py` (one json for all)
   * `taunts_extraction.py` (one json per opponent)
