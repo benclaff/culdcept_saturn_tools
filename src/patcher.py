@@ -56,10 +56,12 @@ pattern_icon = re.compile(b'x\\[([^\\]]+)\\]')
 def reverse_control_codes(value):
     value = value.replace('\\p'.encode('shift_jisx0213'), b'\x13\x07')
     value = value.replace('\\P'.encode('shift_jisx0213'), b'\x13\x08')
-    #as with use yaml 's ">-" block adds spaces after \n and \w, we ned to remove it
+    #use of yaml's ">-" block adds a space after \n and \w during parsing, we need to remove it
     #before reencoding
-    value = value.replace('\\n'.encode('shift_jisx0213'), b'\x0A')
-    value = value.replace('\\w'.encode('shift_jisx0213'), b'\x07')
+    value = re.sub('\\n |\\n'.encode('shift_jisx0213'), b'\x0A', value)
+    value = re.sub('\\w |\\w'.encode('shift_jisx0213'), b'\x07', value)
+    #value = value.replace('\\n '.encode('shift_jisx0213'), b'\x0A')
+    #value = value.replace('\\w '.encode('shift_jisx0213'), b'\x07')
     v = b''
     for m in re.finditer(pattern_icon, value): #retrieve icon pointer value(s)
         hex_str = str(m.group(1))[2:-1]  #this line is a bit hacky, may be a better way ?
@@ -113,6 +115,7 @@ def patch_from_yaml_scenario(yaml_file, DT0: mmap):
                 print("len(translation): " + str(len(block_data)))
                 print("len(original): " + str(end - start))
                 if ((end - start) - len(block_data)) < 0:
+                    print(str(block_data))
                     print("text too long...")
                     exit(1)
                 print("filler : " + str((end - start) - len(block_data)))
@@ -165,8 +168,6 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                         continue
                     txt = txt.encode('shift_jisx0213')
                     txt = reverse_control_codes(txt)
-                    txt = txt.replace(b'\n ',b'\n')
-                    txt = txt.replace(b'\w ', b'\w')
                     block_data += txt
                     # tail
                     # if "tail_hexa" in yaml_data[block]["sequences"][sequence]:
@@ -178,7 +179,8 @@ def patch_from_yaml_block_with_pointers(yaml_file, DT0: mmap):
                         print("len(translation): " + str(len(block_data)))
                         print("len(original): " + str(shifted_end - shifted_start))
                         if ((shifted_end - shifted_start) - len(block_data)) < 0:
-                            print("text too long...")
+                            print(block_data)
+                            print(block+" "+sequence+" : text too long...")
                             exit(1)
                         print("filler : " + str((shifted_end - shifted_start) - len(block_data)))
                         DT0[shifted_start: shifted_start+len(block_data)] = block_data
@@ -209,9 +211,10 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             name = reverse_control_codes(name)
             block_data += name
             block_data += b'\x00'
-            #todo description
             desc = yaml_data[block]["text"]["desc"]["translat_txt"]
-            desc = re.sub(r'\\+', r'\\', desc) #avoids case where yaml parser replace \ with \\
+            if desc == 'null':
+                desc=''
+            #desc = re.sub(r'\\+', r'\\', desc) #avoids case where yaml parser replace \ with \\
             desc = desc.encode('shift_jisx0213')
             desc = reverse_control_codes(desc)
             block_data += desc
@@ -223,10 +226,11 @@ def patch_from_yaml_cards(yaml_file, DT0: mmap):
             #filler
             block_len = yaml_data[block]["offsets"]["byte_length"]
             text_len_diff = (block_len - len(tail)/2) - len(head)/2 - len(name) -1  - len(desc) -1 #head&tail are str
-            if text_len_diff > 0:
+            if text_len_diff >= 0:
                 block_data += b'\x00' * int(text_len_diff)
             else:
                 print("block " + block + " : text size > max_size")
+                print("bytes diff (if negative, reduce text): " + str(text_len_diff))
                 exit(1)
             DT0[start: start+len(block_data)] = block_data
             DT0.flush()
@@ -305,11 +309,11 @@ except IOError as err:
     exit(1)
 
 # debug
-skip_scenario = True
+skip_scenario = False
 skip_helpscript = False
-skip_taunts = True
-skip_cards = True
-skip_shrineeffects = True
+skip_taunts = False
+skip_cards = False
+skip_shrineeffects = False
 skip_tutorial = False
 
 print("patching DT0")
