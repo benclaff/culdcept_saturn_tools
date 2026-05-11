@@ -1,0 +1,17 @@
+taunt10_block_21:
+  offsets:
+    byte_length: 31
+    start: 0xb58e0d
+    end: 0xb58e2c
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 31
+      portrait: 0f0e
+      original_txt: >-
+        フッ、いい考えが浮かびそうだ
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Hm, seems like\n
+        a good idea. 

@@ -1,0 +1,27 @@
+block_3:
+  offsets:
+    byte_length: 149
+    start: 0xc1200b
+    end: 0xc120a0
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 148
+      portrait: 0f05
+      original_txt: >-
+        手札は、６枚までしか持つ事ができません\n
+        一枚を選んで捨てて下さい\w
+        カードは、５０枚すべて引き終ると\n
+        シャッフルされ、また最初から引けるように\n
+        なります
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        You can hold up to\n
+        6 cards in your hand.\w
+        Choose 1 card and\n
+        discard it.\w
+        Once 50 cards have\n
+        been drawn, the deck\n
+        will be shuffled and\n
+        drawn from top again.

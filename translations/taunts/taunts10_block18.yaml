@@ -1,0 +1,17 @@
+taunt10_block_18:
+  offsets:
+    byte_length: 43
+    start: 0xb58d73
+    end: 0xb58d9e
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 43
+      portrait: 0f0d
+      original_txt: >-
+        俺ともあろうものが、この有り様とは・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        I can't believe this is\n
+        happening to me… 

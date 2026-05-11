@@ -1,0 +1,20 @@
+taunt10_block_23:
+  offsets:
+    byte_length: 50
+    start: 0xb58e4f
+    end: 0xb58e81
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 50
+      portrait: 0f0b
+      original_txt: >-
+        フフフ・・・\n
+        ここに止まった時が、貴様の最期だ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Hehe…\n
+        Stopping here brings\n
+        you one step closer\n
+        to defeat! 

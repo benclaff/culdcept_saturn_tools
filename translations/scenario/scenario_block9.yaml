@@ -1,0 +1,57 @@
+scenario_block_9:
+  offsets:
+    byte_length: 455
+    start: 0xc0c125
+    end: 0xc0c2ec
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 127
+      head_hexa: '0f02'
+      portrait: '0f02'
+      original_txt: >-
+        お見事です、\p殿！\wゼネスも、かなりのパワーを持つセプター\nでしたが・・・\wあまりたいしたカードを持っては\nいなかったようですな\w
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Well done, \p!\n
+        Zenes was also a Scepter\n
+        wielding some power...\w
+        But it seems he didn't\n
+        possess any particularly\n
+        impressive cards.
+    sequence_1:
+      start_relative_to_block: 127
+      end_relative_to_block: 391
+      head_hexa: '0d00'
+      portrait: '0d00'
+      original_txt: >-
+        しかし、あなたも同じ事です\w邪悪なセプター達に打ち勝って、彼らのカードを\n奪って行かなければ、この道中きびしいものに\nなりましょうぞ\wさて、この先道が３つに別れているようですが\nどちらへ進みますかな？\w情報では、東へ行くほど手強いセプターが\n存在するらしいですが・・・\w
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        But you're no different.\n
+        Defeat the wicked\n
+        Scepters and take\w
+        their cards.\n
+        This journey will be a\n
+        harsh one indeed.\w
+        Now then, the path\n
+        ahead seems to split\n
+        into three.\w
+        Which way shall we go?\w
+        The further east you go,\n
+        the tougher the Scepters\n
+        become...
+    sequence_2:
+      start_relative_to_block: 391
+      end_relative_to_block: 454
+      head_hexa: '0d02'
+      portrait: '0d02'
+      original_txt: >-
+        もちろん私は、あなたがどこへ行こうとも\nお供させてもらいますぞ
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Of course, wherever you\n
+        go, I'll go with you!

@@ -1,0 +1,42 @@
+block_2:
+  offsets:
+    byte_length: 385
+    start: 0xc11e8a
+    end: 0xc1200b
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 384
+      portrait: 0f05
+      original_txt: >-
+        ◆カードの見方\n
+        画面右側のパネルは、カード説明です\w
+        最上段：カードの名前\n
+        二段目：カードの種類　　属性・種族（種類）\n
+        ＳＴ：攻撃力、ＨＰ：耐久力\n
+        （クリーチャーのみ）\w
+        Ｇ：カードを使用するために必要な魔力・条件\n
+        （クリーチャーの場合、召還に必要な土地数\n
+        カード数を記述）\w
+        使用制限：このアイテムを使えない種族\n
+        配置制限：このクリーチャーを配置\n 　　　　　　できない地形\n
+        以下の文面：カードの能力
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ◆How to Read Cards\n
+        The panel on the right\n
+        side of the screen\w
+        shows the card\n
+        description.\n
+        Top row: Card name\w
+        Second row: Card type Attribute・Race (Type)\n
+        ATK: Attack power, HP: Health points\n
+        (Creatures only)\w
+        G: Mana cost/conditions required to use the card\n
+        (For creatures, number of lands required for summoning\n
+        and number of cards needed)\w
+        Usage Restriction: Races that cannot use this item\n
+        Placement Restriction: Terrains where this creature\n
+        cannot be placed\n
+        Text below: The card's abilities

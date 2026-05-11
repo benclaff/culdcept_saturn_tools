@@ -1,0 +1,17 @@
+taunt10_block_24:
+  offsets:
+    byte_length: 40
+    start: 0xb58e81
+    end: 0xb58ea9
+  sequences:
+    sequence_0:
+      start_relative_to_block: 9
+      end_relative_to_block: 40
+      portrait: 0f0b
+      original_txt: >-
+        よし！これで連鎖が増えたぜ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Yes! My chain got\n
+        increased! 

@@ -1,0 +1,17 @@
+taunt10_block_35:
+  offsets:
+    byte_length: 48
+    start: 0xb59151
+    end: 0xb59181
+  sequences:
+    sequence_0:
+      start_relative_to_block: 9
+      end_relative_to_block: 48
+      portrait: 0f0b
+      original_txt: >-
+        この戦い、どうやら俺の勝ちらしいな！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Looks like I've won\n
+        this battle. 

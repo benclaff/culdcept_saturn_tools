@@ -1,0 +1,6 @@
+taunt10_block_8:
+  offsets:
+    byte_length: 1
+    start: 0xb58bc9
+    end: 0xb58bca
+  sequences:

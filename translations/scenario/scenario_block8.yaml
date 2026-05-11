@@ -1,0 +1,18 @@
+scenario_block_8:
+  offsets:
+    byte_length: 83
+    start: 0xc0c0d2
+    end: 0xc0c125
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 82
+      head_hexa: '1800010d0f0a'
+      head_preportrait_hexa: '1800010d'
+      portrait: '0f0a'
+      original_txt: >-
+        貴様が、その程度のセプターであるわけが\nない！\w今度こそ本気を出してもらおう！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        null

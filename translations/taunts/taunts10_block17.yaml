@@ -1,0 +1,17 @@
+taunt10_block_17:
+  offsets:
+    byte_length: 64
+    start: 0xb58d33
+    end: 0xb58d73
+  sequences:
+    sequence_0:
+      start_relative_to_block: 35
+      end_relative_to_block: 64
+      portrait: 0f0d
+      original_txt: >-
+        くそっ！このままでは・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Damn it!\n
+        This can't be…

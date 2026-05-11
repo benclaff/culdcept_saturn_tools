@@ -1,0 +1,102 @@
+scenario_block_3:
+  offsets:
+    byte_length: 712
+    start: 0xc0bccd
+    end: 0xc0bf95
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 118
+      head_hexa: '1801830f0a'
+      head_preportrait_hexa: '180183'
+      portrait: '0f0a'
+      original_txt: >-
+        俺の名は、竜眼のゼネス\w貴様が、どれほどの力を持っているかは\n知らんが・・・\wこの町を出る前に俺と勝負してもらおうか
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        My name is Zenes\n
+        of the Dragon Eye.\w
+        I don't know how\n
+        powerful you are...\w
+        But before you leave\n
+        this town, how about\n
+        we settle this?
+    sequence_1:
+      start_relative_to_block: 118
+      end_relative_to_block: 256
+      head_hexa: '0f01'
+      portrait: '0f01'
+      original_txt: >-
+        何をバカな事を！\wこの\p殿は、この大陸の人々の\n希望を託された、大切な任務を持つお方\nなのだぞ！\wおぬしなどの相手をしているひまは無いのだ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        What nonsense!\w
+        Master \p\n
+        is entrusted with the\n
+        hopes of the people.\w
+        He has no time to waste\n
+        on the likes of you!
+    sequence_2:
+      start_relative_to_block: 256
+      end_relative_to_block: 504
+      head_hexa: '0f0c'
+      portrait: '0f0c'
+      original_txt: >-
+        人々の希望だと？\nフッ、笑わせるぜ！\wおろかな民どもの希望などかなえて、それで\n大陸が平和になるとでも思っているのか？\w俺は貴様と同じように大陸をめぐり、\nセプター達を倒そうと思っている\wしかし、人々のためなどではない\n俺がこの世界を支配するためにだ！\w
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        The people's hopes?\n
+        Hah, what a joke!\w
+        Fulfilling foolish\n
+        commoners hopes, can\w
+        this bring peace ?\w
+        Like you, I intend to\n
+        defeat the Scepters.\w
+        But not for the people.\n
+        It's so I can rule\n
+        this world!\w
+    sequence_3:
+      start_relative_to_block: 504
+      end_relative_to_block: 542
+      head_hexa: '0d0b'
+      portrait: '0d0b'
+      original_txt: >-
+        さあ、これでも戦えないというのか！？
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Well then, you still\n
+        think we can't fight!?
+    sequence_4:
+      start_relative_to_block: 542
+      end_relative_to_block: 606
+      head_hexa: '0f03'
+      portrait: '0f03'
+      original_txt: >-
+        なんたること・・・\w止むを得ません、ここは戦うしか無いようです\w
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Why this now...\w
+        But no choice.\n
+        It seems our only\n
+        option is to fight.\w
+    sequence_5:
+      start_relative_to_block: 606
+      end_relative_to_block: 712
+      head_hexa: '0d00'
+      tail_hexa: '1800000000'
+      portrait: '0d00'
+      original_txt: >-
+        初陣にしてやっかいな相手にめぐり会って\nしまったものですが・・・\w私は、\p殿の力を\n信じておりますぞ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Though we encounter\n
+        a troublesome foe in\n
+        our very 1st battle...\w
+        I firmly believe in\n
+        your strength, my lord!

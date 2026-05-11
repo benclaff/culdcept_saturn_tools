@@ -1,0 +1,20 @@
+scenario_block_6:
+  offsets:
+    byte_length: 75
+    start: 0xc0c03f
+    end: 0xc0c08a
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 74
+      head_hexa: '1801110f0d'
+      head_preportrait_hexa: '180111'
+      portrait: '0f0d'
+      original_txt: >-
+        何と言うことだ・・・この俺が、また敗北を\n味わうことになろうとは・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        What the...\w
+        That I should taste\n
+        defeat once more.

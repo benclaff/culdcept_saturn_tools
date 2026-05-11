@@ -1,0 +1,56 @@
+scenario_block_1:
+  offsets:
+    byte_length: 462
+    start: 0xc0bab0
+    end: 0xc0bc7e
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 362
+      head_hexa: '0f02'
+      portrait: '0f02'
+      original_txt: >-
+        \p殿！\nついに、このバブラシュカ大陸を救う気に\nなられたのですな？\w私は、あなたに助けられた日からずっと\nこの時を待っておったのです\wあなたにはできます\w自分では気づいておらんようですが、あなた\nにはそれだけのパワーが秘められている\w私には強力なセプターをかぎ分ける能力が\nあるのです\wさあ、道を急ぎましょう\wこの世界には、邪悪なセプターの匂いが\nぷんぷんしとりますからな
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Master \p!\n
+        You've finally decided\n
+        to save Bubrashka land?\w
+        Ever since the day you\n
+        saved me, I've been\n
+        waiting for this moment.\w
+        I'm confident. You may\n
+        not realize it yourself\n
+        but you possess that power.\w
+        I have the ability to\n
+        detect powerful scep-
+        ters. Now, let's hurry.\w
+        This world reeks of the\n
+        scent of an evil scepter,\n
+        you see.
+    sequence_1:
+      start_relative_to_block: 362
+      end_relative_to_block: 399
+      head_hexa: '0f0a'
+      portrait: '0f0a'
+      original_txt: >-
+        ちょっと待ちな\n聞き捨てならないぜ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Hold on a sec\n
+        I won't let that slide!
+    sequence_2:
+      start_relative_to_block: 399
+      end_relative_to_block: 461
+      head_hexa: '0f01'
+      portrait: '0f01'
+      original_txt: >-
+        何ものだ！？\wムッ！・・・この気は\w・・・おぬしもセプター！！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        What the !?\w
+        Hmph! ...This aura...\w
+        You too are a Scepter!!

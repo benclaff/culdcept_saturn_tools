@@ -1,0 +1,20 @@
+scenario_block_2:
+  offsets:
+    byte_length: 79
+    start: 0xc0bc7e
+    end: 0xc0bccd
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 78
+      head_hexa: '0f00'
+      portrait: '0f00'
+      original_txt: >-
+        この場所で、もう少し技をみがいてから\n進むのですか？\nまあ、それもよいでしょう
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Do you plan to hone\n
+        your skills a bit\n
+        before moving on?\w
+        Well, that's fine.

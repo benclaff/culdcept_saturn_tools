@@ -1,0 +1,16 @@
+taunt10_block_30:
+  offsets:
+    byte_length: 36
+    start: 0xb58f6b
+    end: 0xb58f8f
+  sequences:
+    sequence_0:
+      start_relative_to_block: 11
+      end_relative_to_block: 36
+      portrait: 0f0d
+      original_txt: >-
+        ええい！ふがいない！！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Ugh! Worthless!

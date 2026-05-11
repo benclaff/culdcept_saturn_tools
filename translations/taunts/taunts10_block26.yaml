@@ -1,0 +1,16 @@
+taunt10_block_26:
+  offsets:
+    byte_length: 34
+    start: 0xb58edb
+    end: 0xb58efd
+  sequences:
+    sequence_0:
+      start_relative_to_block: 11
+      end_relative_to_block: 34
+      portrait: 0f0b
+      original_txt: >-
+        これでもくらえっ！！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Take that!

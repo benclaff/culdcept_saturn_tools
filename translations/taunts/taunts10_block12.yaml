@@ -1,0 +1,17 @@
+taunt10_block_12:
+  offsets:
+    byte_length: 37
+    start: 0xb58c57
+    end: 0xb58c7c
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 37
+      portrait: 0f0e
+      original_txt: >-
+        貴様らでは、俺に勝つことはできまい
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        You lot won't be able\n
+        to beat me.  

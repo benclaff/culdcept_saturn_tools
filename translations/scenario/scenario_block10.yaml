@@ -1,0 +1,20 @@
+scenario_block_10:
+  offsets:
+    byte_length: 83
+    start: 0xc0c2ec
+    end: 0xc0c33f
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 82
+      head_hexa: '0f00'
+      portrait: '0f00'
+      original_txt: >-
+        ここでゼネスとばかり戦っていても\n良いカードは手に入りませんぞ\wさあ、参りましょう
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        You won't get any good\n
+        cards just fighting\n
+        Zenes here.\w
+        Come on, let's go.

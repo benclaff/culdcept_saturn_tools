@@ -1,0 +1,23 @@
+block_6:
+  offsets:
+    byte_length: 238
+    start: 0xc12253
+    end: 0xc12341
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 237
+      portrait: 0f05
+      original_txt: >-
+        ◆コマンドモード\n
+        ここでは各種コマンドを使うことができます\n
+        説明は右側のパネルに表示されます\w
+        ここにあるコマンドは、移動後のコマンド\n
+        モードでも使用できます\w
+        ←→ボタン　：コマンド選択\n
+        ＡＣボタン　：コマンドを使う\n
+        ↑ボタン　　：スペルモード
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        null

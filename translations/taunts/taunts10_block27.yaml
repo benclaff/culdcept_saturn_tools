@@ -1,0 +1,16 @@
+taunt10_block_27:
+  offsets:
+    byte_length: 34
+    start: 0xb58efd
+    end: 0xb58f1f
+  sequences:
+    sequence_0:
+      start_relative_to_block: 9
+      end_relative_to_block: 34
+      portrait: 0f0c
+      original_txt: >-
+        ここは・・・これだっ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        I choose… this!

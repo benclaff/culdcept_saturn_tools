@@ -1,0 +1,19 @@
+taunt10_block_31:
+  offsets:
+    byte_length: 61
+    start: 0xb58f8f
+    end: 0xb58fcc
+  sequences:
+    sequence_0:
+      start_relative_to_block: 11
+      end_relative_to_block: 61
+      portrait: 0f0d
+      original_txt: >-
+        まさか・・・\n
+        俺のクリーチャーが負けるとは・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Impossible…\n
+        My creature was\n
+        defeated…

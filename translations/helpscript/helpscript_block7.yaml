@@ -1,0 +1,36 @@
+block_7:
+  offsets:
+    byte_length: 474
+    start: 0xc12341
+    end: 0xc1251b
+  sequences:
+    sequence_0:
+      start_relative_to_block: 93
+      end_relative_to_block: 423
+      portrait: 0f05
+      original_txt: >-
+        この土地に所有者はいません\n
+        クリーチャーカードを使えば\n
+        この土地を手に入れることができます\w
+        クリーチャーを配置する場合、クリーチャーの\n
+        属性（色付きマーク）と土地の属性が合って\n
+        いれば・・・\w
+        地形効果として、戦闘中ＨＰ＋（１０×レベル）\n
+        されます\w
+        また、となりが自分の領地だった場合\n
+        支援効果として、戦闘中ＳＴ＋（１０\n
+        ×隣接数）されます
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        null
+    sequence_1:
+      start_relative_to_block: 429
+      end_relative_to_block: 461
+      portrait: 0f05
+      original_txt: >-
+        ↓ボタン　：クリーチャーモード
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ↓ : Creature Mode

@@ -1,0 +1,32 @@
+block_8:
+  offsets:
+    byte_length: 188
+    start: 0xc1251b
+    end: 0xc125d7
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 139
+      portrait: 0f05
+      original_txt: >-
+        ここは他セプターの領地です\n
+        何もしなければ通行料として魔力を奪われます\w
+        クリーチャーカードを使って戦いに勝てば\n
+        この土地を奪うことができます
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        This is a Scepter's territory.\n
+        They'll take your magic as a toll.\w
+        If you use a creature card to win\n
+        the battle, you can seize this land.
+    sequence_1:
+      start_relative_to_block: 145
+      end_relative_to_block: 177
+      portrait: 0f05
+      original_txt: >-
+        ↓ボタン　：クリーチャーモード
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ↓ : Creature Mode

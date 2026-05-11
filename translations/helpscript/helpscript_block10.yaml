@@ -1,0 +1,20 @@
+block_10:
+  offsets:
+    byte_length: 57
+    start: 0xc12659
+    end: 0xc12692
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 56
+      portrait: 0f05
+      original_txt: >-
+        ◆城・砦\n
+        領地コマンドを全ての領地で使うことが\n
+        できます
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ◆Castles & Fortresses\n
+        You can use the Territory\n
+        Command on all territories.

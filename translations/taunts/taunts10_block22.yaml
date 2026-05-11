@@ -1,0 +1,16 @@
+taunt10_block_22:
+  offsets:
+    byte_length: 35
+    start: 0xb58e2c
+    end: 0xb58e4f
+  sequences:
+    sequence_0:
+      start_relative_to_block: 10
+      end_relative_to_block: 35
+      portrait: 0f0c
+      original_txt: >-
+        フッ、いい調子だ・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Heh, a good way to go…

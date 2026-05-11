@@ -1,0 +1,40 @@
+block_4:
+  offsets:
+    byte_length: 312
+    start: 0xc120a0
+    end: 0xc121d8
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 311
+      portrait: 0f05
+      original_txt: >-
+        ◆スペルモード\n
+        ここでスペルカードを使う事ができます\n
+        手札の中で明るくなっているのがスペルです\w
+        スペルカードを使うと魔力を消費します\n
+        スペルを使わず先に進みたい場合は\n
+        ↑でダイスモードに切り替えて下さい\w
+        ←→ボタン　：カード選択\n
+        ＡＣボタン　：スペルを使う\n
+        ↑ボタン　　：ダイスモードへ\n
+        ↓ボタン　　：コマンドモードへ
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ◆Spell Mode\n
+        Now you can use spell\n
+        cards.\w
+        From the cards in your\n
+        hand, the brightened\n
+        cards are spells.\w
+        When you use a spell\n
+        card, magic power is\n
+        spent.\w
+        To proceed without\n
+        using spells,\n
+        ↑ switch to dice mode\w
+        ←→ : Select cards\n
+        AC : Use spell\n
+        ↑ : To dice mode\w
+        ↓ : To command mode

@@ -1,0 +1,17 @@
+taunt10_block_34:
+  offsets:
+    byte_length: 51
+    start: 0xb5911e
+    end: 0xb59151
+  sequences:
+    sequence_0:
+      start_relative_to_block: 12
+      end_relative_to_block: 51
+      portrait: 0f0d
+      original_txt: >-
+        くそっ・・・このままではすまさんぞ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Arggh… this isn't over\n
+        yet!

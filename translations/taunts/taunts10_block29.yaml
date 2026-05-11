@@ -1,0 +1,16 @@
+taunt10_block_29:
+  offsets:
+    byte_length: 41
+    start: 0xb58f42
+    end: 0xb58f6b
+  sequences:
+    sequence_0:
+      start_relative_to_block: 12
+      end_relative_to_block: 41
+      portrait: 0f0b
+      original_txt: >-
+        この土地はだれにも渡さん！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        That land is mine!

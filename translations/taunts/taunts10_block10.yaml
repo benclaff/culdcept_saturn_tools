@@ -1,0 +1,17 @@
+taunt10_block_10:
+  offsets:
+    byte_length: 40
+    start: 0xb58bf2
+    end: 0xb58c1a
+  sequences:
+    sequence_0:
+      start_relative_to_block: 1
+      end_relative_to_block: 40
+      portrait: 0f0b
+      original_txt: >-
+        無駄だ！貴様らがどうあがこうともな！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        It's futile! No matter\n
+        how hard you struggle!

@@ -1,0 +1,17 @@
+taunt10_block_13:
+  offsets:
+    byte_length: 57
+    start: 0xb58c7c
+    end: 0xb58cb5
+  sequences:
+    sequence_0:
+      start_relative_to_block: 22
+      end_relative_to_block: 57
+      portrait: 0f0d
+      original_txt: >-
+        まだまだ・・・これからが勝負だ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Still… the future is\n
+        unwritten! 

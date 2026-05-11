@@ -1,0 +1,27 @@
+taunt10_block_2:
+  offsets:
+    byte_length: 70
+    start: 0xb58b7e
+    end: 0xb58bc4
+  sequences:
+    sequence_0:
+      start_relative_to_block: 12
+      end_relative_to_block: 33
+      portrait: 0f0a
+      original_txt: >-
+        貴様ら、必ず倒す！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        I can't loose!
+    sequence_1:
+      start_relative_to_block: 33
+      end_relative_to_block: 70
+      portrait: 0f0a
+      original_txt: >-
+        貴様のカードを、全て奪ってやるぜ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        I'll take all your\n
+        cards away!

@@ -1,0 +1,42 @@
+taunt10_block_32:
+  offsets:
+    byte_length: 166
+    start: 0xb58fcc
+    end: 0xb59072
+  sequences:
+    sequence_0:
+      start_relative_to_block: 46
+      end_relative_to_block: 78
+      portrait: 0f0b
+      original_txt: >-
+        ハハハッ！\n
+        魔力はもらったっ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Hahaha!\n
+        I gained magic!
+    sequence_1:
+      start_relative_to_block: 78
+      end_relative_to_block: 137
+      portrait: 0f0e
+      original_txt: >-
+        フッ！\n
+        うかつにも、俺の領地に\n
+        踏み込んだのが悪いのだよ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Heh!\n
+        Be careful when tread-\n
+        ing in my territory!
+    sequence_2:
+      start_relative_to_block: 137
+      end_relative_to_block: 166
+      portrait: 0f0c
+      original_txt: >-
+        Your end draws near!
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        null

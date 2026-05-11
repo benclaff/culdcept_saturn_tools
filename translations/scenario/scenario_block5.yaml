@@ -1,0 +1,23 @@
+scenario_block_5:
+  offsets:
+    byte_length: 120
+    start: 0xc0bfc7
+    end: 0xc0c03f
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 119
+      head_hexa: '1801110f0d'
+      head_preportrait_hexa: '180111'
+      portrait: '0f0d'
+      original_txt: >-
+        この、竜眼のゼネスの力をしのぐセプターが\n存在しようとは・・・\wここは退くが・・・\w\p！\n俺は貴様を必ず倒してみせる！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        A scepter surpassing\n
+        the Dragon Eye Zenes...\n
+        I shall retreat for now.\w
+        \p!\n
+        I will defeat you,\n
+        mark my words!

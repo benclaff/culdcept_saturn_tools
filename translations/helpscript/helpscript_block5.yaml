@@ -1,0 +1,24 @@
+block_5:
+  offsets:
+    byte_length: 123
+    start: 0xc121d8
+    end: 0xc12253
+  sequences:
+    sequence_0:
+      start_relative_to_block: 0
+      end_relative_to_block: 122
+      portrait: 0f05
+      original_txt: >-
+        ◆ダイスモード\n
+        ダイスを止めると、出た目の数だけ進む事が\n
+        できます\w
+        ＡＣボタン　：ダイスを停止\n
+        ↓ボタン　　：スペルモードへ
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        ◆Dice Mode\n
+        When you stop the dice, you can\n
+        move forward by the number of steps\w
+        AC: Stop the dice\n
+        ↓ : Enter Spell Mode

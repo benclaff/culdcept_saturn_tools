@@ -1,0 +1,16 @@
+taunt10_block_20:
+  offsets:
+    byte_length: 51
+    start: 0xb58dda
+    end: 0xb58e0d
+  sequences:
+    sequence_0:
+      start_relative_to_block: 24
+      end_relative_to_block: 51
+      portrait: 0f0a
+      original_txt: >-
+        さて・・・どの手で行くか
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Hmm… what to do next? 

@@ -1,0 +1,50 @@
+taunt10_block_33:
+  offsets:
+    byte_length: 172
+    start: 0xb59072
+    end: 0xb5911e
+  sequences:
+    sequence_0:
+      start_relative_to_block: 36
+      end_relative_to_block: 64
+      portrait: 0f0a
+      original_txt: >-
+        チッ！\n
+        ここに止まるとは！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Ugh!\n
+        This stops here.
+    sequence_1:
+      start_relative_to_block: 88
+      end_relative_to_block: 122
+      portrait: 0f0b
+      original_txt: >-
+        覚えていろ！\n
+        必ず借りは返すッ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Remember.\n
+        I owe you this!
+    sequence_2:
+      start_relative_to_block: 132
+      end_relative_to_block: 155
+      portrait: 0f0d
+      original_txt: >-
+        ば・・・ばかな・・・
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        You… stupid…
+    sequence_3:
+      start_relative_to_block: 155
+      end_relative_to_block: 172
+      portrait: 0f0d
+      original_txt: >-
+        うわあああっ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Oh wow!

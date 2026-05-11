@@ -1,0 +1,17 @@
+taunt10_block_36:
+  offsets:
+    byte_length: 40
+    start: 0xb59181
+    end: 0xb591a9
+  sequences:
+    sequence_0:
+      start_relative_to_block: 9
+      end_relative_to_block: 40
+      portrait: 0f0d
+      original_txt: >-
+        このまま終わる俺ではないっ！
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        This should end well\n
+        for me! 

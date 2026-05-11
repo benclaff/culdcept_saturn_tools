@@ -1,0 +1,17 @@
+taunt10_block_9:
+  offsets:
+    byte_length: 40
+    start: 0xb58bca
+    end: 0xb58bf2
+  sequences:
+    sequence_0:
+      start_relative_to_block: 24
+      end_relative_to_block: 41
+      portrait: 0f0e
+      original_txt: >-
+        フッ！楽勝だな
+      ruler_helper: >-
+        -----------------------|-----------------------|-----------------------|
+      translat_txt: >-
+        Heh! This is going to\n
+        be an easy victory. 
